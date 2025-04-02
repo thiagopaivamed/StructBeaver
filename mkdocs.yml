@@ -1,0 +1,67 @@
+site_name: Struct Beaver
+site_url: https://structbeaver.com
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+   - search.suggest
+   - search.highlight
+   - navigation.instant
+   - navigation.instant.prefetch
+   - navigation.instant.progress
+   - navigation.expand
+   - navigation.path
+   - navigation.prune
+   - navigation.indexes
+   - toc.follow
+   - content.code.copy
+   - content.code.select
+   
+  palette:
+    
+     # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+nav:
+  - 1. Vetores:
+    - vetores/index.md
+    - 1.1 Uso básico: vetores/uso-basico.md
+    - 1.2 Pesquisa simples: vetores/pesquisa_simples.md
+    - 1.3 Pesquisa binaria: vetores/pesquisa_binaria.md
+
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.superfences
+
+plugins:
+ - glightbox:
+       touchNavigation: true
+       loop: false
+       effect: zoom
+       slide_effect: slide
+       width: 100%
+       height: auto
+       zoomable: true
+       draggable: true       
+       auto_caption: false
+       background: white
+       shadow: true
+       manual: false

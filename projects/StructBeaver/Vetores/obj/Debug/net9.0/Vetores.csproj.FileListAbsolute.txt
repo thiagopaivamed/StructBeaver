@@ -1,0 +1,11 @@
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\bin\Debug\net9.0\Vetores.deps.json
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\bin\Debug\net9.0\Vetores.dll
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\bin\Debug\net9.0\Vetores.pdb
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\obj\Debug\net9.0\Vetores.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\obj\Debug\net9.0\Vetores.AssemblyInfoInputs.cache
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\obj\Debug\net9.0\Vetores.AssemblyInfo.cs
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\obj\Debug\net9.0\Vetores.csproj.CoreCompileInputs.cache
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\obj\Debug\net9.0\Vetores.dll
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\obj\Debug\net9.0\refint\Vetores.dll
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\obj\Debug\net9.0\Vetores.pdb
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\obj\Debug\net9.0\ref\Vetores.dll
