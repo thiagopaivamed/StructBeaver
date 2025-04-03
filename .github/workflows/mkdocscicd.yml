@@ -32,6 +32,9 @@ jobs:
         run: |
           mkdocs build
 
+      - name: Install glightbox
+        run: pip install mkdocs-glightbox
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
