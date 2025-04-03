@@ -27,7 +27,7 @@ jobs:
         run: mkdocs build
 
       - name: Upload site as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v1
         with:
           name: site
           path: site/
