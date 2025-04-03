@@ -3,8 +3,8 @@ name: Deploy MkDocs to GitHub Pages
 on:
   push:
     branches:
-      - main  # 🚀 Deploy automático quando há push na `main`
-  workflow_dispatch:  # Permite iniciar o workflow manualmente no GitHub
+      - main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -35,9 +35,9 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: 📤 Fazer upload dos arquivos do site
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: ./site  # 🚀 MkDocs gera os arquivos aqui
+          path: ./site
 
       - name: 🌍 Deploy para GitHub Pages
         id: deployment
