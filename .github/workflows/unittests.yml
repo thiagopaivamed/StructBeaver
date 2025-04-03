@@ -28,6 +28,8 @@ jobs:
 
       - name: Build project
         run: dotnet build StructBeaver.sln --no-restore --configuration Release
+        working-directory: projects/StructBeaver
 
       - name: Run unit tests
         run: dotnet test StructBeaver.UnitTests/StructBeaver.UnitTests.csproj --no-build --configuration Release --verbosity normal    
+        working-directory: projects/StructBeaver

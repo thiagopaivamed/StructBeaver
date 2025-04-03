@@ -3,6 +3,7 @@ date:
     created: 03-30-2025
 draft: true
 readtime: 5
+comments: true
 ---
 
 # **Uso básico de vetores (Array)**
