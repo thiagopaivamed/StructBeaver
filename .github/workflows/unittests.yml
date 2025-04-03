@@ -23,13 +23,14 @@ jobs:
         with:
           dotnet-version: '9.0.x' 
 
+      - name: List files for debugging
+        run: ls -R
+
       - name: Restore dependencies
-        run: dotnet restore StructBeaver.sln
+        run: dotnet restore projects/StructBeaver/StructBeaver.sln
 
       - name: Build project
-        run: dotnet build StructBeaver.sln --no-restore --configuration Release
-        working-directory: projects/StructBeaver
+        run: dotnet build projects/StructBeaver/StructBeaver.sln --no-restore --configuration Release       
 
       - name: Run unit tests
-        run: dotnet test StructBeaver.UnitTests/StructBeaver.UnitTests.csproj --no-build --configuration Release --verbosity normal    
-        working-directory: projects/StructBeaver
+        run: dotnet test projects/StructBeaver/StructBeaver.UnitTests/StructBeaver.UnitTests.csproj --no-build --configuration Release --verbosity normal    
