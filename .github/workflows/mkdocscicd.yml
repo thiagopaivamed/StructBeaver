@@ -35,10 +35,10 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: 📤 Fazer upload dos arquivos do site
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           path: ./site  # 🔥 MkDocs gera os arquivos aqui
 
       - name: 🌍 Deploy para GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
