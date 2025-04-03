@@ -1,4 +1,4 @@
-name: Run Tests
+name: Run Unit Tests
 
 on:
   push:
@@ -27,10 +27,10 @@ jobs:
         run: ls -R
 
       - name: Restore dependencies
-        run: dotnet restore projects/StructBeaver/StructBeaver.sln
+        run: dotnet restore ./projects/StructBeaver/StructBeaver.sln
 
       - name: Build project
-        run: dotnet build projects/StructBeaver/StructBeaver.sln --no-restore --configuration Release       
+        run: dotnet build ./projects/StructBeaver/StructBeaver.sln --no-restore --configuration Release       
 
       - name: Run unit tests
-        run: dotnet test projects/StructBeaver/StructBeaver.UnitTests/StructBeaver.UnitTests.csproj --no-build --configuration Release --verbosity normal    
+        run: dotnet test ./projects/StructBeaver/StructBeaver.Tests/StructBeaver.Tests.csproj --no-build --configuration Release --verbosity normal    
