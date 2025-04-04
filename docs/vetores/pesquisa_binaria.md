@@ -4,11 +4,11 @@ comments: true
 
 ---
 
-# **Pesquisa Binária**
+# **Pesquisa binária**
 
-A pesquisa binária é um algoritmo de busca baseado na estratégia de dividir e conquistar. Ele é aplicado a vetores e listas ordenadas, reduzindo pela metade a área de busca a cada iteração até encontrar o elemento desejado. 
+A pesquisa binária é um algoritmo de pesquisa baseado na estratégia de dividir e conquistar. Ele é aplicado a vetores e listas ordenadas, reduzindo pela metade a área de pesquisa a cada iteração até encontrar o elemento desejado. 
 
-Sua eficiência se destaca em relação à pesquisa linear, pois evita a necessidade de examinar todos os elementos do vetor, tornando a busca significativamente mais rápida.
+Sua eficiência se destaca em relação à pesquisa linear, pois evita a necessidade de examinar todos os elementos do vetor, tornando a pesquisa significativamente mais rápida.
 
 O algoritmo segue os seguintes passos:
 

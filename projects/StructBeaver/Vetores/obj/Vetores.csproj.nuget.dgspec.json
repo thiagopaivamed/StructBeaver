@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Vetores\\Vetores.csproj": {}
+    "C:\\Users\\Thiago\\desktop\\structbeaver\\projects\\StructBeaver\\Vetores\\Vetores.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Vetores\\Vetores.csproj": {
+    "C:\\Users\\Thiago\\desktop\\structbeaver\\projects\\StructBeaver\\Vetores\\Vetores.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Vetores\\Vetores.csproj",
+        "projectUniqueName": "C:\\Users\\Thiago\\desktop\\structbeaver\\projects\\StructBeaver\\Vetores\\Vetores.csproj",
         "projectName": "Vetores",
-        "projectPath": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Vetores\\Vetores.csproj",
+        "projectPath": "C:\\Users\\Thiago\\desktop\\structbeaver\\projects\\StructBeaver\\Vetores\\Vetores.csproj",
         "packagesPath": "C:\\Users\\Thiago\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Vetores\\obj\\",
+        "outputPath": "C:\\Users\\Thiago\\desktop\\structbeaver\\projects\\StructBeaver\\Vetores\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

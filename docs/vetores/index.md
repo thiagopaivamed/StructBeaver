@@ -21,6 +21,6 @@ Vamos entender como podemos usar vetores (arrays).
 
 [1.1 Formas de uso](../vetores/uso-basico.md)
 
-[1.2 Pesquisa Simples](../vetores/pesquisa_simples.md)
+[1.2 Pesquisa simples](../vetores/pesquisa_simples.md)
 
-[1.3 Pesquisa Binária](../vetores/pesquisa_binaria.md)
+[1.3 Pesquisa binária](../vetores/pesquisa_binaria.md)
