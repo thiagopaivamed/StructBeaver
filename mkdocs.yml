@@ -5,6 +5,7 @@ theme:
   name: material
   custom_dir: overrides
   features:
+   - search
    - search.suggest
    - search.highlight
    - navigation.instant
@@ -49,9 +50,11 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 
 plugins:
+ - search
  - glightbox:
        touchNavigation: true
        loop: false
@@ -65,3 +68,6 @@ plugins:
        background: white
        shadow: true
        manual: false
+
+extra_css:
+  - assets/styles.css

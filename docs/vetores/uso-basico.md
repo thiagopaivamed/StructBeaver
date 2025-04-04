@@ -10,32 +10,31 @@ comments: true
 
 Vetores são estruturas de dados que armazenam uma sequência de elementos, todos do mesmo tipo. Esses elementos podem ser números, strings, objetos, ou até mesmo outros vetores.
 
-
 Em programação, os vetores são frequentemente chamados de arrays (ou listas, dependendo da linguagem). Eles são uma forma eficaz de organizar dados para facilitar o acesso, manipulação e processamento.
 
 ![Vetores](vetores.assets/vetores.png)
 
 ```csharp
 
-int[] vetor = { 9, 2, 5, 1, 0, 7, 10, 3, 8, 7 };
+int[] vetor = { 3, 1, 2, 7, 10, 4, 8, 6, 12, 15 }; 
 
 ```
 
 ## **Operações em vetores**
 
-Para realizar operações em vetores, é necessário acessarmos seus índices. Vamos ver como isso funciona na prática.
+Para manipular vetores, precisamos acessar seus índices. Vamos ver como isso funciona na prática.
 
 ### **Acessando seus elementos**
 
-Para o acesso de valores, é necessário utilizar os índices dos vetores. O índice vai de 0 até o tamanho total do vetor -1 (n - 1). Se tentarmos acessar a posição 20 por exemplo, teremos a exceção **IndexOutOfRangeException**.
+Para acessar valores em um vetor, utilizamos seus índices, que variam de `0` até `n - 1` (onde n é o tamanho do vetor). Se tentarmos acessar a posição 20, por exemplo, ocorrerá a exceção **IndexOutOfRangeException**.
 
 ```csharp
 
- int[] vetor = { 9, 2, 5, 1, 0, 7, 10, 3, 8, 7 }; 
+ int[] vetor = { 3, 1, 2, 7, 10, 4, 8, 6, 12, 15 }; 
  
- Console.Writeline(vetor[2]); // 3     
+ Console.WriteLine(vetor[5]); // 4     
 
- Console.Writeline(vetor[20]); // Index out of range 
+ Console.WriteLine(vetor[20]); // Index out of range 
 
 ```
 
@@ -45,18 +44,18 @@ Para o acesso de valores, é necessário utilizar os índices dos vetores. O ín
 
 ### **Adição de elementos**
 
-Para a adição de elementos, vamos criar um novo vetor. A quantidade de elementos desse novo vetor será o tamanho do vetor anterior mais a quantidade de novo elementos.
+Para adicionar elementos, criaremos um novo vetor. O tamanho desse novo vetor será igual ao tamanho do vetor original somado à quantidade de novos elementos.
 
 ```csharp
 
-int[] vetorAnterior = { 9, 2, 5, 1, 0, 7, 10, 3, 8, 7 }; 
-int novoElemento = 15;
+int[] vetorAnterior = { 3, 1, 2, 7, 10, 4, 8, 6, 12, 15 };  
+int novoElemento = 29;
 
 int[] vetorNovo = new int[vetorAnterior.Length + 1];
 
 ```
 
-Após criarmos o novo vetor com o tamanho extra, basta inserir os elementos lá e depois atualizar o vetor anterior.
+Após criar o novo vetor com o tamanho expandido, basta inserir os elementos nele e, em seguida, atualizar o vetor original.
 
 ```csharp
 
@@ -68,7 +67,6 @@ vetorAnterior = vetorNovo;
 
 ```
 
-
 !!! warning "Cuidado com o índice"
 
-    Cuidado para não acessar um posição além do tamanho do vetor e causar a exceção **IndexOufOfRange**.
+    Cuidado para não acessar uma posição além do tamanho do vetor. Isso resultará na exceção **IndexOufOfRange**.

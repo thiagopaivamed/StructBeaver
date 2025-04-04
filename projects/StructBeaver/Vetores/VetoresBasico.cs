@@ -28,9 +28,26 @@
             return -1;
         }
 
-        public bool PesquisaBinaria(int[] vetor, int valorProcurado, int inicio, int fim)
+        public int PesquisaBinaria(int[] vetor, int elementoProcurado)
         {
-            return false;
+            int inicio = 0;
+            int fim = vetor.Length - 1;
+            int meio = 0;
+
+            while(inicio <= fim)
+            {
+                meio = (inicio + fim) / 2;
+
+                if (vetor[meio] == elementoProcurado)
+                    return meio;
+
+                else if (vetor[meio] < elementoProcurado)
+                    inicio = meio + 1;
+                else
+                    fim = meio - 1;
+            }
+
+            return -1;
         }
 
     }

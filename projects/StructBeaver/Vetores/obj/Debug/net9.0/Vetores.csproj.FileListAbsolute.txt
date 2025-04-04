@@ -9,3 +9,4 @@ C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\obj\Debug\net
 C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\obj\Debug\net9.0\refint\Vetores.dll
 C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\obj\Debug\net9.0\Vetores.pdb
 C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\obj\Debug\net9.0\ref\Vetores.dll
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Vetores\obj\Debug\net9.0\Vetores.sourcelink.json

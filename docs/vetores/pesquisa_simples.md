@@ -4,24 +4,31 @@ comments: true
 
 ---
 
-
 # **Pesquisa simples (sequencial)**
 
+Quando for necessário procurar dados em um vetor, é possível fazer uma pesquisa sequencial. Esse método percorre o vetor elemento por elemento, verificando se o valor atual corresponde ao valor procurado. Se houver uma correspondência, o índice do elemento é retornado imediatamente.
 
-Quando for necessário procurar dados em um vetor, é possível fazer uma pesquisa sequencial. Essa pesquisa consiste em executar um loop nesse vetor, passando por cada elemento dele e verificando se o atual elemento é o elemento procurado. Caso seja, retorna-se o índice daquele elemento.
+O algoritmo segue os seguintes passos:
 
-No exemplo abaixo, passamos por todos os índices do vetor procura o elemento 10. Caso não seja encontrado, será retornado -1.
+1. Determine o tamanho do vetor `T`.
 
-```csharp
+2. Percorra o vetor do índice inicial `I` até `T - 1`.
 
-int[] vetor = { 3, 1, 2, 7, 10, 4, 8, 6, 12, 15 };
-int elementoProcurado = 10;
+3. Se o elemento no índice atual for igual ao valor procurado, retorne esse índice.
 
-int indiceElementoProcurado = PesquisaSimples(vetor, elementoProcurado);
+4. Se o elemento não for encontrado, retorne `-1`.
 
-Console.Writeline("Resultado da pesquisa - {0}", indiceElementoProcurado);
+=== "Iteração 1"
 
-```
+    ![](vetores.assets/pesquisasimples01.png)
+
+=== "Iteração 2"
+
+    ![](vetores.assets/pesquisasimples02.png)
+
+=== "Iteração 3"
+
+    ![](vetores.assets/pesquisasimples03.png)
 
 ```csharp
 
@@ -38,5 +45,13 @@ Console.Writeline("Resultado da pesquisa - {0}", indiceElementoProcurado);
 
 ```
 
+```csharp
 
-![Pesquisa simples](vetores.assets/pesquisasimples.png)
+int[] vetor = { 3, 1, 2, 7, 10, 4, 8, 6, 12, 15 };
+int elementoProcurado = 2;
+
+int indiceElementoProcurado = PesquisaSimples(vetor, elementoProcurado);
+
+Console.WriteLine($"O elemento {elementoProcurado} foi encontrado na posição {indiceElementoProcurado} no vetor.");
+
+```
