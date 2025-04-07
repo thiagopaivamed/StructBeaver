@@ -42,6 +42,7 @@ nav:
   - 2. Recursividade:
     - recursividade/index.md
     - 2.1 Funções recursivas: recursividade/funcoes-recursivas.md
+    - 2.2 Sequência de Fibonacci: recursividade/fibonacci.md
 
 markdown_extensions:
   - admonition

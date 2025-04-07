@@ -26,7 +26,7 @@ namespace StructBeaver.Tests
 
             int indiceElementoProcurado = _vetoresBasico.PesquisaSimples(vetor, elementoProcurado);
 
-            Assert.True(indiceElementoProcurado != -1);
+            Assert.True(indiceElementoProcurado is not -1);
 
             Console.WriteLine($"O elemento {elementoProcurado} foi encontrado na posicao {indiceElementoProcurado} no vetor.");
         }
@@ -39,7 +39,7 @@ namespace StructBeaver.Tests
 
             int indiceElementoProcurado = _vetoresBasico.PesquisaSimples(vetor, elementoProcurado);
 
-            Assert.False(indiceElementoProcurado != -1);
+            Assert.False(indiceElementoProcurado is not -1);
 
             Console.WriteLine($"O elemento {elementoProcurado} não foi encontrado no vetor.");
         }
@@ -52,7 +52,7 @@ namespace StructBeaver.Tests
 
             int indiceElementoProcurado = _vetoresBasico.PesquisaBinaria(vetor, elementoProcurado);
 
-            Assert.True(indiceElementoProcurado != -1);
+            Assert.True(indiceElementoProcurado is not -1);
             Console.WriteLine($"O elemento {elementoProcurado} foi encontrado na posicao {indiceElementoProcurado} no vetor.");
         }
 
@@ -64,7 +64,7 @@ namespace StructBeaver.Tests
 
             int indiceElementoProcurado = _vetoresBasico.PesquisaBinaria(vetor, elementoProcurado);
 
-            Assert.False(indiceElementoProcurado != -1);
+            Assert.False(indiceElementoProcurado is not -1);
 
             Console.WriteLine($"O elemento {elementoProcurado} não foi encontrado no vetor.");
         }

@@ -17,6 +17,8 @@ Essa brincadeira é uma metáfora perfeita para recursão. Assim como Beatriz fo
 A partir daí, todo o processo começa a se desfazer:
 cada chamada da função vai sendo resolvida, uma por uma, como se estivéssemos fechando as caixas de volta, até tudo estar completo.
 
-Vamos entender mais sobre recursividade.
+Vários algoritmos importates utilizam recursão, tornando fundamental compreendermos como ela funciona.
 
 [2.1 Funções recursivas](../recursividade/funcoes-recursivas.md)
+
+[2.2 Sequência de Fibonacci](../recursividade/fibonacci.md)
