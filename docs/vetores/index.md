@@ -5,7 +5,7 @@ comments: true
 ---
 
 
-# **Introdução a vetores**
+# **Introdução à vetores**
 
 ![Vetores](vetores.assets/aeroporto.jpeg)
 

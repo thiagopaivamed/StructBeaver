@@ -43,6 +43,11 @@ nav:
     - recursividade/index.md
     - 2.1 Funções recursivas: recursividade/funcoes-recursivas.md
     - 2.2 Sequência de Fibonacci: recursividade/fibonacci.md
+  - 3. Notação Big O: 
+    - notacaoBigO/index.md
+    - 3.1 Como calcular o tempo de execução: notacaoBigO/calculo-tempo-execucao.md
+    - 3.2 Revisitando algoritmos: notacaoBigO/revisitando-algoritmos.md
+
 
 markdown_extensions:
   - admonition

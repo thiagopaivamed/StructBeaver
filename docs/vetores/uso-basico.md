@@ -40,7 +40,7 @@ Para acessar valores em um vetor, utilizamos seus índices, que variam de `0` at
 
 !!! note "Adição de elementos"
 
-    Não é possível adicionar elementos em um vetor de tamanho fixo. Seria necessário cria outro vetor, copiar os elementos do primeiro para o segundo e então adicionar os novos elementos.
+    Não é possível adicionar elementos em um vetor de tamanho fixo. Seria necessário criar outro vetor, copiar os elementos do primeiro para o segundo e então adicionar os novos elementos.
 
 ### **Adição de elementos**
 

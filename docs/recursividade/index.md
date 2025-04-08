@@ -2,11 +2,11 @@
 comments: true
 ---
 
-# **Introdução a recursividade**
+# **Introdução à recursividade**
 
 ![Recursividade](recursividade.assets/recursividade.png)
 
-Hoje é o aniversário de Beatriz. Muito animada, ela decidiu comemorar com uma festa, chamando suas amigas. Sabrina, uma de suas amigas, resolveu fazer uma brincadeira com o presente que preparou especialmente para ela. 
+Hoje é o aniversário de Beatriz. Muito animada, ela decidiu comemorar com uma festa, chamando suas amigas. Sabrina, uma de suas amigas, resolveu fazer uma brincadeira com o presente que preparou especialmente para ela.
 
 Assim que chegou a festa, Sabrina entregou a Beatriz um presente cuidadosamente embrulhadado com papel de aniversário. Ao rasgar o embrulho, Beatriz encontrou uma caixa. Ao abri-la, havia outra caixa dentro. E dentro dela, mais uma. E assim por diante.
 

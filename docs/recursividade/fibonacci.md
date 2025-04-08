@@ -4,7 +4,7 @@ comments: true
 
 ---
 
-# Sequência de Fibonacci
+# **Sequência de Fibonacci**
 
 Um dos problemas conhecidos quando se fala em recursão é a sequência de Fibonacci. Trata-se de uma série de números inteiros que normalmente começa em zero e um, em que cada número seguinte é a soma dos dois anteriores. Essa sequência aparece com frequência em diversos fenômenos da natureza.
 
