@@ -1,7 +1,0 @@
----
-
-comments: true
-
----
-
-# **Revisitando algoritmos**

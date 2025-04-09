@@ -21,5 +21,3 @@ Assim como escolher a melhor avenida pode significar a diferença entre um traje
 Compreender seu funcionamento é essencial para que possamos escolher a abordagem mais adequada nas mais variadas situações.
 
 [3.1 Como calcular o tempo de execução](../notacaoBigO/calculo-tempo-execucao.md)
-
-[3.2 Revisitando algoritmos](../notacaoBigO/revisitando-algoritmos.md)
