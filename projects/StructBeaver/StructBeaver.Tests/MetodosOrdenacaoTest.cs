@@ -9,16 +9,32 @@ namespace StructBeaver.Tests
         public MetodosOrdenacaoTest()
             => _metodosOrdenacao = new MetodosOrdenacao();
 
-        [Fact]  
+        [Fact]
         public void BubbleSort_Deve_Retornar_Vetor_Ordenado()
         {
-            int[] vetorDesordenado = [ 3, 7, 5, 9, 4, 1 ];
+            int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
 
             int[] vetorOrdenado = _metodosOrdenacao.BubbleSort(vetorDesordenado);
-            
-            for(int indice = 0; indice < vetorOrdenado.Length - 1; indice++)            
+
+            MostrarVetorOrdenado(vetorOrdenado);
+        }
+
+        [Fact]
+        public void SelectionSort_Deve_Retornar_Vetor_Ordenado()
+        {
+            int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
+
+            int[] vetorOrdenado = _metodosOrdenacao.SelectionSort(vetorDesordenado);
+
+            MostrarVetorOrdenado(vetorOrdenado);
+        }
+
+
+        private void MostrarVetorOrdenado(int[] vetorOrdenado)
+        {
+            for (int indice = 0; indice < vetorOrdenado.Length - 1; indice++)
                 Assert.True(vetorOrdenado[indice] <= vetorOrdenado[indice + 1]);
-            
+
             Console.WriteLine($"O vetor ordenado é: {string.Join(", ", vetorOrdenado)}.");
         }
 

@@ -6,23 +6,52 @@
         {
             int quantidadeElementos = vetor.Length;
 
-            for (int indice = 0; indice < quantidadeElementos - 1; indice++)
+            for (int indiceAtual = 0; indiceAtual < quantidadeElementos - 1; indiceAtual++)
             {
-                for (int indiceAux = 0; indiceAux < quantidadeElementos - indice - 1; indiceAux++)
+                for (int proximoIndice = 0; proximoIndice < quantidadeElementos - indiceAtual - 1; proximoIndice++)
                 {
-                    if (vetor[indiceAux] > vetor[indiceAux + 1])
-                        Swap(vetor, indiceAux);
+                    if (vetor[proximoIndice] > vetor[proximoIndice + 1])
+                        Swap(vetor, proximoIndice);
                 }
             }
 
             return vetor;
         }
 
-        private void Swap(int[] vetorDesordenado, int indice)
+        private void Swap(int[] vetorDesordenado, int indiceAtual)
         {
-            int auxiliar = vetorDesordenado[indice];
-            vetorDesordenado[indice] = vetorDesordenado[indice + 1];
-            vetorDesordenado[indice + 1] = auxiliar;
+            int valorTemporario = vetorDesordenado[indiceAtual];
+            vetorDesordenado[indiceAtual] = vetorDesordenado[indiceAtual + 1];
+            vetorDesordenado[indiceAtual + 1] = valorTemporario;
+        }
+
+        public int[] SelectionSort(int[] vetor)
+        {
+            int indiceMenorValor;
+            int quantidadeElementos = vetor.Length;
+
+            for(int indiceAtual = 0; indiceAtual < quantidadeElementos - 1; indiceAtual++)
+            {
+                indiceMenorValor = indiceAtual;
+
+                for(int proximoIndice = indiceAtual + 1; proximoIndice < quantidadeElementos; proximoIndice++)
+                {
+                    if (vetor[proximoIndice] < vetor[indiceMenorValor])
+                        indiceMenorValor = proximoIndice;
+                }
+
+                if (vetor[indiceAtual] != vetor[indiceMenorValor])
+                    Swap(vetor, indiceAtual, indiceMenorValor);
+            }
+
+            return vetor;
+        }
+
+        private void Swap(int[] vetorDesordenado, int indiceAtual, int indiceMenorValor)
+        {
+            int valorTemporario = vetorDesordenado[indiceAtual];
+            vetorDesordenado[indiceAtual] = vetorDesordenado[indiceMenorValor];
+            vetorDesordenado[indiceMenorValor] = valorTemporario;
         }
     }
 }
