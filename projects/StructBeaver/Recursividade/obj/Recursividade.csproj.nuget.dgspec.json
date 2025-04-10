@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Thiago\\desktop\\structbeaver\\projects\\StructBeaver\\Recursividade\\Recursividade.csproj": {}
+    "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Recursividade\\Recursividade.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Thiago\\desktop\\structbeaver\\projects\\StructBeaver\\Recursividade\\Recursividade.csproj": {
+    "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Recursividade\\Recursividade.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Thiago\\desktop\\structbeaver\\projects\\StructBeaver\\Recursividade\\Recursividade.csproj",
+        "projectUniqueName": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Recursividade\\Recursividade.csproj",
         "projectName": "Recursividade",
-        "projectPath": "C:\\Users\\Thiago\\desktop\\structbeaver\\projects\\StructBeaver\\Recursividade\\Recursividade.csproj",
+        "projectPath": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Recursividade\\Recursividade.csproj",
         "packagesPath": "C:\\Users\\Thiago\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Thiago\\desktop\\structbeaver\\projects\\StructBeaver\\Recursividade\\obj\\",
+        "outputPath": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Recursividade\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

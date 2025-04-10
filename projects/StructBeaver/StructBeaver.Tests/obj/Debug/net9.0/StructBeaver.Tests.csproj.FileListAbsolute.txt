@@ -103,3 +103,5 @@ C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver.Tests\ob
 C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver.Tests\obj\Debug\net9.0\StructBeaver.Tests.sourcelink.json
 C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver.Tests\bin\Debug\net9.0\Recursividade.dll
 C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver.Tests\bin\Debug\net9.0\Recursividade.pdb
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver.Tests\bin\Debug\net9.0\Ordenacao.dll
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver.Tests\bin\Debug\net9.0\Ordenacao.pdb

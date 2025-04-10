@@ -1,0 +1,12 @@
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Ordenacao\bin\Debug\net9.0\Ordenacao.deps.json
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Ordenacao\bin\Debug\net9.0\Ordenacao.dll
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Ordenacao\bin\Debug\net9.0\Ordenacao.pdb
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Ordenacao\obj\Debug\net9.0\Ordenacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Ordenacao\obj\Debug\net9.0\Ordenacao.AssemblyInfoInputs.cache
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Ordenacao\obj\Debug\net9.0\Ordenacao.AssemblyInfo.cs
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Ordenacao\obj\Debug\net9.0\Ordenacao.csproj.CoreCompileInputs.cache
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Ordenacao\obj\Debug\net9.0\Ordenacao.sourcelink.json
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Ordenacao\obj\Debug\net9.0\Ordenacao.dll
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Ordenacao\obj\Debug\net9.0\refint\Ordenacao.dll
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Ordenacao\obj\Debug\net9.0\Ordenacao.pdb
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\Ordenacao\obj\Debug\net9.0\ref\Ordenacao.dll

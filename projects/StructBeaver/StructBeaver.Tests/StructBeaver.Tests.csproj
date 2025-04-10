@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Ordenacao\Ordenacao.csproj" />
     <ProjectReference Include="..\Recursividade\Recursividade.csproj" />
     <ProjectReference Include="..\Vetores\Vetores.csproj" />
   </ItemGroup>
