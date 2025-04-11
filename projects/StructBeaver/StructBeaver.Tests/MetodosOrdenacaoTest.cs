@@ -20,6 +20,17 @@ namespace StructBeaver.Tests
         }
 
         [Fact]
+        public void BubbleSortRecursivo_Deve_Retornar_Vetor_Ordenado()
+        {
+            int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
+            int quantidadeElementos = vetorDesordenado.Length;
+
+            int[] vetorOrdenado = _metodosOrdenacao.BubbleSortRecursivo(vetorDesordenado, quantidadeElementos);
+
+            MostrarVetorOrdenado(vetorOrdenado);
+        }
+
+        [Fact]
         public void SelectionSort_Deve_Retornar_Vetor_Ordenado()
         {
             int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
@@ -29,6 +40,26 @@ namespace StructBeaver.Tests
             MostrarVetorOrdenado(vetorOrdenado);
         }
 
+        [Fact]
+        public void SelectionSortRecursivo_Deve_Retornar_Vetor_Ordenado()
+        {
+            int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
+            int quantidadeElementos = vetorDesordenado.Length;
+
+            int[] vetorOrdenado = _metodosOrdenacao.SelectionSortRecursivo(vetorDesordenado, quantidadeElementos);
+
+            MostrarVetorOrdenado(vetorOrdenado);
+        }
+
+        [Fact]
+        public void InsertionSort_Deve_Retornar_Vetor_Ordenado()
+        {
+            int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
+
+            int[] vetorOrdenado = _metodosOrdenacao.InsertionSort(vetorDesordenado);
+
+            MostrarVetorOrdenado(vetorOrdenado);
+        }
 
         private void MostrarVetorOrdenado(int[] vetorOrdenado)
         {
