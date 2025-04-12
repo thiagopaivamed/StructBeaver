@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver.tests\\metodosordenacaotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|solutionrelative:structbeaver.tests\\metodosordenacaotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver.tests\\vetorestest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|solutionrelative:structbeaver.tests\\vetorestest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA21B0BC-4A16-412A-AE16-A79894894A49}|Ordenacao\\Ordenacao.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\ordenacao\\metodosordenacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA21B0BC-4A16-412A-AE16-A79894894A49}|Ordenacao\\Ordenacao.csproj|solutionrelative:ordenacao\\metodosordenacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DCEADFE-8F17-40E1-90EB-37B561E7BD6C}|Vetores\\Vetores.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\vetores\\vetoresbasico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DCEADFE-8F17-40E1-90EB-37B561E7BD6C}|Vetores\\Vetores.csproj|solutionrelative:vetores\\vetoresbasico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MetodosOrdenacaoTest.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\MetodosOrdenacaoTest.cs",
-              "RelativeDocumentMoniker": "StructBeaver.Tests\\MetodosOrdenacaoTest.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\MetodosOrdenacaoTest.cs",
-              "RelativeToolTip": "StructBeaver.Tests\\MetodosOrdenacaoTest.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA1wBsAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "VetoresBasico.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Vetores\\VetoresBasico.cs",
+              "RelativeDocumentMoniker": "Vetores\\VetoresBasico.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Vetores\\VetoresBasico.cs",
+              "RelativeToolTip": "Vetores\\VetoresBasico.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAswD8AAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T23:28:53.824Z",
+              "WhenOpened": "2025-04-11T20:46:32.466Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MetodosOrdenacao.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Ordenacao\\MetodosOrdenacao.cs",
-              "RelativeDocumentMoniker": "Ordenacao\\MetodosOrdenacao.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Ordenacao\\MetodosOrdenacao.cs",
-              "RelativeToolTip": "Ordenacao\\MetodosOrdenacao.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwB8AAAAXAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "VetoresTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\VetoresTest.cs",
+              "RelativeDocumentMoniker": "StructBeaver.Tests\\VetoresTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\VetoresTest.cs",
+              "RelativeToolTip": "StructBeaver.Tests\\VetoresTest.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAADwv3kAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T22:39:10.62Z",
+              "WhenOpened": "2025-04-11T20:46:32.486Z",
               "EditorCaption": ""
             }
           ]

@@ -62,7 +62,7 @@ public int PesquisaBinaria(int[] vetor, int elementoProcurado)
 
 ```csharp
 
-int[] vetor = { 1, 3, 7, 8, 10, 14, 18, 26, 32, 45 };
+int[] vetor = [ 1, 3, 7, 8, 10, 14, 18, 26, 32, 45 ];
 int elementoProcurado = 26;
 
 int indiceElementoProcurado = PesquisaBinaria(vetor, elementoProcurado);

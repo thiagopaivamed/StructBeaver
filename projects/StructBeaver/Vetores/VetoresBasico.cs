@@ -28,6 +28,17 @@
             return -1;
         }
 
+        public int PesquisaSimplesRecursiva(int[] vetor, int elementoProcurado, int indice)
+        {
+            if (indice >= vetor.Length)
+                return -1;
+
+            if (vetor[indice] == elementoProcurado)
+                return indice;
+
+            return PesquisaSimplesRecursiva(vetor, elementoProcurado, indice + 1);
+        }
+
         public int PesquisaBinaria(int[] vetor, int elementoProcurado)
         {
             int inicio = 0;
@@ -48,6 +59,23 @@
             }
 
             return -1;
+        }
+
+        public int PesquisaBinariaRecursiva(int[] vetor, int elementoProcurado, int inicio, int fim)
+        {          
+
+            if (inicio > fim)
+                return -1;
+
+            int meio = (inicio + fim) / 2;
+
+            if (vetor[meio] == elementoProcurado)
+                return meio;
+
+            if (vetor[meio] < elementoProcurado)
+                return PesquisaBinariaRecursiva(vetor, elementoProcurado, meio + 1, fim);
+
+            return PesquisaBinariaRecursiva(vetor, elementoProcurado, inicio, meio - 1);
         }
 
     }

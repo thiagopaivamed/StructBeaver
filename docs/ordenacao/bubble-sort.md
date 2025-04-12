@@ -70,7 +70,7 @@ private void Swap(int[] vetorDesordenado, int indice)
 
 ```csharp
 
-int[] vetorDesordenado = { 3, 7, 5, 9, 4, 1 };
+int[] vetorDesordenado = [ 3, 7, 5, 9, 4, 1 ];
 
 int[] vetorOrdenado = _metodosOrdenacao.BubbleSort(vetorDesordenado);
 

@@ -47,7 +47,7 @@ O algoritmo segue os seguintes passos:
 
 ```csharp
 
-int[] vetor = { 3, 1, 2, 7, 10, 4, 8, 6, 12, 15 };
+int[] vetor = [ 3, 1, 2, 7, 10, 4, 8, 6, 12, 15 ];
 int elementoProcurado = 2;
 
 int indiceElementoProcurado = PesquisaSimples(vetor, elementoProcurado);

@@ -61,6 +61,16 @@ namespace StructBeaver.Tests
             MostrarVetorOrdenado(vetorOrdenado);
         }
 
+        [Fact]
+        public void QuickSort_Deve_Retornar_Vetor_Ordenado()
+        {
+            int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
+
+            int[] vetorOrdenado = _metodosOrdenacao.QuickSort(vetorDesordenado, 0, vetorDesordenado.Length - 1);
+
+            MostrarVetorOrdenado(vetorOrdenado);
+        }
+
         private void MostrarVetorOrdenado(int[] vetorOrdenado)
         {
             for (int indice = 0; indice < vetorOrdenado.Length - 1; indice++)

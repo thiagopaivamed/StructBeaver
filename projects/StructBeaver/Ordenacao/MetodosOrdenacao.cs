@@ -107,5 +107,42 @@
 
             return vetor;
         }
+        public int[] QuickSort(int[] vetor, int esquerda, int direita)
+        {
+            if (esquerda < direita)
+            {
+                int pivo = Particionemento(vetor, esquerda, direita);
+                QuickSort(vetor, esquerda, pivo - 1);
+                QuickSort(vetor, pivo + 1, direita);
+            }
+
+            return vetor;
+        }
+
+        private int Particionemento(int[] vetor, int esquerda, int direita)
+        {
+            int pivo = vetor[esquerda];
+            int indicePivo = esquerda;
+
+            for (int i = esquerda + 1; i <= direita; i++)
+            {
+                if (vetor[i] < pivo)
+                {
+                    indicePivo++;
+                    SwapQuickSort(vetor, i, indicePivo);
+                }
+            }
+
+            SwapQuickSort(vetor, esquerda, indicePivo); 
+
+            return indicePivo;
+        }
+
+        private void SwapQuickSort(int[] vetorDesordenado, int esquerda, int direita)
+        {
+            int temp = vetorDesordenado[esquerda];
+            vetorDesordenado[esquerda] = vetorDesordenado[direita];
+            vetorDesordenado[direita] = temp;
+        }
     }
 }

@@ -79,6 +79,6 @@ O algoritmo de inserção funciona da seguinte maneira:
 
 ```
 
-=== "Selection Sort 1"
+=== "Insertion Sort"
 
     ![](ordenacao.assets/insertionsort.png)
