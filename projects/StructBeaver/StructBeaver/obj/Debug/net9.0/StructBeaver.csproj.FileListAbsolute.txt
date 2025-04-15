@@ -1,0 +1,12 @@
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver\bin\Debug\net9.0\StructBeaver.deps.json
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver\bin\Debug\net9.0\StructBeaver.dll
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver\bin\Debug\net9.0\StructBeaver.pdb
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver\obj\Debug\net9.0\StructBeaver.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver\obj\Debug\net9.0\StructBeaver.AssemblyInfoInputs.cache
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver\obj\Debug\net9.0\StructBeaver.AssemblyInfo.cs
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver\obj\Debug\net9.0\StructBeaver.csproj.CoreCompileInputs.cache
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver\obj\Debug\net9.0\StructBeaver.sourcelink.json
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver\obj\Debug\net9.0\StructBeaver.dll
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver\obj\Debug\net9.0\refint\StructBeaver.dll
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver\obj\Debug\net9.0\StructBeaver.pdb
+C:\Users\Thiago\Desktop\StructBeaver\projects\StructBeaver\StructBeaver\obj\Debug\net9.0\ref\StructBeaver.dll

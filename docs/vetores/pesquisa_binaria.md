@@ -10,7 +10,9 @@ A pesquisa binária é um algoritmo de pesquisa baseado na estratégia de dividi
 
 Sua eficiência se destaca em relação à pesquisa linear, pois evita a necessidade de examinar todos os elementos do vetor, tornando a pesquisa significativamente mais rápida.
 
-O algoritmo segue os seguintes passos:
+# **Algoritmo**
+
+O algoritmo da pesquisa binária segue os seguintes passos:
 
 1. Crie uma iteração (loop) que execute enquanto o índice inicial `I` seja menor ou igual ao indice final `F`
 
@@ -24,38 +26,35 @@ O algoritmo segue os seguintes passos:
 
 4. Repita os passos 2 e 3 até encontrar o elemento ou até que o índice inicial seja maior que o índice final.  
 
-Se o valor **não estiver no vetor**, retorne `-1`.  
+5. Se o valor **não estiver no vetor**, retorne `-1`.  
 
-=== "Iteração 1"
-
-    ![](vetores.assets/pesquisabinaria01.png)
-
-=== "Iteração 2"
-
-    ![](vetores.assets/pesquisabinaria02.png)
+# **Implementação**
 
 ```csharp
 
-public int PesquisaBinaria(int[] vetor, int elementoProcurado)
+public class PesquisaBinaria
 {
-    int inicio = 0;
-    int fim = vetor.Length - 1;
-    int meio = 0;
-
-    while(inicio <= fim)
+    public int ExecutarPesquisaBinaria(int[] vetor, int elementoProcurado)
     {
-        meio = (inicio + fim) / 2;
+        int inicio = 0;
+        int fim = vetor.Length - 1;
+        int meio = 0;
 
-        if (vetor[meio] == elementoProcurado)
-            return meio;
+        while (inicio <= fim)
+        {
+            meio = (inicio + fim) / 2;
 
-        else if (vetor[meio] < elementoProcurado)
-            inicio = meio + 1;
-        else
-            fim = meio - 1;
-    }
+            if (vetor[meio] == elementoProcurado)
+                return meio;
 
-    return -1;
+            else if (vetor[meio] < elementoProcurado)
+                inicio = meio + 1;
+            else
+                fim = meio - 1;
+        }
+
+        return -1;
+    }    
 }
 
 ```
@@ -65,8 +64,16 @@ public int PesquisaBinaria(int[] vetor, int elementoProcurado)
 int[] vetor = [ 1, 3, 7, 8, 10, 14, 18, 26, 32, 45 ];
 int elementoProcurado = 26;
 
-int indiceElementoProcurado = PesquisaBinaria(vetor, elementoProcurado);
+int indiceElementoProcurado = PesquisaBinaria.ExecutarPesquisaBinaria(vetor, elementoProcurado);
 
 Console.WriteLine($"O elemento {elementoProcurado} foi encontrado na posição {indiceElementoProcurado} no vetor.");
 
 ```
+
+=== "Iteração 1"
+
+    ![](vetores.assets/pesquisabinaria01.png)
+
+=== "Iteração 2"
+
+    ![](vetores.assets/pesquisabinaria02.png)

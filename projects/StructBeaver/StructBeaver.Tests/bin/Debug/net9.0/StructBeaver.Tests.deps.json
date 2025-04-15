@@ -9,9 +9,7 @@
       "StructBeaver.Tests/1.0.0": {
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "17.12.0",
-          "Ordenacao": "1.0.0",
-          "Recursividade": "1.0.0",
-          "Vetores": "1.0.0",
+          "StructBeaver": "1.0.0",
           "coverlet.collector": "6.0.2",
           "xunit": "2.9.2",
           "xunit.runner.visualstudio": "2.8.2"
@@ -343,25 +341,9 @@
         }
       },
       "xunit.runner.visualstudio/2.8.2": {},
-      "Ordenacao/1.0.0": {
+      "StructBeaver/1.0.0": {
         "runtime": {
-          "Ordenacao.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Recursividade/1.0.0": {
-        "runtime": {
-          "Recursividade.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Vetores/1.0.0": {
-        "runtime": {
-          "Vetores.dll": {
+          "StructBeaver.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -480,17 +462,7 @@
       "path": "xunit.runner.visualstudio/2.8.2",
       "hashPath": "xunit.runner.visualstudio.2.8.2.nupkg.sha512"
     },
-    "Ordenacao/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Recursividade/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Vetores/1.0.0": {
+    "StructBeaver/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

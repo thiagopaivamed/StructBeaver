@@ -34,8 +34,8 @@ Sua performance do algoritmo pode ser resumida da seguinte forma:
 
 | Caso         | Complexidade |
 |--------------|--------------|
-| Melhor caso  | O(n log n)         |
-| Caso médio   | O(n log n)        |
+| Melhor caso  | O(n log n)   |
+| Caso médio   | O(n log n)   |
 | Pior caso    | O(n²)        |
 
 !!! tip "Uso no dia-a-dia"
@@ -46,51 +46,53 @@ Sua performance do algoritmo pode ser resumida da seguinte forma:
 
 ```csharp
 
-public int[] QuickSort(int[] vetor, int esquerda, int direita)
-{
-    if (esquerda < direita)
-    {
-        int pivo = Particionemento(vetor, esquerda, direita);
-        QuickSort(vetor, esquerda, pivo - 1);
-        QuickSort(vetor, pivo + 1, direita);
-    }
+ public class QuickSort
+ {
+     public int[] Sort(int[] vetor, int esquerda, int direita)
+     {
+         if (esquerda < direita)
+         {
+             int pivo = Particionemento(vetor, esquerda, direita);
+             Sort(vetor, esquerda, pivo - 1);
+             Sort(vetor, pivo + 1, direita);
+         }
 
-    return vetor;
-}
+         return vetor;
+     }
 
-private int Particionemento(int[] vetor, int esquerda, int direita)
-{
-    int pivo = vetor[esquerda];
-    int indicePivo = esquerda;
+     private int Particionemento(int[] vetor, int esquerda, int direita)
+     {
+         int pivo = vetor[esquerda];
+         int indicePivo = esquerda;
 
-    for (int i = esquerda + 1; i <= direita; i++)
-    {
-        if (vetor[i] < pivo)
-        {
-            indicePivo++;
-            Swap(vetor, i, indicePivo);
-        }
-    }
+         for (int i = esquerda + 1; i <= direita; i++)
+         {
+             if (vetor[i] < pivo)
+             {
+                 indicePivo++;
+                 Swap(vetor, i, indicePivo);
+             }
+         }
 
-    Swap(vetor, esquerda, indicePivo); 
+         Swap(vetor, esquerda, indicePivo);
 
-    return indicePivo;
-}
+         return indicePivo;
+     }
 
-private void Swap(int[] vetorDesordenado, int esquerda, int direita)
-{
-    int temp = vetorDesordenado[esquerda];
-    vetorDesordenado[esquerda] = vetorDesordenado[direita];
-    vetorDesordenado[direita] = temp;
-}
-
+     private void Swap(int[] vetorDesordenado, int esquerda, int direita)
+     {
+         int temp = vetorDesordenado[esquerda];
+         vetorDesordenado[esquerda] = vetorDesordenado[direita];
+         vetorDesordenado[direita] = temp;
+     }
+ }
 ```
 
 ```csharp
 
 int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
 
-int[] vetorOrdenado = _metodosOrdenacao.QuickSort(vetorDesordenado, 0, vetorDesordenado.Length - 1);
+int[] vetorOrdenado = QuickSort.Sort(vetorDesordenado, 0, vetorDesordenado.Length - 1);
 
 Console.WriteLine($"O vetor ordenado é: {string.Join(", ", vetorOrdenado)}.");
 

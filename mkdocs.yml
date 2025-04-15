@@ -52,6 +52,7 @@ nav:
     - 4.2 Ordenação usando o método de seleção (Selection Sort): ordenacao/selection-sort.md
     - 4.3 Ordenação usando o método de inserção (Insertion Sort): ordenacao/insertion-sort.md
     - 4.4 Ordenação usando o método de ordenação rápida (Quick Sort): ordenacao/quick-sort.md
+    - 4.5 Ordenação usando o Merge Sort: ordenacao/merge-sort.md
 
 
 markdown_extensions:

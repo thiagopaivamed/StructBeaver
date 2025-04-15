@@ -77,6 +77,5 @@
 
             return PesquisaBinariaRecursiva(vetor, elementoProcurado, inicio, meio - 1);
         }
-
     }
 }

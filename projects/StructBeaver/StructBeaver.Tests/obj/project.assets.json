@@ -412,34 +412,14 @@
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "Ordenacao/1.0.0": {
+      "StructBeaver/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "compile": {
-          "bin/placeholder/Ordenacao.dll": {}
+          "bin/placeholder/StructBeaver.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Ordenacao.dll": {}
-        }
-      },
-      "Recursividade/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/Recursividade.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Recursividade.dll": {}
-        }
-      },
-      "Vetores/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/Vetores.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Vetores.dll": {}
+          "bin/placeholder/StructBeaver.dll": {}
         }
       }
     }
@@ -963,28 +943,16 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "Ordenacao/1.0.0": {
+    "StructBeaver/1.0.0": {
       "type": "project",
-      "path": "../Ordenacao/Ordenacao.csproj",
-      "msbuildProject": "../Ordenacao/Ordenacao.csproj"
-    },
-    "Recursividade/1.0.0": {
-      "type": "project",
-      "path": "../Recursividade/Recursividade.csproj",
-      "msbuildProject": "../Recursividade/Recursividade.csproj"
-    },
-    "Vetores/1.0.0": {
-      "type": "project",
-      "path": "../Vetores/Vetores.csproj",
-      "msbuildProject": "../Vetores/Vetores.csproj"
+      "path": "../StructBeaver/StructBeaver.csproj",
+      "msbuildProject": "../StructBeaver/StructBeaver.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "Microsoft.NET.Test.Sdk >= 17.12.0",
-      "Ordenacao >= 1.0.0",
-      "Recursividade >= 1.0.0",
-      "Vetores >= 1.0.0",
+      "StructBeaver >= 1.0.0",
       "coverlet.collector >= 6.0.2",
       "xunit >= 2.9.2",
       "xunit.runner.visualstudio >= 2.8.2"
@@ -1024,14 +992,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Ordenacao\\Ordenacao.csproj": {
-              "projectPath": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Ordenacao\\Ordenacao.csproj"
-            },
-            "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Recursividade\\Recursividade.csproj": {
-              "projectPath": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Recursividade\\Recursividade.csproj"
-            },
-            "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Vetores\\Vetores.csproj": {
-              "projectPath": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\Vetores\\Vetores.csproj"
+            "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\StructBeaver.csproj": {
+              "projectPath": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\StructBeaver.csproj"
             }
           }
         }

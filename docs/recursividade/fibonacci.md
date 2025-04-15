@@ -14,14 +14,26 @@ Vamos analisar como calcular o n-ésimo elemento dessa sequência utilizando rec
 
 ```csharp
 
-public int Fibonacci(int numero)
+public class Fibonacci
 {
-    if (numero < 2)
-        return numero;
+    public int CalcularFibonacci(int numeroSequencia)
+    {
+        if (numeroSequencia < 2)
+            return numeroSequencia;
 
-    else
-        return Fibonacci(numero - 1) + Fibonacci(numero - 2);
+        return CalcularFibonacci(numeroSequencia - 1) + CalcularFibonacci(numeroSequencia - 2);
+    }
 }
+
+```
+
+```csharp
+
+int numeroSequencia = 4;
+
+int fibonacci = Fibonacci.CalcularFibonacci(numeroSequencia);
+
+Console.WriteLine($"O {numeroSequencia}° termo da sequência de fibonacci é {fibonacci}.");
 
 ```
 

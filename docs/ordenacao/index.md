@@ -26,8 +26,12 @@ Essas questões, na verdade, são comuns para qualquer um que lide com organiza�
 
 A partir da história de Cíntia, percebemos como algo simples como ordenar uma lista pode se tornar um desafio interessante, especialmente quando buscamos eficiência, clareza e organização.
 
-[4.1 Ordenação usando o método da bolha (Bubble sort)](../ordenacao/bubble-sort.md)
+[4.1 Ordenação usando o método da bolha (Bubble Sort)](../ordenacao/bubble-sort.md)
 
-[4.2 Ordenação usando o método de seleção (Selection sort)](../ordenacao/selection-sort.md)
+[4.2 Ordenação usando o método de seleção (Selection Sort)](../ordenacao/selection-sort.md)
 
-[4.3 Ordenação usando o método de inserção (Insertion sort)](../ordenacao/insertion-sort.md)
+[4.3 Ordenação usando o método de inserção (Insertion Sort)](../ordenacao/insertion-sort.md)
+
+[4.4 Ordenação usando o método de ordenação rápida (Quick Sort)](../ordenacao/quick-sort.md)
+
+[4.5 Ordenação usando o Merge Sort](../ordenacao/merge-sort.md)

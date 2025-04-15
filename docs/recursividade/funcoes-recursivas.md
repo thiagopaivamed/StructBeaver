@@ -16,18 +16,30 @@ O código abaixo calcula o fatorial de um número. Vamos analisar como o mesmo f
 
 ```csharp
 
-public int Fatorial(int numero)
+public class Fatorial
 {
-    if (numero < 0)
-        return -1;
+    public int CalcularFatorial(int numero)
+    {
+        if (numero < 0)
+            return -1;
 
-    else if (numero == 0 || numero == 1)
-        return 1;
+        else if (numero is 0 or 1)
+            return 1;
 
-    else
-        return numero * Fatorial(numero - 1);
+        else
+            return numero * CalcularFatorial(numero - 1);
+    }
 }
 
+```
+
+```csharp
+
+int numero = 6;
+
+int fatorial = Fatorial.CalcularFatorial(numero);
+
+Console.WriteLine($"O fatorial de {numero} é {fatorial}.");
 
 ```
 
