@@ -22,3 +22,5 @@ Vários algoritmos importates utilizam recursão, tornando fundamental compreend
 [2.1 Funções recursivas](../recursividade/funcoes-recursivas.md)
 
 [2.2 Sequência de Fibonacci](../recursividade/fibonacci.md)
+
+[2.2 Exercícios recursividade](../recursividade/exercicios-recursividade.md)

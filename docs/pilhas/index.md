@@ -19,3 +19,5 @@ Vamos entender melhor com ela funciona.
 [5.1 Pilhas e suas operações](../pilhas/pilhas-operacoes.md)
 
 [5.2 Implementação padrão de pilhas usando C#](../pilhas/pilhas-c-sharp.md)
+
+[5.3 Exercícios pilhas](../pilhas/exercicios-pilhas.md)

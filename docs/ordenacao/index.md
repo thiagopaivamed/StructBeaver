@@ -35,3 +35,5 @@ A partir da história de Cíntia, percebemos como algo simples como ordenar uma 
 [4.4 Ordenação usando o método de ordenação rápida (Quick Sort)](../ordenacao/quick-sort.md)
 
 [4.5 Ordenação usando o Merge Sort](../ordenacao/merge-sort.md)
+
+[4.6 Exercícios ordenação](../ordenacao/exercicios-ordenacao.md)
