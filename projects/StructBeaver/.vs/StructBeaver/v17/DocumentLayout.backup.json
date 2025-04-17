@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "StructBeaver.Tests\\Pilhas\\PilhaCSharpTest.cs",
               "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Pilhas\\PilhaCSharpTest.cs",
               "RelativeToolTip": "StructBeaver.Tests\\Pilhas\\PilhaCSharpTest.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwEUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T01:06:54.966Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "StructBeaver\\Pilhas\\PilhaCSharp.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T00:54:23.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T00:54:23.109Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "StructBeaver.Tests\\Pilhas\\PilhaTest.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAowEMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T21:34:37.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T21:34:37.44Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "StructBeaver\\Pilhas\\Pilha.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAA3wC0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T20:52:22.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T20:52:22.016Z"
             }
           ]
         }
