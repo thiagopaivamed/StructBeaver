@@ -53,6 +53,10 @@ nav:
     - 4.3 Ordenação usando o método de inserção (Insertion Sort): ordenacao/insertion-sort.md
     - 4.4 Ordenação usando o método de ordenação rápida (Quick Sort): ordenacao/quick-sort.md
     - 4.5 Ordenação usando o Merge Sort: ordenacao/merge-sort.md
+  - 5. Pilhas:
+    - pilhas/index.md
+    - 5.1 Pilhas e suas operações: pilhas/pilhas-operacoes.md
+    - 5.2 Implementação padrão de pilhas usando C#: pilhas/pilhas-c-sharp.md
 
 
 markdown_extensions:
