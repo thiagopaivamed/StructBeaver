@@ -6,7 +6,7 @@ comments: true
 
 # **Exercícios**
 
-1. Crie um programa que receba uma palavra e verifique se ela é um palíndromo.
+1. Crie um programa que receba palavras e verifique se elas são palíndromos.
 
 2. Crie um programa que receba uma frase e uma palavra. Verifique se essa palavra está na frase recebida.
 
