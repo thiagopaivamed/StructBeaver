@@ -24,7 +24,7 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
         [Fact]
         public void PalindromoRecursivo_Deve_Retornar_False_Quando_Nao_For_Palindromo()
         {
-            string palavra = "arara";
+            string palavra = "aviao";
 
             bool ehPalindromo = _palindromoRecursivo.IsPalindromo(palavra, 0, palavra.Length - 1);
 

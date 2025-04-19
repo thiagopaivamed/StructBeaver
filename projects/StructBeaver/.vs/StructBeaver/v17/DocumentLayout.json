@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver.tests\\recursividade\\exercicios\\palindromorecursivotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|solutionrelative:structbeaver.tests\\recursividade\\exercicios\\palindromorecursivotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\recursividade\\exercicios\\digitosrecursivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\recursividade\\exercicios\\digitosrecursivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\recursividade\\exercicios\\palindromorecursivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\recursividade\\exercicios\\palindromorecursivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver.tests\\recursividade\\exercicios\\palindromorecursivotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|solutionrelative:structbeaver.tests\\recursividade\\exercicios\\palindromorecursivotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver.tests\\recursividade\\exercicios\\digitosrecursivotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,8 +62,7 @@
               "RelativeToolTip": "StructBeaver.Tests\\Recursividade\\Exercicios\\PesquisaBinariaRecursivaTest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T02:07:38.244Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-19T02:07:38.244Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "StructBeaver.Tests\\Recursividade\\Exercicios\\PesquisaSimplesRecursivaTest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T01:38:38.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-19T01:38:38.125Z"
             },
             {
               "$type": "Document",
@@ -88,25 +86,24 @@
               "RelativeToolTip": "StructBeaver.Tests\\Recursividade\\Exercicios\\DigitosRecursivoTest.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T02:02:08.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-19T02:02:08.481Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "PalindromoRecursivoTest.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Recursividade\\Exercicios\\PalindromoRecursivoTest.cs",
               "RelativeDocumentMoniker": "StructBeaver.Tests\\Recursividade\\Exercicios\\PalindromoRecursivoTest.cs",
               "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Recursividade\\Exercicios\\PalindromoRecursivoTest.cs",
               "RelativeToolTip": "StructBeaver.Tests\\Recursividade\\Exercicios\\PalindromoRecursivoTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwBUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-19T01:50:26.818Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PalindromoRecursivo.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Recursividade\\Exercicios\\PalindromoRecursivo.cs",
               "RelativeDocumentMoniker": "StructBeaver\\Recursividade\\Exercicios\\PalindromoRecursivo.cs",
@@ -114,8 +111,7 @@
               "RelativeToolTip": "StructBeaver\\Recursividade\\Exercicios\\PalindromoRecursivo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T01:46:58.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-19T01:46:58.156Z"
             },
             {
               "$type": "Document",
@@ -127,12 +123,11 @@
               "RelativeToolTip": "StructBeaver.Tests\\Recursividade\\Exercicios\\NumeroPrimeroTest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T01:35:12.373Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-19T01:35:12.373Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "NumeroPrimo.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Recursividade\\Exercicios\\NumeroPrimo.cs",
               "RelativeDocumentMoniker": "StructBeaver\\Recursividade\\Exercicios\\NumeroPrimo.cs",
@@ -140,12 +135,11 @@
               "RelativeToolTip": "StructBeaver\\Recursividade\\Exercicios\\NumeroPrimo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T01:27:41.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-19T01:27:41.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DigitosRecursivo.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Recursividade\\Exercicios\\DigitosRecursivo.cs",
               "RelativeDocumentMoniker": "StructBeaver\\Recursividade\\Exercicios\\DigitosRecursivo.cs",
