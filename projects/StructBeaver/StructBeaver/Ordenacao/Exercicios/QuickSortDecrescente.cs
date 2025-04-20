@@ -1,14 +1,14 @@
-﻿namespace StructBeaver.Ordenacao
+﻿namespace StructBeaver.Ordenacao.Exercicios
 {
-    public class QuickSort
+    public class QuickSortDecrescente
     {
-        public int[] Sort(int[] vetor, int esquerda, int direita)
+        public int[] Ordenar(int[] vetor, int esquerda, int direita)
         {
             if (esquerda < direita)
             {
                 int pivo = Particionemento(vetor, esquerda, direita);
-                Sort(vetor, esquerda, pivo - 1);
-                Sort(vetor, pivo + 1, direita);
+                Ordenar(vetor, esquerda, pivo - 1);
+                Ordenar(vetor, pivo + 1, direita);
             }
 
             return vetor;
@@ -21,7 +21,7 @@
 
             for (int i = esquerda + 1; i <= direita; i++)
             {
-                if (vetor[i] < pivo)
+                if (vetor[i] > pivo)
                 {
                     indicePivo = indicePivo + 1;
                     Swap(vetor, i, indicePivo);
@@ -35,9 +35,9 @@
 
         private void Swap(int[] vetorDesordenado, int esquerda, int direita)
         {
-            int valorTemporario = vetorDesordenado[esquerda];
+            int temp = vetorDesordenado[esquerda];
             vetorDesordenado[esquerda] = vetorDesordenado[direita];
-            vetorDesordenado[direita] = valorTemporario;
+            vetorDesordenado[direita] = temp;
         }
     }
 }

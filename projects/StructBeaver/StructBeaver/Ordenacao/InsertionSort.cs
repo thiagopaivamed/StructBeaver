@@ -6,6 +6,9 @@
         {
             int quantidadeElementos = vetor.Length;
 
+            if(quantidadeElementos <= 1)
+                return vetor;
+
             for (int indiceAtual = 1; indiceAtual < quantidadeElementos; indiceAtual++)
             {
                 int valorTemporario = vetor[indiceAtual];
