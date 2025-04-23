@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,28 +34,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PilhaInvertidaRecursiva.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Pilhas\\Exercicios\\PilhaInvertidaRecursiva.cs",
-              "RelativeDocumentMoniker": "StructBeaver\\Pilhas\\Exercicios\\PilhaInvertidaRecursiva.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Pilhas\\Exercicios\\PilhaInvertidaRecursiva.cs",
-              "RelativeToolTip": "StructBeaver\\Pilhas\\Exercicios\\PilhaInvertidaRecursiva.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T18:14:30.733Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "OrdenacaoPilhaTest.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Pilhas\\Exercicios\\OrdenacaoPilhaTest.cs",
               "RelativeDocumentMoniker": "StructBeaver.Tests\\Pilhas\\Exercicios\\OrdenacaoPilhaTest.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Pilhas\\Exercicios\\OrdenacaoPilhaTest.cs*",
-              "RelativeToolTip": "StructBeaver.Tests\\Pilhas\\Exercicios\\OrdenacaoPilhaTest.cs*",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAIwCAAAAATAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Pilhas\\Exercicios\\OrdenacaoPilhaTest.cs",
+              "RelativeToolTip": "StructBeaver.Tests\\Pilhas\\Exercicios\\OrdenacaoPilhaTest.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T18:10:09.969Z",
+              "WhenOpened": "2025-04-23T20:38:44.338Z",
               "EditorCaption": ""
             },
             {
@@ -66,9 +53,22 @@
               "RelativeDocumentMoniker": "StructBeaver\\Pilhas\\Exercicios\\OrdenacaoPilha.cs",
               "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Pilhas\\Exercicios\\OrdenacaoPilha.cs",
               "RelativeToolTip": "StructBeaver\\Pilhas\\Exercicios\\OrdenacaoPilha.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAgAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwDQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T17:59:34.469Z",
+              "WhenOpened": "2025-04-23T20:38:00.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PilhaInvertidaRecursiva.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Pilhas\\Exercicios\\PilhaInvertidaRecursiva.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Pilhas\\Exercicios\\PilhaInvertidaRecursiva.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Pilhas\\Exercicios\\PilhaInvertidaRecursiva.cs",
+              "RelativeToolTip": "StructBeaver\\Pilhas\\Exercicios\\PilhaInvertidaRecursiva.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T20:37:58.544Z",
               "EditorCaption": ""
             }
           ]
