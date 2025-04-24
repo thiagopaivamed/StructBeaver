@@ -3,6 +3,50 @@
   "WorkspaceRootPath": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver.tests\\filas\\exercicios\\ordenacaofilatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|solutionrelative:structbeaver.tests\\filas\\exercicios\\ordenacaofilatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\filas\\exercicios\\ordenacaofila.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\filas\\exercicios\\ordenacaofila.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver.tests\\filas\\exercicios\\rotacaofilatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|solutionrelative:structbeaver.tests\\filas\\exercicios\\rotacaofilatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\filas\\exercicios\\rotacaofila.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\filas\\exercicios\\rotacaofila.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver.tests\\filas\\exercicios\\mediavaloresfilatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|solutionrelative:structbeaver.tests\\filas\\exercicios\\mediavaloresfilatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\filas\\exercicios\\mediavaloresfila.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\filas\\exercicios\\mediavaloresfila.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\filas\\exercicios\\verificafilas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\filas\\exercicios\\verificafilas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver.tests\\filas\\exercicios\\verificafilastest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|solutionrelative:structbeaver.tests\\filas\\exercicios\\verificafilastest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver.tests\\filas\\exercicios\\copiafilatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|solutionrelative:structbeaver.tests\\filas\\exercicios\\copiafilatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\filas\\exercicios\\copiafila.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\filas\\exercicios\\copiafila.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\ordenacao\\mergesort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\ordenacao\\mergesort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\filas\\fila.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\filas\\fila.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +82,150 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrdenacaoFilaTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Filas\\Exercicios\\OrdenacaoFilaTest.cs",
+              "RelativeDocumentMoniker": "StructBeaver.Tests\\Filas\\Exercicios\\OrdenacaoFilaTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Filas\\Exercicios\\OrdenacaoFilaTest.cs",
+              "RelativeToolTip": "StructBeaver.Tests\\Filas\\Exercicios\\OrdenacaoFilaTest.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T17:50:30.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrdenacaoFila.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Filas\\Exercicios\\OrdenacaoFila.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Filas\\Exercicios\\OrdenacaoFila.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Filas\\Exercicios\\OrdenacaoFila.cs",
+              "RelativeToolTip": "StructBeaver\\Filas\\Exercicios\\OrdenacaoFila.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAgwFoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T17:44:45.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MediaValoresFila.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Filas\\Exercicios\\MediaValoresFila.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Filas\\Exercicios\\MediaValoresFila.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Filas\\Exercicios\\MediaValoresFila.cs",
+              "RelativeToolTip": "StructBeaver\\Filas\\Exercicios\\MediaValoresFila.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T17:26:58.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VerificaFilasTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Filas\\Exercicios\\VerificaFilasTest.cs",
+              "RelativeDocumentMoniker": "StructBeaver.Tests\\Filas\\Exercicios\\VerificaFilasTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Filas\\Exercicios\\VerificaFilasTest.cs",
+              "RelativeToolTip": "StructBeaver.Tests\\Filas\\Exercicios\\VerificaFilasTest.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCEAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T17:21:46.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VerificaFilas.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Filas\\Exercicios\\VerificaFilas.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Filas\\Exercicios\\VerificaFilas.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Filas\\Exercicios\\VerificaFilas.cs",
+              "RelativeToolTip": "StructBeaver\\Filas\\Exercicios\\VerificaFilas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T17:16:33.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CopiaFilaTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Filas\\Exercicios\\CopiaFilaTest.cs",
+              "RelativeDocumentMoniker": "StructBeaver.Tests\\Filas\\Exercicios\\CopiaFilaTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Filas\\Exercicios\\CopiaFilaTest.cs",
+              "RelativeToolTip": "StructBeaver.Tests\\Filas\\Exercicios\\CopiaFilaTest.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAswCcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T17:13:37.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CopiaFila.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Filas\\Exercicios\\CopiaFila.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Filas\\Exercicios\\CopiaFila.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Filas\\Exercicios\\CopiaFila.cs",
+              "RelativeToolTip": "StructBeaver\\Filas\\Exercicios\\CopiaFila.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T17:10:53.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MediaValoresFilaTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Filas\\Exercicios\\MediaValoresFilaTest.cs",
+              "RelativeDocumentMoniker": "StructBeaver.Tests\\Filas\\Exercicios\\MediaValoresFilaTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Filas\\Exercicios\\MediaValoresFilaTest.cs",
+              "RelativeToolTip": "StructBeaver.Tests\\Filas\\Exercicios\\MediaValoresFilaTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T17:29:00.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RotacaoFila.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Filas\\Exercicios\\RotacaoFila.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Filas\\Exercicios\\RotacaoFila.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Filas\\Exercicios\\RotacaoFila.cs",
+              "RelativeToolTip": "StructBeaver\\Filas\\Exercicios\\RotacaoFila.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T17:32:56.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "RotacaoFilaTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Filas\\Exercicios\\RotacaoFilaTest.cs",
+              "RelativeDocumentMoniker": "StructBeaver.Tests\\Filas\\Exercicios\\RotacaoFilaTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Filas\\Exercicios\\RotacaoFilaTest.cs",
+              "RelativeToolTip": "StructBeaver.Tests\\Filas\\Exercicios\\RotacaoFilaTest.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwCcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T17:37:28.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MergeSort.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Ordenacao\\MergeSort.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Ordenacao\\MergeSort.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Ordenacao\\MergeSort.cs",
+              "RelativeToolTip": "StructBeaver\\Ordenacao\\MergeSort.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAYwE0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T17:45:27.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "FilaCSharpTest.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Filas\\FilaCSharpTest.cs",
               "RelativeDocumentMoniker": "StructBeaver.Tests\\Filas\\FilaCSharpTest.cs",
@@ -46,12 +233,11 @@
               "RelativeToolTip": "StructBeaver.Tests\\Filas\\FilaCSharpTest.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAowD8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T01:41:00.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T01:41:00.252Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "FilaCSharp.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Filas\\FilaCSharp.cs",
               "RelativeDocumentMoniker": "StructBeaver\\Filas\\FilaCSharp.cs",
@@ -59,12 +245,24 @@
               "RelativeToolTip": "StructBeaver\\Filas\\FilaCSharp.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T01:35:42.689Z",
+              "WhenOpened": "2025-04-24T01:35:42.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Fila.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Filas\\Fila.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Filas\\Fila.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Filas\\Fila.cs",
+              "RelativeToolTip": "StructBeaver\\Filas\\Fila.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:52:21.09Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "FilaTest.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Filas\\FilaTest.cs",
               "RelativeDocumentMoniker": "StructBeaver.Tests\\Filas\\FilaTest.cs",
@@ -72,21 +270,7 @@
               "RelativeToolTip": "StructBeaver.Tests\\Filas\\FilaTest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T01:02:58.717Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Fila.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Filas\\Fila.cs",
-              "RelativeDocumentMoniker": "StructBeaver\\Filas\\Fila.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Filas\\Fila.cs",
-              "RelativeToolTip": "StructBeaver\\Filas\\Fila.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T00:52:21.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T01:02:58.717Z"
             }
           ]
         }
