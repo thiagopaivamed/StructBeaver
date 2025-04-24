@@ -20,4 +20,4 @@ Vamos entender melhor com ela funciona.
 
 [5.2 Implementação padrão de pilhas usando C#](../pilhas/pilhas-c-sharp.md)
 
-[5.3 Exercícios pilhas](../pilhas/exercicios-pilhas.md)
+[5.3 Exercícios de pilhas](../pilhas/exercicios-pilhas.md)

@@ -4,7 +4,7 @@ comments: true
 
 ---
 
-# **Exercícios pilhas**
+# **Exercícios de pilhas**
 
 (1) Crie um programa que copie os dados de um pilha para outra.
 
