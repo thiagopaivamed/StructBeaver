@@ -184,23 +184,22 @@ comments: true
 
     Console.WriteLine($"A fila rotacionada é ");
 
-    Console.WriteLine($"{fila.Peek}");
+    Console.WriteLine($"{fila.Peek()}");
     fila.Dequeue();
 
-    Console.WriteLine($"{fila.Peek}");
+    Console.WriteLine($"{fila.Peek()}");
     fila.Dequeue();
 
-    Console.WriteLine($"{fila.Peek}");
+    Console.WriteLine($"{fila.Peek()}");
     fila.Dequeue();
 
-    Console.WriteLine($"{fila.Peek}");
+    Console.WriteLine($"{fila.Peek()}");
     fila.Dequeue();
 
-    Console.WriteLine($"{fila.Peek}");
+    Console.WriteLine($"{fila.Peek()}");
     fila.Dequeue();
     
     ```
-
 
 (5) Dada uma fila, use o método Merge Sort para ordenar a mesma.
 

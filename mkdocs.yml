@@ -63,9 +63,15 @@ nav:
     - 5.3 Exercícios de pilhas: pilhas/exercicios-pilhas.md
   - 6. Filas:
     - filas/index.md
-    - 5.1 Filas e suas operações: filas/filas-operacoes.md
-    - 5.2 Implementação padrão de filas usando C#: filas/filas-c-sharp.md
-    - 5.3 Exercícios de filas: filas/exercicios-filas.md
+    - 6.1 Filas e suas operações: filas/filas-operacoes.md
+    - 6.2 Implementação padrão de filas usando C#: filas/filas-c-sharp.md
+    - 6.3 Exercícios de filas: filas/exercicios-filas.md
+  - 7. Listas:
+    - listas/index.md
+    - 7.1 Listas encadeadas e suas operações: listas/listas-encadeadas-operacoes.md
+    - 7.2 Listas duplamente encadeadas e suas operações: listas/listas-duplamente-encadeadas-operacoes.md
+    - 7.3 Listas circulares e suas operações: listas/listas-circulares-operacoes.md
+    - 7.4 Exercícios de listas: listas/exercicios-listas.md
 
 
 markdown_extensions:

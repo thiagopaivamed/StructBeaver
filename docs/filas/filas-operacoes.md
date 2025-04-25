@@ -32,75 +32,75 @@ Ao manter um contador atualizado na estrutura da fila, é possível obter seu ta
 
 ```csharp
 
-     public class Fila
+public class Fila
+{
+    private int[] itens;
+    private int inicio;
+    private int fim;
+    private int tamanho;
+    private const int capacidade = 10;
+
+    public Fila()
     {
-        private int[] itens;
-        private int inicio;
-        private int fim;
-        private int tamanho;
-        private const int capacidade = 10;
-
-        public Fila()
-        {
-            itens = new int[capacidade];
-            inicio = 0;
-            fim = 0;
-            tamanho = 0;
-        }
-
-        public void Enqueue(int item)
-        {
-            if (tamanho == capacidade)
-                throw new InvalidOperationException("Fila cheia.");
-
-            itens[fim] = item;
-            fim = fim + 1;
-            tamanho = tamanho + 1;
-        }
-
-        public int Dequeue()
-        {
-            if (IsEmpty())
-                throw new InvalidOperationException("Fila vazia.");
-
-            int item = itens[inicio];
-            inicio = inicio + 1;
-            tamanho = tamanho - 1;
-            return item;
-        }
-
-        public int Peek()
-        {
-            if (IsEmpty())
-                throw new InvalidOperationException("Fila vazia.");
-
-            return itens[inicio];
-        }
-
-        public bool IsEmpty() => tamanho == 0;
-
-        public int Size() => tamanho;
+        itens = new int[capacidade];
+        inicio = 0;
+        fim = 0;
+        tamanho = 0;
     }
+
+    public void Enqueue(int item)
+    {
+        if (tamanho == capacidade)
+            throw new InvalidOperationException("Fila cheia.");
+
+        itens[fim] = item;
+        fim = fim + 1;
+        tamanho = tamanho + 1;
+    }
+
+    public int Dequeue()
+    {
+        if (IsEmpty())
+            throw new InvalidOperationException("Fila vazia.");
+
+        int item = itens[inicio];
+        inicio = inicio + 1;
+        tamanho = tamanho - 1;
+        return item;
+    }
+
+    public int Peek()
+    {
+        if (IsEmpty())
+            throw new InvalidOperationException("Fila vazia.");
+
+        return itens[inicio];
+    }
+
+    public bool IsEmpty() => tamanho == 0;
+
+    public int Size() => tamanho;
+}
 
 ```
 
 ```csharp
 
-    Fila fila = new Fila();
+Fila fila = new Fila();
 
-    fila.Enqueue(10);
-    Console.WriteLine($"O valor {fila.Peek()} foi adicionado na fila.");
+fila.Enqueue(10);
+Console.WriteLine($"O valor {fila.Peek()} foi adicionado na fila.");
 
-    fila.Enqueue(20);
-    Console.WriteLine($"O valor {fila.Peek()} foi adicionado na fila.");
+fila.Enqueue(20);
+Console.WriteLine($"O valor {fila.Peek()} foi adicionado na fila.");
 
-    fila.Enqueue(30);
-    Console.WriteLine($"O valor {fila.Peek()} foi adicionado na fila.");
+fila.Enqueue(30);
+Console.WriteLine($"O valor {fila.Peek()} foi adicionado na fila.");
 
 
-    Console.WriteLine($"O valor {fila.Dequeue()} foi removido da fila.");
-    Console.WriteLine($"O valor {fila.Dequeue()} foi removido da fila.");
-    Console.WriteLine($"O valor {fila.Dequeue()} foi removido da fila.");
+Console.WriteLine($"O valor {fila.Dequeue()} foi removido da fila.");
+Console.WriteLine($"O valor {fila.Dequeue()} foi removido da fila.");
+Console.WriteLine($"O valor {fila.Dequeue()} foi removido da fila.");
 
 ```
 

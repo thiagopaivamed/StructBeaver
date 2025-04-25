@@ -34,19 +34,19 @@ public class PilhaCSharp
 
 ```csharp
 
-    PilhaCSharp pilha = new PilhaCSharp();
-    pilha.Push(10);
-    Console.WriteLine($"O elemento {pilha.Peek()} foi adicionado na pilha.");
+PilhaCSharp pilha = new PilhaCSharp();
+pilha.Push(10);
+Console.WriteLine($"O elemento {pilha.Peek()} foi adicionado na pilha.");
 
-    pilha.Push(15);
-    Console.WriteLine($"O elemento {pilha.Peek()} foi adicionado na pilha.");
+pilha.Push(15);
+Console.WriteLine($"O elemento {pilha.Peek()} foi adicionado na pilha.");
 
-    pilha.Push(20);
-    Console.WriteLine($"O elemento {pilha.Peek()} foi adicionado na pilha.");
-    
-    Console.WriteLine($"O elemento {pilha.Pop()} foi removido da pilha.");
-    Console.WriteLine($"O elemento {pilha.Pop()} foi removido da pilha.");
-    Console.WriteLine($"O elemento {pilha.Pop()} foi removido da pilha.");
+pilha.Push(20);
+Console.WriteLine($"O elemento {pilha.Peek()} foi adicionado na pilha.");
+
+Console.WriteLine($"O elemento {pilha.Pop()} foi removido da pilha.");
+Console.WriteLine($"O elemento {pilha.Pop()} foi removido da pilha.");
+Console.WriteLine($"O elemento {pilha.Pop()} foi removido da pilha.");
 
 ```
 

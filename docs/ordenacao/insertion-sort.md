@@ -74,11 +74,11 @@ Sua performance do algoritmo pode ser resumida da seguinte forma:
 
 ```csharp
 
-    int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
+int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
 
-    int[] vetorOrdenado = InsertionSort.Sort(vetorDesordenado);
+int[] vetorOrdenado = InsertionSort.Sort(vetorDesordenado);
 
-    Console.WriteLine($"O vetor ordenado é: {string.Join(", ", vetorOrdenado)}.");
+Console.WriteLine($"O vetor ordenado é: {string.Join(", ", vetorOrdenado)}.");
 
 ```
 

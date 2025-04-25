@@ -24,19 +24,19 @@ namespace StructBeaver.Tests.Filas.Exercicios
 
             Console.WriteLine($"A fila rotacionada é ");
             
-            Console.WriteLine($"{fila.Peek}");
+            Console.WriteLine($"{fila.Peek()}");
             Assert.Equal(3, fila.Dequeue());
 
-            Console.WriteLine($"{fila.Peek}");
+            Console.WriteLine($"{fila.Peek()}");
             Assert.Equal(4, fila.Dequeue());
 
-            Console.WriteLine($"{fila.Peek}");
+            Console.WriteLine($"{fila.Peek()}");
             Assert.Equal(5, fila.Dequeue());
 
-            Console.WriteLine($"{fila.Peek}");
+            Console.WriteLine($"{fila.Peek()}");
             Assert.Equal(1, fila.Dequeue());
 
-            Console.WriteLine($"{fila.Peek}");
+            Console.WriteLine($"{fila.Peek()}");
             Assert.Equal(2, fila.Dequeue());
         }
     }
