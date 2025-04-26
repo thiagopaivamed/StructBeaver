@@ -13,7 +13,7 @@ namespace StructBeaver.Tests.Listas
         [Fact]
         public void AdicionarInicio_Deve_Adicionar_No_Inicio()
         {
-            No no = _listaEncadeada.AdicionarInicio(10);
+            No? no = _listaEncadeada.AdicionarInicio(10);
 
             Assert.Equal(10, no.valor);
             Assert.Equal(1, _listaEncadeada.Size());
@@ -24,7 +24,7 @@ namespace StructBeaver.Tests.Listas
         [Fact]
         public void AdicionarFim_Deve_Adicionar_No_Fim()
         {
-            No no = _listaEncadeada.AdicionarFim(20);
+            No? no = _listaEncadeada.AdicionarFim(20);
 
             Assert.Equal(20, no.valor);
             Assert.Equal(1, _listaEncadeada.Size());
@@ -38,9 +38,9 @@ namespace StructBeaver.Tests.Listas
             _listaEncadeada.AdicionarInicio(5);
             _listaEncadeada.AdicionarInicio(10); 
 
-            No removido = _listaEncadeada.RemoverInicio();
+            No? removido = _listaEncadeada.RemoverInicio();
 
-            Assert.Equal(10, removido.valor);
+            Assert.Equal(10, removido!.valor);
             Assert.Equal(1, _listaEncadeada.Size());
 
             Console.WriteLine($"O nó com valor {removido.valor} foi removido.");
@@ -49,7 +49,7 @@ namespace StructBeaver.Tests.Listas
         [Fact]
         public void RemoverInicio_Em_Lista_Vazia_Deve_Retornar_Null()
         {     
-            No removido = _listaEncadeada.RemoverInicio();
+            No? removido = _listaEncadeada.RemoverInicio();
 
             Assert.Null(removido);
 
@@ -61,9 +61,9 @@ namespace StructBeaver.Tests.Listas
         {            
             _listaEncadeada.AdicionarInicio(42);
 
-            No removido = _listaEncadeada.RemoverFim();
+            No? removido = _listaEncadeada.RemoverFim();
 
-            Assert.Equal(42, removido.valor);
+            Assert.Equal(42, removido!.valor);
             Assert.True(_listaEncadeada.IsEmpty());
 
             Console.WriteLine($"O nó removido possui o valor {removido.valor}.");
@@ -76,9 +76,9 @@ namespace StructBeaver.Tests.Listas
             _listaEncadeada.AdicionarFim(2);
             _listaEncadeada.AdicionarFim(3);
 
-            No removido = _listaEncadeada.RemoverFim();
+            No? removido = _listaEncadeada.RemoverFim();
 
-            Assert.Equal(3, removido.valor);
+            Assert.Equal(3, removido!.valor);
             Assert.Equal(2, _listaEncadeada.Size());
 
             Console.WriteLine($"O nó removido possui o valor {removido.valor}.");
@@ -87,7 +87,7 @@ namespace StructBeaver.Tests.Listas
         [Fact]
         public void RemoverFim_Em_Lista_Vazia_Deve_Retornar_Null()
         {
-            No removido = _listaEncadeada.RemoverFim();
+            No? removido = _listaEncadeada.RemoverFim();
 
             Assert.Null(removido);
 
@@ -100,7 +100,7 @@ namespace StructBeaver.Tests.Listas
             _listaEncadeada.AdicionarInicio(7);
             _listaEncadeada.AdicionarFim(15);
 
-            No resultado = _listaEncadeada.Pesquisar(15);
+            No? resultado = _listaEncadeada.Pesquisar(15);
 
             Assert.NotNull(resultado);
             Assert.Equal(15, resultado.valor);
@@ -114,7 +114,7 @@ namespace StructBeaver.Tests.Listas
             _listaEncadeada.AdicionarInicio(7);
             _listaEncadeada.AdicionarFim(15);
 
-            No resultado = _listaEncadeada.Pesquisar(99);
+            No? resultado = _listaEncadeada.Pesquisar(99);
 
             Assert.Null(resultado);
 

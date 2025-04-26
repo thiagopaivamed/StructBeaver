@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StructBeaver.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ab833b4ae6691b80d151df1180e3546e55637d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e65a721935acdb4018cccbc56ac852051768d7f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("StructBeaver.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StructBeaver.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2,7 +2,7 @@
 {
     public class ListaEncadeada
     {
-        private No primeiroNo;
+        private No? primeiroNo;
 
         public ListaEncadeada()
             => primeiroNo = null;
@@ -36,7 +36,7 @@
             return novoNo;
         }
 
-        public No RemoverInicio()
+        public No? RemoverInicio()
         {
             if (primeiroNo is null)
                 return null;
@@ -47,7 +47,7 @@
             return noRemovido;
         }
 
-        public No RemoverFim()
+        public No? RemoverFim()
         {
             if (primeiroNo is null)
                 return null;
@@ -59,9 +59,9 @@
                 return noUnico;
             }
 
-            No noAtual = primeiroNo;
+            No? noAtual = primeiroNo;
 
-            while (noAtual.proximo.proximo is not null)
+            while (noAtual.proximo!.proximo is not null)
                 noAtual = noAtual.proximo;
 
             No noRemovido = noAtual.proximo;
@@ -69,7 +69,7 @@
             return noRemovido;
         }
 
-        public No RemoverNo(int posicao)
+        public No? RemoverNo(int posicao)
         {
             if (posicao < 0 || primeiroNo is null)
                 return null;
@@ -96,9 +96,9 @@
             return noRemovido;
         }
 
-        public No Pesquisar(int valor)
+        public No? Pesquisar(int valor)
         {
-            No noAtual = primeiroNo;
+            No? noAtual = primeiroNo;
 
             while (noAtual is not null)
             {
@@ -115,7 +115,7 @@
         {
             int quantidadeNos = 0;
 
-            No noAtual = primeiroNo;
+            No? noAtual = primeiroNo;
 
             while (noAtual is not null)
             {

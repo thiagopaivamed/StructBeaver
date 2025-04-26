@@ -47,7 +47,7 @@ Uma lista encadeada é formada por elementos chamados de nós. Por isso, o prime
 public class No
 {
     public int valor;
-    public No proximo;
+    public No? proximo;
 
     public No(int Valor)
     {
@@ -64,7 +64,7 @@ Agora que temos a estrutura dos nós definida, podemos começar a construir a no
 
 public class ListaEncadeada
 {
-    private No primeiroNo;
+    private No? primeiroNo;
 
     public ListaEncadeada()
         => primeiroNo = null;
@@ -98,7 +98,7 @@ public class ListaEncadeada
         return novoNo;
     }
 
-    public No RemoverInicio()
+    public No? RemoverInicio()
     {
         if (primeiroNo is null)
             return null;
@@ -109,7 +109,7 @@ public class ListaEncadeada
         return noRemovido;
     }
 
-    public No RemoverFim()
+    public No? RemoverFim()
     {
         if (primeiroNo is null)
             return null;
@@ -121,9 +121,9 @@ public class ListaEncadeada
             return noUnico;
         }
 
-        No noAtual = primeiroNo;
+        No? noAtual = primeiroNo;
 
-        while (noAtual.proximo.proximo is not null)
+        while (noAtual.proximo!.proximo is not null)
             noAtual = noAtual.proximo;
 
         No noRemovido = noAtual.proximo;
@@ -131,7 +131,7 @@ public class ListaEncadeada
         return noRemovido;
     }
 
-    public No RemoverNo(int posicao)
+    public No? RemoverNo(int posicao)
     {
         if (posicao < 0 || primeiroNo is null)
             return null;
@@ -158,9 +158,9 @@ public class ListaEncadeada
         return noRemovido;
     }
 
-    public No Pesquisar(int valor)
+    public No? Pesquisar(int valor)
     {
-        No noAtual = primeiroNo;
+        No? noAtual = primeiroNo;
 
         while (noAtual is not null)
         {
@@ -177,7 +177,7 @@ public class ListaEncadeada
     {
         int quantidadeNos = 0;
 
-        No noAtual = primeiroNo;
+        No? noAtual = primeiroNo;
 
         while (noAtual is not null)
         {
