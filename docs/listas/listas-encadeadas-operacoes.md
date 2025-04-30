@@ -36,7 +36,7 @@ Por outro lado, a remoção de um nó em uma posição específica ou no final d
 
 Como os elementos de uma lista encadeada não estão armazenados de forma contígua na memória, não é possível acessar diretamente um nó específico. Para encontrar um valor, é necessário percorrer a lista a partir do primeiro nó, um a um, até localizar o dado desejado ou atingir o final da lista.
 
-Portanto, a complexidade da operação de busca é `O(n)`, onde n representa o número de elementos da lista.
+Portanto, a complexidade da operação de busca é `O(n)`, onde `n` representa o número de elementos da lista.
 
 ## **Implementação**
 
@@ -214,10 +214,10 @@ Console.WriteLine($"O nó com valor {noRemovido.valor} foi removido.");
 
     ![](listas.assets/lista01.png)
 
-=== "Inserção de nós em uma lista"
+=== "Inserção de nós"
 
     ![](listas.assets/lista02.png)
 
-=== "Remoção de nós em uma lista"
+=== "Remoção de nós"
 
     ![](listas.assets/lista03.png)
