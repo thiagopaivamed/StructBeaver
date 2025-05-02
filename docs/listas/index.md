@@ -18,8 +18,12 @@ Vamos explorar mais a fundo como essas listas funcionam.
 
 [7.1 Listas encadeadas e suas operações](../listas/listas-encadeadas-operacoes.md)
 
-[7.2 Listas duplamente encadeadas e suas operações](../listas/listas-duplamente-encadeadas-operacoes.md)
+[7.2 Listas encadeadas padrão em C#](../listas/listas-encadeadas-operacoes-c-sharp.md)
 
-[7.3 Listas circulares e suas operações](../listas/listas-circulares-operacoes.md)
+[7.3 Listas duplamente encadeadas e suas operações](../listas/listas-duplamente-encadeadas-operacoes.md)
 
-[7.4 Exercícios de listas](../listas/exercicios-listas.md)
+[7.4 Listas duplamente encadeadas padrão em C#](../listas/listas-duplamente-encadeadas-operacoes-c-sharp.md)
+
+[7.5 Listas circulares duplamente encadeadas e suas operações](../listas/listas-circulares-duplamente-encadeadas.md)
+
+[7.6 Exercícios de listas](../listas/exercicios-listas.md)
