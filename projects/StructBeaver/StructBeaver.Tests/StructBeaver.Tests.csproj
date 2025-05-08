@@ -3,10 +3,9 @@
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
+        <Nullable>disable</Nullable>
         <IsPackable>false</IsPackable>
-
-        <NoWarn>8602</NoWarn>
+        <NoWarn>8632</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>

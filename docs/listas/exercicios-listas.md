@@ -10,7 +10,7 @@ comments: true
 
 (2) Dada uma lista encadeada, crie uma função recursiva para fazer a pesquisa de um valor.
 
-(3) Dadas duas listas encadeadas, implemente uma função recursiva que as mescle em uma única lista encadeada também ordenada.
+(3) Dadas duas listas encadeadas, implemente uma função recursiva que as mescle em uma única lista encadeada.
 
 (4) Dado uma lista encadeada, utilize a ordenação por inserção (insertion sort) para ordenar seus elementos.
 
@@ -28,7 +28,7 @@ comments: true
 
 (11) Dada uma lista circular, implemente uma função que percorra seus nós e retorne a quantidade total de elementos presentes na lista.
 
-(12) Crie uma lista circular para a simulação de um relógio de ponteiros (segundos, minutos, horas).
+(12) Dada uma lista circular, crie uma função para procurar recursivamente um elemento.
 
 (13) Dada uma lista circular, implemente uma função que percorra a lista e remova todos os nós cujo valor seja múltiplo de 5.
 

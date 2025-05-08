@@ -1,10 +1,10 @@
-﻿namespace StructBeaver.Listas
+﻿namespace StructBeaver.Listas.ListaEncadeada
 {
-    public class ListaEncadeadaCSharp
+    public class ListaEncadeadaPadrao
     {
         private List<int> numeros;
 
-        public ListaEncadeadaCSharp()
+        public ListaEncadeadaPadrao()
             => numeros = new List<int>();        
 
         public void Adicionar(int valor)
