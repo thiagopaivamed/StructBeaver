@@ -31,7 +31,6 @@ namespace StructBeaver.Tests.Filas.Exercicios
             bool filasSaoIguais = _verificaFilas.VerificarFilasPorOrdemValores(fila1, fila2);
 
             Assert.True(filasSaoIguais);
-            Console.WriteLine("As filas são iguais.");
         }
 
         [Fact]
@@ -55,9 +54,6 @@ namespace StructBeaver.Tests.Filas.Exercicios
             bool filasSaoIguais = _verificaFilas.VerificarFilasPorOrdemValores(fila1, fila2);
 
             Assert.False(filasSaoIguais);
-            Console.WriteLine("As filas não são iguais.");
         }
-
-
     }
 }

@@ -33,16 +33,6 @@ public class Fatorial
 
 ```
 
-```csharp
-
-int numero = 6;
-
-int fatorial = Fatorial.CalcularFatorial(numero);
-
-Console.WriteLine($"O fatorial de {numero} é {fatorial}.");
-
-```
-
  Se for utilizado um número válido (maior ou igual a 0), podemos perceber que o caso base da função recursiva retorna 1. Se utilizarmos o número 3, a função se chamará algumas vezes, decrementando o valor em 1 a cada chamada, até que a condição do `else if` seja satisfeita. A partir daí, os calculos começarão a ser feitos na ordem inversa, conforme as chamadas anteriores forem sendo resolvidas.
 
 ![Fatorial](recursividade.assets/fatorial.png)

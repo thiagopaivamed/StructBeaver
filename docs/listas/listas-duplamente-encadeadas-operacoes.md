@@ -12,111 +12,148 @@ Uma lista duplamente encadeada é uma estrutura de dados linear e dinâmica, com
 
 A inserção no início e no fim de uma lista duplamente encadeada possui complexidade `O(1)`, pois são mantidas referências separadas para o primeiro e o último nó da lista. Isso permite adicionar elementos diretamente nessas posições sem percorrer a estrutura. Já para inserir em uma posição intermediária, é necessário percorrer a lista até o ponto desejado, o que resulta em uma complexidade `O(n)`.
 
+| Caso         | Complexidade |
+|--------------|--------------|
+| Melhor caso  | O(1)         |
+| Caso médio   | O(n)         |
+| Pior caso    | O(n)         |
+
 ## **Remoção de nós**
 
 A remoção no início e no fim de uma lista duplamente encadeada possui complexidade `O(1)`, pois são mantidas referências diretas para o primeiro e o último nó, permitindo a exclusão imediata dessas posições. Já a remoção de um elemento no meio da lista exige um percurso até o nó desejado, resultando em uma complexidade `O(n)`.
+
+| Caso         | Complexidade |
+|--------------|--------------|
+| Melhor caso  | O(1)         |
+| Caso médio   | O(n)         |
+| Pior caso    | O(n)         |
 
 ## **Pesquisa de valores**
 
 Para encontrar um elemento em uma lista duplamente encadeada, é necessário percorrê-la a partir do início. Se o elemento estiver no primeiro nó, a busca terá complexidade `O(1)`. No pior caso, será necessário percorrer toda a lista, resultando em uma complexidade `O(n)`.
 
+| Caso         | Complexidade |
+|--------------|--------------|
+| Melhor caso  | O(1)         |
+| Caso médio   | O(n)         |
+| Pior caso    | O(n)         |
+
+!!! tip "Uso no dia-a-dia"
+
+    Listas duplamente encadeadas são amplamente utilizadas em diversos cenários, como o gerenciamento de processos em sistemas operacionais, a gestão de memória, sistemas de edição de texto e outras aplicações que exigem manipulação eficiente e bidirecional de dados.
+
+
 ## **Implementação**
+
+Note o novo atributo que referencia o nó anterior. Chamaremos essa estrutura de `NoDuplamenteEncadeado`.
 
 ```csharp
 
-public class ListaDuplamenteEncadeada
+public class NoDuplamenteEncadeado
 {
-    public class No
-    {
-        public int Valor;
-        public No? Proximo;
-        public No? Anterior;
+    public int Valor;
+    public NoDuplamenteEncadeado? Proximo;
+    public NoDuplamenteEncadeado? Anterior;
 
-        public No(int valor)
-        {
-            Valor = valor;
-            Proximo = null;
-            Anterior = null;
-        }
+    public NoDuplamenteEncadeado(int valor)
+    {
+        Valor = valor;
+        Proximo = null;
+        Anterior = null;
     }
+}
 
-    private No? primeiroNo;
-    private No? ultimoNo;
+```
 
-    public No AdicionarNoInicio(int valor)
+```csharp
+
+ppublic class ListaDuplamenteEncadeada
+{
+    public NoDuplamenteEncadeado PrimeiroNo;
+    public NoDuplamenteEncadeado UltimoNo;
+
+    public NoDuplamenteEncadeado? PegarPrimeiroNo() => PrimeiroNo;
+
+    public NoDuplamenteEncadeado? PegarUltimoNo() => UltimoNo;
+
+    public NoDuplamenteEncadeado AdicionarNoInicio(int valor)
     {
-        No novoNo = new No(valor);
+        NoDuplamenteEncadeado novoNo = new NoDuplamenteEncadeado(valor);
 
-        if (primeiroNo == null)
+        if (PrimeiroNo is null)
         {
             novoNo.Proximo = null;
             novoNo.Anterior = null;
 
-            primeiroNo = novoNo;
-            ultimoNo = novoNo;
+            PrimeiroNo = novoNo;
+            UltimoNo = novoNo;
         }
         else
         {
-            novoNo.Proximo = primeiroNo;
+            novoNo.Proximo = PrimeiroNo;
             novoNo.Anterior = null;
 
-            primeiroNo.Anterior = novoNo;
-            primeiroNo = novoNo;
+            PrimeiroNo.Anterior = novoNo;
+            PrimeiroNo = novoNo;
         }
 
         return novoNo;
     }
 
-    public No AdicionarNoFinal(int valor)
+    public NoDuplamenteEncadeado AdicionarNoFinal(int valor)
     {
-        No novoNo = new No(valor);
+        NoDuplamenteEncadeado novoNo = new NoDuplamenteEncadeado(valor);
 
-        if (ultimoNo == null)
+        if (UltimoNo is null)
         {
             novoNo.Proximo = null;
             novoNo.Anterior = null;
 
-            primeiroNo = novoNo;
-            ultimoNo = novoNo;
+            PrimeiroNo = novoNo;
+            UltimoNo = novoNo;
         }
         else
         {
-            novoNo.Anterior = ultimoNo;
+            novoNo.Anterior = UltimoNo;
             novoNo.Proximo = null;
 
-            ultimoNo.Proximo = novoNo;
-            ultimoNo = novoNo;
+            UltimoNo.Proximo = novoNo;
+            UltimoNo = novoNo;
         }
 
         return novoNo;
     }
 
-    public No? Remover(int valor)
+    public NoDuplamenteEncadeado Remover(int valor)
     {
-        No? noAtual = primeiroNo;
+        NoDuplamenteEncadeado noAtual = PrimeiroNo;
 
-        while (noAtual != null)
+        while (noAtual is not null)
         {
             if (noAtual.Valor == valor)
             {
-                if (noAtual == primeiroNo)
+                if (noAtual == PrimeiroNo)
                 {
-                    primeiroNo = primeiroNo.Proximo;
+                    PrimeiroNo = PrimeiroNo.Proximo;
 
-                    if (primeiroNo != null)
-                        primeiroNo.Anterior = null;
+                    if (PrimeiroNo is not null)
+                        PrimeiroNo.Anterior = null;
+                    
                     else
-                        ultimoNo = null;
+                        UltimoNo = null;
                 }
-                else if (noAtual == ultimoNo)
+
+                else if (noAtual == UltimoNo)
                 {
-                    ultimoNo = ultimoNo.Anterior;
+                    UltimoNo = UltimoNo.Anterior;
 
-                    if (ultimoNo != null)
-                        ultimoNo.Proximo = null;
+                    if (UltimoNo is not null)
+                        UltimoNo.Proximo = null;
+                    
                     else
-                        primeiroNo = null;
+                        PrimeiroNo = null;
                 }
+
                 else
                 {
                     noAtual.Anterior!.Proximo = noAtual.Proximo;
@@ -135,24 +172,6 @@ public class ListaDuplamenteEncadeada
         return null;
     }
 }
-
-```
-
-```csharp
-
-ListaDuplamenteEncadeada listaDuplamenteEncadeada = new ListaDuplamenteEncadeada();
-
-ListaDuplamenteEncadeada.No no1 = listaDuplamenteEncadeada.AdicionarNoInicio(8);
-Console.WriteLine($"O nó com valor {no1.valor} foi adicionado.");
-
-ListaDuplamenteEncadeada.No no2 = listaDuplamenteEncadeada.AdicionarNoInicio(21);
-Console.WriteLine($"O nó com valor {no2.valor} foi adicionado.");
-
-ListaDuplamenteEncadeada.No no3 = listaDuplamenteEncadeada.AdicionarNoInicio(14);
-Console.WriteLine($"O nó com valor {no3.valor} foi adicionado.");
-
-ListaDuplamenteEncadeada.No no4 = listaDuplamenteEncadeada.Remover(21);
-Console.WriteLine($"O nó com valor {no4.valor} foi removido.");
 
 ```
 

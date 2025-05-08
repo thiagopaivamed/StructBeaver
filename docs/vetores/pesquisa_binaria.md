@@ -59,17 +59,6 @@ public class PesquisaBinaria
 
 ```
 
-```csharp
-
-int[] vetor = [ 1, 3, 7, 8, 10, 14, 18, 26, 32, 45 ];
-int elementoProcurado = 26;
-
-int indiceElementoProcurado = PesquisaBinaria.ExecutarPesquisaBinaria(vetor, elementoProcurado);
-
-Console.WriteLine($"O elemento {elementoProcurado} foi encontrado na posição {indiceElementoProcurado} no vetor.");
-
-```
-
 === "Iteração 1"
 
     ![](vetores.assets/pesquisabinaria01.png)

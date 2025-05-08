@@ -18,8 +18,6 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
             int indiceElementoProcurado = _pesquisaSimplesRecursiva.ExecutarPesquisaSimplesRecursiva(vetor, elementoProcurado, 0);
 
             Assert.True(indiceElementoProcurado is not -1);
-
-            Console.WriteLine($"O elemento {elementoProcurado} foi encontrado na posicao {indiceElementoProcurado} no vetor.");
         }
 
         [Fact]
@@ -31,8 +29,6 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
             int indiceElementoProcurado = _pesquisaSimplesRecursiva.ExecutarPesquisaSimplesRecursiva(vetor, elementoProcurado, 0);
 
             Assert.True(indiceElementoProcurado is -1);
-
-            Console.WriteLine($"O elemento {elementoProcurado} não foi encontrado no vetor.");
         }
     }
 }

@@ -34,17 +34,6 @@ comments: true
 
     ```
 
-    ```csharp
-    
-    string palavra = "arara";
-
-    Padrimos palindromos = new Palindromos();
-    bool ehPalindromo = palindromos.IsPalindromo(palavra);
-
-    Console.WriteLine($"A palavra {palavra} {(ehPalindromo ? "é" : "não é")} um palíndromo.")
-    
-    ```
-
 (2) Crie um programa que receba uma frase e uma palavra. Verifique se essa palavra está na frase recebida.
 
 ??? abstract "Procurando palavras"
@@ -85,18 +74,6 @@ comments: true
 
     ```
 
-    ```csharp
-    
-    string texto = "O rato roeu a roupa do rei de Roma.";
-    string palavra = "roupa";
-
-    ProcuraPalavras procuraPalavras = new ProcuraPalavras();
-    bool palavraEstaNoTexto = procuraPalavras.PalavraEstaNoTexto(texto, palavra);
-    Console.WriteLine($"A palavra {palavra} {(palavraEstaNoTexto ? "está" : "não está")} no texto.")
-    
-    ```
-
-
 (3) Crie um programa que leia 10 números inteiros e armazene-os em um vetor. Após isso, inverta a ordem dos elementos do vetor e exiba o vetor invertido.
 
 ??? abstract "Invertendo vetores"
@@ -120,18 +97,6 @@ comments: true
         }
     }
 
-    ```
-
-    ```csharp
-
-    int[] vetor = [30, 1, 5, 77, 19, 32, 97, 36, 42, 66];
-
-    InverteVetor inveterVetor = new InverteVetor();
-    int[] vetorInvertido = inverteVetor.Inverter(vetor);
-
-    Console.WriteLine($"Vetor original: {string.Join(", ", vetor)}");
-
-    Console.WriteLine($"Vetor invertido: {string.Join(", ", vetorInvertido)}");
     ```
 
 (4) Crie um programa que leia 10 números inteiros e os armazene em um vetor. Em seguida, encontre e exiba o maior e o menor número do vetor.
@@ -158,24 +123,7 @@ comments: true
             return $"{maior} {menor}";
         }
 
-    ```
-
-    ```csharp
-
-    int[] vetor = [30, 1, 5, 77, 19, 32, 97, 36, 42, 66];
-    int maiorNumero;
-    int menorNumero;
-
-    MaiorMenorNumero maiorMenorNumero = new MaiorMenorNumero();
-    string[] quantidades = maiorMenorNumero.PegarMaiorMenor(vetor).Split(" ");
-    maiorNumero = int.Parse(quantidades[0]);
-    menorNumero = int.Parse(quantidades[1]);
-
-    Console.WriteLine($"Vetor original: {string.Join(", ", vetor)}");
-    Console.WriteLine($"Maior número: {maiorNumero}");
-    Console.WriteLine($"Menor número: {menorNumero}");
-
-    ```
+    ```   
 
 (5) Crie um programa que leia 10 números inteiros e os armazene em um vetor. O programa deve então contar quantos números são pares e quantos são ímpares no vetor e exibir essa informação.
 
@@ -201,22 +149,5 @@ comments: true
             return $"{pares} {impares}";
         }
     }
-
-    ```
-
-    ```csharp
-
-    int[] vetor = [30, 1, 5, 77, 19, 32, 97, 36, 42, 66];
-
-    int pares;
-    int impares;
-    ParesImpares paresImpares = new ParesImpares();
-    string[] quantidades = paresImpares.ContarParesImpares(vetor).Split(" ");
-    
-    pares = int.Parse(quantidades[0]);
-    impares = int.Parse(quantidades[1]);
-
-    Console.WriteLine($"Quantidade de pares - {pares}")
-    Console.WriteLine($"Quantidade de impares - {impares}")
 
     ```

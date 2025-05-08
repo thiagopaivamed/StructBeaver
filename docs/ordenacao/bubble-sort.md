@@ -16,7 +16,7 @@ O algoritmo Bubble Sort funciona da seguinte forma:
 
 2. Crie um laço externo que irá controlar o número de passadas pelo vetor — ele irá do primeiro elemento até o penúltimo.
 
-3. Dentro do laço externo, crie um laço interno que percorre o vetor do início até o último elemento não ordenado (ou seja, do início até `tamanho - i - 1`, onde `i` é o índice da iteração externa).
+3. Dentro do laço externo, crie um laço interno que percorre o vetor do início até o último elemento não ordenado (ou seja, do  início até `tamanho - i - 1`, onde `i` é o índice da iteração externa).
 
 4. Compare os elementos adjacentes: se o elemento atual for maior que o próximo, troque suas posições.
 
@@ -68,16 +68,6 @@ public class BubbleSort
         vetorDesordenado[indiceAtual + 1] = valorTemporario;
     }
 }
-
-```
-
-```csharp
-
-int[] vetorDesordenado = [ 3, 7, 5, 9, 4, 1 ];
-
-int[] vetorOrdenado = BubbleSort.Sort(vetorDesordenado);
-
-Console.WriteLine($"O vetor ordenado é: {string.Join(", ", vetorOrdenado)}.");
 
 ```
 

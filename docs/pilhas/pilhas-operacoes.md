@@ -12,17 +12,45 @@ Pilhas são estruturas de dados do tipo `LIFO (Last In, First Out)`, nas quais o
 
 Ao inserir dados em uma pilha, se ela estiver cheia, é necessário redimensionar seu tamanho para acomodar os novos elementos. Esse redimensionamento envolve a criação de um novo array e a cópia de todos os elementos existentes, resultando em uma complexidade de tempo `O(n)`. No entanto, quando há espaço disponível, a inserção é direta e ocorre em tempo constante, com complexidade `O(1)`.
 
+| Caso         | Complexidade |
+|--------------|--------------|
+| Melhor caso  | O(1)         |
+| Caso médio   | O(n)         |
+| Pior caso    | O(n)         |
+
 ## **Remoção de dados (pop)**
 
 A remoção de elementos em uma pilha ocorre sempre no topo, o que torna essa operação simples e direta, com complexidade de tempo constante, ou seja, `O(1)`.
+
+| Caso         | Complexidade |
+|--------------|--------------|
+| Melhor caso  | O(1)         |
+| Caso médio   | O(1)         |
+| Pior caso    | O(1)         |
 
 ## **Retornando o elemento do topo (peek)**
 
 Quando pegamos o elemento do topo da pilha, não é necessário percorrê-la, pois o elemento já está na posição correta, ou seja, no topo da estrutura. Isso resulta em uma operação de complexidade constante, `O(1)`.
 
+| Caso         | Complexidade |
+|--------------|--------------|
+| Melhor caso  | O(1)         |
+| Caso médio   | O(1)         |
+| Pior caso    | O(1)         |
+
 ## **Verificando se a pilha está vazia**
 
 A verificação de se a pilha está vazia é realizada por meio de uma simples comparação com o elemento do topo. Portanto, a operação possui complexidade `O(1)`.
+
+| Caso         | Complexidade |
+|--------------|--------------|
+| Melhor caso  | O(1)         |
+| Caso médio   | O(1)         |
+| Pior caso    | O(1)         |
+
+!!! tip "Uso no dia-a-dia"
+
+    A estrutura de pilha é comumente utilizada para armazenar o histórico de navegação em navegadores, ações realizadas em editores de texto (como desfazer e refazer), entre outros cenários em que é necessário manter o controle da ordem reversa das operações.
 
 ## **Implementação**
 
@@ -30,23 +58,23 @@ A verificação de se a pilha está vazia é realizada por meio de uma simples c
 
 public class Pilha
 {
-    private int[] itens;
-    private int topo;
-    private const int capacidade = 10;
+    private int[] Itens;
+    private int Topo;
+    private const int Capacidade = 10;
 
     public Pilha()
     {
-        itens = new int[capacidade];
-        topo = -1;
+        Itens = new int[Capacidade];
+        Topo = -1;
     }
 
     public void Push(int item)
     {
-        if (topo == itens.Length - 1)
+        if (Topo == Itens.Length - 1)
             Redimensionar();
 
-        topo = topo + 1;
-        itens[topo] = item;
+        Topo = Topo + 1;
+        Itens[Topo] = item;
     }
 
     public int Pop()
@@ -54,9 +82,9 @@ public class Pilha
         if (IsEmpty())
             throw new InvalidOperationException("A pilha está vazia.");
 
-        int item = itens[topo];
-        itens[topo] = default;
-        topo = topo - 1;
+        int item = Itens[Topo];
+        Itens[Topo] = default;
+        Topo = Topo - 1;
 
         return item;
     }
@@ -66,42 +94,24 @@ public class Pilha
         if (IsEmpty())
             throw new InvalidOperationException("A pilha está vazia.");
 
-        return itens[topo];
+        return Itens[Topo];
     }
 
-    public bool IsEmpty() => topo == -1;
+    public bool IsEmpty() => Topo == -1;
 
-    public int Tamanho() => topo + 1;
+    public int Tamanho() => Topo + 1;
 
     private void Redimensionar()
     {
-        int novaCapacidade = capacidade * 2;
+        int novaCapacidade = Capacidade * 2;
         int[] novosItens = new int[novaCapacidade];
 
-        for (int indice = 0; indice < itens.Length; indice++)
-            novosItens[indice] = itens[indice];
+        for (int indice = 0; indice < Itens.Length; indice++)
+            novosItens[indice] = Itens[indice];
 
-        itens = novosItens;
+        Itens = novosItens;
     }
 }
-
-```
-
-```csharp
-
-Pilha pilha = new Pilha();
-pilha.Push(10);
-Console.WriteLine($"O elemento {pilha.Peek()} foi adicionado na pilha.");
-
-pilha.Push(15);
-Console.WriteLine($"O elemento {pilha.Peek()} foi adicionado na pilha.");
-
-pilha.Push(20);
-Console.WriteLine($"O elemento {pilha.Peek()} foi adicionado na pilha.");
-
-Console.WriteLine($"O elemento {pilha.Pop()} foi removido da pilha.");
-Console.WriteLine($"O elemento {pilha.Pop()} foi removido da pilha.");
-Console.WriteLine($"O elemento {pilha.Pop()} foi removido da pilha.");
 
 ```
 

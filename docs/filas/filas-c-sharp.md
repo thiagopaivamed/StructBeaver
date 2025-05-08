@@ -12,46 +12,26 @@ A linguagem C# já fornece uma estrutura de fila pronta por meio da classe `Queu
 
 ```csharp
 
-public class FilaCSharp
+public class FilaPadrao
 {
-    private Queue<int> itens;
+    private Queue<int> Itens;
 
-    public FilaCSharp()
-        => itens = new Queue<int>();
+    public FilaPadrao()
+        => Itens = new Queue<int>();
 
     public void Enqueue(int item)
-        => itens.Enqueue(item);
+        => Itens.Enqueue(item);
 
     public int Dequeue()
-        => itens.Dequeue();
+        => Itens.Dequeue();
 
     public int Peek()
-        => itens.Peek();
+        => Itens.Peek();
 
-    public bool IsEmpty() => itens.Count == 0;
+    public bool IsEmpty() => Itens.Count == 0;
 
-    public int Size() => itens.Count;
+    public int Size() => Itens.Count;
 }
-
-```
-
-```csharp
-
-FilaCSharp fila = new FilaCSharp();
-
-fila.Enqueue(10);
-Console.WriteLine($"O valor {fila.Peek()} foi adicionado na fila.");
-
-fila.Enqueue(20);
-Console.WriteLine($"O valor {fila.Peek()} foi adicionado na fila.");
-
-fila.Enqueue(30);
-Console.WriteLine($"O valor {fila.Peek()} foi adicionado na fila.");
-
-
-Console.WriteLine($"O valor {fila.Dequeue()} foi removido da fila.");
-Console.WriteLine($"O valor {fila.Dequeue()} foi removido da fila.");
-Console.WriteLine($"O valor {fila.Dequeue()} foi removido da fila.");
 
 ```
 

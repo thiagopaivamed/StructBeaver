@@ -12,18 +12,18 @@ A linguagem C# disponibiliza uma estrutura de lista pronta por meio da classe `L
 
 ```csharp
 
-public class ListaEncadeadaCSharp
+public class ListaEncadeadaPadrao
 {
-    private List<int> numeros;
+    private List<int> Numeros;
 
-    public ListaEncadeadaCSharp()
-        => numeros = new List<int>();        
+    public ListaEncadeadaPadrao()
+        => Numeros = new List<int>();        
 
     public void Adicionar(int valor)
-        => numeros.Add(valor);
+        => Numeros.Add(valor);
 
     public bool Remover(int valor)
-        => numeros.Remove(valor);
+        => Numeros.Remove(valor);
 }
 
 ```

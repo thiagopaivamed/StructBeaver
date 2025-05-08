@@ -28,18 +28,6 @@ comments: true
 
     ```
 
-    ```csharp
-
-        int[] vetor = [3, 1, 2, 7, 10, 4, 8, 6, 12, 15];
-        int elementoProcurado = 2;
-
-        PesquisaSimplesRecursiva pesquisaSimplesRecursiva = new PesquisaSimplesRecursiva();
-        int indiceElementoProcurado = pesquisaSimplesRecursiva.ExecutarPesquisaSimplesRecursiva(vetor, elementoProcurado, 0);
-
-        Console.WriteLine($"O elemento {elementoProcurado} foi encontrado na posicao {indiceElementoProcurado} no vetor.");
-
-    ```
-
 (2) Crie um programa que receba um vetor de números inteiros e um número a ser procurado dentro desse vetor. Implemente uma função de pesquisa binária recursiva que percorra o vetor e retorne o índice da primeira ocorrência do número procurado. Caso o número não seja encontrado, a função deve retornar -1.
 
 ??? abstract "Pesquisa binária recursiva"
@@ -67,19 +55,7 @@ comments: true
 
     ```
 
-    ```csharp
-
-            int[] vetor = [3, 1, 2, 7, 10, 4, 8, 6, 12, 15];
-            int elementoProcurado = 2;
-
-            PesquisaBinariaRecursiva pesquisaBinariaRecursiva = new PesquisaBinariaRecursiva();
-            int indiceElementoProcurado = pesquisaBinariaRecursiva.ExecutarPesquisaBinariaRecursiva(vetor, elementoProcurado);
-
-            Console.WriteLine($"O elemento {elementoProcurado} foi encontrado na posicao {indiceElementoProcurado} no vetor.");
-
-    ```
-
-3. Crie uma função recursiva para verificar se um número inteiro é primo. Um número é primo se ele for maior que 1 e não for divisível por nenhum número que não seja 1 ou ele mesmo.
+(3) Crie uma função recursiva para verificar se um número inteiro é primo. Um número é primo se ele for maior que 1 e não for divisível por nenhum número que não seja 1 ou ele mesmo.
 
 ??? abstract "Número primo"
 
@@ -98,17 +74,6 @@ comments: true
             return VerificarPrimo(numero, divisor + 1);
         }
     }
-
-    ```
-
-    ```csharp
-
-    int numero = 7;
-
-    NumeroPrimo numeroPrimo = new NumeroPrimo();
-    bool primo = numeroPrimero.VerificarPrimo(numero, 2);
-
-    Console.WriteLine($"O numero {numero} {(primo ? "é" : "não é")} primo.");
 
     ```
 
@@ -134,16 +99,6 @@ comments: true
 
     ```
 
-    ```csharp
-
-    string palavra = "arara";
-    PalindromoRecursivo palindromoRecursivo = new PalindromoRecursivo();
-    bool ehPalindromo = _palindromoRecursivo.IsPalindromo(palavra, 0, palavra.Length - 1);
-
-    Console.WriteLine($"A palavra {palavra} {(ehPalindromo ? "é" : "não é")} um palíndromo.")
-
-    ```
-
 (5) Crie uma função recursiva para contar quantos dígitos um número inteiro possui. O número deve ser passado como argumento e a função deve retornar o número de dígitos desse número. Utilize a recursão para dividir o número sucessivamente até que ele se torne zero.
 
 ??? abstract "Quantidade de dígitos"
@@ -160,16 +115,5 @@ comments: true
             return 1 + PegarQuantidadeDigitos(numero / 10);
         }
     }
-
-    ```
-
-    ```csharp
-
-    int numero = 789;
-
-    DigitosRecursivo digitosRecursivo = new DigitosRecursivo();
-    int quantidadeDigitos = digitosRecursivo.PegarQuantidadeDigitos(numero);
-
-    Console.WriteLine($"O numero {numero} possui {quantidadeDigitos} digitos.");
 
     ```

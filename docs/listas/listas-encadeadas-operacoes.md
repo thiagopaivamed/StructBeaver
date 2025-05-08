@@ -26,17 +26,39 @@ Já a inserção no final de uma lista simplesmente encadeada, em geral, tem com
 
 Por fim, inserir em uma posição específica exige percorrer a lista até o ponto desejado, o que resulta em complexidade `O(n)`, já que, em média, é necessário visitar metade dos elementos.
 
+| Caso         | Complexidade |
+|--------------|--------------|
+| Melhor caso  | O(1)         |
+| Caso médio   | O(n)         |
+| Pior caso    | O(n)         |
+
 ## **Remoção de nós**
 
 Remover um nó do início de uma lista encadeada é uma operação de complexidade `O(1)`. Isso ocorre porque basta atualizar o ponteiro do primeiro nó para apontar para o segundo — uma ação direta, independente do tamanho da lista.
 
 Por outro lado, a remoção de um nó em uma posição específica ou no final da lista exige percorrer os elementos até o ponto desejado. Como não há acesso direto aos nós anteriores, é necessário visitar cada um sequencialmente até chegar ao nó anterior ao que será removido, apresentando complexidade `O(n)`.
 
+| Caso         | Complexidade |
+|--------------|--------------|
+| Melhor caso  | O(1)         |
+| Caso médio   | O(n)         |
+| Pior caso    | O(n)         |
+
 ## **Pesquisa de dados**
 
 Como os elementos de uma lista encadeada não estão armazenados de forma contígua na memória, não é possível acessar diretamente um nó específico. Para encontrar um valor, é necessário percorrer a lista a partir do primeiro nó, um a um, até localizar o dado desejado ou atingir o final da lista.
 
 Portanto, a complexidade da operação de busca é `O(n)`, onde `n` representa o número de elementos da lista.
+
+| Caso         | Complexidade |
+|--------------|--------------|
+| Melhor caso  | O(1)         |
+| Caso médio   | O(n)         |
+| Pior caso    | O(n)         |
+
+!!! tip "Uso no dia-a-dia"
+
+    Listas encadeadas são amplamente utilizadas em diversos cenários que envolvem estruturas dinâmicas, como listas de reprodução de músicas, carrinhos de compras em plataformas de e-commerce, e gerenciamento de filas de voos em aeroportos, entre outros contextos em que inserções e remoções frequentes de elementos são comuns.
 
 ## **Implementação**
 
@@ -46,13 +68,13 @@ Uma lista encadeada é formada por elementos chamados de nós. Por isso, o prime
 
 public class No
 {
-    public int valor;
-    public No? proximo;
+    public int Valor;
+    public No Proximo;
 
-    public No(int Valor)
+    public No(int valor)
     {
-        valor = Valor;
-        proximo = null;            
+        Valor = valor;
+        Proximo = null;            
     }
 }
 
@@ -64,110 +86,111 @@ Agora que temos a estrutura dos nós definida, podemos começar a construir a no
 
 public class ListaEncadeada
 {
-    private No? primeiroNo;
+    public No PrimeiroNo;
 
     public ListaEncadeada()
-        => primeiroNo = null;
+        => PrimeiroNo = null;
 
-    public No AdicionarInicio(int valor)
+    public No PegarPrimeiroNo() => PrimeiroNo;
+    public No AdicionarNoInicio(int valor)
     {
         No novoNo = new No(valor);
-        novoNo.proximo = primeiroNo;
-        primeiroNo = novoNo;
+        novoNo.Proximo = PrimeiroNo;
+        PrimeiroNo = novoNo;
 
-        return primeiroNo;
+        return PrimeiroNo;
     }
 
-    public No AdicionarFim(int valor)
+    public No AdicionarNoFim(int valor)
     {
         No novoNo = new No(valor);
 
-        if (primeiroNo is null)
+        if (PrimeiroNo is null)
         {
-            primeiroNo = novoNo;
+            PrimeiroNo = novoNo;
             return novoNo;
         }
 
-        No noAtual = primeiroNo;
+        No noAtual = PrimeiroNo;
 
-        while (noAtual.proximo is not null)
-            noAtual = noAtual.proximo;
+        while (noAtual.Proximo is not null)
+            noAtual = noAtual.Proximo;
 
-        noAtual.proximo = novoNo;
+        noAtual.Proximo = novoNo;
 
         return novoNo;
     }
 
-    public No? RemoverInicio()
+    public No RemoverNoInicio()
     {
-        if (primeiroNo is null)
+        if (PrimeiroNo is null)
             return null;
 
-        No noRemovido = primeiroNo;
-        primeiroNo = primeiroNo.proximo;
-        noRemovido.proximo = null;
+        No noRemovido = PrimeiroNo;
+        PrimeiroNo = PrimeiroNo.Proximo;
+        noRemovido.Proximo = null;
         return noRemovido;
     }
 
-    public No? RemoverFim()
+    public No RemoverNoFim()
     {
-        if (primeiroNo is null)
+        if (PrimeiroNo is null)
             return null;
 
-        if (primeiroNo.proximo is null)
+        if (PrimeiroNo.Proximo is null)
         {
-            No noUnico = primeiroNo;
-            primeiroNo = null;
+            No noUnico = PrimeiroNo;
+            PrimeiroNo = null;
             return noUnico;
         }
 
-        No? noAtual = primeiroNo;
+        No noAtual = PrimeiroNo;
 
-        while (noAtual.proximo!.proximo is not null)
-            noAtual = noAtual.proximo;
+        while (noAtual.Proximo.Proximo is not null)
+            noAtual = noAtual.Proximo;
 
-        No noRemovido = noAtual.proximo;
-        noAtual.proximo = null;
+        No noRemovido = noAtual.Proximo;
+        noAtual.Proximo = null;
         return noRemovido;
     }
 
-    public No? RemoverNo(int posicao)
+    public No RemoverNo(int posicao)
     {
-        if (posicao < 0 || primeiroNo is null)
+        if (posicao < 0 || PrimeiroNo is null)
             return null;
 
         if (posicao == 0)
-            return RemoverInicio();
+            return RemoverNoInicio();
 
-        No noAtual = primeiroNo;
+        No noAtual = PrimeiroNo;
         int indice = 0;
 
-        while (noAtual.proximo is not null && indice < posicao - 1)
+        while (noAtual.Proximo is not null && indice < posicao - 1)
         {
-            noAtual = noAtual.proximo;
+            noAtual = noAtual.Proximo;
             indice = indice + 1;
         }
 
-        if (noAtual.proximo is null)
+        if (noAtual.Proximo is null)
             return null;
 
-        No noRemovido = noAtual.proximo;
-        noAtual.proximo = noRemovido.proximo;
-        noRemovido.proximo = null;
+        No noRemovido = noAtual.Proximo;
+        noAtual.Proximo = noRemovido.Proximo;
+        noRemovido.Proximo = null;
 
         return noRemovido;
     }
 
-    public No? Pesquisar(int valor)
+    public No Pesquisar(int valor)
     {
-        No? noAtual = primeiroNo;
+        No noAtual = PrimeiroNo;
 
         while (noAtual is not null)
         {
-            if (noAtual.valor == valor)
+            if (noAtual.Valor == valor)
                 return noAtual;
 
-            noAtual = noAtual.proximo;
+            noAtual = noAtual.Proximo;
         }
 
         return null;
@@ -177,36 +200,19 @@ public class ListaEncadeada
     {
         int quantidadeNos = 0;
 
-        No? noAtual = primeiroNo;
+        No noAtual = PrimeiroNo;
 
         while (noAtual is not null)
         {
-            noAtual = noAtual.proximo;
+            noAtual = noAtual.Proximo;
             quantidadeNos = quantidadeNos + 1;
         }
 
         return quantidadeNos;
     }
-
     public bool IsEmpty()
-        => primeiroNo is null;
+        => PrimeiroNo is null;
 }
-
-```
-
-```csharp
-
-ListaEncadeada listaEncadeada = = new ListaEncadeada();
-
-No no = listaEncadeada.AdicionarInicio(10);
-
-Console.WriteLine($"O nó com valor {no.valor} foi adicionado.");
-
-listaEncadeada.AdicionarInicio(20);
-
-No noRemovido = listaEncadeada.RemoverInicio();
-
-Console.WriteLine($"O nó com valor {noRemovido.valor} foi removido.");
 
 ```
 

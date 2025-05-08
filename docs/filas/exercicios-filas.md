@@ -27,37 +27,6 @@ comments: true
 
     ```
 
-    ```csharp
-    
-    Fila filaOriginal = new Fila();
-
-    filaOriginal.Enqueue(1);
-    filaOriginal.Enqueue(2);
-    filaOriginal.Enqueue(3);
-    filaOriginal.Enqueue(4);
-    filaOriginal.Enqueue(5);
-
-    Fila filaCopia = copiaFila.CopiarDados(filaOriginal);
-
-    Console.WriteLine($"Os valores da fila copiada são ");
-
-    Console.WriteLine($"{filaCopia.Peek()} ");
-    filaCopia.Dequeue();
-
-    Console.WriteLine($"{filaCopia.Peek()} ");
-    filaCopia.Dequeue();
-
-    Console.WriteLine($"{filaCopia.Peek()} ");
-    filaCopia.Dequeue();
-
-    Console.WriteLine($"{filaCopia.Peek()} ");
-    filaCopia.Dequeue();
-
-    Console.WriteLine($"{filaCopia.Peek()} ");
-    filaCopia.Dequeue();
-
-    ```
-
 (2) Crie uma função que compare duas filas e verifique se são iguais (ordem e valores).
 
 ??? abstract "Comparação de filas"
@@ -80,30 +49,7 @@ comments: true
         }
     }
     
-    ```
-
-    ```csharp
-    
-    Fila fila1 = new Fila();
-    Fila fila2 = new Fila();
-
-    fila1.Enqueue(1);
-    fila1.Enqueue(2);
-    fila1.Enqueue(3);
-    fila1.Enqueue(4);
-    fila1.Enqueue(5);
-
-    fila2.Enqueue(1);
-    fila2.Enqueue(2);
-    fila2.Enqueue(3);
-    fila2.Enqueue(4);
-    fila2.Enqueue(5);
-
-    bool filasSaoIguais = _verificaFilas.VerificarFilasPorOrdemValores(fila1, fila2);
-
-    Console.WriteLine("As filas {(filasSaoIguais ? "são" : "não são")} iguais.");
-
-    ```
+    ```    
 
 (3) Dada uma fila de números, crie uma função que retorne a média dos valores.
 
@@ -129,23 +75,7 @@ comments: true
         }
     }
     
-    ```
-
-    ```csharp
-    
-    Fila fila = new Fila();
-
-    fila.Enqueue(1);
-    fila.Enqueue(2);
-    fila.Enqueue(3);
-    fila.Enqueue(4);
-    fila.Enqueue(5);
-
-    double media = _mediaValoresFila.CalcularMedia(fila);
-
-    Console.WriteLine($"A media dos valores da fila é {media}.");
-    
-    ```
+    ```    
 
 (4) Dada uma fila, crie uma função que rotacione os elementos n vezes (ex: [1,2,3] → [2,3,1]).
 
@@ -167,37 +97,6 @@ comments: true
             return fila;
         }
     }
-    
-    ```
-
-    ```csharp
-    
-    Fila fila = new Fila();
-
-    fila.Enqueue(1);
-    fila.Enqueue(2);
-    fila.Enqueue(3);
-    fila.Enqueue(4);
-    fila.Enqueue(5);
-
-    fila = _rotacaoFila.Rotacionar(fila, 2);
-
-    Console.WriteLine($"A fila rotacionada é ");
-
-    Console.WriteLine($"{fila.Peek()}");
-    fila.Dequeue();
-
-    Console.WriteLine($"{fila.Peek()}");
-    fila.Dequeue();
-
-    Console.WriteLine($"{fila.Peek()}");
-    fila.Dequeue();
-
-    Console.WriteLine($"{fila.Peek()}");
-    fila.Dequeue();
-
-    Console.WriteLine($"{fila.Peek()}");
-    fila.Dequeue();
     
     ```
 
@@ -296,36 +195,5 @@ comments: true
             }
         }
     }
-    
-    ```
-
-    ```csharp
-    
-    Fila fila = new Fila();
-
-    fila.Enqueue(5);
-    fila.Enqueue(3);
-    fila.Enqueue(1);
-    fila.Enqueue(4);
-    fila.Enqueue(2);
-
-    fila = _ordenacaoFila.Ordenar(fila);
-
-    Console.WriteLine($"A fila ordenada é ");
-
-    Console.WriteLine($"{fila.Peek()}");
-    fila.Dequeue();
-
-    Console.WriteLine($"{fila.Peek()}");
-    fila.Dequeue();
-
-    Console.WriteLine($"{fila.Peek()}");
-    fila.Dequeue();
-
-    Console.WriteLine($"{fila.Peek()}");
-    fila.Dequeue();
-
-    Console.WriteLine($"{fila.Peek()}");
-    fila.Dequeue();
     
     ```

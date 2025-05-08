@@ -17,8 +17,6 @@ namespace StructBeaver.Tests.Recursividade
             int fibonacci = _fibonacci.CalcularFibonacci(numeroSequencia);
 
             Assert.True(fibonacci == numeroSequencia);
-
-            Console.WriteLine($"O {numeroSequencia}° termo da sequência de fibonacci é {fibonacci}.");
         }
 
         [Fact]
@@ -29,9 +27,6 @@ namespace StructBeaver.Tests.Recursividade
             int fibonacci = _fibonacci.CalcularFibonacci(numeroSequencia);
 
             Assert.True(fibonacci is not 0 or 1);
-
-            Console.WriteLine($"O {numeroSequencia}° termo da sequência de fibonacci é {fibonacci}.");
         }
-
     }
 }

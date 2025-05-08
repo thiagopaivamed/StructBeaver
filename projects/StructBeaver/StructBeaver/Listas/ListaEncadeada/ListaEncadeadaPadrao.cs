@@ -2,15 +2,15 @@
 {
     public class ListaEncadeadaPadrao
     {
-        private List<int> numeros;
+        private List<int> Numeros;
 
         public ListaEncadeadaPadrao()
-            => numeros = new List<int>();        
+            => Numeros = new List<int>();        
 
         public void Adicionar(int valor)
-            => numeros.Add(valor);
+            => Numeros.Add(valor);
 
         public bool Remover(int valor)
-            => numeros.Remove(valor);
+            => Numeros.Remove(valor);
     }
 }

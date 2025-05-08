@@ -24,7 +24,6 @@ namespace StructBeaver.Tests.Filas.Exercicios
             double media = _mediaValoresFila.CalcularMedia(fila);
 
             Assert.Equal(3, media);
-            Console.WriteLine($"A media dos valores da fila é {media}.");
         }
     }
 }

@@ -26,29 +26,7 @@ comments: true
         }
     }
 
-    ```
-
-    ```csharp
-
-    Pilha pilhaOriginal = new Pilha();
-    pilhaOriginal.Push(1);
-    pilhaOriginal.Push(2);
-    pilhaOriginal.Push(3);
-    pilhaOriginal.Push(4);
-    pilhaOriginal.Push(5);
-
-    CopiaPilha copiaPilha = new CopiaPilha();
-
-    Pilha pilhaCopiada = copiaPilha.PegarPilhaCopiada(pilhaOriginal);
-
-    Console.WriteLine("Os elementos copiados de uma pilha para a outra são ");
-    Console.WriteLine($"{pilhaCopiada.Pop()} ");
-    Console.WriteLine($"{pilhaCopiada.Pop()} ");
-    Console.WriteLine($"{pilhaCopiada.Pop()} ");
-    Console.WriteLine($"{pilhaCopiada.Pop()} ");
-    Console.WriteLine($"{pilhaCopiada.Pop()} ");
-
-    ```
+    ```    
 
 (2) Crie um programa para pegar o menor valor de uma pilha.
 
@@ -74,22 +52,7 @@ comments: true
         }
     }
 
-    ```
-
-    ```csharp
-
-    Pilha pilha = new Pilha();
-    pilha.Push(1);
-    pilha.Push(2);
-    pilha.Push(3);
-    pilha.Push(4);
-    pilha.Push(5);
-
-    int menorValor = _menorValorPilha.PegarMenorValor(pilha);
-
-    Console.WriteLine($"O menor valor da pilha é {menorValor} ");
-
-    ```
+    ```   
 
 (3) Crie um programa que converta um número inteiro em sua representação binária usando uma pilha. O programa deve receber um número decimal do usuário e usar a pilha para armazenar os restos da divisão sucessiva por 2, até que o número seja 0. Depois, deve exibir a sequência de restos como o número binário correspondente.
 
@@ -122,16 +85,7 @@ comments: true
         }
     }
 
-    ```
-
-    ```csharp
-
-    int valorDecimal = 10;
-    string binario = _conversorBinario.ConverterParaBinario(valorDecimal);
-
-    Console.WriteLine($"O valor decimal {valorDecimal} em binário é {binario}")
-
-    ```
+    ```    
 
 (4) Crie um programa que inverta uma pilha usando recursão.
 
@@ -156,28 +110,7 @@ comments: true
         }
     }
 
-    ```
-
-    ```csharp
-
-    Pilha pilha = new Pilha();
-    pilha.Push(1);
-    pilha.Push(2);
-    pilha.Push(3);
-    pilha.Push(4);
-    pilha.Push(5);
-
-    PilhaInvertidaRecursiva pilhaInvertidaRecursiva = new PilhaInvertidaRecursiva();
-    pilha = pilhaInvertidaRecursiva.InverterPilha(pilha);
-
-    Console.WriteLine("Os elementos invertidos são ");
-    Console.WriteLine($"{pilha.Pop()} ");
-    Console.WriteLine($"{pilha.Pop()} ");
-    Console.WriteLine($"{pilha.Pop()} ");
-    Console.WriteLine($"{pilha.Pop()} ");
-    Console.WriteLine($"{pilha.Pop()} ");
-
-    ```
+    ```    
 
 (5) Crie um programa que ordene os elementos de uma pilha usando o algorítmo insertion sort recursivo. O algoritmo deve remover os elementos da pilha, armazená-los e, em seguida, recolocá-los na pilha de forma ordenada. Utilize um método recursivo para inserir elementos na pilha de maneira ordenada.
 
@@ -236,26 +169,5 @@ comments: true
             InserirRecursivo(pilha, elementos, indice + 1);
         }
     }
-
-    ```
-
-    ```csharp
-
-    Pilha pilha = new Pilha();
-    pilha.Push(55);
-    pilha.Push(7);
-    pilha.Push(9);
-    pilha.Push(32);
-    pilha.Push(89);
-
-    OrdenacaoPilha ordenacaoPilha = new OrdenacaoPilha();
-    pilha = ordenacaoPilha.OrdenarPilha(pilha);
-
-    Console.WriteLine("Os elementos ordenados são ");
-    Console.WriteLine($"{pilha.Pop()} ");
-    Console.WriteLine($"{pilha.Pop()} ");
-    Console.WriteLine($"{pilha.Pop()} ");
-    Console.WriteLine($"{pilha.Pop()} ");
-    Console.WriteLine($"{pilha.Pop()} ");
 
     ```

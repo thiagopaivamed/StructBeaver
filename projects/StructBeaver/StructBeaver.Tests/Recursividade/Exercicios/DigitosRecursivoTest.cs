@@ -17,8 +17,6 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
             int quantidadeDigitos = _digitosRecursivo.PegarQuantidadeDigitos(numero);
 
             Assert.Equal(3, quantidadeDigitos);
-
-            Console.WriteLine($"O numero {numero} possui {quantidadeDigitos} digitos.");
         }
 
         [Fact]
@@ -29,8 +27,6 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
             int quantidadeDigitos = _digitosRecursivo.PegarQuantidadeDigitos(numero);
 
             Assert.Equal(1, quantidadeDigitos);
-
-            Console.WriteLine($"O numero {numero} possui {quantidadeDigitos} digitos.");
         }
     }
 }

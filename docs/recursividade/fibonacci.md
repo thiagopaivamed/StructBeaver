@@ -27,14 +27,4 @@ public class Fibonacci
 
 ```
 
-```csharp
-
-int numeroSequencia = 4;
-
-int fibonacci = Fibonacci.CalcularFibonacci(numeroSequencia);
-
-Console.WriteLine($"O {numeroSequencia}° termo da sequência de fibonacci é {fibonacci}.");
-
-```
-
 ![Fibonacci](recursividade.assets/fibonacci.png)

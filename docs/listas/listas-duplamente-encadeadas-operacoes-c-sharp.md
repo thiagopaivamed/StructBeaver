@@ -14,16 +14,16 @@ As operações de adição retornam um nó já implementado pela linguagem, repr
 
 ```csharp
 
-public class ListaDuplamenteEncadeadaCSharp
+public class ListaDuplamenteEncadeadaPadrao
 {
     private LinkedList<int> _listaDuplamenteEncadeada;
 
-    public ListaDuplamenteEncadeadaCSharp()        
+    public ListaDuplamenteEncadeadaPadrao()        
         => _listaDuplamenteEncadeada = new LinkedList<int>();        
 
-    public LinkedListNode<int>? PrimeiroNo => _listaDuplamenteEncadeada.First;
+    public LinkedListNode<int> PrimeiroNo => _listaDuplamenteEncadeada.First;
 
-    public LinkedListNode<int>? UltimoNo => _listaDuplamenteEncadeada.Last;
+    public LinkedListNode<int> UltimoNo => _listaDuplamenteEncadeada.Last;
 
     public LinkedListNode<int> AdicionarNoInicio(int valor)
         =>  _listaDuplamenteEncadeada.AddFirst(valor);        
@@ -37,9 +37,9 @@ public class ListaDuplamenteEncadeadaCSharp
     public void RemoverNoFinal()
         => _listaDuplamenteEncadeada.RemoveLast();
 
-    public LinkedListNode<int>? Remover(int valor)
+    public LinkedListNode<int> Remover(int valor)
     {
-        LinkedListNode<int>? noAtual = _listaDuplamenteEncadeada.First;
+        LinkedListNode<int> noAtual = _listaDuplamenteEncadeada.First;
         
         while (noAtual != null)
         {

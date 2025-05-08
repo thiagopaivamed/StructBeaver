@@ -2,11 +2,11 @@
 
 namespace StructBeaver.Tests.Pilhas
 {
-    public class PilhaCSharpTest
+    public class PilhaPadraoTest
     {
-        private PilhaCSharp pilha;
-        public PilhaCSharpTest()
-            => pilha = new PilhaCSharp();
+        private PilhaPadrao pilha;
+        public PilhaPadraoTest()
+            => pilha = new PilhaPadrao();
 
         [Fact]
         public void Push_Deve_Adicionar_Elemento_Na_Pilha()
@@ -14,7 +14,6 @@ namespace StructBeaver.Tests.Pilhas
             int item = 10;
             pilha.Push(item);
             Assert.Equal(item, pilha.Peek());
-            Console.WriteLine($"O elemento {item} foi adicionado na pilha.");
         }
 
         [Fact]
@@ -26,15 +25,11 @@ namespace StructBeaver.Tests.Pilhas
 
             int itemRemovido = pilha.Pop();
             Assert.Equal(item, itemRemovido);
-            Console.WriteLine($"O elemento {item} foi removido da pilha.");
         }
 
         [Fact]
         public void Pop_Deve_Disparar_Excecao_Quando_Nao_Houver_Elemento_Na_Pilha()
-        {
-            Assert.Throws<InvalidOperationException>(() => pilha.Pop());
-            Console.WriteLine($"A pilha está vazia. Não há elementos para serem removidos.");
-        }
+            => Assert.Throws<InvalidOperationException>(() => pilha.Pop());
 
         [Fact]
         public void Peek_Deve_Verificar_Elemento_Na_Pilha()
@@ -42,15 +37,11 @@ namespace StructBeaver.Tests.Pilhas
             int item = 10;
             pilha.Push(item);
             Assert.Equal(item, pilha.Peek());
-            Console.WriteLine($"O elemento {item} está na pilha.");
         }
 
         [Fact]
         public void Peek_Deve_Disparar_Excecao_Quando_Nao_Houver_Elemento_Na_Pilha()
-        {
-            Assert.Throws<InvalidOperationException>(() => pilha.Peek());
-            Console.WriteLine($"A pilha está vazia. Não há elementos no topo.");
-        }
+            => Assert.Throws<InvalidOperationException>(() => pilha.Peek());
 
         [Fact]
         public void IsEmpty_Deve_Verificar_Pilha_Vazia()
@@ -64,7 +55,6 @@ namespace StructBeaver.Tests.Pilhas
             pilha.Pop();
 
             Assert.True(pilha.IsEmpty());
-            Console.WriteLine("A pilha está vazia.");
         }
     }
 }

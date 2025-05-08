@@ -1,11 +1,5 @@
 ﻿using StructBeaver.Filas;
 using StructBeaver.Filas.Exercicios;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StructBeaver.Tests.Filas.Exercicios
 {
@@ -29,23 +23,15 @@ namespace StructBeaver.Tests.Filas.Exercicios
 
             Fila filaCopia = copiaFila.CopiarDados(filaOriginal);
 
-            Console.WriteLine($"Os valores da fila copiada são ");
-
-            Console.WriteLine($"{filaCopia.Peek()} ");
             Assert.Equal(1, filaCopia.Dequeue());
 
-            Console.WriteLine($"{filaCopia.Peek()} ");
             Assert.Equal(2, filaCopia.Dequeue());
 
-            Console.WriteLine($"{filaCopia.Peek()} ");
             Assert.Equal(3, filaCopia.Dequeue());
 
-            Console.WriteLine($"{filaCopia.Peek()} ");
             Assert.Equal(4, filaCopia.Dequeue());
 
-            Console.WriteLine($"{filaCopia.Peek()} ");
             Assert.Equal(5, filaCopia.Dequeue());
         }
-
     }
 }

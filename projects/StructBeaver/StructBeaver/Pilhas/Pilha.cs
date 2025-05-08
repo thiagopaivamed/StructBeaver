@@ -2,23 +2,23 @@
 {
     public class Pilha
     {
-        private int[] itens;
-        private int topo;
-        private const int capacidade = 10;
+        private int[] Itens;
+        private int Topo;
+        private const int Capacidade = 10;
 
         public Pilha()
         {
-            itens = new int[capacidade];
-            topo = -1;
+            Itens = new int[Capacidade];
+            Topo = -1;
         }
 
         public void Push(int item)
         {
-            if (topo == itens.Length - 1)
+            if (Topo == Itens.Length - 1)
                 Redimensionar();
 
-            topo = topo + 1;
-            itens[topo] = item;
+            Topo = Topo + 1;
+            Itens[Topo] = item;
         }
 
         public int Pop()
@@ -26,9 +26,9 @@
             if (IsEmpty())
                 throw new InvalidOperationException("A pilha está vazia.");
 
-            int item = itens[topo];
-            itens[topo] = default;
-            topo = topo - 1;
+            int item = Itens[Topo];
+            Itens[Topo] = default;
+            Topo = Topo - 1;
 
             return item;
         }
@@ -38,22 +38,22 @@
             if (IsEmpty())
                 throw new InvalidOperationException("A pilha está vazia.");
 
-            return itens[topo];
+            return Itens[Topo];
         }
 
-        public bool IsEmpty() => topo == -1;
+        public bool IsEmpty() => Topo == -1;
 
-        public int Tamanho() => topo + 1;
+        public int Tamanho() => Topo + 1;
 
         private void Redimensionar()
         {
-            int novaCapacidade = capacidade * 2;
+            int novaCapacidade = Capacidade * 2;
             int[] novosItens = new int[novaCapacidade];
 
-            for (int indice = 0; indice < itens.Length; indice++)
-                novosItens[indice] = itens[indice];
+            for (int indice = 0; indice < Itens.Length; indice++)
+                novosItens[indice] = Itens[indice];
 
-            itens = novosItens;
+            Itens = novosItens;
         }
     }
 }

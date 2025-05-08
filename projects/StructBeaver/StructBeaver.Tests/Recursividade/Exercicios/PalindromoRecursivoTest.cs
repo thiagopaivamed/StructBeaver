@@ -17,8 +17,6 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
             bool ehPalindromo = _palindromoRecursivo.IsPalindromo(palavra, 0, palavra.Length - 1);
 
             Assert.True(ehPalindromo);
-
-            Console.WriteLine($"A palavra {palavra} é palindromo.");
         }
 
         [Fact]
@@ -29,8 +27,6 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
             bool ehPalindromo = _palindromoRecursivo.IsPalindromo(palavra, 0, palavra.Length - 1);
 
             Assert.False(ehPalindromo);
-
-            Console.WriteLine($"A palavra {palavra} não é palindromo.");
         }
     }
 }

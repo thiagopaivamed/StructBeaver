@@ -41,17 +41,6 @@ O algoritmo da pesquisa simples segue os seguintes passos:
 
 ```
 
-```csharp
-
-int[] vetor = [3, 1, 2, 7, 10, 4, 8, 6, 12, 15];
-int elementoProcurado = 2;
-
-int indiceElementoProcurado = _pesquisaSimples.ExecutarPesquisaSimples(vetor, elementoProcurado);
-
-Console.WriteLine($"O elemento {elementoProcurado} foi encontrado na posicao {indiceElementoProcurado} no vetor.");
-
-```
-
 === "Iteração 1"
 
     ![](vetores.assets/pesquisasimples01.png)

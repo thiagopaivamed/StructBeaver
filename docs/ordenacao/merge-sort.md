@@ -123,15 +123,6 @@ public class MergeSort
 
 ```
 
-```csharp
-
-int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
-int[] vetorOrdenado = MergeSort.Sort(vetorDesordenado);
-
-Console.WriteLine($"O vetor ordenado é: {string.Join(", ", vetorOrdenado)}.");
-
-```
-
 === "Merge Sort 01"
 
     ![](ordenacao.assets/mergesort01.png)

@@ -17,8 +17,6 @@ namespace StructBeaver.Tests.Recursividade
             int fatorial = _fatorial.CalcularFatorial(numero);
 
             Assert.True(fatorial is -1);
-
-            Console.WriteLine($"Não existe fatorial de numeros negativos, portanto, foi retornado {fatorial}.");
         }
 
         [Fact]
@@ -41,9 +39,6 @@ namespace StructBeaver.Tests.Recursividade
             int fatorial = _fatorial.CalcularFatorial(numero);
 
             Assert.True(fatorial is 720);
-
-            Console.WriteLine($"O fatorial de {numero} é {fatorial}.");
         }
-
     }
 }

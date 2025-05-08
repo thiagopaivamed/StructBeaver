@@ -17,8 +17,6 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
             bool primo = _numeroPrimero.VerificarPrimo(numero, 2);
 
             Assert.True(primo);
-
-            Console.WriteLine($"O numero {numero} é primo.");
         }
 
         [Fact]
@@ -29,9 +27,6 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
             bool primo = _numeroPrimero.VerificarPrimo(numero, 2);
 
             Assert.False(primo);
-
-            Console.WriteLine($"O numero {numero} não é primo.");
         }
-
     }
 }

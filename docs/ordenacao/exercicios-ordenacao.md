@@ -38,19 +38,9 @@ comments: true
 
     ```
 
-    ```csharp
-
-    int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
-
-    int[] vetorOrdenado = _bubbleSortRecursivo.OrdenarRecursivamente(vetorDesordenado);
-
-    Console.WriteLine($"O vetor ordenado é: {string.Join(", ", vetorOrdenado)}.");
-
-    ```
-
 (2) Implemente o selection sort de forma recursiva.
 
-??? abstract "Bubble Sort recursivo"
+??? abstract "Selection Sort recursivo"
 
     ```csharp
 
@@ -75,17 +65,6 @@ comments: true
             return RecursiveSort(vetor, quantidadeElementos, indice + 1);
         }
     }
-
-    ```
-
-    ```csharp
-
-    int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
-
-    SelectionSortRecursivo selectionSortRecursivo = new SelectionSortRecursivo();
-    int[] vetorOrdenado = selectionSortRecursivo.RecursiveSort(vetorDesordenado);
-
-    Console.WriteLine($"O vetor ordenado é: {string.Join(", ", vetorOrdenado)}.");
 
     ```
 
@@ -122,19 +101,6 @@ comments: true
         }
     }
     ```
-
-    ```csharp
-
-    int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
-
-    InsertionSortRecursivo insertionSortRecursivo = new InsertionSortRecursivo();
-    int[] vetorOrdenado = insertionSortRecursivo.RecursiveSort(vetorDesordenado);
-
-    Console.WriteLine($"O vetor ordenado é: {string.Join(", ", vetorOrdenado)}.");
-
-    ```
-
-
 
 (4) Implemente o quick sort para ordenar um vetor de forma decrescente.
 
@@ -185,16 +151,6 @@ comments: true
 
     ```
 
-    ```csharp
-
-        int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
-
-        int[] vetorOrdenadoDecrescente = _quickSortDecrescente.Ordenar(vetorDesordenado, 0, vetorDesordenado.Length -1);
-
-        Console.WriteLine($"O vetor ordenado é: {string.Join(", ", vetorOrdenadoDecrescente)}.");
-
-    ```
-
 (5) Implemente o bubble sort de forma recursiva para ordenar um vetor. Deve ser possível escolher se a ordenação será em forma crescente ou decrescente.
 
 ??? abstract "Bubble Sort recursivo crescente e decrescente"
@@ -210,10 +166,14 @@ comments: true
 
             for (int i = 0; i < quantidadeElementos - 1; i++)
             {
-                bool precisaTrocar = ordemCrescente
-                    ? vetor[i] > vetor[i + 1]
-                    : vetor[i] < vetor[i + 1];
+                bool precisaTrocar;
 
+                if (ordemCrescente)                
+                    precisaTrocar = vetor[i] > vetor[i + 1];
+
+                else                
+                    precisaTrocar = vetor[i] < vetor[i + 1];  
+                    
                 if (precisaTrocar)
                     TrocarValores(vetor, i);
             }
@@ -228,17 +188,5 @@ comments: true
             vetor[indice + 1] = valorTemporario;
         }
     }
-
-    ```
-
-    ```csharp
-
-    int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
-    int quantidadeElementos = vetorDesordenado.Length;
-    bool ordemCrescente = true;
-
-    int[] vetorOrdenado = _bubbleSortRecursivoCrescenteDecrescente.OrdenarRecursivamente(vetorDesordenado, quantidadeElementos, ordemCrescente);
-
-    Console.WriteLine($"O vetor ordenado em ordem crescente é: {string.Join(", ", vetorOrdenado)}.");
 
     ```

@@ -88,16 +88,6 @@ Sua performance do algoritmo pode ser resumida da seguinte forma:
  }
 ```
 
-```csharp
-
-int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
-
-int[] vetorOrdenado = QuickSort.Sort(vetorDesordenado, 0, vetorDesordenado.Length - 1);
-
-Console.WriteLine($"O vetor ordenado é: {string.Join(", ", vetorOrdenado)}.");
-
-```
-
 === "Quick Sort"
 
     ![](ordenacao.assets/quicksort.png)

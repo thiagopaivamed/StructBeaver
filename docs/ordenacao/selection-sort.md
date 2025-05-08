@@ -78,16 +78,6 @@ public class SelectionSort
 
 ```
 
-```csharp
-
-int[] vetorDesordenado = [3, 7, 5, 9, 4, 1];
-
-int[] vetorOrdenado = SelectionSort.Sort(vetorDesordenado);
-
-Console.WriteLine($"O vetor ordenado é: {string.Join(", ", vetorOrdenado)}.");
-
-```
-
 === "Selection Sort 1"
 
     ![](ordenacao.assets/selectionsort01.png)

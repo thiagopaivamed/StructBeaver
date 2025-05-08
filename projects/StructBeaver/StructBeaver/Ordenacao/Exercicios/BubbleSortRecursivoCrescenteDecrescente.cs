@@ -9,9 +9,13 @@
 
             for (int i = 0; i < quantidadeElementos - 1; i++)
             {
-                bool precisaTrocar = ordemCrescente
-                    ? vetor[i] > vetor[i + 1]
-                    : vetor[i] < vetor[i + 1];
+                bool precisaTrocar;
+
+                if (ordemCrescente)                
+                    precisaTrocar = vetor[i] > vetor[i + 1];
+                
+                else                
+                    precisaTrocar = vetor[i] < vetor[i + 1];                
 
                 if (precisaTrocar)
                     TrocarValores(vetor, i);

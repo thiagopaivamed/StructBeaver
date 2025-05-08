@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver.tests\\listas\\listacircular\\exercicios\\mergesortlistacirculartest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|solutionrelative:structbeaver.tests\\listas\\listacircular\\exercicios\\mergesortlistacirculartest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\ordenacao\\exercicios\\bubblesortrecursivocrescentedecrescente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\ordenacao\\exercicios\\bubblesortrecursivocrescentedecrescente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\listas\\listacircular\\exercicios\\mergesortlistacircular.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\listas\\listacircular\\exercicios\\mergesortlistacircular.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\listas\\listacircular\\exercicios\\rotacaolistacircular.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\listas\\listacircular\\exercicios\\rotacaolistacircular.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\listas\\listacircular\\listacircularduplamenteencadeada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\listas\\listacircular\\listacircularduplamenteencadeada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\listas\\listacircular\\exercicios\\removemultiplodecincolistacircular.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\listas\\listacircular\\exercicios\\removemultiplodecincolistacircular.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\listas\\listacircular\\exercicios\\quantidadenoslistacircular.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\listas\\listacircular\\exercicios\\quantidadenoslistacircular.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,34 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MergeSortListaCircularTest.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Listas\\ListaCircular\\Exercicios\\MergeSortListaCircularTest.cs",
-              "RelativeDocumentMoniker": "StructBeaver.Tests\\Listas\\ListaCircular\\Exercicios\\MergeSortListaCircularTest.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Listas\\ListaCircular\\Exercicios\\MergeSortListaCircularTest.cs",
-              "RelativeToolTip": "StructBeaver.Tests\\Listas\\ListaCircular\\Exercicios\\MergeSortListaCircularTest.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAwBsAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T20:50:58.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ListaCircularDuplamenteEncadeada.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Listas\\ListaCircular\\ListaCircularDuplamenteEncadeada.cs",
-              "RelativeDocumentMoniker": "StructBeaver\\Listas\\ListaCircular\\ListaCircularDuplamenteEncadeada.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Listas\\ListaCircular\\ListaCircularDuplamenteEncadeada.cs",
-              "RelativeToolTip": "StructBeaver\\Listas\\ListaCircular\\ListaCircularDuplamenteEncadeada.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T20:21:04.999Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -60,15 +38,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MergeSortListaCircular.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Listas\\ListaCircular\\Exercicios\\MergeSortListaCircular.cs",
-              "RelativeDocumentMoniker": "StructBeaver\\Listas\\ListaCircular\\Exercicios\\MergeSortListaCircular.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Listas\\ListaCircular\\Exercicios\\MergeSortListaCircular.cs",
-              "RelativeToolTip": "StructBeaver\\Listas\\ListaCircular\\Exercicios\\MergeSortListaCircular.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAnAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "BubbleSortRecursivoCrescenteDecrescente.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Ordenacao\\Exercicios\\BubbleSortRecursivoCrescenteDecrescente.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Ordenacao\\Exercicios\\BubbleSortRecursivoCrescenteDecrescente.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Ordenacao\\Exercicios\\BubbleSortRecursivoCrescenteDecrescente.cs",
+              "RelativeToolTip": "StructBeaver\\Ordenacao\\Exercicios\\BubbleSortRecursivoCrescenteDecrescente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T20:13:15.467Z",
+              "WhenOpened": "2025-05-08T23:25:06.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RotacaoListaCircular.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Listas\\ListaCircular\\Exercicios\\RotacaoListaCircular.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Listas\\ListaCircular\\Exercicios\\RotacaoListaCircular.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Listas\\ListaCircular\\Exercicios\\RotacaoListaCircular.cs",
+              "RelativeToolTip": "StructBeaver\\Listas\\ListaCircular\\Exercicios\\RotacaoListaCircular.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T22:54:35.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RemoveMultiploDeCincoListaCircular.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Listas\\ListaCircular\\Exercicios\\RemoveMultiploDeCincoListaCircular.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Listas\\ListaCircular\\Exercicios\\RemoveMultiploDeCincoListaCircular.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Listas\\ListaCircular\\Exercicios\\RemoveMultiploDeCincoListaCircular.cs",
+              "RelativeToolTip": "StructBeaver\\Listas\\ListaCircular\\Exercicios\\RemoveMultiploDeCincoListaCircular.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T22:53:36.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QuantidadeNosListaCircular.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Listas\\ListaCircular\\Exercicios\\QuantidadeNosListaCircular.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Listas\\ListaCircular\\Exercicios\\QuantidadeNosListaCircular.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Listas\\ListaCircular\\Exercicios\\QuantidadeNosListaCircular.cs",
+              "RelativeToolTip": "StructBeaver\\Listas\\ListaCircular\\Exercicios\\QuantidadeNosListaCircular.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T22:51:13.627Z",
               "EditorCaption": ""
             }
           ]

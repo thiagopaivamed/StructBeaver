@@ -12,41 +12,23 @@ A linguagem C# já fornece uma estrutura de pilha pronta por meio da classe `Sta
 
 ```csharp
 
-public class PilhaCSharp
+public class PilhaPadrao
 {
-    private Stack<int> itens;
+    private Stack<int> Itens;
 
-    public PilhaCSharp()
-        => itens = new Stack<int>();
+    public PilhaPadrao()
+        => Itens = new Stack<int>();
 
-    public void Push(int item) => itens.Push(item);
+    public void Push(int item) => Itens.Push(item);
 
-    public int Pop() => itens.Pop();
+    public int Pop() => Itens.Pop();
 
-    public int Peek() => itens.Peek();
+    public int Peek() => Itens.Peek();
 
-    public bool IsEmpty() => itens.Count == 0;
+    public bool IsEmpty() => Itens.Count == 0;
 
-    public int Tamanho() => itens.Count;
+    public int Tamanho() => Itens.Count;
 }
-
-```
-
-```csharp
-
-PilhaCSharp pilha = new PilhaCSharp();
-pilha.Push(10);
-Console.WriteLine($"O elemento {pilha.Peek()} foi adicionado na pilha.");
-
-pilha.Push(15);
-Console.WriteLine($"O elemento {pilha.Peek()} foi adicionado na pilha.");
-
-pilha.Push(20);
-Console.WriteLine($"O elemento {pilha.Peek()} foi adicionado na pilha.");
-
-Console.WriteLine($"O elemento {pilha.Pop()} foi removido da pilha.");
-Console.WriteLine($"O elemento {pilha.Pop()} foi removido da pilha.");
-Console.WriteLine($"O elemento {pilha.Pop()} foi removido da pilha.");
 
 ```
 
