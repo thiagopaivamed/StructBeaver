@@ -22,10 +22,6 @@ namespace StructBeaver.Tests.Vetores.Exercicios
 
             Assert.Equal(5, pares);
             Assert.Equal(5, impares);
-
-            Console.WriteLine($"Vetor original: {string.Join(", ", vetor)}");
-            Console.WriteLine($"Quantidade de pares: {pares}");
-            Console.WriteLine($"Quantidade de impares: {impares}");
         }
     }
 }

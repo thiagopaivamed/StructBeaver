@@ -22,10 +22,6 @@ namespace StructBeaver.Tests.Vetores.Exercicios
 
             Assert.Equal(97, maiorNumero);
             Assert.Equal(1, menorNumero);
-
-            Console.WriteLine($"Vetor original: {string.Join(", ", vetor)}");
-            Console.WriteLine($"Maior número: {maiorNumero}");
-            Console.WriteLine($"Menor número: {menorNumero}");
         }
     }
 }

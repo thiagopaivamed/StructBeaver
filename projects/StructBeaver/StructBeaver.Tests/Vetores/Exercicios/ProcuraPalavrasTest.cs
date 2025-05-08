@@ -28,6 +28,5 @@ namespace StructBeaver.Tests.Vetores.Exercicios
             bool palavraEstaNoTexto = _procuraPalavras.PalavraEstaNoTexto(texto, palavra);
             Assert.False(palavraEstaNoTexto);
         }
-
     }
 }

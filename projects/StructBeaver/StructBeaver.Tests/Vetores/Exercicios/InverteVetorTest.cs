@@ -17,9 +17,6 @@ namespace StructBeaver.Tests.Vetores.Exercicios
             int[] vetorInvertido = _inverteVetor.Inverter(vetor);
 
             Assert.Equal([66, 42, 36, 97, 32, 19, 77, 5, 1, 30], vetorInvertido);
-
-            Console.WriteLine($"Vetor original: {string.Join(", ", vetor)}");
-            Console.WriteLine($"Vetor invertido: {string.Join(", ", vetorInvertido)}");
         }
     }
 }

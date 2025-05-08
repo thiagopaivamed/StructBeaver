@@ -26,7 +26,6 @@ namespace StructBeaver.Tests.Vetores.Exercicios
             {
                 bool ehPalindromo = _palidromos.IsPalindromo(palavras[indice]);
                 Assert.True(ehPalindromo);
-                Console.WriteLine($"A palavra {palavras[indice]} é um palindromo");
                 indice = indice + 1;
             }            
         }
@@ -42,7 +41,6 @@ namespace StructBeaver.Tests.Vetores.Exercicios
             {
                 bool ehPalindromo = _palidromos.IsPalindromo(palavras[indice]);
                 Assert.False(ehPalindromo);
-                Console.WriteLine($"A palavra {palavras[indice]} não é um palindromo");
                 indice = indice + 1;
             }
         }

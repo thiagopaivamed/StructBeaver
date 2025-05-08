@@ -18,8 +18,6 @@ namespace StructBeaver.Tests.Ordenacao.Exercicios
 
             for (int indice = 0; indice < vetorOrdenadoDecrescente.Length - 1; indice++)
                 Assert.True(vetorOrdenadoDecrescente[indice] >= vetorOrdenadoDecrescente[indice + 1]);
-
-            Console.WriteLine($"O vetor ordenado é: {string.Join(", ", vetorOrdenadoDecrescente)}.");
         }
     }
 }

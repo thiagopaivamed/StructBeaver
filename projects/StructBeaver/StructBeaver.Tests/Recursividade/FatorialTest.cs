@@ -27,8 +27,6 @@ namespace StructBeaver.Tests.Recursividade
             int fatorial = _fatorial.CalcularFatorial(numero);
 
             Assert.True(fatorial is 0 or 1);
-
-            Console.WriteLine($"O fatorial de 0 ou 1 é {fatorial}.");
         }
 
         [Fact]
