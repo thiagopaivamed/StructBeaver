@@ -74,7 +74,9 @@ nav:
     - 7.4 Listas duplamente encadeadas padrão em C#: listas/listas-duplamente-encadeadas-operacoes-c-sharp.md
     - 7.5 Listas circulares duplamente encadeadas e suas operações: listas/listas-circulares-duplamente-encadeadas.md
     - 7.6 Exercícios de listas: listas/exercicios-listas.md
-
+  - 8. Árvores:
+    - arvores/index.md
+    - 8.1 Árvores binárias: arvores/arvores-binarias.md
 
 markdown_extensions:
   - admonition
@@ -88,6 +90,9 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.tabbed:
       alternate_style: true
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 plugins:
  - search
