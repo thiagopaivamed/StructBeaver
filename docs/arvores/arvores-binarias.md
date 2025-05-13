@@ -104,23 +104,33 @@ private NoArvore InserirRecursivamente(NoArvore atual, NoArvore novoNo)
 
 ![Inserção de nós](arvores.assets/arvores03.png)
 
-### **Pesquisa de nós (DFS - Depth-First Search)**
+### **Pesquisa de nós em profundidade (DFS - Depth-First Search)**
 
-Uma das formas de realizar a busca de um nó em uma árvore é através da Pesquisa em Profundidade (DFS - Depth-First Search). Nessa abordagem, começamos na raiz e exploramos os ramos da árvore de maneira profunda, ou seja, descemos o máximo possível em cada ramo antes de voltar e explorar outros caminhos.
+Uma forma comum de buscar um nó em uma árvore é usando a Pesquisa em Profundidade (DFS – Depth-First Search). Nessa abordagem, começamos pela raiz e exploramos o máximo possível cada ramo da árvore antes de voltar e tentar outros caminhos.
 
-A implementação do DFS pode ser feita de forma recursiva ou iterativa. A lógica básica consiste em:
+A DFS pode ser implementada de forma recursiva ou iterativa (usando uma pilha). A lógica básica da busca é:
 
 1. Início da busca: Começamos pela raiz da árvore.
 
-2. Caso base: Se o nó atual for null, significa que o valor procurado não está na árvore, então a busca retorna sem sucesso.
+2. Caso base: Se o nó atual for null, significa que o valor não está na árvore.
 
-3. Busca bem-sucedida: Se o valor procurado for encontrado no nó atual, retornamos esse nó.
+3. Valor encontrado: Se o valor do nó atual for o procurado, retornamos esse nó.
 
-4.  Exploração das subárvores: Se o valor não for encontrado no nó atual, a busca continua explorando as subárvores.Primeiro, explora-se a subárvore à esquerda do nó. Em seguida, explora-se a subárvore à direita.
+4. Exploração: Se não for o valor, continuamos a busca nas subárvores – primeiro à esquerda, depois à direita.
 
-Esse processo é repetido até que o nó seja encontrado ou todos os nós da árvore tenham sido explorados.
+Esse processo se repete até encontrar o valor ou percorrer todos os nós da árvore.
 
-O DFS é eficiente em árvores balanceadas, mas em árvores desbalanceadas, a profundidade pode aumentar, tornando o tempo de busca mais longo.
+Embora eficiente em árvores balanceadas, a DFS pode ser menos eficiente em árvores desbalanceadas, já que a profundidade aumenta e o tempo de busca pode crescer.
+
+#### **Ordens de visita na DFS**
+
+A DFS pode ser feita em três ordens diferentes, dependendo da posição da raiz em relação aos filhos:
+
+1. Pré-Ordem (PreOrder): Visita primeiro a raiz, depois o filho esquerdo e o filho direito.
+
+2. Em Ordem (InOrder): Visita primeiro o filho esquerdo, depois a raiz e, por fim, o filho direito.
+
+3. Pós-Ordem (PostOrder): Visita primeiro os filhos (esquerdo e direito) e só depois a raiz.
 
 #### **Complexidade**
 
@@ -136,28 +146,154 @@ Portanto, em casos em que o nó procurado não é a raiz, a complexidade de temp
 
 #### **Implementação**
 
+=== "DFS Pré-Ordem"
+
+    ```csharp
+
+        public NoArvore? PesquisarComDfsPreOrdem(int valor)
+        {
+            if (Raiz is null)
+                return null;
+
+            Stack<NoArvore> pilha = new();
+            pilha.Push(Raiz);
+
+            while (pilha.Count > 0)
+            {
+                NoArvore noAtual = pilha.Pop();
+
+                if (noAtual.Valor == valor)
+                    return noAtual;
+                                
+                if (noAtual.NoDireito is not null)
+                    pilha.Push(noAtual.NoDireito);
+
+                if (noAtual.NoEsquerdo is not null)
+                    pilha.Push(noAtual.NoEsquerdo);
+            }
+
+            return null;
+        }  
+
+    ```
+
+=== "DFS Em Ordem"
+
+    ```csharp
+
+    public NoArvore? PesquisarDfsEmOrdem(int valor)
+        => PesquisarDfsEmOrdemRecursivo(Raiz, valor);
+
+    private NoArvore? PesquisarDfsEmOrdemRecursivo(NoArvore? noAtual, int valor)
+    {
+        if (noAtual is null)
+            return null;
+
+        // Busca na subárvore esquerda
+        NoArvore? noEsquerdo = PesquisarDfsEmOrdemRecursivo(noAtual.NoEsquerdo, valor);
+        if (noEsquerdo is not null)
+            return noEsquerdo;
+
+        // Verifica o nó atual
+        if (noAtual.Valor == valor)
+            return noAtual;
+
+        // Busca na subárvore direita
+        return PesquisarDfsEmOrdemRecursivo(noAtual.NoDireito, valor);
+    }
+
+    ```
+
+=== "DFS Pós-Ordem"
+
 ```csharp
 
-public NoArvore? Pesquisar(int valor)
-    => PesquisarRecursivo(Raiz, valor);        
+public NoArvore? PesquisarDfsPosOrdem(int valor)
+    => PesquisarDfsPosOrdemRecursivo(Raiz, valor);
 
-private NoArvore? PesquisarRecursivo(NoArvore? noAtual, int valor)
+private NoArvore? PesquisarDfsPosOrdemRecursivo(NoArvore? noAtual, int valor)
 {
     if (noAtual is null)
         return null;
 
+    // Busca na subárvore esquerda
+    NoArvore? noEsquerdo = PesquisarDfsPosOrdemRecursivo(noAtual.NoEsquerdo, valor);
+    if (noEsquerdo is not null)
+        return noEsquerdo;
+
+    // Busca na subárvore direita
+    NoArvore? noDireito = PesquisarDfsPosOrdemRecursivo(noAtual.NoDireito, valor);
+    if (noDireito is not null)
+        return noDireito;
+
+    // Verifica o nó atual
     if (noAtual.Valor == valor)
         return noAtual;
 
-    NoArvore? noPesquisaLadoEsquerdo = PesquisarRecursivo(noAtual.NoEsquerdo, valor);
-
-    if (noPesquisaLadoEsquerdo is not null)
-        return noPesquisaLadoEsquerdo;
-
-    return PesquisarRecursivo(noAtual.NoDireito, valor);
+    return null;
 }
 
 ```
+
+=== "DFS Pré-Ordem"
+
+    ![DFS Pré-Ordem](arvores.assets/dfs-pre-ordem.png)
+
+=== "DFS Em Ordem"
+
+    ![DFS Em Ordem](arvores.assets/dfs-em-ordem.png)
+
+=== "DFS Pós-Ordem"
+
+    ![DFS Pós-Ordem](arvores.assets/dfs-pos-ordem.png)
+
+
+### **Pesquisa de nós em largura (Breadth-First Search)**
+
+Outra forma de pesquisar por nós é usando a pesquisa em largura. Ela consiste em visitar os nós da árvore nível por nível. A pesquisa começa pela raiz da árvore, visita todos os vizinhos (filhos diretos) antes de descer para o nível abaixo e para manter a ordem de visitação, usamos uma fila ou recursão.
+
+#### **Complexidade**
+
+Se o nó procurado for a raiz, então a complexidade é `O(1)`. Caso contrário, será necessário visitar os nós até achar o nó procurado. Nesse caso, a complexidade é `O(n)`.
+
+| Caso         | Complexidade |
+|--------------|--------------|
+| Melhor caso  | O(1)         |
+| Caso médio   | O(n)         |
+| Pior caso    | O(n)         |
+
+#### **Implementação**
+
+```csharp
+
+public NoArvore? PesquisarComBfs(int valor)
+{
+    if (Raiz is null) 
+        return null;
+
+    Queue<NoArvore> nosVisitados = new();
+    nosVisitados.Enqueue(Raiz);
+
+    while (nosVisitados.Count > 0)
+    {
+        NoArvore noAtual = nosVisitados.Dequeue();
+
+        if (noAtual.Valor == valor)
+            return noAtual;
+
+        if (noAtual.NoEsquerdo is not null)
+            nosVisitados.Enqueue(noAtual.NoEsquerdo);
+
+        if (noAtual.NoDireito is not null)
+            nosVisitados.Enqueue(noAtual.NoDireito);
+    }
+
+    return null;
+}
+
+```
+
+![Pesquisa por largura (BFS)](arvores.assets/bfs.png)
 
 ### **Remoção de nós**
 
@@ -233,6 +369,3 @@ private NoArvore EncontrarMinimo(NoArvore? noAtual)
 }
 
 ```
-
-
-

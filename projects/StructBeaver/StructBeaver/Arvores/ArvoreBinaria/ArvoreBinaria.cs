@@ -6,7 +6,7 @@
 
         public NoArvore Inserir(int valor)
         {
-            NoArvore novoNo = new NoArvore(valor);
+            NoArvore novoNo = new (valor);
 
             if (Raiz is null)
             {
@@ -42,23 +42,100 @@
             }
         }
 
-        public NoArvore? Pesquisar(int valor)
-            => PesquisarRecursivo(Raiz, valor);        
+        public NoArvore? PesquisarComBfs(int valor)
+        {
+            if (Raiz is null) 
+                return null;
 
-        private NoArvore? PesquisarRecursivo(NoArvore? noAtual, int valor)
+            Queue<NoArvore> nosVisitados = new();
+            nosVisitados.Enqueue(Raiz);
+
+            while (nosVisitados.Count > 0)
+            {
+                NoArvore noAtual = nosVisitados.Dequeue();
+
+                if (noAtual.Valor == valor)
+                    return noAtual;
+
+                if (noAtual.NoEsquerdo is not null)
+                    nosVisitados.Enqueue(noAtual.NoEsquerdo);
+
+                if (noAtual.NoDireito is not null)
+                    nosVisitados.Enqueue(noAtual.NoDireito);
+            }
+
+            return null;
+        }
+
+        public NoArvore? PesquisarComDfsPreOrdem(int valor)
+        {
+            if (Raiz is null)
+                return null;
+
+            Stack<NoArvore> pilha = new();
+            pilha.Push(Raiz);
+
+            while (pilha.Count > 0)
+            {
+                NoArvore noAtual = pilha.Pop();
+
+                if (noAtual.Valor == valor)
+                    return noAtual;
+                                
+                if (noAtual.NoDireito is not null)
+                    pilha.Push(noAtual.NoDireito);
+
+                if (noAtual.NoEsquerdo is not null)
+                    pilha.Push(noAtual.NoEsquerdo);
+            }
+
+            return null;
+        }
+
+        public NoArvore? PesquisarDfsEmOrdem(int valor)
+            => PesquisarDfsEmOrdemRecursivo(Raiz, valor);
+        
+        private NoArvore? PesquisarDfsEmOrdemRecursivo(NoArvore? noAtual, int valor)
         {
             if (noAtual is null)
                 return null;
 
+            // Busca na subárvore esquerda
+            NoArvore? noEsquerdo = PesquisarDfsEmOrdemRecursivo(noAtual.NoEsquerdo, valor);
+            if (noEsquerdo is not null)
+                return noEsquerdo;
+
+            // Verifica o nó atual
             if (noAtual.Valor == valor)
                 return noAtual;
 
-            NoArvore? noPesquisaLadoEsquerdo = PesquisarRecursivo(noAtual.NoEsquerdo, valor);
+            // Busca na subárvore direita
+            return PesquisarDfsEmOrdemRecursivo(noAtual.NoDireito, valor);
+        }
 
-            if (noPesquisaLadoEsquerdo is not null)
-                return noPesquisaLadoEsquerdo;
+        public NoArvore? PesquisarDfsPosOrdem(int valor)
+            => PesquisarDfsPosOrdemRecursivo(Raiz, valor);
+        
+        private NoArvore? PesquisarDfsPosOrdemRecursivo(NoArvore? noAtual, int valor)
+        {
+            if (noAtual is null)
+                return null;
 
-            return PesquisarRecursivo(noAtual.NoDireito, valor);
+            // Busca na subárvore esquerda
+            NoArvore? noEsquerdo = PesquisarDfsPosOrdemRecursivo(noAtual.NoEsquerdo, valor);
+            if (noEsquerdo is not null)
+                return noEsquerdo;
+
+            // Busca na subárvore direita
+            NoArvore? noDireito = PesquisarDfsPosOrdemRecursivo(noAtual.NoDireito, valor);
+            if (noDireito is not null)
+                return noDireito;
+
+            // Verifica o nó atual
+            if (noAtual.Valor == valor)
+                return noAtual;
+
+            return null;
         }
 
         public void Remover(int valor)

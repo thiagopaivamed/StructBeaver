@@ -58,27 +58,125 @@ namespace StructBeaver.Tests.Arvores.Binaria
         }
 
         [Fact]
-        public void Pesquisar_Deve_Retornar_No_Quando_Ele_For_Encontrado()
+        public void PesquisarComBfs_Deve_Retornar_No_QuandoValor_Esta_Na_Raiz()
         {
-            _arvoreBinaria.Inserir(10);
-            _arvoreBinaria.Inserir(5);
-            _arvoreBinaria.Inserir(15);
+            InicializarArvore();
 
-            NoArvore noEncontrado = _arvoreBinaria.Pesquisar(5);
-            noEncontrado.ShouldNotBeNull();
-            noEncontrado.Valor.ShouldBe(5);
+            NoArvore noProcurado = _arvoreBinaria.PesquisarComBfs(1);
+
+            noProcurado.ShouldNotBeNull();
+            noProcurado.Valor.ShouldBe(1);
         }
 
         [Fact]
-        public void Pesquisar_Deve_Retornar_Null_Quando_No_Nao_For_Encontrado()
+        public void PesquisarComBfs_Deve_Retornar_No_Quando_Valor_Esta_No_Meio()
         {
-            _arvoreBinaria.Inserir(10);
-            _arvoreBinaria.Inserir(5);
-            _arvoreBinaria.Inserir(15);
+            InicializarArvore();
 
-            NoArvore noEncontrado = _arvoreBinaria.Pesquisar(30);
-            noEncontrado.ShouldBeNull();
+            NoArvore noProcurado = _arvoreBinaria.PesquisarComBfs(3);
+
+            noProcurado.ShouldNotBeNull();
+            noProcurado.Valor.ShouldBe(3);
         }
+
+        [Fact]
+        public void PesquisarComBfs_Deve_Retornar_No_Quando_Valor_Esta_Na_Folha()
+        {
+            InicializarArvore();
+
+            NoArvore noProcurado = _arvoreBinaria.PesquisarComBfs(5);
+
+            noProcurado.ShouldNotBeNull();
+            noProcurado.Valor.ShouldBe(5);
+        }
+
+        [Fact]
+        public void PesquisarComBfs_DeveRetornar_Null_Quando_Valor_Nao_Existe()
+        {
+            InicializarArvore();
+
+            NoArvore noProcurado = _arvoreBinaria.PesquisarComBfs(999);
+
+            noProcurado.ShouldBeNull();
+        }
+
+        [Fact]
+        public void PesquisarComDfsPreOrdem_Deve_Retornar_No_Quando_Valor_Esta_Na_Raiz()
+        {
+            InicializarArvore();
+            NoArvore noProcurado = _arvoreBinaria.PesquisarComDfsPreOrdem(4);
+
+            noProcurado.ShouldNotBeNull();
+            noProcurado.Valor.ShouldBe(4);
+        }
+
+        [Fact]
+        public void PesquisarComDfsPreOrdem_Deve_Retornar_No_Quando_Valor_Esta_No_Meio()
+        {
+            InicializarArvore();
+            NoArvore noProcurado = _arvoreBinaria.PesquisarComDfsPreOrdem(2);
+
+            noProcurado.ShouldNotBeNull();
+            noProcurado.Valor.ShouldBe(2);
+        }
+
+        [Fact]
+        public void PesquisarComDfsPreOrdem_Deve_Retornar_No_Quando_Valor_Esta_Na_Folha()
+        {
+            InicializarArvore();
+            NoArvore noProcurado = _arvoreBinaria.PesquisarComDfsPreOrdem(1);
+
+            noProcurado.ShouldNotBeNull();
+            noProcurado.Valor.ShouldBe(1);
+        }
+
+        [Fact]
+        public void PesquisarComDfsPreOrdem_Deve_Retornar_Null_Quando_Valor_Nao_Existe()
+        {
+            InicializarArvore();
+            NoArvore noProcurado = _arvoreBinaria.PesquisarComDfsPreOrdem(999);
+
+            noProcurado.ShouldBeNull();
+        }
+
+        [Fact]
+        public void PesquisarDfsEmOrdem_Deve_Retornar_Null_Quando_Valor_Nao_Existe()
+        {
+            InicializarArvore();
+            NoArvore? noProcurado = _arvoreBinaria.PesquisarDfsEmOrdem(999);
+
+            noProcurado.ShouldBeNull();
+        }
+
+        [Fact]
+        public void PesquisarDfsEmOrdem_Deve_Retornar_No_Quando_Valor_Existe()
+        {
+            InicializarArvore();
+            NoArvore? noProcurado = _arvoreBinaria.PesquisarDfsEmOrdem(5);
+
+            noProcurado.ShouldNotBeNull();
+            noProcurado.Valor.ShouldBe(5);
+        }
+
+        [Fact]
+        public void PesquisarDfsPosOrdem_Deve_Retornar_Null_Quando_Valor_Nao_Existe()
+        {
+            InicializarArvore();
+            NoArvore? noProcurado = _arvoreBinaria.PesquisarDfsPosOrdem(999);
+
+            noProcurado.ShouldBeNull();
+        }
+
+        [Fact]
+        public void PesquisarDfsPosOrdem_Deve_Retornar_No_Quando_Valor_Existe()
+        {
+            InicializarArvore();
+            NoArvore? noProcurado = _arvoreBinaria.PesquisarDfsPosOrdem(6);
+
+            noProcurado.ShouldNotBeNull();
+            noProcurado.Valor.ShouldBe(6);
+        }
+
 
         [Fact]
         public void Remover_Deve_Remover_No_Sem_Filhos()
@@ -89,7 +187,7 @@ namespace StructBeaver.Tests.Arvores.Binaria
 
             _arvoreBinaria.Remover(5);
 
-            _arvoreBinaria.Pesquisar(5).ShouldBeNull();
+            _arvoreBinaria.PesquisarComBfs(5).ShouldBeNull();
         }
 
         [Fact]
@@ -103,8 +201,8 @@ namespace StructBeaver.Tests.Arvores.Binaria
 
             _arvoreBinaria.Remover(5);
 
-            _arvoreBinaria.Pesquisar(5).ShouldBeNull();
-            _arvoreBinaria.Pesquisar(7).ShouldNotBeNull();
+            _arvoreBinaria.PesquisarComBfs(5).ShouldBeNull();
+            _arvoreBinaria.PesquisarComBfs(7).ShouldNotBeNull();
         }
 
         [Fact]
@@ -118,8 +216,8 @@ namespace StructBeaver.Tests.Arvores.Binaria
 
             _arvoreBinaria.Remover(5);
 
-            _arvoreBinaria.Pesquisar(5).ShouldBeNull();
-            _arvoreBinaria.Pesquisar(7).ShouldNotBeNull();
+            _arvoreBinaria.PesquisarComBfs(5).ShouldBeNull();
+            _arvoreBinaria.PesquisarComBfs(7).ShouldNotBeNull();
         }
 
         [Fact]
@@ -133,9 +231,19 @@ namespace StructBeaver.Tests.Arvores.Binaria
 
             _arvoreBinaria.Remover(10);
 
-            _arvoreBinaria.Pesquisar(10).ShouldBeNull();
-            _arvoreBinaria.Pesquisar(7).ShouldNotBeNull();
-            _arvoreBinaria.Pesquisar(15).ShouldNotBeNull();
+            _arvoreBinaria.PesquisarComBfs(10).ShouldBeNull();
+            _arvoreBinaria.PesquisarComBfs(7).ShouldNotBeNull();
+            _arvoreBinaria.PesquisarComBfs(15).ShouldNotBeNull();
+        }
+
+        private void InicializarArvore()
+        {            
+            _arvoreBinaria.Inserir(1);
+            _arvoreBinaria.Inserir(2);
+            _arvoreBinaria.Inserir(3);
+            _arvoreBinaria.Inserir(4);
+            _arvoreBinaria.Inserir(5);
+            _arvoreBinaria.Inserir(6);
         }
     }
 }
