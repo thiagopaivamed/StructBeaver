@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\arvores\\arvorebinaria\\arvorebinaria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\arvores\\arvorebinaria\\arvorebinaria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver.tests\\arvores\\binaria\\arvorebinariatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|solutionrelative:structbeaver.tests\\arvores\\binaria\\arvorebinariatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\arvores\\arvorebinaria\\arvorebinaria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\arvores\\arvorebinaria\\arvorebinaria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\arvores\\noarvore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,26 +34,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ArvoreBinariaTest.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Arvores\\Binaria\\ArvoreBinariaTest.cs",
               "RelativeDocumentMoniker": "StructBeaver.Tests\\Arvores\\Binaria\\ArvoreBinariaTest.cs",
               "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Arvores\\Binaria\\ArvoreBinariaTest.cs",
               "RelativeToolTip": "StructBeaver.Tests\\Arvores\\Binaria\\ArvoreBinariaTest.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAkwE8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T21:49:42.445Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ArvoreBinaria.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\ArvoreBinaria\\ArvoreBinaria.cs",
               "RelativeDocumentMoniker": "StructBeaver\\Arvores\\ArvoreBinaria\\ArvoreBinaria.cs",
               "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\ArvoreBinaria\\ArvoreBinaria.cs",
               "RelativeToolTip": "StructBeaver\\Arvores\\ArvoreBinaria\\ArvoreBinaria.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAD0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwD8AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T19:02:45.409Z",
               "EditorCaption": ""

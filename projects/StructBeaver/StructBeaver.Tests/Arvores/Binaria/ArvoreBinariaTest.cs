@@ -1,4 +1,5 @@
-﻿using StructBeaver.Arvores;
+﻿using Shouldly;
+using StructBeaver.Arvores;
 using StructBeaver.Arvores.ArvoreBinaria;
 
 namespace StructBeaver.Tests.Arvores.Binaria
@@ -8,25 +9,25 @@ namespace StructBeaver.Tests.Arvores.Binaria
         private ArvoreBinaria _arvoreBinaria;
 
         public ArvoreBinariaTest()
-            => _arvoreBinaria = new ArvoreBinaria(null);
+            => _arvoreBinaria = new(null);
 
         [Fact]
         public void Inserir_Deve_Definir_Raiz_Se_Arvore_Estiver_Vazia()
         {
             NoArvore raizAntesDaInsercao = _arvoreBinaria.Raiz;
 
-            Assert.Null(raizAntesDaInsercao);
-            Assert.Null(raizAntesDaInsercao?.NoEsquerdo);
-            Assert.Null(raizAntesDaInsercao?.NoDireito);
+            raizAntesDaInsercao.ShouldBeNull();
+            raizAntesDaInsercao?.NoEsquerdo.ShouldBeNull();
+            raizAntesDaInsercao?.NoDireito.ShouldBeNull();
 
              _arvoreBinaria.Inserir(10);
 
             NoArvore raizDepoisDaInsercao = _arvoreBinaria.Raiz;
 
-            Assert.NotNull(raizDepoisDaInsercao);
-            Assert.Equal(raizDepoisDaInsercao.Valor, 10);
-            Assert.Null(raizDepoisDaInsercao.NoEsquerdo);
-            Assert.Null(raizDepoisDaInsercao.NoDireito);
+            raizDepoisDaInsercao.ShouldNotBeNull();
+            raizDepoisDaInsercao.Valor.ShouldBe(10);
+            raizDepoisDaInsercao.NoEsquerdo.ShouldBeNull();
+            raizDepoisDaInsercao.NoDireito.ShouldBeNull();
         }
 
         [Fact]
@@ -34,26 +35,26 @@ namespace StructBeaver.Tests.Arvores.Binaria
         {
             NoArvore raizAntesDaInsercao = _arvoreBinaria.Raiz;
 
-            Assert.Null(raizAntesDaInsercao);
-            Assert.Null(raizAntesDaInsercao?.NoEsquerdo);
-            Assert.Null(raizAntesDaInsercao?.NoDireito);
+            raizAntesDaInsercao.ShouldBeNull();
+            raizAntesDaInsercao?.NoEsquerdo.ShouldBeNull();
+            raizAntesDaInsercao?.NoDireito.ShouldBeNull();
 
             _arvoreBinaria.Inserir(10);
             NoArvore raizDepoisDaInsercao = _arvoreBinaria.Raiz;
 
-            Assert.NotNull(raizDepoisDaInsercao);
-            Assert.Null(raizDepoisDaInsercao.NoEsquerdo);
-            Assert.Null(raizDepoisDaInsercao.NoDireito);
+            raizDepoisDaInsercao.ShouldNotBeNull();
+            raizDepoisDaInsercao.NoEsquerdo.ShouldBeNull();
+            raizDepoisDaInsercao.NoDireito.ShouldBeNull();
 
             _arvoreBinaria.Inserir(5);
-            Assert.NotNull(raizDepoisDaInsercao.NoEsquerdo);
-            Assert.Equal(raizDepoisDaInsercao.NoEsquerdo.Valor, 5);
-            Assert.Null(raizDepoisDaInsercao.NoDireito);
+            raizDepoisDaInsercao.NoEsquerdo.ShouldNotBeNull();
+            raizDepoisDaInsercao.NoEsquerdo.Valor.ShouldBe(5);
+            raizDepoisDaInsercao.NoDireito.ShouldBeNull();
 
             _arvoreBinaria.Inserir(15);
-            Assert.NotNull(raizDepoisDaInsercao.NoEsquerdo);
-            Assert.NotNull(raizDepoisDaInsercao.NoDireito);
-            Assert.Equal(raizDepoisDaInsercao.NoDireito.Valor, 15);
+            raizDepoisDaInsercao.NoEsquerdo.ShouldNotBeNull();
+            raizDepoisDaInsercao.NoDireito.ShouldNotBeNull();
+            raizDepoisDaInsercao.NoDireito.Valor.ShouldBe(15);
         }
 
         [Fact]
@@ -64,8 +65,8 @@ namespace StructBeaver.Tests.Arvores.Binaria
             _arvoreBinaria.Inserir(15);
 
             NoArvore noEncontrado = _arvoreBinaria.Pesquisar(5);
-            Assert.NotNull(noEncontrado);
-            Assert.Equal(noEncontrado.Valor, 5);
+            noEncontrado.ShouldNotBeNull();
+            noEncontrado.Valor.ShouldBe(5);
         }
 
         [Fact]
@@ -76,7 +77,65 @@ namespace StructBeaver.Tests.Arvores.Binaria
             _arvoreBinaria.Inserir(15);
 
             NoArvore noEncontrado = _arvoreBinaria.Pesquisar(30);
-            Assert.Null(noEncontrado);
-        }        
+            noEncontrado.ShouldBeNull();
+        }
+
+        [Fact]
+        public void Remover_Deve_Remover_No_Sem_Filhos()
+        {
+            _arvoreBinaria.Inserir(10);
+            _arvoreBinaria.Inserir(5);
+            _arvoreBinaria.Inserir(15);
+
+            _arvoreBinaria.Remover(5);
+
+            _arvoreBinaria.Pesquisar(5).ShouldBeNull();
+        }
+
+        [Fact]
+        public void Remover_Deve_Remover_No_Com_Um_Filho()
+        {
+            ArvoreBinaria arvore = new(null);
+            _arvoreBinaria.Inserir(10);
+            _arvoreBinaria.Inserir(5);
+            _arvoreBinaria.Inserir(15);
+            _arvoreBinaria.Inserir(7);  
+
+            _arvoreBinaria.Remover(5);
+
+            _arvoreBinaria.Pesquisar(5).ShouldBeNull();
+            _arvoreBinaria.Pesquisar(7).ShouldNotBeNull();
+        }
+
+        [Fact]
+        public void Remover_Deve_Remover_No_Com_Dois_Filhos()
+        {
+            _arvoreBinaria.Inserir(10);
+            _arvoreBinaria.Inserir(5);
+            _arvoreBinaria.Inserir(15);
+            _arvoreBinaria.Inserir(3);
+            _arvoreBinaria.Inserir(7);
+
+            _arvoreBinaria.Remover(5);
+
+            _arvoreBinaria.Pesquisar(5).ShouldBeNull();
+            _arvoreBinaria.Pesquisar(7).ShouldNotBeNull();
+        }
+
+        [Fact]
+        public void Remover_Deve_Remover_Raiz_Com_Dois_Filhos()
+        {
+            _arvoreBinaria.Inserir(10);
+            _arvoreBinaria.Inserir(5);
+            _arvoreBinaria.Inserir(15);
+            _arvoreBinaria.Inserir(3);
+            _arvoreBinaria.Inserir(7);
+
+            _arvoreBinaria.Remover(10);
+
+            _arvoreBinaria.Pesquisar(10).ShouldBeNull();
+            _arvoreBinaria.Pesquisar(7).ShouldNotBeNull();
+            _arvoreBinaria.Pesquisar(15).ShouldNotBeNull();
+        }
     }
 }

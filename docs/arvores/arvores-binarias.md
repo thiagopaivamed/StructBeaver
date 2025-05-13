@@ -141,23 +141,98 @@ Portanto, em casos em que o nó procurado não é a raiz, a complexidade de temp
 public NoArvore? Pesquisar(int valor)
     => PesquisarRecursivo(Raiz, valor);        
 
-private NoArvore? PesquisarRecursivo(NoArvore? atual, int valor)
+private NoArvore? PesquisarRecursivo(NoArvore? noAtual, int valor)
 {
-    if (atual is null)
+    if (noAtual is null)
         return null;
 
-    if (atual.Valor == valor)
-        return atual;
+    if (noAtual.Valor == valor)
+        return noAtual;
 
-    NoArvore? noPesquisaLadoEsquerdo = PesquisarRecursivo(atual.NoEsquerdo, valor);
+    NoArvore? noPesquisaLadoEsquerdo = PesquisarRecursivo(noAtual.NoEsquerdo, valor);
 
     if (noPesquisaLadoEsquerdo is not null)
         return noPesquisaLadoEsquerdo;
 
-    return PesquisarRecursivo(atual.NoDireito, valor);
+    return PesquisarRecursivo(noAtual.NoDireito, valor);
 }
 
 ```
 
 ### **Remoção de nós**
+
+A remoção de um nó em uma árvore binária de busca envolve 3 casos principais:
+
+1. Nó sem filhos (nó folha)
+O nó é removido e simplesmente a referência para ele se torna `null`.
+
+2. Nó com um filho (esquerdo ou direito)
+O nó é removido e o filho (caso exista) ocupa o lugar dele, ou seja, a referência ao nó é substituída pela referência ao filho.
+
+3. Nó com dois filhos
+O nó é removido, mas como ele tem dois filhos, precisamos encontrar uma forma de mantê-lo na estrutura da árvore. O método utilizado aqui é substituir o nó pelo seu sucessor, ou seja, o nó de menor valor na subárvore à direita do nó a ser removido.
+
+#### **Complexidade**
+
+Em uma árvore balanceada, o tempo necessário para percorrer até o nó desejado é proporcional à altura da árvore. Portanto, a operação de remoção, que envolve procurar o nó e, em alguns casos, encontrar o sucessor e removê-lo, leva `O(log n)` tempo.
+
+No pior caso, a árvore pode se tornar uma lista encadeada (se os elementos forem inseridos em ordem crescente ou decrescente, por exemplo). Nesse caso, a operação de remoção teria uma complexidade de `O(n)`.
+
+| Caso         | Complexidade |
+|--------------|--------------|
+| Melhor caso  | O(log n)     |
+| Caso médio   | O(log n)     |
+| Pior caso    | O(n)         |
+
+#### **Implementação**
+
+```csharp
+
+public void Remover(int valor)
+    => Raiz = RemoverRecursivo(Raiz, valor);
+
+private NoArvore? RemoverRecursivo(NoArvore? noAtual, int valor)
+{
+    if (noAtual is null)
+        return null;
+
+    if (valor < noAtual.Valor)
+        noAtual.NoEsquerdo = RemoverRecursivo(noAtual.NoEsquerdo, valor);
+    
+    else if (valor > noAtual.Valor)
+        noAtual.NoDireito = RemoverRecursivo(noAtual.NoDireito, valor);
+    
+    else
+    {
+        // Caso 1: Sem filhos
+        if (noAtual.NoEsquerdo is null && noAtual.NoDireito is null)
+            return null;
+
+        // Caso 2: Um filho
+        if (noAtual.NoEsquerdo is null)
+            return noAtual.NoDireito;
+
+        if (noAtual.NoDireito is null)
+            return noAtual.NoEsquerdo;
+
+        // Caso 3: Dois filhos
+        NoArvore noSucessor = EncontrarMinimo(noAtual.NoDireito);
+        noAtual.Valor = noSucessor.Valor;
+        noAtual.NoDireito = RemoverRecursivo(noAtual.NoDireito, noSucessor.Valor.Value);
+    }
+
+    return noAtual;
+}
+
+private NoArvore EncontrarMinimo(NoArvore? noAtual)
+{
+    while (noAtual?.NoEsquerdo is not null)
+        noAtual = noAtual.NoEsquerdo;
+
+    return noAtual;
+}
+
+```
+
+
 
