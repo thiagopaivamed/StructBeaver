@@ -6,7 +6,7 @@ comments: true
 
 # **Funções recursivas**
 
-Funções recursivas são aquelas que chamam a si mesmas dentro do seu próprio bloco de código. Dessa forma, conseguemcriar iterações até que o objetivo do algoritmo seja alcançado. A sua última chamada é conhecido como **caso base**.
+Funções recursivas são aquelas que chamam a si mesmas dentro do seu próprio bloco de código. Dessa forma, conseguem criar iterações até que o objetivo do algoritmo seja alcançado. A sua última chamada é conhecido como **caso base**.
 
 Como a função se chama a si mesma, é necessário ter cuidado para não acabar em um _loop_ infinito.
 
