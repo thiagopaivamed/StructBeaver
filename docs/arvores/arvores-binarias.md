@@ -150,30 +150,30 @@ Portanto, em casos em que o nó procurado não é a raiz, a complexidade de temp
 
     ```csharp
 
-        public NoArvore? PesquisarComDfsPreOrdem(int valor)
-        {
-            if (Raiz is null)
-                return null;
-
-            Stack<NoArvore> pilha = new();
-            pilha.Push(Raiz);
-
-            while (pilha.Count > 0)
-            {
-                NoArvore noAtual = pilha.Pop();
-
-                if (noAtual.Valor == valor)
-                    return noAtual;
-                                
-                if (noAtual.NoDireito is not null)
-                    pilha.Push(noAtual.NoDireito);
-
-                if (noAtual.NoEsquerdo is not null)
-                    pilha.Push(noAtual.NoEsquerdo);
-            }
-
+    public NoArvore? PesquisarComDfsPreOrdem(int valor)
+    {
+        if (Raiz is null)
             return null;
-        }  
+
+        Stack<NoArvore> pilha = new();
+        pilha.Push(Raiz);
+
+        while (pilha.Count > 0)
+        {
+            NoArvore noAtual = pilha.Pop();
+
+            if (noAtual.Valor == valor)
+                return noAtual;
+                            
+            if (noAtual.NoDireito is not null)
+                pilha.Push(noAtual.NoDireito);
+
+            if (noAtual.NoEsquerdo is not null)
+                pilha.Push(noAtual.NoEsquerdo);
+        }
+
+        return null;
+    }        
 
     ```
 
@@ -182,7 +182,7 @@ Portanto, em casos em que o nó procurado não é a raiz, a complexidade de temp
     ```csharp
 
     public NoArvore? PesquisarDfsEmOrdem(int valor)
-        => PesquisarDfsEmOrdemRecursivo(Raiz, valor);
+    => PesquisarDfsEmOrdemRecursivo(Raiz, valor);
 
     private NoArvore? PesquisarDfsEmOrdemRecursivo(NoArvore? noAtual, int valor)
     {
@@ -206,46 +206,47 @@ Portanto, em casos em que o nó procurado não é a raiz, a complexidade de temp
 
 === "DFS Pós-Ordem"
 
-```csharp
+    ```csharp
 
-public NoArvore? PesquisarDfsPosOrdem(int valor)
+    public NoArvore? PesquisarDfsPosOrdem(int valor)
     => PesquisarDfsPosOrdemRecursivo(Raiz, valor);
 
-private NoArvore? PesquisarDfsPosOrdemRecursivo(NoArvore? noAtual, int valor)
-{
-    if (noAtual is null)
+    private NoArvore? PesquisarDfsPosOrdemRecursivo(NoArvore? noAtual, int valor)
+    {
+        if (noAtual is null)
+            return null;
+
+        // Busca na subárvore esquerda
+        NoArvore? noEsquerdo = PesquisarDfsPosOrdemRecursivo(noAtual.NoEsquerdo, valor);
+        if (noEsquerdo is not null)
+            return noEsquerdo;
+
+        // Busca na subárvore direita
+        NoArvore? noDireito = PesquisarDfsPosOrdemRecursivo(noAtual.NoDireito, valor);
+        if (noDireito is not null)
+            return noDireito;
+
+        // Verifica o nó atual
+        if (noAtual.Valor == valor)
+            return noAtual;
+
         return null;
+    }
 
-    // Busca na subárvore esquerda
-    NoArvore? noEsquerdo = PesquisarDfsPosOrdemRecursivo(noAtual.NoEsquerdo, valor);
-    if (noEsquerdo is not null)
-        return noEsquerdo;
-
-    // Busca na subárvore direita
-    NoArvore? noDireito = PesquisarDfsPosOrdemRecursivo(noAtual.NoDireito, valor);
-    if (noDireito is not null)
-        return noDireito;
-
-    // Verifica o nó atual
-    if (noAtual.Valor == valor)
-        return noAtual;
-
-    return null;
-}
-
-```
+    ```
+<!-- -->
 
 === "DFS Pré-Ordem"
 
-    ![DFS Pré-Ordem](arvores.assets/dfs-pre-ordem.png)
+    ![](arvores.assets/dfs-pre-ordem.png)
 
 === "DFS Em Ordem"
 
-    ![DFS Em Ordem](arvores.assets/dfs-em-ordem.png)
+    ![](arvores.assets/dfs-em-ordem.png)
 
 === "DFS Pós-Ordem"
 
-    ![DFS Pós-Ordem](arvores.assets/dfs-pos-ordem.png)
+    ![](arvores.assets/dfs-pos-ordem.png)
 
 
 ### **Pesquisa de nós em largura (Breadth-First Search)**
@@ -369,3 +370,23 @@ private NoArvore EncontrarMinimo(NoArvore? noAtual)
 }
 
 ```
+
+=== "Árvore inicial"
+
+    ![](arvores.assets/remocao01.png)
+
+=== "Remoção - Caso 01 - Nó sem filhos"
+
+    ![](arvores.assets/remocao02.png)
+
+=== "Remoção - Caso 02 - Nó com 1 filho"
+
+    ![](arvores.assets/remocao03.png)
+
+=== "Remoção - Caso 03 - Nó com filhos"
+
+    ![](arvores.assets/remocao04.png)
+
+=== "Árvore resultante das 3 remoções"
+
+    ![](arvores.assets/remocao05.png)
