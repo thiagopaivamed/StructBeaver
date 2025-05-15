@@ -28,8 +28,8 @@ Cada nó da árvore possui um atributo de altura, que serve de apoio no cálculo
 public class NoAvl
 {
     public int Valor;
-    public NoAvl? Esquerda;
-    public NoAvl? Direita;
+    public NoAvl? NoEsquerdo;
+    public NoAvl? NoDireito;
     public int Altura;
 
     public NoAvl(int valor)
@@ -53,3 +53,143 @@ Existem quatro tipos de rotações fundamentais em árvores AVL, utilizadas para
 
 4. **Rotação dupla à esquerda (RL):** necessária quando o desbalanceamento está no filho esquerdo do filho direito (caso direita-esquerda).
 
+### **Operações**
+
+Com o nó da árvore definido acima, vamos dar início à criação da AVL para prosseguirmos com as operações.
+
+```csharp
+
+public class ArvoreAvl (NoAvl raizAvl)
+{
+    public NoAvl RaizAvl = raizAvl;
+}
+
+```
+
+Para garantir o funcionamento correto da nossa árvore AVL, precisamos implementar alguns métodos auxiliares essenciais. Vamos lá.
+
+#### **Métodos de suporte (Altura, Fator de balanceamento e atualização da altura)**
+
+Para sabermos a altura de um nó, basta consultar o valor armazenado em sua propriedade de altura.
+
+```csharp
+
+private int PegarAlturaNo(NoAvl? noAvl)
+    => noAvl?.Altura ?? 0;
+
+```
+
+Se o nó for nulo, significa que ele não possui altura, portanto retornamos 0. Caso contrário, retornamos o valor da sua altura.
+
+Agora, vamos implementar o cálculo do fator de balanceamento de cada nó.
+
+```csharp
+
+private int FatorBalanceamento(NoAvl? no)
+{
+    if (no is null)
+        return 0;
+
+    return PegarAlturaNo(no.NoEsquerdo) - PegarAlturaNo(no.NoDireito);
+}
+
+```
+
+Por último, é necessário recalcular a altura do nó para manter as informações da árvore atualizadas.
+
+```csharp
+
+private void AtualizarAltura(NoAvl no)
+{
+    int alturaNoEsquerdo = PegarAlturaNo(no.NoEsquerdo);
+    int alturaNoDireito = PegarAlturaNo(no.NoDireito);
+    no.Altura = Math.Max(alturaNoEsquerdo, alturaNoDireito) + 1;
+}
+
+```
+
+Com os métodos auxiliares prontos, estamos prontos para iniciar a implementação das rotações.
+
+#### **Rotação simples à direita (LL)**
+
+A rotação para a direita ocorre quando os nós à esquerda estão desequilibrados.
+
+```csharp
+
+private NoAvl RotacaoSimplesDireita(NoAvl noAtual)
+{
+    NoAvl filhoEsquerdo = noAtual.NoEsquerdo;
+    NoAvl subarvoreDireitaDoFilho = filhoEsquerdo.NoDireito;
+
+    // Rotaciona
+    filhoEsquerdo.NoDireito = noAtual;
+    noAtual.NoEsquerdo = subarvoreDireitaDoFilho;
+
+    // Atualiza alturas
+    AtualizarAltura(noAtual);
+    AtualizarAltura(filhoEsquerdo);
+
+    return filhoEsquerdo;
+}
+
+```
+
+![Rotação simples direita](arvores.assets/rotacao-simples-direita-avl.png)
+
+#### **Rotação simples à esquerda (RR)**
+
+A rotação para a esquerda ocorre quando os nós à direita estão desequilibrados.
+
+```csharp
+
+private NoAvl RotacaoSimplesEsquerda(NoAvl noAtual)
+{
+    NoAvl filhoDireito = noAtual.NoDireito;
+    NoAvl subarvoreEsquerdaDoFilho = filhoDireito.NoEsquerdo;
+
+    // Rotaciona
+    filhoDireito.NoEsquerdo = noAtual;
+    noAtual.NoDireito = subarvoreEsquerdaDoFilho;
+
+    // Atualiza alturas
+    AtualizarAltura(noAtual);
+    AtualizarAltura(filhoDireito);
+
+    return filhoDireito;
+}
+
+```
+
+![Rotação simples esquerda](arvores.assets/rotacao-simples-esquerda-avl.png)
+
+#### **Rotação Dupla Esquerda–Direita (LR)**
+
+Essa rotação é utilizada quando temos um desbalanceamento na subárvore esquerda de um nó, e a causa do desbalanceamento está na subárvore direita do filho à esquerda.
+
+```csharp
+
+private NoAvl RotacaoDuplaEsquerdaDireita(NoAvl noAtual)
+{
+    noAtual.NoEsquerdo = RotacaoSimplesEsquerda(noAtual.NoEsquerdo);
+    return RotacaoSimplesDireita(noAtual);
+}
+
+```
+
+![Rotação Esquerda–Direita](arvores.assets/rotacao-dupla-esquerda-direita-avl.png)
+
+#### **Rotacao Dupla Direita-Esquerda (RL)**
+
+Essa rotação é utilizada quando há um desbalanceamento na subárvore direita de um nó, e a causa do desbalanceamento está na subárvore esquerda do filho direito.
+
+```csharp
+
+private NoAvl RotacaoDuplaDireitaEsquerda(NoAvl noAtual)
+{
+    noAtual.NoDireito = RotacaoSimplesDireita(noAtual.NoDireito);
+    return RotacaoSimplesEsquerda(noAtual);
+}
+
+```
+
+![Rotação Direita-Esquerda](arvores.assets/rotacao-dupla-direita-esquerda-avl.png)

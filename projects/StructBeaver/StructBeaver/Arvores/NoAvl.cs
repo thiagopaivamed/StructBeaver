@@ -3,8 +3,8 @@
     public class NoAvl
     {
         public int Valor;
-        public NoAvl? Esquerda;
-        public NoAvl? Direita;
+        public NoAvl? NoEsquerdo;
+        public NoAvl? NoDireito;
         public int Altura;
 
         public NoAvl(int valor)
