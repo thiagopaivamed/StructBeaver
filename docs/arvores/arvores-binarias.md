@@ -326,47 +326,60 @@ No pior caso, a árvore pode se tornar uma lista encadeada (se os elementos fore
 ```csharp
 
 public void Remover(int valor)
-    => Raiz = RemoverRecursivo(Raiz, valor);
-
-private NoArvore? RemoverRecursivo(NoArvore? noAtual, int valor)
 {
-    if (noAtual is null)
-        return null;
+    if (Raiz is null) 
+        return;
 
-    if (valor < noAtual.Valor)
-        noAtual.NoEsquerdo = RemoverRecursivo(noAtual.NoEsquerdo, valor);
+    if (Raiz.Valor == valor)
+    {
+        Raiz = RemoverNo(Raiz);
+        return;
+    }
+
+    RemoverRecursivo(Raiz, valor);
+}
+
+private void RemoverRecursivo(NoArvore? noPai, int valor)
+{
+    if (noPai is null) 
+        return;
+
+    if (noPai.NoEsquerdo is not null && noPai.NoEsquerdo.Valor == valor)            
+        noPai.NoEsquerdo = RemoverNo(noPai.NoEsquerdo);
     
-    else if (valor > noAtual.Valor)
-        noAtual.NoDireito = RemoverRecursivo(noAtual.NoDireito, valor);
+    else if (noPai.NoDireito is not null && noPai.NoDireito.Valor == valor)            
+        noPai.NoDireito = RemoverNo(noPai.NoDireito);
     
     else
     {
-        // Caso 1: Sem filhos
-        if (noAtual.NoEsquerdo is null && noAtual.NoDireito is null)
-            return null;
-
-        // Caso 2: Um filho
-        if (noAtual.NoEsquerdo is null)
-            return noAtual.NoDireito;
-
-        if (noAtual.NoDireito is null)
-            return noAtual.NoEsquerdo;
-
-        // Caso 3: Dois filhos
-        NoArvore noSucessor = EncontrarMinimo(noAtual.NoDireito);
-        noAtual.Valor = noSucessor.Valor;
-        noAtual.NoDireito = RemoverRecursivo(noAtual.NoDireito, noSucessor.Valor.Value);
+        RemoverRecursivo(noPai.NoEsquerdo, valor);
+        RemoverRecursivo(noPai.NoDireito, valor);
     }
-
-    return noAtual;
 }
 
-private NoArvore EncontrarMinimo(NoArvore? noAtual)
+private NoArvore? RemoverNo(NoArvore noAtual)
 {
-    while (noAtual?.NoEsquerdo is not null)
-        noAtual = noAtual.NoEsquerdo;
+    // Caso 1: Sem filhos
+    if (noAtual.NoEsquerdo is null && noAtual.NoDireito is null)
+        return null;
 
-    return noAtual;
+    // Caso 2: Um filho
+    if (noAtual.NoEsquerdo is null)
+        return noAtual.NoDireito;
+
+    if (noAtual.NoDireito is null)
+        return noAtual.NoEsquerdo;
+
+    // Caso 3: Dois filhos
+    // Promove o filho esquerdo e insere o filho direito no nó mais à direita
+    NoArvore novoNo = noAtual.NoEsquerdo;
+    NoArvore noDireito = novoNo;
+    while (noDireito.NoDireito is not null)
+        noDireito = noDireito.NoDireito;
+
+    noDireito.NoDireito = noAtual.NoDireito;
+
+    return novoNo;
 }
 
 ```

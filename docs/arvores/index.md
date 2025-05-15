@@ -20,3 +20,7 @@ Ela tem dois caminhos possíveis: ir à academia ou se exercitar ao ar livre —
 Vamos adentrar o fascinante mundo das árvores binárias.
 
 [8.1 Árvores binárias](../arvores/arvores-binarias.md)
+
+[8.2 Árvores de pesquisa binária](../arvores/arvores-pesquisas-binarias.md)
+
+[8.3 Árvores AVL](../arvores/arvores-avl.md)
