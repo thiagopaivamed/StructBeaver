@@ -25,18 +25,12 @@ Cada nó da árvore possui um atributo de altura, que serve de apoio no cálculo
 
 ```csharp
 
-public class NoAvl
+public class NoAvl(int valor)
 {
-    public int Valor;
+    public int Valor = valor;
     public NoAvl? NoEsquerdo;
     public NoAvl? NoDireito;
-    public int Altura;
-
-    public NoAvl(int valor)
-    {
-        Valor = valor;
-        Altura = 1;
-    }
+    public int Altura = 1;
 }
 
 ```
@@ -193,3 +187,146 @@ private NoAvl RotacaoDuplaDireitaEsquerda(NoAvl noAtual)
 ```
 
 ![Rotação Direita-Esquerda](arvores.assets/rotacao-dupla-direita-esquerda-avl.png)
+
+#### **Inserção de nós**
+
+A inserção de nós nesse tipo de árvore sempre precisa se preocupar com o balanceamento e atualização da altura.
+
+```csharp
+
+public NoAvl Inserir(NoAvl raiz, int valor)
+{
+    if (raiz is null)
+        return new NoAvl(valor);
+
+    if (valor < raiz.Valor)
+        raiz.NoEsquerdo = Inserir(raiz.NoEsquerdo, valor);
+    else if (valor > raiz.Valor)
+        raiz.NoDireito = Inserir(raiz.NoDireito, valor);
+    else
+        return raiz; 
+
+    AtualizarAltura(raiz);
+
+    int balanceamento = FatorBalanceamento(raiz);
+
+    if (balanceamento > 1 && valor < raiz.NoEsquerdo.Valor)
+        return RotacaoSimplesDireita(raiz);
+
+    if (balanceamento < -1 && valor > raiz.NoDireito.Valor)
+        return RotacaoSimplesEsquerda(raiz); 
+
+    if (balanceamento > 1 && valor > raiz.NoEsquerdo.Valor)
+        return RotacaoDuplaEsquerdaDireita(raiz); 
+
+    if (balanceamento < -1 && valor < raiz.NoDireito.Valor)
+        return RotacaoDuplaDireitaEsquerda(raiz); 
+
+    return raiz; 
+}
+
+```
+
+![Inserção AVL](arvores.assets/insercao-avl.png)
+
+#### **Remoção de nós**
+
+A remoção de nós em uma árvore AVL exige cuidado especial com o balanceamento da árvore e a atualização correta das alturas dos nós, para garantir que as propriedades da AVL sejam mantidas após a operação.
+
+Vamos fazer seguindo os passos:
+
+1. Se `valor < raiz.Valor` → remove à esquerda.
+
+2. Se `valor > raiz.Valor` → remove à direita.
+
+3. Se `valor == raiz.Valor`:
+- Se nó com 1 ou nenhum filho, retorna o filho não nulo (ou `null`).
+- Se nó com 2 filhos, substitui pelo menor valor da subárvore direita, depois remove esse menor nó.
+
+4. Após remover, atualiza a altura.
+
+5. Verifica o fator de balanceamento e aplica rotação se necessário.
+
+```csharp
+
+public NoAvl Remover(NoAvl raiz, int valor)
+{
+    if (raiz is null)
+        return null;
+
+    // Passo 1: busca
+    if (valor < raiz.Valor)
+        raiz.NoEsquerdo = Remover(raiz.NoEsquerdo, valor);
+    else if (valor > raiz.Valor)
+        raiz.NoDireito = Remover(raiz.NoDireito, valor);
+    else
+    {
+        // Passo 2: nó com um ou nenhum filho
+        if (raiz.NoEsquerdo is null || raiz.NoDireito is null)
+        {
+            NoAvl temp = null;
+
+            if (raiz?.NoEsquerdo is not null)
+                temp = raiz.NoEsquerdo;
+
+            else
+                temp = raiz.NoDireito;
+
+            // Sem filhos
+            if (temp is null) 
+                return null;
+
+            // Um filho
+            else
+                return temp;
+        }
+
+        // Passo 3: nó com dois filhos
+        NoAvl sucessor = PegarMenorNo(raiz.NoDireito);
+        raiz.Valor = sucessor.Valor;
+        raiz.NoDireito = Remover(raiz.NoDireito, sucessor.Valor);
+    }
+
+    // Passo 4: atualizar altura
+    AtualizarAltura(raiz);
+
+    // Passo 5: balancear
+    int fator = FatorBalanceamento(raiz);
+
+    // Casos de rotação
+    if (fator > 1)
+    {
+        if (FatorBalanceamento(raiz.NoEsquerdo) >= 0)
+            return RotacaoSimplesDireita(raiz);
+        else
+            return RotacaoDuplaEsquerdaDireita(raiz);
+    }
+
+    if (fator < -1)
+    {
+        if (FatorBalanceamento(raiz.NoDireito) <= 0)
+            return RotacaoSimplesEsquerda(raiz);
+        else
+            return RotacaoDuplaDireitaEsquerda(raiz);
+    }
+
+    return raiz;
+}
+
+private NoAvl PegarMenorNo(NoAvl no)
+{
+    while (no.NoEsquerdo is not null)
+        no = no.NoEsquerdo;
+
+    return no;
+}
+
+```
+
+=== "Remoção de nós na AVL"
+
+    ![Remoçao 01](arvores.assets/remocao-nos-avl-01.png)
+
+=== "Árvore pós-remoção"
+
+    ![Remoçao 02](arvores.assets/remocao-nos-avl-02.png)

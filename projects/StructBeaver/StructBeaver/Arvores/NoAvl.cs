@@ -1,16 +1,10 @@
 ﻿namespace StructBeaver.Arvores
 {
-    public class NoAvl
+    public class NoAvl(int valor)
     {
-        public int Valor;
+        public int Valor = valor;
         public NoAvl? NoEsquerdo;
         public NoAvl? NoDireito;
-        public int Altura;
-
-        public NoAvl(int valor)
-        {
-            Valor = valor;
-            Altura = 1;
-        }
+        public int Altura = 1;
     }
 }

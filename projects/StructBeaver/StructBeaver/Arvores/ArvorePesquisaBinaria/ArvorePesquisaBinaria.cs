@@ -1,8 +1,8 @@
 ﻿namespace StructBeaver.Arvores.ArvorePesquisaBinaria
 {
-    public class ArvorePesquisaBinaria(NoArvore noArvore)
+    public class ArvorePesquisaBinaria(NoArvore raiz)
     {
-        public NoArvore Raiz = noArvore;
+        public NoArvore Raiz = raiz;
 
         public NoArvore Inserir(int valor)
             => InserirRecursivo(Raiz, valor);
@@ -16,10 +16,11 @@
                     noAtual.NoEsquerdo = new(valor);
                     return noAtual.NoEsquerdo;
                 }
+
                 else
-                    return InserirRecursivo(noAtual.NoEsquerdo, valor);
-                
+                    return InserirRecursivo(noAtual.NoEsquerdo, valor);                
             }
+
             else if (valor > noAtual.Valor)
             {
                 if (noAtual.NoDireito == null)
@@ -27,9 +28,9 @@
                     noAtual.NoDireito = new NoArvore(valor);
                     return noAtual.NoDireito;
                 }
+
                 else
-                    return InserirRecursivo(noAtual.NoDireito, valor);
-                
+                    return InserirRecursivo(noAtual.NoDireito, valor);                
             }
 
             // Se valor já existir, não insere
@@ -41,7 +42,7 @@
         
         private NoArvore? PesquisarRecursivo(NoArvore? noAtual, int valor)
         {
-            if (noAtual == null)
+            if (noAtual is null)
                 return null;
 
             if (valor == noAtual.Valor)
@@ -83,7 +84,7 @@
                 // Caso 3: dois filhos
                 NoArvore sucessor = EncontrarMinimo(noAtual.NoDireito);
                 noAtual.Valor = sucessor.Valor;
-                noAtual.NoDireito = RemoverRecursivo(noAtual.NoDireito, sucessor.Valor.Value);
+                noAtual.NoDireito = RemoverRecursivo(noAtual.NoDireito, sucessor.Valor);
             }
 
             return noAtual;
