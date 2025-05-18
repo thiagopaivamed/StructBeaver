@@ -1,4 +1,5 @@
-﻿using StructBeaver.Recursividade;
+﻿using Shouldly;
+using StructBeaver.Recursividade;
 
 namespace StructBeaver.Tests.Recursividade
 {
@@ -7,7 +8,7 @@ namespace StructBeaver.Tests.Recursividade
         private readonly Fatorial _fatorial;
 
         public FatorialTest()  
-            => _fatorial = new Fatorial();
+            => _fatorial = new();
 
         [Fact]
         public void Fatorial_Deve_Retornar_MenosUm()
@@ -16,17 +17,21 @@ namespace StructBeaver.Tests.Recursividade
 
             int fatorial = _fatorial.CalcularFatorial(numero);
 
-            Assert.True(fatorial is -1);
+            fatorial.ShouldBe(-1);
         }
 
         [Fact]
-        public void Fatorial_Deve_Retornar_Zero_Ou_Um()
+        public void Fatorial_Deve_Retornar_1_Quando_Numero_For_0()
         {
-            int numero = 0;
+            int resultado = _fatorial.CalcularFatorial(0);
+            resultado.ShouldBe(1);
+        }
 
-            int fatorial = _fatorial.CalcularFatorial(numero);
-
-            Assert.True(fatorial is 0 or 1);
+        [Fact]
+        public void Fatorial_Deve_Retornar_1_Quando_Numero_For_1()
+        {
+            int resultado = _fatorial.CalcularFatorial(1);
+            resultado.ShouldBe(1);
         }
 
         [Fact]
@@ -36,7 +41,7 @@ namespace StructBeaver.Tests.Recursividade
 
             int fatorial = _fatorial.CalcularFatorial(numero);
 
-            Assert.True(fatorial is 720);
+            fatorial.ShouldBe(720);
         }
     }
 }

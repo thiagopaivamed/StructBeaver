@@ -24,11 +24,11 @@
 
         private NoAvl RotacaoSimplesDireita(NoAvl noAtual)
         {
-            NoAvl filhoEsquerdo = noAtual.NoEsquerdo;
-            NoAvl subarvoreDireitaDoFilho = filhoEsquerdo.NoDireito;
+            NoAvl? filhoEsquerdo = noAtual.NoEsquerdo;
+            NoAvl? subarvoreDireitaDoFilho = filhoEsquerdo?.NoDireito;
 
             // Rotaciona
-            filhoEsquerdo.NoDireito = noAtual;
+            filhoEsquerdo!.NoDireito = noAtual;
             noAtual.NoEsquerdo = subarvoreDireitaDoFilho;
 
             // Atualiza alturas
@@ -40,8 +40,8 @@
 
         private NoAvl RotacaoSimplesEsquerda(NoAvl noAtual)
         {
-            NoAvl filhoDireito = noAtual.NoDireito;
-            NoAvl subarvoreEsquerdaDoFilho = filhoDireito.NoEsquerdo;
+            NoAvl? filhoDireito = noAtual!.NoDireito;
+            NoAvl? subarvoreEsquerdaDoFilho = filhoDireito!.NoEsquerdo;
 
             // Rotaciona
             filhoDireito.NoEsquerdo = noAtual;
@@ -56,69 +56,71 @@
 
         private NoAvl RotacaoDuplaEsquerdaDireita(NoAvl noAtual)
         {
-            noAtual.NoEsquerdo = RotacaoSimplesEsquerda(noAtual.NoEsquerdo);
+            noAtual.NoEsquerdo = RotacaoSimplesEsquerda(noAtual.NoEsquerdo!);
             return RotacaoSimplesDireita(noAtual);
         }
 
         private NoAvl RotacaoDuplaDireitaEsquerda(NoAvl noAtual)
         {
-            noAtual.NoDireito = RotacaoSimplesDireita(noAtual.NoDireito);
+            noAtual.NoDireito = RotacaoSimplesDireita(noAtual.NoDireito!);
             return RotacaoSimplesEsquerda(noAtual);
         }
 
-        public NoAvl Inserir(NoAvl raiz, int valor)
+        public NoAvl? Inserir(NoAvl? raiz, int valor)
         {
             if (raiz is null)
                 return new NoAvl(valor);
 
             if (valor < raiz.Valor)
-                raiz.NoEsquerdo = Inserir(raiz.NoEsquerdo, valor);
+                raiz.NoEsquerdo = Inserir(raiz?.NoEsquerdo, valor);
+
             else if (valor > raiz.Valor)
-                raiz.NoDireito = Inserir(raiz.NoDireito, valor);
+                raiz.NoDireito = Inserir(raiz?.NoDireito, valor);
+
             else
                 return raiz;
 
-            AtualizarAltura(raiz);
+            AtualizarAltura(raiz!);
 
             int balanceamento = FatorBalanceamento(raiz);
 
-            if (balanceamento > 1 && valor < raiz.NoEsquerdo.Valor)
+            if (balanceamento > 1 && valor < raiz!.NoEsquerdo!.Valor)
                 return RotacaoSimplesDireita(raiz);
 
-            if (balanceamento < -1 && valor > raiz.NoDireito.Valor)
+            if (balanceamento < -1 && valor > raiz!.NoDireito!.Valor)
                 return RotacaoSimplesEsquerda(raiz);
 
-            if (balanceamento > 1 && valor > raiz.NoEsquerdo.Valor)
+            if (balanceamento > 1 && valor > raiz!.NoEsquerdo!.Valor)
                 return RotacaoDuplaEsquerdaDireita(raiz);
 
-            if (balanceamento < -1 && valor < raiz.NoDireito.Valor)
+            if (balanceamento < -1 && valor < raiz!.NoDireito!.Valor)
                 return RotacaoDuplaDireitaEsquerda(raiz);
 
             return raiz;
         }
 
-        public NoAvl Remover(NoAvl raiz, int valor)
+        public NoAvl? Remover(NoAvl raiz, int valor)
         {
             if (raiz is null)
                 return null;
 
             // Passo 1: busca
             if (valor < raiz.Valor)
-                raiz.NoEsquerdo = Remover(raiz.NoEsquerdo, valor);
+                raiz.NoEsquerdo = Remover(raiz.NoEsquerdo!, valor);
             else if (valor > raiz.Valor)
-                raiz.NoDireito = Remover(raiz.NoDireito, valor);
+                raiz.NoDireito = Remover(raiz.NoDireito!, valor);
             else
             {
                 // Passo 2: nó com um ou nenhum filho
                 if (raiz.NoEsquerdo is null || raiz.NoDireito is null)
                 {
-                    NoAvl temp = null;
+                    NoAvl? temp = null;
 
                     if (raiz?.NoEsquerdo is not null)
                         temp = raiz.NoEsquerdo;
 
                     else
-                        temp = raiz.NoDireito;
+                        temp = raiz!.NoDireito;
 
                     // Sem filhos
                     if (temp is null) 

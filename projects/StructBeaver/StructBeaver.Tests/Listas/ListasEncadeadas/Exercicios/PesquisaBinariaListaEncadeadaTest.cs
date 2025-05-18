@@ -1,18 +1,19 @@
-﻿using StructBeaver.Listas.ListaEncadeada;
+﻿using Shouldly;
+using StructBeaver.Listas.ListaEncadeada;
 using StructBeaver.Listas.ListaEncadeada.Exercicios;
 
 namespace StructBeaver.Tests.Listas.ListasEncadeadas.Exercicios
 {
     public class PesquisaBinariaListaEncadeadaTest
     {
-        private PesquisaBinariaListaEncadeada _pesquisaBinariaLista;
-        private ListaEncadeada listaEncadeada;
+        private readonly PesquisaBinariaListaEncadeada _pesquisaBinariaLista;
+        private readonly ListaEncadeada listaEncadeada;
 
         public PesquisaBinariaListaEncadeadaTest()
         {
-            _pesquisaBinariaLista = new PesquisaBinariaListaEncadeada();
+            _pesquisaBinariaLista = new();
 
-            listaEncadeada = new ListaEncadeada();
+            listaEncadeada = new();
             listaEncadeada.AdicionarNoFim(1);
             listaEncadeada.AdicionarNoFim(2);
             listaEncadeada.AdicionarNoFim(3);
@@ -27,7 +28,7 @@ namespace StructBeaver.Tests.Listas.ListasEncadeadas.Exercicios
 
             bool valorFoiEncontrado = _pesquisaBinariaLista.Pesquisar(listaEncadeada, valorProcurado);
 
-            Assert.True(valorFoiEncontrado);
+            valorFoiEncontrado.ShouldBeTrue();
         }
 
         [Fact]
@@ -37,7 +38,7 @@ namespace StructBeaver.Tests.Listas.ListasEncadeadas.Exercicios
 
             bool valorFoiEncontrado = _pesquisaBinariaLista.Pesquisar(listaEncadeada, valorProcurado);
 
-            Assert.False(valorFoiEncontrado);
+            valorFoiEncontrado.ShouldBeFalse();
         }
     }
 }

@@ -4,7 +4,7 @@
     {
         public Pilha InverterPilha(Pilha pilha)
         {
-            if(pilha.IsEmpty())
+            if (pilha.IsEmpty())
                 return pilha;
 
             int elemento = pilha.Pop();

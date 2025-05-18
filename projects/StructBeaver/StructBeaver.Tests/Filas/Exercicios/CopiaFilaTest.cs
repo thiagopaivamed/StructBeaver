@@ -1,19 +1,20 @@
-﻿using StructBeaver.Filas;
+﻿using Shouldly;
+using StructBeaver.Filas;
 using StructBeaver.Filas.Exercicios;
 
 namespace StructBeaver.Tests.Filas.Exercicios
 {
     public class CopiaFilaTest
     {
-        private CopiaFila copiaFila;
+        private readonly CopiaFila copiaFila;
 
         public CopiaFilaTest()
-            => copiaFila = new CopiaFila();
+            => copiaFila = new();
 
         [Fact]
         public void CopiarDados_Deve_Retornar_Fila_Preenchida()
         {
-            Fila filaOriginal = new Fila();
+            Fila filaOriginal = new ();
 
             filaOriginal.Enqueue(1);
             filaOriginal.Enqueue(2);
@@ -23,15 +24,15 @@ namespace StructBeaver.Tests.Filas.Exercicios
 
             Fila filaCopia = copiaFila.CopiarDados(filaOriginal);
 
-            Assert.Equal(1, filaCopia.Dequeue());
+            filaCopia.Dequeue().ShouldBe(1);
 
-            Assert.Equal(2, filaCopia.Dequeue());
+            filaCopia.Dequeue().ShouldBe(2);
 
-            Assert.Equal(3, filaCopia.Dequeue());
+            filaCopia.Dequeue().ShouldBe(3);
 
-            Assert.Equal(4, filaCopia.Dequeue());
+            filaCopia.Dequeue().ShouldBe(4);
 
-            Assert.Equal(5, filaCopia.Dequeue());
+            filaCopia.Dequeue().ShouldBe(5);
         }
     }
 }

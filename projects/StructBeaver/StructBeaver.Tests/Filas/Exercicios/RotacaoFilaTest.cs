@@ -1,18 +1,19 @@
-﻿using StructBeaver.Filas;
+﻿using Shouldly;
+using StructBeaver.Filas;
 using StructBeaver.Filas.Exercicios;
 
 namespace StructBeaver.Tests.Filas.Exercicios
 {
     public class RotacaoFilaTest
     {
-        private RotacaoFila _rotacaoFila;
+        private readonly RotacaoFila _rotacaoFila;
         public RotacaoFilaTest()
-            => _rotacaoFila = new RotacaoFila();
+            => _rotacaoFila = new();
 
         [Fact]
         public void RotacaoFila_Deve_Retornar_Fila_Rotacionada()
         {
-            Fila fila = new Fila();
+            Fila fila = new();
 
             fila.Enqueue(1);
             fila.Enqueue(2);
@@ -22,15 +23,15 @@ namespace StructBeaver.Tests.Filas.Exercicios
 
             fila = _rotacaoFila.Rotacionar(fila, 2);
 
-            Assert.Equal(3, fila.Dequeue());
+            fila.Dequeue().ShouldBe(3);
 
-            Assert.Equal(4, fila.Dequeue());
+            fila.Dequeue().ShouldBe(4);
 
-            Assert.Equal(5, fila.Dequeue());
+            fila.Dequeue().ShouldBe(5);
 
-            Assert.Equal(1, fila.Dequeue());
+            fila.Dequeue().ShouldBe(1);
 
-            Assert.Equal(2, fila.Dequeue());
+            fila.Dequeue().ShouldBe(2);
         }
     }
 }

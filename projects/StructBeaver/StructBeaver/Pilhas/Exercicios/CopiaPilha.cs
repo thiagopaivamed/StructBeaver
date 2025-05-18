@@ -4,10 +4,10 @@
     {
         public Pilha PegarPilhaCopiada(Pilha pilha)
         {
-            Pilha pilhaCopiada = new Pilha();
+            Pilha pilhaCopiada = new();
             int quantidadeElementos = pilha.Tamanho();
 
-            for(int i = 0; i < quantidadeElementos; i++)
+            for (int i = 0; i < quantidadeElementos; i++)
                 pilhaCopiada.Push(pilha.Pop());
 
             return pilhaCopiada;

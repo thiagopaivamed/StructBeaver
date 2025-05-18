@@ -1,20 +1,21 @@
-﻿using StructBeaver.Filas;
+﻿using Shouldly;
+using StructBeaver.Filas;
 
 namespace StructBeaver.Tests.Filas
 {
     public class FilaTest
     {
-        private Fila _fila;
+        private readonly Fila _fila;
 
         public FilaTest()
-            => _fila = new Fila();
+            => _fila = new();
 
         [Fact]
         public void Enqueue_Deve_Adicionar_Elemento_Na_Fila()
         {
             int item = 10;
             _fila.Enqueue(item);
-            Assert.Equal(item, _fila.Peek());
+            _fila.Peek().ShouldBe(item);
         }
 
         [Fact]
@@ -22,22 +23,22 @@ namespace StructBeaver.Tests.Filas
         {
             int item = 10;
             _fila.Enqueue(item);
-            Assert.Equal(item, _fila.Peek());
+            _fila.Peek().ShouldBe(item);
 
             int itemRemovido = _fila.Dequeue();
-            Assert.Equal(item, itemRemovido);
+            itemRemovido.ShouldBe(item);
         }
 
         [Fact]
         public void Dequeue_Deve_Disparar_Excecao_Quando_Nao_Houver_Elemento_Na_Fila()
             => Assert.Throws<InvalidOperationException>(() => _fila.Dequeue());
-        
+
         [Fact]
         public void Peek_Deve_Verificar_Elemento_Na_Fila()
         {
             int item = 10;
             _fila.Enqueue(item);
-            Assert.Equal(item, _fila.Peek());
+            _fila.Peek().ShouldBe(item);
         }
 
         [Fact]
@@ -55,7 +56,7 @@ namespace StructBeaver.Tests.Filas
             _fila.Dequeue();
             _fila.Dequeue();
 
-            Assert.True(_fila.IsEmpty());
+            _fila.IsEmpty().ShouldBeTrue();
         }
     }
 }

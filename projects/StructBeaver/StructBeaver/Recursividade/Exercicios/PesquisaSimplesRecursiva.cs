@@ -7,7 +7,7 @@ namespace StructBeaver.Recursividade.Exercicios
         private PesquisaSimples _pesquisaSimples;
 
         public PesquisaSimplesRecursiva() =>
-            _pesquisaSimples = new PesquisaSimples();
+            _pesquisaSimples = new();
 
         public int ExecutarPesquisaSimplesRecursiva(int[] vetor, int elementoProcurado, int indice)
             => _pesquisaSimples.ExecutarPesquisaSimplesRecursiva(vetor, elementoProcurado, indice);

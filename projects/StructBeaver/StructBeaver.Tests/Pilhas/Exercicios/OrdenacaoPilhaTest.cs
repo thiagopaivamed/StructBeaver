@@ -1,4 +1,5 @@
-﻿using StructBeaver.Pilhas;
+﻿using Shouldly;
+using StructBeaver.Pilhas;
 using StructBeaver.Pilhas.Exercicios;
 
 namespace StructBeaver.Tests.Pilhas.Exercicios
@@ -8,12 +9,12 @@ namespace StructBeaver.Tests.Pilhas.Exercicios
         private readonly OrdenacaoPilha _ordenacaoPilha;
 
         public OrdenacaoPilhaTest()
-            => _ordenacaoPilha = new OrdenacaoPilha();
+            => _ordenacaoPilha = new();
 
         [Fact]
         public void OrdenarPilha_Deve_Retornar_Pilha_Ordenada()
         {
-            Pilha pilha = new Pilha();
+            Pilha pilha = new();
             pilha.Push(55);
             pilha.Push(7);
             pilha.Push(9);
@@ -22,11 +23,11 @@ namespace StructBeaver.Tests.Pilhas.Exercicios
 
             pilha = _ordenacaoPilha.OrdenarPilha(pilha);
 
-            Assert.Equal(7, pilha.Pop());
-            Assert.Equal(9, pilha.Pop());
-            Assert.Equal(32, pilha.Pop());
-            Assert.Equal(55, pilha.Pop());
-            Assert.Equal(89, pilha.Pop());
+            pilha.Pop().ShouldBe(7);
+            pilha.Pop().ShouldBe(9);
+            pilha.Pop().ShouldBe(32);
+            pilha.Pop().ShouldBe(55);
+            pilha.Pop().ShouldBe(89);
         }
     }
 }

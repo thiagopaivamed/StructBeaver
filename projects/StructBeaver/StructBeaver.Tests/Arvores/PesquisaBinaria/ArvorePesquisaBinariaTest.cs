@@ -6,15 +6,15 @@ namespace StructBeaver.Tests.Arvores.PesquisaBinaria
 {
     public class ArvorePesquisaBinariaTest
     {
-        private ArvorePesquisaBinaria _arvorePesquisaBinaria;
+        private readonly ArvorePesquisaBinaria _arvorePesquisaBinaria;
 
         public ArvorePesquisaBinariaTest()
-        => _arvorePesquisaBinaria = new(new NoArvore(50));
+            => _arvorePesquisaBinaria = new(new NoArvore(50));
 
         [Fact]
         public void Inserir_Deve_Retornar_ValorMenor_Na_Esquerda()
         {
-            NoArvore noInserido = _arvorePesquisaBinaria.Inserir(30);
+            NoArvore? noInserido = _arvorePesquisaBinaria.Inserir(30);
 
             noInserido.ShouldNotBeNull();
             noInserido.Valor.ShouldBe(30);
@@ -24,7 +24,7 @@ namespace StructBeaver.Tests.Arvores.PesquisaBinaria
         [Fact]
         public void Inserir_Deve_Retornar_Valor_Maior_Na_Direita()
         {
-            NoArvore noInserido = _arvorePesquisaBinaria.Inserir(70);
+            NoArvore? noInserido = _arvorePesquisaBinaria.Inserir(70);
 
             noInserido.ShouldNotBeNull();
             noInserido.Valor.ShouldBe(70);
@@ -43,7 +43,7 @@ namespace StructBeaver.Tests.Arvores.PesquisaBinaria
         [Fact]
         public void Pesquisar_Deve_Encontrar_Valor_Na_Raiz()
         {
-            NoArvore noPesquisado = _arvorePesquisaBinaria.Pesquisar(50);
+            NoArvore? noPesquisado = _arvorePesquisaBinaria.Pesquisar(50);
 
             noPesquisado.ShouldNotBeNull();
             noPesquisado.Valor.ShouldBe(50);
@@ -56,7 +56,7 @@ namespace StructBeaver.Tests.Arvores.PesquisaBinaria
             _arvorePesquisaBinaria.Inserir(20);
             _arvorePesquisaBinaria.Inserir(40);
 
-            NoArvore noPesquisado = _arvorePesquisaBinaria.Pesquisar(20);
+            NoArvore? noPesquisado = _arvorePesquisaBinaria.Pesquisar(20);
 
             noPesquisado.ShouldNotBeNull();
             noPesquisado.Valor.ShouldBe(20);

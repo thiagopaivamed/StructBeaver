@@ -69,11 +69,8 @@ public class SelectionSort
     }    
 
     private void Swap(int[] vetorDesordenado, int indiceAtual, int indiceMenorValor)
-    {
-        int valorTemporario = vetorDesordenado[indiceAtual];
-        vetorDesordenado[indiceAtual] = vetorDesordenado[indiceMenorValor];
-        vetorDesordenado[indiceMenorValor] = valorTemporario;
-    }
+        => (vetorDesordenado[indiceMenorValor], vetorDesordenado[indiceAtual]) = 
+            (vetorDesordenado[indiceAtual], vetorDesordenado[indiceMenorValor]);    
 }
 
 ```

@@ -1,4 +1,5 @@
-﻿using StructBeaver.Pilhas.Exercicios;
+﻿using Shouldly;
+using StructBeaver.Pilhas.Exercicios;
 
 namespace StructBeaver.Tests.Pilhas.Exercicios
 {
@@ -7,15 +8,14 @@ namespace StructBeaver.Tests.Pilhas.Exercicios
         private ConversorBinario _conversorBinario;
 
         public ConversorBinarioTest()
-            => _conversorBinario = new ConversorBinario();
+            => _conversorBinario = new();
 
         [Fact]
         public void ConverterDecimalParaBinario_Deve_Retornar_Binario()
         {
             int decimalValue = 10;
             string binario = _conversorBinario.ConverterParaBinario(decimalValue);
-            Assert.Equal("1010", binario);
+            binario.ShouldBe("1010");
         }
-
     }
 }

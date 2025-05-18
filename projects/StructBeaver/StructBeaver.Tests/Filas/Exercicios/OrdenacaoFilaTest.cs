@@ -1,19 +1,20 @@
-﻿using StructBeaver.Filas;
+﻿using Shouldly;
+using StructBeaver.Filas;
 using StructBeaver.Filas.Exercicios;
 
 namespace StructBeaver.Tests.Filas.Exercicios
 {
     public class OrdenacaoFilaTest
     {
-        private OrdenacaoFila _ordenacaoFila;
+        private readonly OrdenacaoFila _ordenacaoFila;
 
         public OrdenacaoFilaTest()
-            => _ordenacaoFila = new OrdenacaoFila();
+            => _ordenacaoFila = new();
 
         [Fact]
         public void OrdenacaoFila_Deve_Retornar_Fila_Ordenada()
         {
-            Fila fila = new Fila();
+            Fila fila = new();
 
             fila.Enqueue(5);
             fila.Enqueue(3);
@@ -23,15 +24,15 @@ namespace StructBeaver.Tests.Filas.Exercicios
 
             fila = _ordenacaoFila.Ordenar(fila);
 
-            Assert.Equal(1, fila.Dequeue());
+            fila.Dequeue().ShouldBe(1);
 
-            Assert.Equal(2, fila.Dequeue());
+            fila.Dequeue().ShouldBe(2);
 
-            Assert.Equal(3, fila.Dequeue());
+            fila.Dequeue().ShouldBe(3);
 
-            Assert.Equal(4, fila.Dequeue());
+            fila.Dequeue().ShouldBe(4);
 
-            Assert.Equal(5, fila.Dequeue());
+            fila.Dequeue().ShouldBe(5);
         }
     }
 }

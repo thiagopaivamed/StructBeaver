@@ -4,11 +4,11 @@
     {
         public ListaDuplamenteEncadeada Remover(ListaDuplamenteEncadeada listaDuplamenteEncadeada)
         {
-            NoDuplamenteEncadeado noAtual = listaDuplamenteEncadeada.PegarPrimeiroNo();
+            NoDuplamenteEncadeado? noAtual = listaDuplamenteEncadeada.PegarPrimeiroNo();
 
             while (noAtual is not null)
             {
-                NoDuplamenteEncadeado proximoNo = noAtual.Proximo;
+                NoDuplamenteEncadeado? proximoNo = noAtual.Proximo;
 
                 if (noAtual.Valor % 2 == 0)
                     listaDuplamenteEncadeada.Remover(noAtual.Valor);

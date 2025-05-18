@@ -1,4 +1,5 @@
-﻿using StructBeaver.Listas.ListaDuplamenteEncadeada;
+﻿using Shouldly;
+using StructBeaver.Listas.ListaDuplamenteEncadeada;
 using StructBeaver.Listas.ListaDuplamenteEncadeada.Exercicios;
 
 namespace StructBeaver.Tests.Listas.ListasDuplamenteEncadeadas.Exercicios
@@ -8,7 +9,7 @@ namespace StructBeaver.Tests.Listas.ListasDuplamenteEncadeadas.Exercicios
         private readonly InversaoRecursivaListaDuplamenteEncadeada _inversaoRecursivaListaDuplamenteEncadeada;
 
         public InversaoRecursivaListaDuplamenteEncadeadaTest()
-            => _inversaoRecursivaListaDuplamenteEncadeada = new InversaoRecursivaListaDuplamenteEncadeada();
+            => _inversaoRecursivaListaDuplamenteEncadeada = new();
 
         [Fact]
         public void Inverter_Lista_Deve_Retornar_Lista_Invertida()
@@ -23,11 +24,11 @@ namespace StructBeaver.Tests.Listas.ListasDuplamenteEncadeadas.Exercicios
             ListaDuplamenteEncadeada listaInvertida = _inversaoRecursivaListaDuplamenteEncadeada.Inverter(listaParaInversao);
 
             int valor = 5;
-            NoDuplamenteEncadeado primeiroNo = listaInvertida.PegarPrimeiroNo();
+            NoDuplamenteEncadeado? primeiroNo = listaInvertida.PegarPrimeiroNo();
 
-            while(primeiroNo is not null)
+            while (primeiroNo is not null)
             {
-                Assert.Equal(primeiroNo.Valor, valor);
+                primeiroNo.Valor.ShouldBe(valor);
                 primeiroNo = primeiroNo.Proximo;
                 valor = valor - 1;
             }

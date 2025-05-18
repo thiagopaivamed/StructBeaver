@@ -4,11 +4,11 @@
     {
         public ListaEncadeada Inverter(ListaEncadeada listaParaInversao)
         {
-            ListaEncadeada listaInvertida = new ListaEncadeada();
+            ListaEncadeada listaInvertida = new();
 
             while (!listaParaInversao.IsEmpty())
             {
-                No noRemovido = listaParaInversao.RemoverNoInicio();
+                No? noRemovido = listaParaInversao.RemoverNoInicio();
 
                 if (noRemovido is not null)
                     listaInvertida.AdicionarNoInicio(noRemovido.Valor);

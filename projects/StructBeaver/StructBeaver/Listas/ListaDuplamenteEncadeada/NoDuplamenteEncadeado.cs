@@ -1,16 +1,9 @@
 ﻿namespace StructBeaver.Listas.ListaDuplamenteEncadeada
 {
-    public class NoDuplamenteEncadeado
+    public class NoDuplamenteEncadeado(int valor)
     {
-        public int Valor;
+        public int Valor = valor;
         public NoDuplamenteEncadeado? Proximo;
-        public NoDuplamenteEncadeado? Anterior;
-
-        public NoDuplamenteEncadeado(int valor)
-        {
-            Valor = valor;
-            Proximo = null;
-            Anterior = null;
-        }
+        public NoDuplamenteEncadeado? Anterior;        
     }
 }

@@ -4,7 +4,7 @@
     {
         public bool Pesquisar(ListaCircularDuplamenteEncadeada listaCircularDuplamenteEncadeada, int valorProcurado)
         {
-            NoCircular noAtual = listaCircularDuplamenteEncadeada.PrimeiroNo;
+            NoCircular? noAtual = listaCircularDuplamenteEncadeada.PrimeiroNo;
 
             if (noAtual is null) 
                 return false;
@@ -12,9 +12,9 @@
             return PesquisarRecursivo(noAtual, noAtual, valorProcurado);
         }
 
-        private bool PesquisarRecursivo(NoCircular noAtual, NoCircular primeiroNo, int valorProcurado)
+        private bool PesquisarRecursivo(NoCircular? noAtual, NoCircular primeiroNo, int valorProcurado)
         {
-            if (noAtual.Valor == valorProcurado)
+            if (noAtual!.Valor == valorProcurado)
                 return true;
 
             if(noAtual.Proximo == primeiroNo)

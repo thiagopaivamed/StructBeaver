@@ -4,9 +4,9 @@
     {
         public string ConverterParaBinario(int numero)
         {
-            Pilha pilha = new Pilha();
+            Pilha pilha = new();
 
-            while(numero > 0)
+            while (numero > 0)
             {
                 int resto = numero % 2;
                 pilha.Push(resto);
@@ -15,7 +15,7 @@
 
             string numeroBinario = string.Empty;
 
-            while(!pilha.IsEmpty())
+            while (!pilha.IsEmpty())
             {
                 int bit = pilha.Pop();
                 numeroBinario = numeroBinario + bit.ToString();

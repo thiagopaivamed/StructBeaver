@@ -11,6 +11,7 @@
             {
                 if (vetor[indice] > maior)
                     maior = vetor[indice];
+
                 else if (vetor[indice] < menor)
                     menor = vetor[indice];
             }

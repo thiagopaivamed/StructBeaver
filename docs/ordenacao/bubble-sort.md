@@ -62,14 +62,16 @@ public class BubbleSort
     }    
 
     private void Swap(int[] vetorDesordenado, int indiceAtual)
-    {
-        int valorTemporario = vetorDesordenado[indiceAtual];
-        vetorDesordenado[indiceAtual] = vetorDesordenado[indiceAtual + 1];
-        vetorDesordenado[indiceAtual + 1] = valorTemporario;
-    }
+        => (vetorDesordenado[indiceAtual + 1], vetorDesordenado[indiceAtual]) = 
+            (vetorDesordenado[indiceAtual], vetorDesordenado[indiceAtual + 1]);          
 }
 
 ```
+
+!!! tip "Tuplas"
+
+    Como você deve ter percebido, estamos utilizando um novo tipo na função Swap: as tuplas. Uma tupla é uma estrutura de dados leve que permite agrupar múltiplos valores — possivelmente de tipos diferentes — em um único objeto, sem a necessidade de criar uma classe ou struct específica para isso. Isso torna o código mais simples e direto, especialmente em operações como a troca de valores, onde conseguimos fazer tudo de forma rápida e concisa com apenas uma linha.
+
 
 === "Bubble Sort 1"
 

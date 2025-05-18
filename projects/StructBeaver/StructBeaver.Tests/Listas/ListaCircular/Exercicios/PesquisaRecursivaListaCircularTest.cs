@@ -1,18 +1,19 @@
-﻿using StructBeaver.Listas.ListaCircular;
+﻿using Shouldly;
+using StructBeaver.Listas.ListaCircular;
 using StructBeaver.Listas.ListaCircular.Exercicios;
 
 namespace StructBeaver.Tests.Listas.ListaCircular.Exercicios
 {
     public class PesquisaRecursivaListaCircularTest
     {
-        private PesquisaRecursivaListaCircular _pesquisaRecursivaListaCircular;
-        private ListaCircularDuplamenteEncadeada _listaCircular;
+        private readonly PesquisaRecursivaListaCircular _pesquisaRecursivaListaCircular;
+        private readonly ListaCircularDuplamenteEncadeada _listaCircular;
 
         public PesquisaRecursivaListaCircularTest()
         {
-            _pesquisaRecursivaListaCircular = new PesquisaRecursivaListaCircular();
+            _pesquisaRecursivaListaCircular = new();
 
-            _listaCircular = new ListaCircularDuplamenteEncadeada();
+            _listaCircular = new();
             _listaCircular.AdicionarNoInicio(1);
             _listaCircular.AdicionarNoInicio(2);
             _listaCircular.AdicionarNoInicio(3);
@@ -27,7 +28,7 @@ namespace StructBeaver.Tests.Listas.ListaCircular.Exercicios
 
             bool valorFoiEncontrado = _pesquisaRecursivaListaCircular.Pesquisar(_listaCircular, valor);
 
-            Assert.True(valorFoiEncontrado);
+            valorFoiEncontrado.ShouldBeTrue();
         }
 
         [Fact]
@@ -37,7 +38,7 @@ namespace StructBeaver.Tests.Listas.ListaCircular.Exercicios
 
             bool valorFoiEncontrado = _pesquisaRecursivaListaCircular.Pesquisar(_listaCircular, valor);
 
-            Assert.False(valorFoiEncontrado);
+            valorFoiEncontrado.ShouldBeFalse();
         }
     }
 }

@@ -79,12 +79,9 @@ Sua performance do algoritmo pode ser resumida da seguinte forma:
          return indicePivo;
      }
 
-     private void Swap(int[] vetorDesordenado, int esquerda, int direita)
-     {
-         int temp = vetorDesordenado[esquerda];
-         vetorDesordenado[esquerda] = vetorDesordenado[direita];
-         vetorDesordenado[direita] = temp;
-     }
+    private void Swap(int[] vetorDesordenado, int esquerda, int direita)
+        => (vetorDesordenado[direita], vetorDesordenado[esquerda]) = 
+            (vetorDesordenado[esquerda], vetorDesordenado[direita]);
  }
 ```
 

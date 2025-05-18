@@ -1,4 +1,5 @@
-﻿using StructBeaver.Ordenacao;
+﻿using Shouldly;
+using StructBeaver.Ordenacao;
 
 namespace StructBeaver.Tests.Ordenacao
 {
@@ -7,7 +8,7 @@ namespace StructBeaver.Tests.Ordenacao
         private readonly QuickSort _quickSort;
 
         public QuickSortTest()
-            => _quickSort = new QuickSort();
+            => _quickSort = new();
 
         [Fact]
         public void QuickSort_Deve_Retornar_Vetor_Ordenado()
@@ -17,7 +18,7 @@ namespace StructBeaver.Tests.Ordenacao
             int[] vetorOrdenado = _quickSort.Sort(vetorDesordenado, 0, vetorDesordenado.Length - 1);
 
             for (int indice = 0; indice < vetorOrdenado.Length - 1; indice++)
-                Assert.True(vetorOrdenado[indice] <= vetorOrdenado[indice + 1]);
+                vetorOrdenado[indice].ShouldBeLessThanOrEqualTo(vetorOrdenado[indice + 1]);
         }
     }
 }

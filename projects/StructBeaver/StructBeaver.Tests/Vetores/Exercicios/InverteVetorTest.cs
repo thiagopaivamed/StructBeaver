@@ -1,13 +1,14 @@
-﻿using StructBeaver.Vetores.Exercicios;
+﻿using Shouldly;
+using StructBeaver.Vetores.Exercicios;
 
 namespace StructBeaver.Tests.Vetores.Exercicios
 {
     public class InverteVetorTest
     {
-        private InverteVetor _inverteVetor;
+        private readonly InverteVetor _inverteVetor;
 
         public InverteVetorTest()
-            => _inverteVetor = new InverteVetor();
+            => _inverteVetor = new();
 
         [Fact]
         public void Inverter_Deve_Retornar_Vetor_Invertido()
@@ -16,7 +17,7 @@ namespace StructBeaver.Tests.Vetores.Exercicios
 
             int[] vetorInvertido = _inverteVetor.Inverter(vetor);
 
-            Assert.Equal([66, 42, 36, 97, 32, 19, 77, 5, 1, 30], vetorInvertido);
+            vetorInvertido.ShouldBe([66, 42, 36, 97, 32, 19, 77, 5, 1, 30]);
         }
     }
 }

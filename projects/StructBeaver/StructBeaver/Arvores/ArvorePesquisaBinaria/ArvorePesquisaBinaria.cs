@@ -4,10 +4,10 @@
     {
         public NoArvore Raiz = raiz;
 
-        public NoArvore Inserir(int valor)
+        public NoArvore? Inserir(int valor)
             => InserirRecursivo(Raiz, valor);
 
-        private NoArvore InserirRecursivo(NoArvore noAtual, int valor)
+        private NoArvore? InserirRecursivo(NoArvore noAtual, int valor)
         {
             if (valor < noAtual.Valor)
             {
@@ -55,7 +55,7 @@
         }
 
         public void Remover(int valor)
-            => Raiz = RemoverRecursivo(Raiz, valor);
+            => Raiz = RemoverRecursivo(Raiz, valor)!;
         
         private NoArvore? RemoverRecursivo(NoArvore? noAtual, int valor)
         {

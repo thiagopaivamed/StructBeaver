@@ -1,4 +1,5 @@
-﻿using StructBeaver.Recursividade.Exercicios;
+﻿using Shouldly;
+using StructBeaver.Recursividade.Exercicios;
 
 namespace StructBeaver.Tests.Recursividade.Exercicios
 {
@@ -7,7 +8,7 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
         private readonly NumeroPrimo _numeroPrimero;
 
         public NumeroPrimeroTest()
-            => _numeroPrimero = new NumeroPrimo();
+            => _numeroPrimero = new();
 
         [Fact]
         public void VerificaPrimo_Deve_Retornar_True_Quando_Numero_For_Primo()
@@ -16,7 +17,7 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
 
             bool primo = _numeroPrimero.VerificarPrimo(numero, 2);
 
-            Assert.True(primo);
+            primo.ShouldBeTrue();
         }
 
         [Fact]
@@ -26,7 +27,7 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
 
             bool primo = _numeroPrimero.VerificarPrimo(numero, 2);
 
-            Assert.False(primo);
+            primo.ShouldBeFalse();
         }
     }
 }

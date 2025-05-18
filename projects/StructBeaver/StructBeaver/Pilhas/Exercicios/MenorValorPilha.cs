@@ -7,10 +7,10 @@
             int quantidadeElementos = pilha.Tamanho();
             int menorElemento = pilha.Pop();
 
-            for(int i = 0; i < quantidadeElementos - 1; i++)
+            for (int i = 0; i < quantidadeElementos - 1; i++)
             {
                 int aux = pilha.Pop();
-                if (aux < menorElemento) 
+                if (aux < menorElemento)
                     menorElemento = aux;
             }
 

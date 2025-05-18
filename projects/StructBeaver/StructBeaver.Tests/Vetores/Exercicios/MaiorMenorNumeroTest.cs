@@ -1,4 +1,5 @@
-﻿using StructBeaver.Vetores.Exercicios;
+﻿using Shouldly;
+using StructBeaver.Vetores.Exercicios;
 
 namespace StructBeaver.Tests.Vetores.Exercicios
 {
@@ -7,7 +8,7 @@ namespace StructBeaver.Tests.Vetores.Exercicios
         private MaiorMenorNumero _maiorMenorNumero;
 
         public MaiorMenorNumeroTest()
-            => _maiorMenorNumero = new MaiorMenorNumero();
+            => _maiorMenorNumero = new();
 
         [Fact]
         public void Deve_Retornar_Maior_Menor_Numero()
@@ -20,8 +21,8 @@ namespace StructBeaver.Tests.Vetores.Exercicios
             maiorNumero = int.Parse(quantidades[0]);
             menorNumero = int.Parse(quantidades[1]);
 
-            Assert.Equal(97, maiorNumero);
-            Assert.Equal(1, menorNumero);
+            maiorNumero.ShouldBe(97);
+            menorNumero.ShouldBe(1);
         }
     }
 }

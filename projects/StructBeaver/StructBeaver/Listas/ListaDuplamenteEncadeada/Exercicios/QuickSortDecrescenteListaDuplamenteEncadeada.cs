@@ -4,24 +4,24 @@
     {
         public ListaDuplamenteEncadeada QuickSortDecrescente(ListaDuplamenteEncadeada listaParaOrdenacao)
         {
-            NoDuplamenteEncadeado primeiroNo = listaParaOrdenacao.PegarPrimeiroNo();
+            NoDuplamenteEncadeado? primeiroNo = listaParaOrdenacao.PegarPrimeiroNo();
 
             if (primeiroNo is null)
                 return listaParaOrdenacao;
 
-            NoDuplamenteEncadeado ultimoNo = listaParaOrdenacao.PegarUltimoNo();
+            NoDuplamenteEncadeado? ultimoNo = listaParaOrdenacao.PegarUltimoNo();
 
             OrdenarComQuickSort(primeiroNo, ultimoNo, listaParaOrdenacao);
 
             return listaParaOrdenacao;
         }
 
-        private void OrdenarComQuickSort(NoDuplamenteEncadeado inicio, NoDuplamenteEncadeado fim, ListaDuplamenteEncadeada listaParaOrdenacao)
+        private void OrdenarComQuickSort(NoDuplamenteEncadeado inicio, NoDuplamenteEncadeado? fim, ListaDuplamenteEncadeada listaParaOrdenacao)
         {
             if (inicio is null || fim is null || inicio == fim || inicio.Anterior == fim)
                 return;
 
-            NoDuplamenteEncadeado pivo = Particionar(inicio, fim);
+            NoDuplamenteEncadeado pivo = Particionar(inicio, fim)!;
 
             if (pivo.Anterior is not null)
                 OrdenarComQuickSort(inicio, pivo.Anterior, listaParaOrdenacao);
@@ -29,7 +29,7 @@
                 OrdenarComQuickSort(pivo.Proximo, fim, listaParaOrdenacao);
         }
 
-        private NoDuplamenteEncadeado Particionar(NoDuplamenteEncadeado inicio, NoDuplamenteEncadeado fim)
+        private NoDuplamenteEncadeado? Particionar(NoDuplamenteEncadeado inicio, NoDuplamenteEncadeado fim)
         {
             int valorPivo = fim.Valor;
             NoDuplamenteEncadeado? noMenor = inicio.Anterior;
@@ -61,11 +61,7 @@
             return noMenor;
         }
 
-        private void Trocar(NoDuplamenteEncadeado noA, NoDuplamenteEncadeado noB)
-        {
-            int valorTemp = noA.Valor;
-            noA.Valor = noB.Valor;
-            noB.Valor = valorTemp;
-        }
+        private void Trocar(NoDuplamenteEncadeado? noA, NoDuplamenteEncadeado noB)
+            => (noB.Valor, noA!.Valor) = (noA.Valor, noB.Valor);        
     }
 }

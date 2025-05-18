@@ -2,8 +2,9 @@
 {
     public class ListaDuplamenteEncadeada
     {
-        public NoDuplamenteEncadeado PrimeiroNo;
-        public NoDuplamenteEncadeado UltimoNo;
+        public NoDuplamenteEncadeado? PrimeiroNo;
+
+        public NoDuplamenteEncadeado? UltimoNo;
 
         public NoDuplamenteEncadeado? PegarPrimeiroNo() => PrimeiroNo;
 
@@ -35,7 +36,7 @@
 
         public NoDuplamenteEncadeado AdicionarNoFinal(int valor)
         {
-            NoDuplamenteEncadeado novoNo = new NoDuplamenteEncadeado(valor);
+            NoDuplamenteEncadeado novoNo = new(valor);
 
             if (UltimoNo is null)
             {
@@ -57,9 +58,9 @@
             return novoNo;
         }
 
-        public NoDuplamenteEncadeado Remover(int valor)
+        public NoDuplamenteEncadeado? Remover(int valor)
         {
-            NoDuplamenteEncadeado noAtual = PrimeiroNo;
+            NoDuplamenteEncadeado? noAtual = PrimeiroNo;
 
             while (noAtual is not null)
             {

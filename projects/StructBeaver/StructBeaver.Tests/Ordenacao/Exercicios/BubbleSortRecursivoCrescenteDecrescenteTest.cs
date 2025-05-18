@@ -1,13 +1,14 @@
-﻿using StructBeaver.Ordenacao.Exercicios;
+﻿using Shouldly;
+using StructBeaver.Ordenacao.Exercicios;
 
 namespace StructBeaver.Tests.Ordenacao.Exercicios
 {
     public class BubbleSortRecursivoCrescenteDecrescenteTest
     {
-        private BubbleSortRecursivoCrescenteDecrescente _bubbleSortRecursivoCrescenteDecrescente;
+        private readonly BubbleSortRecursivoCrescenteDecrescente _bubbleSortRecursivoCrescenteDecrescente;
 
         public BubbleSortRecursivoCrescenteDecrescenteTest()
-            => _bubbleSortRecursivoCrescenteDecrescente = new BubbleSortRecursivoCrescenteDecrescente();
+            => _bubbleSortRecursivoCrescenteDecrescente = new();
 
         [Fact]
         public void BubbleSortRecursivoCrescenteDecrescente_Deve_Retornar_Vetor_Ordenado_Em_Ordem_Crescente()
@@ -19,7 +20,7 @@ namespace StructBeaver.Tests.Ordenacao.Exercicios
             int[] vetorOrdenado = _bubbleSortRecursivoCrescenteDecrescente.OrdenarRecursivamente(vetorDesordenado, quantidadeElementos, ordemCrescente);
 
             for (int indice = 0; indice < vetorOrdenado.Length - 1; indice++)
-                Assert.True(vetorOrdenado[indice] <= vetorOrdenado[indice + 1]);
+                vetorOrdenado[indice].ShouldBeLessThanOrEqualTo(vetorOrdenado[indice + 1]);
         }
 
         [Fact]
@@ -32,7 +33,7 @@ namespace StructBeaver.Tests.Ordenacao.Exercicios
             int[] vetorOrdenadoDecrescente = _bubbleSortRecursivoCrescenteDecrescente.OrdenarRecursivamente(vetorDesordenado, quantidadeElementos, ordemCrescente);
 
             for (int indice = 0; indice < vetorOrdenadoDecrescente.Length - 1; indice++)
-                Assert.True(vetorOrdenadoDecrescente[indice] >= vetorOrdenadoDecrescente[indice + 1]);
+                vetorOrdenadoDecrescente[indice].ShouldBeGreaterThanOrEqualTo(vetorOrdenadoDecrescente[indice + 1]);
         }
     }
 }

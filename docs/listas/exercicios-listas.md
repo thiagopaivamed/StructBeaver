@@ -16,11 +16,11 @@ comments: true
     {
         public ListaEncadeada Inverter(ListaEncadeada listaParaInversao)
         {
-            ListaEncadeada listaInvertida = new ListaEncadeada();
+            ListaEncadeada listaInvertida = new();
 
             while (!listaParaInversao.IsEmpty())
             {
-                No noRemovido = listaParaInversao.RemoverNoInicio();
+                No? noRemovido = listaParaInversao.RemoverNoInicio();
 
                 if (noRemovido is not null)
                     listaInvertida.AdicionarNoInicio(noRemovido.Valor);
@@ -39,25 +39,25 @@ comments: true
     ```csharp
     
     public class PesquisaRecursivaListaEncadeada
+{
+    public bool Pesquisar(ListaEncadeada listaEncadeada, int valorProcurado)
     {
-        public bool Pesquisar(ListaEncadeada listaEncadeada, int valorProcurado)
-        {
-            No noAtual = listaEncadeada.PegarPrimeiroNo();
+        No? noAtual = listaEncadeada.PegarPrimeiroNo();
 
-            return PesquisarRecursivo(noAtual, valorProcurado);
-        }
-
-        private bool PesquisarRecursivo(No noAtual, int valorProcurado)
-        {
-            if (noAtual is null)
-                return false;
-
-            if (noAtual.Valor == valorProcurado)
-                return true;
-
-            return PesquisarRecursivo(noAtual.Proximo, valorProcurado);
-        }
+        return PesquisarRecursivo(noAtual, valorProcurado);
     }
+
+    private bool PesquisarRecursivo(No? noAtual, int valorProcurado)
+    {
+        if (noAtual is null)
+            return false;
+
+        if (noAtual.Valor == valorProcurado)
+            return true;
+
+        return PesquisarRecursivo(noAtual.Proximo, valorProcurado);
+    }
+}
 
     ```
 
@@ -71,7 +71,7 @@ comments: true
     {
         public ListaEncadeada FazerMerge(ListaEncadeada lista1, ListaEncadeada lista2)
         {
-            ListaEncadeada listasCombinadas = new ListaEncadeada();
+            ListaEncadeada listasCombinadas = new();
 
             No? no1 = lista1.PegarPrimeiroNo();
             No? no2 = lista2.PegarPrimeiroNo();
@@ -106,12 +106,12 @@ comments: true
     {
         public ListaEncadeada Ordenar(ListaEncadeada listaParaOrdenar)
         {
-            ListaEncadeada listaOrdenada = new ListaEncadeada();
+            ListaEncadeada listaOrdenada = new();
             No? noAtual = listaParaOrdenar.PrimeiroNo;
 
             while (noAtual != null)
             {
-                No novoNo = new No(noAtual.Valor);
+                No novoNo = new(noAtual.Valor);
 
                 if (listaOrdenada.PrimeiroNo is null || novoNo.Valor < listaOrdenada.PrimeiroNo.Valor)
                 {
@@ -145,26 +145,32 @@ comments: true
 
     ```csharp
     
-    public class PesquisaRecursivaListaEncadeada
+    public class PesquisaBinariaListaEncadeada
+{
+    public bool Pesquisar(ListaEncadeada lista, int valor)
     {
-        public bool Pesquisar(ListaEncadeada listaEncadeada, int valorProcurado)
-        {
-            No noAtual = listaEncadeada.PegarPrimeiroNo();
+        No? primeiroNo = lista.PegarPrimeiroNo();
 
-            return PesquisarRecursivo(noAtual, valorProcurado);
-        }
+        if (primeiroNo is null)
+            return false;
 
-        private bool PesquisarRecursivo(No noAtual, int valorProcurado)
-        {
-            if (noAtual is null)
-                return false;
-
-            if (noAtual.Valor == valorProcurado)
-                return true;
-
-            return PesquisarRecursivo(noAtual.Proximo, valorProcurado);
-        }
+        return PesquisaBinariaRecursiva(primeiroNo, primeiroNo, valor);
     }
+
+    private bool PesquisaBinariaRecursiva(No? primeiroNo, No? meio, int valor)
+    {
+        if (meio is null)
+            return false;
+                    
+        if (meio.Valor == valor)
+            return true;
+
+        if (valor < meio.Valor)
+            return PesquisaBinariaRecursiva(primeiroNo, meio.Proximo, valor);
+
+        return PesquisaBinariaRecursiva(meio.Proximo, meio.Proximo, valor);
+    }
+}
 
     ```
 
@@ -176,22 +182,22 @@ comments: true
     
     public class RemocaoRecursivaListaDuplamenteEncadeada
     {
-        public NoDuplamenteEncadeado Remover(ListaDuplamenteEncadeada lista, int valor)
+        public NoDuplamenteEncadeado? Remover(ListaDuplamenteEncadeada lista, int valor)
         {
-            NoDuplamenteEncadeado primeiroNo = lista.PegarPrimeiroNo();
+            NoDuplamenteEncadeado? primeiroNo = lista.PegarPrimeiroNo();
 
             return RemoverRecursivo(lista, primeiroNo, valor);
         }
 
-        private NoDuplamenteEncadeado RemoverRecursivo(ListaDuplamenteEncadeada lista, NoDuplamenteEncadeado noAtual, int valor)
+        private NoDuplamenteEncadeado? RemoverRecursivo(ListaDuplamenteEncadeada lista, NoDuplamenteEncadeado? noAtual, int valor)
         {
             if (noAtual is null)
                 return null;
 
             if (noAtual.Valor == valor)
             {
-                NoDuplamenteEncadeado primeiroNo = lista.PegarPrimeiroNo();
-                NoDuplamenteEncadeado ultimoNo = lista.PegarUltimoNo();
+                NoDuplamenteEncadeado? primeiroNo = lista.PegarPrimeiroNo();
+                NoDuplamenteEncadeado? ultimoNo = lista.PegarUltimoNo();
 
                 if (noAtual == primeiroNo)
                 {
@@ -251,11 +257,11 @@ comments: true
     {
         public ListaDuplamenteEncadeada Remover(ListaDuplamenteEncadeada listaDuplamenteEncadeada)
         {
-            NoDuplamenteEncadeado noAtual = listaDuplamenteEncadeada.PegarPrimeiroNo();
+            NoDuplamenteEncadeado? noAtual = listaDuplamenteEncadeada.PegarPrimeiroNo();
 
             while (noAtual is not null)
             {
-                NoDuplamenteEncadeado proximoNo = noAtual.Proximo;
+                NoDuplamenteEncadeado? proximoNo = noAtual.Proximo;
 
                 if (noAtual.Valor % 2 == 0)
                     listaDuplamenteEncadeada.Remover(noAtual.Valor);
@@ -279,14 +285,14 @@ comments: true
     {
         public ListaDuplamenteEncadeada Inverter(ListaDuplamenteEncadeada listaDuplamenteEncadeada)
         {
-            NoDuplamenteEncadeado primeiroNo = listaDuplamenteEncadeada.PegarPrimeiroNo();
+            NoDuplamenteEncadeado? primeiroNo = listaDuplamenteEncadeada.PegarPrimeiroNo();
 
             if (primeiroNo is null)
                 return listaDuplamenteEncadeada;
 
             InverterRecursivo(primeiroNo, listaDuplamenteEncadeada);
 
-            NoDuplamenteEncadeado noTemporario = listaDuplamenteEncadeada.PrimeiroNo;
+            NoDuplamenteEncadeado? noTemporario = listaDuplamenteEncadeada.PrimeiroNo;
             listaDuplamenteEncadeada.PrimeiroNo = listaDuplamenteEncadeada.UltimoNo;
             listaDuplamenteEncadeada.UltimoNo = noTemporario;
 
@@ -295,7 +301,7 @@ comments: true
 
         private ListaDuplamenteEncadeada InverterRecursivo(NoDuplamenteEncadeado noAtual, ListaDuplamenteEncadeada listaDuplamenteEncadeada)
         {
-            NoDuplamenteEncadeado noTemporario = noAtual.Proximo;
+            NoDuplamenteEncadeado? noTemporario = noAtual.Proximo;
             noAtual.Proximo = noAtual.Anterior;
             noAtual.Anterior = noTemporario;
 
@@ -318,19 +324,19 @@ comments: true
     {
         public ListaDuplamenteEncadeada QuickSortDecrescente(ListaDuplamenteEncadeada listaParaOrdenacao)
         {
-            NoDuplamenteEncadeado primeiroNo = listaParaOrdenacao.PegarPrimeiroNo();
+            NoDuplamenteEncadeado? primeiroNo = listaParaOrdenacao.PegarPrimeiroNo();
 
             if (primeiroNo is null)
                 return listaParaOrdenacao;
 
-            NoDuplamenteEncadeado ultimoNo = listaParaOrdenacao.PegarUltimoNo();
+            NoDuplamenteEncadeado? ultimoNo = listaParaOrdenacao.PegarUltimoNo();
 
             OrdenarComQuickSort(primeiroNo, ultimoNo, listaParaOrdenacao);
 
             return listaParaOrdenacao;
         }
 
-        private void OrdenarComQuickSort(NoDuplamenteEncadeado inicio, NoDuplamenteEncadeado fim, ListaDuplamenteEncadeada listaParaOrdenacao)
+        private void OrdenarComQuickSort(NoDuplamenteEncadeado inicio, NoDuplamenteEncadeado? fim, ListaDuplamenteEncadeada listaParaOrdenacao)
         {
             if (inicio is null || fim is null || inicio == fim || inicio.Anterior == fim)
                 return;
@@ -343,7 +349,7 @@ comments: true
                 OrdenarComQuickSort(pivo.Proximo, fim, listaParaOrdenacao);
         }
 
-        private NoDuplamenteEncadeado Particionar(NoDuplamenteEncadeado inicio, NoDuplamenteEncadeado fim)
+        private NoDuplamenteEncadeado? Particionar(NoDuplamenteEncadeado inicio, NoDuplamenteEncadeado fim)
         {
             int valorPivo = fim.Valor;
             NoDuplamenteEncadeado? noMenor = inicio.Anterior;
@@ -375,12 +381,8 @@ comments: true
             return noMenor;
         }
 
-        private void Trocar(NoDuplamenteEncadeado noA, NoDuplamenteEncadeado noB)
-        {
-            int valorTemp = noA.Valor;
-            noA.Valor = noB.Valor;
-            noB.Valor = valorTemp;
-        }
+        private void Trocar(NoDuplamenteEncadeado? noA, NoDuplamenteEncadeado noB)
+            => (noB.Valor, noA!.Valor) = (noA.Valor, noB.Valor);        
     }
 
     ```
@@ -395,18 +397,18 @@ comments: true
     {
         public bool Pesquisar(ListaDuplamenteEncadeada listaParaProcura, int valorProcurado)
         {
-            NoDuplamenteEncadeado primeiroNo = listaParaProcura.PegarPrimeiroNo();
-            NoDuplamenteEncadeado ultimoNo = listaParaProcura.PegarUltimoNo();
+            NoDuplamenteEncadeado? primeiroNo = listaParaProcura.PegarPrimeiroNo();
+            NoDuplamenteEncadeado? ultimoNo = listaParaProcura.PegarUltimoNo();
 
             return PesquisaBinariaRecursiva(primeiroNo, ultimoNo, valorProcurado);
         }
 
-        private bool PesquisaBinariaRecursiva(NoDuplamenteEncadeado noInicial, NoDuplamenteEncadeado noFinal, int valorProcurado)
+        private bool PesquisaBinariaRecursiva(NoDuplamenteEncadeado? noInicial, NoDuplamenteEncadeado? noFinal, int valorProcurado)
         {
             if (noInicial is null || noFinal is null)
                 return false;
 
-            NoDuplamenteEncadeado atual = noInicial;
+            NoDuplamenteEncadeado? atual = noInicial;
 
             while (atual is not null && atual != noFinal)
                 atual = atual.Proximo;
@@ -414,16 +416,16 @@ comments: true
             if (atual != noFinal)
                 return false;
 
-            NoDuplamenteEncadeado ponteiroInicio = noInicial;
-            NoDuplamenteEncadeado ponteiroFim = noFinal;
+            NoDuplamenteEncadeado? ponteiroInicio = noInicial;
+            NoDuplamenteEncadeado? ponteiroFim = noFinal;
 
-            while (ponteiroInicio != ponteiroFim && ponteiroInicio.Proximo != ponteiroFim)
+            while (ponteiroInicio != ponteiroFim && ponteiroInicio!.Proximo != ponteiroFim)
             {
                 ponteiroInicio = ponteiroInicio?.Proximo;
                 ponteiroFim = ponteiroFim?.Anterior;
             }
 
-            NoDuplamenteEncadeado noMeio = ponteiroInicio;
+            NoDuplamenteEncadeado? noMeio = ponteiroInicio;
 
             if (noMeio is null)
                 return false;

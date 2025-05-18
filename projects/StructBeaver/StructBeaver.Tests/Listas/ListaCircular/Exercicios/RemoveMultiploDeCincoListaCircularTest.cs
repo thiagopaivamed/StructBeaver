@@ -1,19 +1,20 @@
-﻿using StructBeaver.Listas.ListaCircular;
+﻿using Shouldly;
+using StructBeaver.Listas.ListaCircular;
 using StructBeaver.Listas.ListaCircular.Exercicios;
 
 namespace StructBeaver.Tests.Listas.ListaCircular.Exercicios
 {
     public class RemoveMultiploDeCincoListaCircularTest
     {
-        private RemoveMultiploDeCincoListaCircular _removeMultiploDeCincoListaCircular;
+        private readonly RemoveMultiploDeCincoListaCircular _removeMultiploDeCincoListaCircular;
 
         public RemoveMultiploDeCincoListaCircularTest()
-            => _removeMultiploDeCincoListaCircular = new RemoveMultiploDeCincoListaCircular();
+            => _removeMultiploDeCincoListaCircular = new();
 
         [Fact]
         public void Remover_Multiplo_De_Cinco_Deve_Remover_Todos_Multiplos_De_Cinco_Da_Lista_Circular()
         {
-            ListaCircularDuplamenteEncadeada listaCircular = new ListaCircularDuplamenteEncadeada();
+            ListaCircularDuplamenteEncadeada listaCircular = new();
             listaCircular.AdicionarNoInicio(20);
             listaCircular.AdicionarNoInicio(2);
             listaCircular.AdicionarNoInicio(3);
@@ -25,15 +26,15 @@ namespace StructBeaver.Tests.Listas.ListaCircular.Exercicios
 
             listaCircular = _removeMultiploDeCincoListaCircular.RemoverMultiploDeCinco(listaCircular);
 
-            NoCircular noAtual = listaCircular.PrimeiroNo;
-            NoCircular primeiroNo = noAtual;
-          
+            NoCircular? noAtual = listaCircular.PrimeiroNo;
+            NoCircular? primeiroNo = noAtual;
+
             do
             {
-                Assert.NotEqual(0, noAtual.Valor % 5);
+                (noAtual!.Valor % 5).ShouldNotBe(0);
                 noAtual = noAtual.Proximo;
             }
-            while (noAtual != primeiroNo);            
+            while (noAtual != primeiroNo);
         }
     }
 }

@@ -1,17 +1,18 @@
-﻿using StructBeaver.Listas.ListaDuplamenteEncadeada;
+﻿using Shouldly;
+using StructBeaver.Listas.ListaDuplamenteEncadeada;
 using StructBeaver.Listas.ListaDuplamenteEncadeada.Exercicios;
 
 namespace StructBeaver.Tests.Listas.ListasDuplamenteEncadeadas.Exercicios
 {
     public class PesquisaBinariaListaDuplamenteEncadeadaTest
     {
-        private PesquisaBinariaListaDuplamenteEncadeada _pesquisaBinariaListaDuplamenteEncadeada;
-        private ListaDuplamenteEncadeada _listaDuplamenteEncadeada;
+        private readonly PesquisaBinariaListaDuplamenteEncadeada _pesquisaBinariaListaDuplamenteEncadeada;
+        private readonly ListaDuplamenteEncadeada _listaDuplamenteEncadeada;
 
         public PesquisaBinariaListaDuplamenteEncadeadaTest()
         {
-            _pesquisaBinariaListaDuplamenteEncadeada = new PesquisaBinariaListaDuplamenteEncadeada();
-            _listaDuplamenteEncadeada = new ListaDuplamenteEncadeada();
+            _pesquisaBinariaListaDuplamenteEncadeada = new();
+            _listaDuplamenteEncadeada = new();
             _listaDuplamenteEncadeada.AdicionarNoFinal(1);
             _listaDuplamenteEncadeada.AdicionarNoFinal(2);
             _listaDuplamenteEncadeada.AdicionarNoFinal(3);
@@ -26,7 +27,7 @@ namespace StructBeaver.Tests.Listas.ListasDuplamenteEncadeadas.Exercicios
 
             bool valorFoiEncontrado = _pesquisaBinariaListaDuplamenteEncadeada.Pesquisar(_listaDuplamenteEncadeada, valorProcurado);
 
-            Assert.True(valorFoiEncontrado);
+            valorFoiEncontrado.ShouldBeTrue();
         }
 
         [Fact]
@@ -36,7 +37,7 @@ namespace StructBeaver.Tests.Listas.ListasDuplamenteEncadeadas.Exercicios
 
             bool valorFoiEncontrado = _pesquisaBinariaListaDuplamenteEncadeada.Pesquisar(_listaDuplamenteEncadeada, valorProcurado);
 
-            Assert.False(valorFoiEncontrado);
+            valorFoiEncontrado.ShouldBeFalse();
         }
     }
 }

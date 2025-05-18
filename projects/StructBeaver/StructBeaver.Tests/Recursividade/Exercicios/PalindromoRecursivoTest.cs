@@ -1,4 +1,5 @@
-﻿using StructBeaver.Recursividade.Exercicios;
+﻿using Shouldly;
+using StructBeaver.Recursividade.Exercicios;
 
 namespace StructBeaver.Tests.Recursividade.Exercicios
 {
@@ -7,7 +8,7 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
         private readonly PalindromoRecursivo _palindromoRecursivo;
 
         public PalindromoRecursivoTest()
-            => _palindromoRecursivo = new PalindromoRecursivo();
+            => _palindromoRecursivo = new();
 
         [Fact]
         public void PalindromoRecursivo_Deve_Retornar_True_Quando_Palindromo()
@@ -16,7 +17,7 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
 
             bool ehPalindromo = _palindromoRecursivo.IsPalindromo(palavra, 0, palavra.Length - 1);
 
-            Assert.True(ehPalindromo);
+            ehPalindromo.ShouldBeTrue();
         }
 
         [Fact]
@@ -26,7 +27,7 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
 
             bool ehPalindromo = _palindromoRecursivo.IsPalindromo(palavra, 0, palavra.Length - 1);
 
-            Assert.False(ehPalindromo);
+            ehPalindromo.ShouldBeFalse();
         }
     }
 }

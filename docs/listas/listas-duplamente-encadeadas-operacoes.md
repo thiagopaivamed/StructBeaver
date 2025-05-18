@@ -49,28 +49,22 @@ Note o novo atributo que referencia o nó anterior. Chamaremos essa estrutura de
 
 ```csharp
 
-public class NoDuplamenteEncadeado
+public class NoDuplamenteEncadeado(int valor)
 {
-    public int Valor;
+    public int Valor = valor;
     public NoDuplamenteEncadeado? Proximo;
-    public NoDuplamenteEncadeado? Anterior;
-
-    public NoDuplamenteEncadeado(int valor)
-    {
-        Valor = valor;
-        Proximo = null;
-        Anterior = null;
-    }
+    public NoDuplamenteEncadeado? Anterior;        
 }
 
 ```
 
 ```csharp
 
-ppublic class ListaDuplamenteEncadeada
+public class ListaDuplamenteEncadeada
 {
-    public NoDuplamenteEncadeado PrimeiroNo;
-    public NoDuplamenteEncadeado UltimoNo;
+    public NoDuplamenteEncadeado? PrimeiroNo;
+
+    public NoDuplamenteEncadeado? UltimoNo;
 
     public NoDuplamenteEncadeado? PegarPrimeiroNo() => PrimeiroNo;
 
@@ -102,7 +96,7 @@ ppublic class ListaDuplamenteEncadeada
 
     public NoDuplamenteEncadeado AdicionarNoFinal(int valor)
     {
-        NoDuplamenteEncadeado novoNo = new NoDuplamenteEncadeado(valor);
+        NoDuplamenteEncadeado novoNo = new(valor);
 
         if (UltimoNo is null)
         {
@@ -124,9 +118,9 @@ ppublic class ListaDuplamenteEncadeada
         return novoNo;
     }
 
-    public NoDuplamenteEncadeado Remover(int valor)
+    public NoDuplamenteEncadeado? Remover(int valor)
     {
-        NoDuplamenteEncadeado noAtual = PrimeiroNo;
+        NoDuplamenteEncadeado? noAtual = PrimeiroNo;
 
         while (noAtual is not null)
         {

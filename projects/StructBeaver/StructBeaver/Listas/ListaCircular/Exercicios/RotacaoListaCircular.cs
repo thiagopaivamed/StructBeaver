@@ -4,10 +4,10 @@
     {
         public ListaCircularDuplamenteEncadeada Rotacionar(ListaCircularDuplamenteEncadeada listaCircular, int quantidadeRotacoes)
         {
-            NoCircular noAtual = listaCircular.PrimeiroNo;
+            NoCircular? noAtual = listaCircular.PrimeiroNo;
 
             for (int i = 0; i < quantidadeRotacoes; i++)
-                noAtual = noAtual.Proximo;            
+                noAtual = noAtual!.Proximo;            
 
             listaCircular.PrimeiroNo = noAtual;
 

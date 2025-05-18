@@ -2,22 +2,22 @@
 {
     public class RemocaoRecursivaListaDuplamenteEncadeada
     {
-        public NoDuplamenteEncadeado Remover(ListaDuplamenteEncadeada lista, int valor)
+        public NoDuplamenteEncadeado? Remover(ListaDuplamenteEncadeada lista, int valor)
         {
-            NoDuplamenteEncadeado primeiroNo = lista.PegarPrimeiroNo();
+            NoDuplamenteEncadeado? primeiroNo = lista.PegarPrimeiroNo();
 
             return RemoverRecursivo(lista, primeiroNo, valor);
         }
 
-        private NoDuplamenteEncadeado RemoverRecursivo(ListaDuplamenteEncadeada lista, NoDuplamenteEncadeado noAtual, int valor)
+        private NoDuplamenteEncadeado? RemoverRecursivo(ListaDuplamenteEncadeada lista, NoDuplamenteEncadeado? noAtual, int valor)
         {
             if (noAtual is null)
                 return null;
 
             if (noAtual.Valor == valor)
             {
-                NoDuplamenteEncadeado primeiroNo = lista.PegarPrimeiroNo();
-                NoDuplamenteEncadeado ultimoNo = lista.PegarUltimoNo();
+                NoDuplamenteEncadeado? primeiroNo = lista.PegarPrimeiroNo();
+                NoDuplamenteEncadeado? ultimoNo = lista.PegarUltimoNo();
 
                 if (noAtual == primeiroNo)
                 {

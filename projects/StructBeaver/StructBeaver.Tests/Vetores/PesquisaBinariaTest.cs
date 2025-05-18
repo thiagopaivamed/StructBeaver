@@ -1,4 +1,5 @@
-﻿using StructBeaver.Vetores;
+﻿using Shouldly;
+using StructBeaver.Vetores;
 
 namespace StructBeaver.Tests.Vetores
 {
@@ -7,7 +8,7 @@ namespace StructBeaver.Tests.Vetores
         private readonly PesquisaBinaria _pesquisaBinaria;
 
         public PesquisaBinariaTest()
-            => _pesquisaBinaria = new PesquisaBinaria();
+            => _pesquisaBinaria = new();
 
         [Fact]
         public void PesquisaBinaria_Deve_Encontrar_Elemento()
@@ -17,7 +18,7 @@ namespace StructBeaver.Tests.Vetores
 
             int indiceElementoProcurado = _pesquisaBinaria.ExecutarPesquisaBinaria(vetor, elementoProcurado);
 
-            Assert.True(indiceElementoProcurado is not -1);
+            indiceElementoProcurado.ShouldNotBe(-1);
         }
 
         [Fact]
@@ -28,7 +29,7 @@ namespace StructBeaver.Tests.Vetores
 
             int indiceElementoProcurado = _pesquisaBinaria.ExecutarPesquisaBinaria(vetor, elementoProcurado);
 
-            Assert.True(indiceElementoProcurado is -1);
+            indiceElementoProcurado.ShouldBe(-1);            
         }
 
         [Fact]
@@ -40,7 +41,7 @@ namespace StructBeaver.Tests.Vetores
 
             int indiceElementoProcurado = _pesquisaBinaria.ExecutarPesquisaBinariaRecursiva(vetor, elementoProcurado, 0, quantidadeElementos);
 
-            Assert.True(indiceElementoProcurado is not -1);
+            indiceElementoProcurado.ShouldNotBe(-1);
         }
 
         [Fact]
@@ -52,7 +53,7 @@ namespace StructBeaver.Tests.Vetores
 
             int indiceElementoProcurado = _pesquisaBinaria.ExecutarPesquisaBinariaRecursiva(vetor, elementoProcurado, 0, quantidadeElementos);
 
-            Assert.True(indiceElementoProcurado is -1);
+            indiceElementoProcurado.ShouldBe(-1);
         }
     }
 }

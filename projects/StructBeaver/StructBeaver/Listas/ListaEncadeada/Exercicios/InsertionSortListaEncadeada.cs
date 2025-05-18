@@ -4,12 +4,12 @@
     {
         public ListaEncadeada Ordenar(ListaEncadeada listaParaOrdenar)
         {
-            ListaEncadeada listaOrdenada = new ListaEncadeada();
+            ListaEncadeada listaOrdenada = new();
             No? noAtual = listaParaOrdenar.PrimeiroNo;
 
             while (noAtual != null)
             {
-                No novoNo = new No(noAtual.Valor);
+                No novoNo = new(noAtual.Valor);
 
                 if (listaOrdenada.PrimeiroNo is null || novoNo.Valor < listaOrdenada.PrimeiroNo.Valor)
                 {

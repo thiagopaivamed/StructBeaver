@@ -1,18 +1,19 @@
-﻿using StructBeaver.Listas.ListaDuplamenteEncadeada;
+﻿using Shouldly;
+using StructBeaver.Listas.ListaDuplamenteEncadeada;
 using StructBeaver.Listas.ListaDuplamenteEncadeada.Exercicios;
 
 namespace StructBeaver.Tests.Listas.ListasDuplamenteEncadeadas.Exercicios
 {
     public class QuickSortDecrescenteListaDuplamenteEncadeadaTest
     {
-        private QuickSortDecrescenteListaDuplamenteEncadeada _quickSortDecrescenteListaDuplamenteEncadeada;
+        private readonly QuickSortDecrescenteListaDuplamenteEncadeada _quickSortDecrescenteListaDuplamenteEncadeada;
         public QuickSortDecrescenteListaDuplamenteEncadeadaTest()
-            => _quickSortDecrescenteListaDuplamenteEncadeada = new QuickSortDecrescenteListaDuplamenteEncadeada();
+            => _quickSortDecrescenteListaDuplamenteEncadeada = new();
 
         [Fact]
         public void Quick_Sort_Decrescente_Lista_Deve_Retornar_Lista_Ordenada_Decrescente()
         {
-            ListaDuplamenteEncadeada listaDuplamenteEncadeada = new ListaDuplamenteEncadeada();
+            ListaDuplamenteEncadeada listaDuplamenteEncadeada = new();
             listaDuplamenteEncadeada.AdicionarNoFinal(1);
             listaDuplamenteEncadeada.AdicionarNoFinal(2);
             listaDuplamenteEncadeada.AdicionarNoFinal(3);
@@ -22,9 +23,9 @@ namespace StructBeaver.Tests.Listas.ListasDuplamenteEncadeadas.Exercicios
             ListaDuplamenteEncadeada listaOrdenada = _quickSortDecrescenteListaDuplamenteEncadeada.QuickSortDecrescente(listaDuplamenteEncadeada);
             NoDuplamenteEncadeado? primeiroNo = listaOrdenada.PegarPrimeiroNo();
 
-            while (primeiroNo.Proximo is not null)
+            while (primeiroNo?.Proximo is not null)
             {
-                Assert.True(primeiroNo.Valor > primeiroNo.Proximo.Valor);
+                primeiroNo.Valor.ShouldBeGreaterThan(primeiroNo.Proximo.Valor);
                 primeiroNo = primeiroNo.Proximo;
             }
         }

@@ -1,4 +1,5 @@
-﻿using StructBeaver.Pilhas;
+﻿using Shouldly;
+using StructBeaver.Pilhas;
 using StructBeaver.Pilhas.Exercicios;
 
 namespace StructBeaver.Tests.Pilhas.Exercicios
@@ -8,7 +9,7 @@ namespace StructBeaver.Tests.Pilhas.Exercicios
         private MenorValorPilha _menorValorPilha;
 
         public MenorValorPilhaTest()
-            =>_menorValorPilha = new MenorValorPilha();
+            => _menorValorPilha = new();
 
         [Fact]
         public void PegarMenorValor_Deve_Retornar_Menor_Valor()
@@ -21,7 +22,7 @@ namespace StructBeaver.Tests.Pilhas.Exercicios
             pilha.Push(5);
 
             int menorValor = _menorValorPilha.PegarMenorValor(pilha);
-            Assert.Equal(1, menorValor);
+            menorValor.ShouldBe(1);
         }
     }
 }

@@ -25,11 +25,6 @@
         }
 
         private void TrocarValores(int[] vetor, int indice)
-        {
-            int valorTemporario = vetor[indice];
-            vetor[indice] = vetor[indice + 1];
-            vetor[indice + 1] = valorTemporario;
-        }
+            => (vetor[indice + 1], vetor[indice]) = (vetor[indice], vetor[indice + 1]);
     }
-
 }

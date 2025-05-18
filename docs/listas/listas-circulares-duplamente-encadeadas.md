@@ -18,7 +18,7 @@ Observe que, ao inicializar um nó, ele é configurado para apontar para si mesm
 
 ```csharp
 
-public class NoCircular
+ public class NoCircular
  {
      public int Valor;
      public NoCircular Proximo;
@@ -40,24 +40,24 @@ public class ListaCircularDuplamenteEncadeada
 {
     public NoCircular? PrimeiroNo;
 
-    public NoCircular PegarPrimeiroNo() => PrimeiroNo;
+    public NoCircular? PegarPrimeiroNo() => PrimeiroNo;
 
     public NoCircular AdicionarNoInicio(int valor)
     {
-        NoCircular novoNo = new NoCircular(valor);
+        NoCircular novoNo = new(valor);
 
         if (PrimeiroNo is null)            
             PrimeiroNo = novoNo;
         
         else
         {
-            NoCircular ultimoNo = PrimeiroNo.Anterior;
+            NoCircular? ultimoNo = PrimeiroNo.Anterior;
 
             novoNo.Proximo = PrimeiroNo;
             novoNo.Anterior = ultimoNo;
 
             PrimeiroNo.Anterior = novoNo;
-            ultimoNo.Proximo = novoNo;
+            ultimoNo!.Proximo = novoNo;
 
             PrimeiroNo = novoNo;
         }
@@ -67,43 +67,43 @@ public class ListaCircularDuplamenteEncadeada
 
     public NoCircular AdicionarNoFim(int valor)
     {
-        NoCircular novoNo = new NoCircular(valor);
+        NoCircular novoNo = new (valor);
 
         if (PrimeiroNo is null)            
             PrimeiroNo = novoNo;
         
         else
         {
-            NoCircular ultimoNo = PrimeiroNo.Anterior;
+            NoCircular? ultimoNo = PrimeiroNo.Anterior;
 
             novoNo.Proximo = PrimeiroNo;
             novoNo.Anterior = ultimoNo;
 
-            ultimoNo.Proximo = novoNo;
+            ultimoNo!.Proximo = novoNo;
             PrimeiroNo.Anterior = novoNo;
         }
 
         return novoNo;  
     }
 
-    public NoCircular Remover(int valor)
+    public NoCircular? Remover(int valor)
     {
         if (PrimeiroNo is null)
             return null;
 
-        NoCircular noAtual = PrimeiroNo;
+        NoCircular? noAtual = PrimeiroNo;
 
         do
         {
-            if (noAtual.Valor == valor)
+            if (noAtual!.Valor == valor)
             {
                 if (noAtual.Proximo == noAtual)                    
                     PrimeiroNo = null;
                 
                 else
                 {
-                    noAtual.Anterior.Proximo = noAtual.Proximo;
-                    noAtual.Proximo.Anterior = noAtual.Anterior;
+                    noAtual.Anterior!.Proximo = noAtual.Proximo;
+                    noAtual.Proximo!.Anterior = noAtual.Anterior;
 
                     if (noAtual == PrimeiroNo)
                         PrimeiroNo = noAtual.Proximo;

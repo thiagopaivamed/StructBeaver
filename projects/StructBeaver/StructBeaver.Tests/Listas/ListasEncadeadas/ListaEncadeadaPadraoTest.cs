@@ -1,13 +1,14 @@
-﻿using StructBeaver.Listas.ListaEncadeada;
+﻿using Shouldly;
+using StructBeaver.Listas.ListaEncadeada;
 
 namespace StructBeaver.Tests.Listas.ListasEncadeadas
 {
     public class ListaEncadeadaPadraoTest
     {
-        private ListaEncadeadaPadrao _listaEncadeadaPadrao;
+        private readonly ListaEncadeadaPadrao _listaEncadeadaPadrao;
 
         public ListaEncadeadaPadraoTest()
-           => _listaEncadeadaPadrao = new ListaEncadeadaPadrao();
+           => _listaEncadeadaPadrao = new();
 
         [Fact]
         public void Deve_Adicionar_Elemento_Na_Lista()
@@ -18,7 +19,7 @@ namespace StructBeaver.Tests.Listas.ListasEncadeadas
 
             bool removido = _listaEncadeadaPadrao.Remover(20);
 
-            Assert.True(removido);
+            removido.ShouldBeTrue();
         }
 
         [Fact]
@@ -30,7 +31,7 @@ namespace StructBeaver.Tests.Listas.ListasEncadeadas
 
             bool removido = _listaEncadeadaPadrao.Remover(2);
 
-            Assert.True(removido);
+            removido.ShouldBeTrue();
         }
 
         [Fact]
@@ -40,7 +41,7 @@ namespace StructBeaver.Tests.Listas.ListasEncadeadas
 
             bool removido = _listaEncadeadaPadrao.Remover(200);
 
-            Assert.False(removido);
+            removido.ShouldBeFalse();
         }
     }
 }

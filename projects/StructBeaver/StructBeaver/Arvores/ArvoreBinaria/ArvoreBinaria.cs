@@ -145,7 +145,7 @@
 
             if (Raiz.Valor == valor)
             {
-                Raiz = RemoverNo(Raiz);
+                Raiz = RemoverNo(Raiz)!;
                 return;
             }
 

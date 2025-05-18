@@ -1,4 +1,5 @@
-﻿using StructBeaver.Recursividade;
+﻿using Shouldly;
+using StructBeaver.Recursividade;
 
 namespace StructBeaver.Tests.Recursividade
 {
@@ -7,7 +8,7 @@ namespace StructBeaver.Tests.Recursividade
         private readonly Fibonacci _fibonacci;
 
         public FibonacciTest()
-            => _fibonacci = new Fibonacci();
+            => _fibonacci = new();
 
         [Fact]
         public void Fibonacci_Deve_Retornar_Zero_Ou_Um()
@@ -16,7 +17,7 @@ namespace StructBeaver.Tests.Recursividade
 
             int fibonacci = _fibonacci.CalcularFibonacci(numeroSequencia);
 
-            Assert.True(fibonacci == numeroSequencia);
+            fibonacci.ShouldBe(numeroSequencia);
         }
 
         [Fact]
@@ -26,7 +27,8 @@ namespace StructBeaver.Tests.Recursividade
 
             int fibonacci = _fibonacci.CalcularFibonacci(numeroSequencia);
 
-            Assert.True(fibonacci is not 0 or 1);
+            fibonacci.ShouldNotBe(0);
+            fibonacci.ShouldNotBe(1);
         }
     }
 }

@@ -1,24 +1,20 @@
-﻿using StructBeaver.Pilhas;
+﻿using Shouldly;
+using StructBeaver.Pilhas;
 using StructBeaver.Pilhas.Exercicios;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StructBeaver.Tests.Pilhas.Exercicios
 {
     public class PilhaInvertidaRecursivaTest
     {
-        private PilhaInvertidaRecursiva _pilhaInvertidaRecursiva;
+        private readonly PilhaInvertidaRecursiva _pilhaInvertidaRecursiva;
 
         public PilhaInvertidaRecursivaTest()
-            => _pilhaInvertidaRecursiva = new PilhaInvertidaRecursiva();
+            => _pilhaInvertidaRecursiva = new();
 
         [Fact]
         public void InverterPilha_Deve_Retornar_Pilha_Invertida()
         {
-            Pilha pilha = new Pilha();
+            Pilha pilha = new();
             pilha.Push(1);
             pilha.Push(2);
             pilha.Push(3);
@@ -27,11 +23,11 @@ namespace StructBeaver.Tests.Pilhas.Exercicios
 
             pilha = _pilhaInvertidaRecursiva.InverterPilha(pilha);
 
-            Assert.Equal(5, pilha.Pop());
-            Assert.Equal(4, pilha.Pop());
-            Assert.Equal(3, pilha.Pop());
-            Assert.Equal(2, pilha.Pop());
-            Assert.Equal(1, pilha.Pop());
+            pilha.Pop().ShouldBe(5);
+            pilha.Pop().ShouldBe(4);
+            pilha.Pop().ShouldBe(3);
+            pilha.Pop().ShouldBe(2);
+            pilha.Pop().ShouldBe(1);
         }
     }
 }

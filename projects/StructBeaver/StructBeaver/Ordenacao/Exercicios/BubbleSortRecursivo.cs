@@ -5,7 +5,7 @@
         private BubbleSort _bubbleSort;
 
         public BubbleSortRecursivo()
-            => _bubbleSort = new BubbleSort();
+            => _bubbleSort = new();
 
         public int[] OrdenarRecursivamente(int[] vetor)
             => _bubbleSort.RecursiveSort(vetor, vetor.Length);

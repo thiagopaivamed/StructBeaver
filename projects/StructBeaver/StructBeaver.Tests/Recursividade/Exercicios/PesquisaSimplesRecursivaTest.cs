@@ -1,13 +1,14 @@
-﻿using StructBeaver.Recursividade.Exercicios;
+﻿using Shouldly;
+using StructBeaver.Recursividade.Exercicios;
 
 namespace StructBeaver.Tests.Recursividade.Exercicios
 {
     public class PesquisaSimplesRecursivaTest
     {
-        private PesquisaSimplesRecursiva _pesquisaSimplesRecursiva;
+        private readonly PesquisaSimplesRecursiva _pesquisaSimplesRecursiva;
 
         public PesquisaSimplesRecursivaTest()
-            => _pesquisaSimplesRecursiva = new PesquisaSimplesRecursiva();
+            => _pesquisaSimplesRecursiva = new();
 
         [Fact]
         public void PesquisaSimplesRecursiva_Deve_Encontrar_Elemento()
@@ -17,7 +18,7 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
 
             int indiceElementoProcurado = _pesquisaSimplesRecursiva.ExecutarPesquisaSimplesRecursiva(vetor, elementoProcurado, 0);
 
-            Assert.True(indiceElementoProcurado is not -1);
+            indiceElementoProcurado.ShouldNotBe(-1);
         }
 
         [Fact]
@@ -28,7 +29,7 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
 
             int indiceElementoProcurado = _pesquisaSimplesRecursiva.ExecutarPesquisaSimplesRecursiva(vetor, elementoProcurado, 0);
 
-            Assert.True(indiceElementoProcurado is -1);
+            indiceElementoProcurado.ShouldBe(-1);
         }
     }
 }

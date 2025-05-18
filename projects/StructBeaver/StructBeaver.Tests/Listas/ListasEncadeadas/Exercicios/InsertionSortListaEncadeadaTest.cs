@@ -1,11 +1,12 @@
-﻿using StructBeaver.Listas.ListaEncadeada;
+﻿using Shouldly;
+using StructBeaver.Listas.ListaEncadeada;
 using StructBeaver.Listas.ListaEncadeada.Exercicios;
 
 namespace StructBeaver.Tests.Listas.ListasEncadeadas.Exercicios
 {
     public class InsertionSortListaEncadeadaTest
     {
-        private InsertionSortListaEncadeada _insertionSortListaEncadeada;
+        private readonly InsertionSortListaEncadeada _insertionSortListaEncadeada;
 
         public InsertionSortListaEncadeadaTest()
             => _insertionSortListaEncadeada = new();
@@ -22,9 +23,9 @@ namespace StructBeaver.Tests.Listas.ListasEncadeadas.Exercicios
 
             ListaEncadeada listaOrdenada = _insertionSortListaEncadeada.Ordenar(listaParaOrdenar);
 
-            while(listaOrdenada.PrimeiroNo.Proximo is not null)
+            while (listaOrdenada.PrimeiroNo!.Proximo is not null)
             {
-                Assert.True(listaOrdenada.PrimeiroNo.Valor < listaOrdenada.PrimeiroNo.Proximo.Valor);
+                listaOrdenada.PrimeiroNo.Valor.ShouldBeLessThan(listaOrdenada.PrimeiroNo.Proximo.Valor);
                 listaOrdenada.PrimeiroNo = listaOrdenada.PrimeiroNo.Proximo;
             }
         }

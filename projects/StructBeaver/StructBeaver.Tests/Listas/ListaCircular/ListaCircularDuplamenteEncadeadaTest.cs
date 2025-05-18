@@ -1,25 +1,26 @@
-﻿using StructBeaver.Listas.ListaCircular;
+﻿using Shouldly;
+using StructBeaver.Listas.ListaCircular;
 
 namespace StructBeaver.Tests.Listas.ListaCircular
 {
     public class ListaCircularDuplamenteEncadeadaTest
     {
-        private ListaCircularDuplamenteEncadeada _listaCircularDuplamenteEncadeada;
+        private readonly ListaCircularDuplamenteEncadeada _listaCircularDuplamenteEncadeada;
 
         public ListaCircularDuplamenteEncadeadaTest()
-            => _listaCircularDuplamenteEncadeada = new ListaCircularDuplamenteEncadeada();
-        
+            => _listaCircularDuplamenteEncadeada = new();
+
 
         [Fact]
         public void Adicionar_No_Inicio_Deve_Inserir_E_Retornar_No()
         {
             NoCircular noAdicionado = _listaCircularDuplamenteEncadeada.AdicionarNoInicio(10);
 
-            Assert.NotNull(noAdicionado);
-            Assert.Equal(10, noAdicionado.Valor);
-            Assert.Same(noAdicionado, noAdicionado.Proximo);
-            Assert.Same(noAdicionado, noAdicionado.Anterior);
-            Assert.Same(noAdicionado, _listaCircularDuplamenteEncadeada.PrimeiroNo);
+            noAdicionado.ShouldNotBeNull();
+            noAdicionado.Valor.ShouldBe(10);
+            noAdicionado.Proximo.ShouldBe(noAdicionado);
+            noAdicionado.Anterior.ShouldBe(noAdicionado);
+            _listaCircularDuplamenteEncadeada.PrimeiroNo.ShouldBe(noAdicionado);
         }
 
         [Fact]
@@ -28,13 +29,13 @@ namespace StructBeaver.Tests.Listas.ListaCircular
             NoCircular noAdicionado1 = _listaCircularDuplamenteEncadeada.AdicionarNoFim(10);
             NoCircular noAdicionado2 = _listaCircularDuplamenteEncadeada.AdicionarNoFim(20);
 
-            Assert.NotNull(noAdicionado1);
-            Assert.NotNull(noAdicionado2);
-            Assert.Equal(10, noAdicionado1.Valor);
-            Assert.Equal(20, noAdicionado2.Valor);
-            Assert.Same(noAdicionado1, noAdicionado2.Proximo);
-            Assert.Same(noAdicionado2, noAdicionado1.Anterior);
-            Assert.Same(noAdicionado2, _listaCircularDuplamenteEncadeada.PrimeiroNo.Anterior);
+            noAdicionado1.ShouldNotBeNull();
+            noAdicionado2.ShouldNotBeNull();
+            noAdicionado1.Valor.ShouldBe(10);
+            noAdicionado2.Valor.ShouldBe(20);
+            noAdicionado1.Proximo.ShouldBe(noAdicionado2);
+            noAdicionado2.Proximo.ShouldBe(noAdicionado1);
+            _listaCircularDuplamenteEncadeada.PrimeiroNo!.Anterior.ShouldBe(noAdicionado2);
         }
 
         [Fact]
@@ -42,11 +43,11 @@ namespace StructBeaver.Tests.Listas.ListaCircular
         {
             _listaCircularDuplamenteEncadeada.AdicionarNoInicio(5);
 
-            NoCircular noRemovido = _listaCircularDuplamenteEncadeada.Remover(5);
+            NoCircular? noRemovido = _listaCircularDuplamenteEncadeada.Remover(5);
 
-            Assert.NotNull(noRemovido);
-            Assert.Equal(5, noRemovido.Valor);
-            Assert.Null(_listaCircularDuplamenteEncadeada.PrimeiroNo);
+            noRemovido.ShouldNotBeNull();
+            noRemovido.Valor.ShouldBe(5);
+            _listaCircularDuplamenteEncadeada.PrimeiroNo.ShouldBeNull();
         }
 
         [Fact]
@@ -56,18 +57,18 @@ namespace StructBeaver.Tests.Listas.ListaCircular
             _listaCircularDuplamenteEncadeada.AdicionarNoFim(2);
             _listaCircularDuplamenteEncadeada.AdicionarNoFim(3);
 
-            NoCircular noRemovido = _listaCircularDuplamenteEncadeada.Remover(2);
+            NoCircular? noRemovido = _listaCircularDuplamenteEncadeada.Remover(2);
 
-            Assert.NotNull(noRemovido);
-            Assert.Equal(2, noRemovido.Valor);
+            noRemovido.ShouldNotBeNull();
+            noRemovido.Valor.ShouldBe(2);
 
-            NoCircular primeiro = _listaCircularDuplamenteEncadeada.PrimeiroNo;
-            NoCircular segundo = primeiro.Proximo;
+            NoCircular? primeiro = _listaCircularDuplamenteEncadeada.PrimeiroNo;
+            NoCircular? segundo = primeiro!.Proximo;
 
-            Assert.Equal(1, primeiro.Valor);
-            Assert.Equal(3, segundo.Valor);
-            Assert.Same(primeiro, segundo.Proximo);
-            Assert.Same(segundo, primeiro.Anterior);
+            primeiro.Valor.ShouldBe(1);
+            segundo!.Valor.ShouldBe(3);
+            primeiro.Proximo.ShouldBe(segundo);
+            segundo.Anterior.ShouldBe(primeiro);
         }
 
         [Fact]
@@ -76,17 +77,17 @@ namespace StructBeaver.Tests.Listas.ListaCircular
             _listaCircularDuplamenteEncadeada.AdicionarNoFim(1);
             _listaCircularDuplamenteEncadeada.AdicionarNoFim(2);
 
-            NoCircular noRemovido = _listaCircularDuplamenteEncadeada.Remover(99);
+            NoCircular? noRemovido = _listaCircularDuplamenteEncadeada.Remover(99);
 
-            Assert.Null(noRemovido);
+            noRemovido.ShouldBeNull();
 
-            NoCircular primeiro = _listaCircularDuplamenteEncadeada.PrimeiroNo;
-            NoCircular segundo = primeiro.Proximo;
+            NoCircular? primeiro = _listaCircularDuplamenteEncadeada.PrimeiroNo;
+            NoCircular? segundo = primeiro!.Proximo;
 
-            Assert.Equal(1, primeiro.Valor);
-            Assert.Equal(2, segundo.Valor);
-            Assert.Same(primeiro, segundo.Proximo);
-            Assert.Same(segundo, primeiro.Anterior);
+            primeiro.Valor.ShouldBe(1);
+            segundo!.Valor.ShouldBe(2);
+            primeiro.Proximo.ShouldBe(segundo);
+            segundo.Anterior.ShouldBe(primeiro);
         }
     }
 }

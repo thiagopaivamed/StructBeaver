@@ -34,10 +34,7 @@
         }
 
         private void Swap(int[] vetorDesordenado, int esquerda, int direita)
-        {
-            int temp = vetorDesordenado[esquerda];
-            vetorDesordenado[esquerda] = vetorDesordenado[direita];
-            vetorDesordenado[direita] = temp;
-        }
+            => (vetorDesordenado[direita], vetorDesordenado[esquerda]) = 
+                (vetorDesordenado[esquerda], vetorDesordenado[direita]);        
     }
 }

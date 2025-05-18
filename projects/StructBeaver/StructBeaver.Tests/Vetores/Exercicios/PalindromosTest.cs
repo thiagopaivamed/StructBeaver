@@ -1,18 +1,14 @@
-﻿using StructBeaver.Vetores.Exercicios;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Shouldly;
+using StructBeaver.Vetores.Exercicios;
 
 namespace StructBeaver.Tests.Vetores.Exercicios
 {
     public class PalindromosTest
     {
-        private Palindromos _palidromos;
+        private readonly Palindromos _palidromos;
 
         public PalindromosTest()
-            => _palidromos = new Palindromos();
+            => _palidromos = new();
 
 
         [Fact]
@@ -25,7 +21,7 @@ namespace StructBeaver.Tests.Vetores.Exercicios
             while(indice < palavras.Length - 1)
             {
                 bool ehPalindromo = _palidromos.IsPalindromo(palavras[indice]);
-                Assert.True(ehPalindromo);
+                ehPalindromo.ShouldBeTrue();
                 indice = indice + 1;
             }            
         }
@@ -40,7 +36,7 @@ namespace StructBeaver.Tests.Vetores.Exercicios
             while (indice < palavras.Length - 1)
             {
                 bool ehPalindromo = _palidromos.IsPalindromo(palavras[indice]);
-                Assert.False(ehPalindromo);
+                ehPalindromo.ShouldBeFalse();
                 indice = indice + 1;
             }
         }

@@ -4,9 +4,9 @@
     {
         public Fila CopiarDados(Fila fila)
         {
-            Fila filaCopia = new Fila();
+            Fila filaCopia = new();
 
-            while(!fila.IsEmpty())
+            while (!fila.IsEmpty())
                 filaCopia.Enqueue(fila.Dequeue());
 
             return filaCopia;

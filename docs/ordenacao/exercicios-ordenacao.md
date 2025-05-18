@@ -29,11 +29,8 @@ comments: true
         }
 
         private void Swap(int[] vetorDesordenado, int indiceAtual)
-        {
-            int valorTemporario = vetorDesordenado[indiceAtual];
-            vetorDesordenado[indiceAtual] = vetorDesordenado[indiceAtual + 1];
-            vetorDesordenado[indiceAtual + 1] = valorTemporario;
-        }
+            => (vetorDesordenado[indiceAtual + 1], vetorDesordenado[indiceAtual]) =
+            (vetorDesordenado[indiceAtual], vetorDesordenado[indiceAtual + 1]);
     }
 
     ```
@@ -142,11 +139,8 @@ comments: true
         }
 
         private void Swap(int[] vetorDesordenado, int esquerda, int direita)
-        {
-            int temp = vetorDesordenado[esquerda];
-            vetorDesordenado[esquerda] = vetorDesordenado[direita];
-            vetorDesordenado[direita] = temp;
-        }
+            => (vetorDesordenado[direita], vetorDesordenado[esquerda]) = 
+                (vetorDesordenado[esquerda], vetorDesordenado[direita]);     
     }
 
     ```
@@ -182,11 +176,7 @@ comments: true
         }
 
         private void TrocarValores(int[] vetor, int indice)
-        {
-            int valorTemporario = vetor[indice];
-            vetor[indice] = vetor[indice + 1];
-            vetor[indice + 1] = valorTemporario;
-        }
+            => (vetor[indice + 1], vetor[indice]) = (vetor[indice], vetor[indice + 1]);
     }
 
     ```

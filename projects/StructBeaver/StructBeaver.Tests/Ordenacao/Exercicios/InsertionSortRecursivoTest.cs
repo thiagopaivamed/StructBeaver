@@ -1,4 +1,5 @@
-﻿using StructBeaver.Ordenacao.Exercicios;
+﻿using Shouldly;
+using StructBeaver.Ordenacao.Exercicios;
 
 namespace StructBeaver.Tests.Ordenacao.Exercicios
 {
@@ -7,7 +8,7 @@ namespace StructBeaver.Tests.Ordenacao.Exercicios
         private readonly InsertionSortRecursivo _insertionSortRecursivo;
 
         public InsertionSortRecursivoTest()
-            => _insertionSortRecursivo = new InsertionSortRecursivo();
+            => _insertionSortRecursivo = new();
 
         [Fact]
         public void InsertionSortRecursivo_Deve_Retornar_Vetor_Ordenado()
@@ -17,7 +18,7 @@ namespace StructBeaver.Tests.Ordenacao.Exercicios
             int[] vetorOrdenado = _insertionSortRecursivo.OrdenarRecursivamente(vetorDesordenado);
 
             for (int indice = 0; indice < vetorOrdenado.Length - 1; indice++)
-                Assert.True(vetorOrdenado[indice] <= vetorOrdenado[indice + 1]);
+                vetorOrdenado[indice].ShouldBeLessThanOrEqualTo(vetorOrdenado[indice + 1]);
         }
     }
 }

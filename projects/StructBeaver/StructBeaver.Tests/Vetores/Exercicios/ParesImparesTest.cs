@@ -1,4 +1,5 @@
-﻿using StructBeaver.Vetores.Exercicios;
+﻿using Shouldly;
+using StructBeaver.Vetores.Exercicios;
 
 namespace StructBeaver.Tests.Vetores.Exercicios
 {
@@ -6,7 +7,7 @@ namespace StructBeaver.Tests.Vetores.Exercicios
     {
         private ParesImpares _paresImpares;
         public ParesImparesTest()
-            => _paresImpares = new ParesImpares();
+            => _paresImpares = new();
 
         [Fact]
         public void Deve_Retornar_Pares_Impares()
@@ -20,8 +21,8 @@ namespace StructBeaver.Tests.Vetores.Exercicios
             pares = int.Parse(quantidades[0]);
             impares = int.Parse(quantidades[1]);
 
-            Assert.Equal(5, pares);
-            Assert.Equal(5, impares);
+            pares.ShouldBe(5);
+            impares.ShouldBe(5);
         }
     }
 }

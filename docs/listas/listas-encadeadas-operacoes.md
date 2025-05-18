@@ -66,18 +66,11 @@ Uma lista encadeada é formada por elementos chamados de nós. Por isso, o prime
 
 ```csharp
 
-public class No
+public class No(int valor)
 {
-    public int Valor;
-    public No Proximo;
-
-    public No(int valor)
-    {
-        Valor = valor;
-        Proximo = null;            
-    }
+    public int Valor = valor;
+    public No? Proximo;        
 }
-
 ```
 
 Agora que temos a estrutura dos nós definida, podemos começar a construir a nossa lista encadeada.
@@ -86,15 +79,13 @@ Agora que temos a estrutura dos nós definida, podemos começar a construir a no
 
 public class ListaEncadeada
 {
-    public No PrimeiroNo;
+    public No? PrimeiroNo;        
 
-    public ListaEncadeada()
-        => PrimeiroNo = null;
+    public No? PegarPrimeiroNo() => PrimeiroNo;
 
-    public No PegarPrimeiroNo() => PrimeiroNo;
     public No AdicionarNoInicio(int valor)
     {
-        No novoNo = new No(valor);
+        No novoNo = new(valor);
         novoNo.Proximo = PrimeiroNo;
         PrimeiroNo = novoNo;
 
@@ -103,7 +94,7 @@ public class ListaEncadeada
 
     public No AdicionarNoFim(int valor)
     {
-        No novoNo = new No(valor);
+        No novoNo = new (valor);
 
         if (PrimeiroNo is null)
         {
@@ -121,7 +112,7 @@ public class ListaEncadeada
         return novoNo;
     }
 
-    public No RemoverNoInicio()
+    public No? RemoverNoInicio()
     {
         if (PrimeiroNo is null)
             return null;
@@ -132,7 +123,7 @@ public class ListaEncadeada
         return noRemovido;
     }
 
-    public No RemoverNoFim()
+    public No? RemoverNoFim()
     {
         if (PrimeiroNo is null)
             return null;
@@ -144,17 +135,20 @@ public class ListaEncadeada
             return noUnico;
         }
 
-        No noAtual = PrimeiroNo;
+        No? noAtual = PrimeiroNo;
 
-        while (noAtual.Proximo.Proximo is not null)
+        while (noAtual?.Proximo?.Proximo is not null)
             noAtual = noAtual.Proximo;
 
-        No noRemovido = noAtual.Proximo;
-        noAtual.Proximo = null;
+        No? noRemovido = noAtual?.Proximo;
+
+        if(noAtual is not null)
+            noAtual.Proximo = null;
+
         return noRemovido;
     }
 
-    public No RemoverNo(int posicao)
+    public No? RemoverNo(int posicao)
     {
         if (posicao < 0 || PrimeiroNo is null)
             return null;
@@ -181,9 +175,9 @@ public class ListaEncadeada
         return noRemovido;
     }
 
-    public No Pesquisar(int valor)
+    public No? Pesquisar(int valor)
     {
-        No noAtual = PrimeiroNo;
+        No? noAtual = PrimeiroNo;
 
         while (noAtual is not null)
         {
@@ -200,7 +194,7 @@ public class ListaEncadeada
     {
         int quantidadeNos = 0;
 
-        No noAtual = PrimeiroNo;
+        No? noAtual = PrimeiroNo;
 
         while (noAtual is not null)
         {

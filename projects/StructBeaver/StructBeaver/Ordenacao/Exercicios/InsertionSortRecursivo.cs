@@ -5,7 +5,7 @@
         private InsertionSort _insertionSort;
 
         public InsertionSortRecursivo()
-            => _insertionSort = new InsertionSort();
+            => _insertionSort = new();
 
         public int[] OrdenarRecursivamente(int[] vetor)
             => _insertionSort.RecursiveSort(vetor, vetor.Length);

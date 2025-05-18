@@ -1,13 +1,14 @@
-﻿using StructBeaver.Recursividade.Exercicios;
+﻿using Shouldly;
+using StructBeaver.Recursividade.Exercicios;
 
 namespace StructBeaver.Tests.Recursividade.Exercicios
 {
     public class DigitosRecursivoTest
     {
-        private DigitosRecursivo _digitosRecursivo;
+        private readonly DigitosRecursivo _digitosRecursivo;
 
         public DigitosRecursivoTest()
-            => _digitosRecursivo = new DigitosRecursivo();
+            => _digitosRecursivo = new();
 
         [Fact]
         public void DigitosRecursivo_Deve_Retornar_Quantidade_De_Digitos_Quando_Numero_For_Maior_Que_10()
@@ -16,7 +17,7 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
 
             int quantidadeDigitos = _digitosRecursivo.PegarQuantidadeDigitos(numero);
 
-            Assert.Equal(3, quantidadeDigitos);
+            quantidadeDigitos.ShouldBe(3);
         }
 
         [Fact]
@@ -26,7 +27,7 @@ namespace StructBeaver.Tests.Recursividade.Exercicios
 
             int quantidadeDigitos = _digitosRecursivo.PegarQuantidadeDigitos(numero);
 
-            Assert.Equal(1, quantidadeDigitos);
+            quantidadeDigitos.ShouldBe(1);
         }
     }
 }

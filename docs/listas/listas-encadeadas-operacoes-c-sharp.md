@@ -17,7 +17,7 @@ public class ListaEncadeadaPadrao
     private List<int> Numeros;
 
     public ListaEncadeadaPadrao()
-        => Numeros = new List<int>();        
+        => Numeros = new();        
 
     public void Adicionar(int valor)
         => Numeros.Add(valor);

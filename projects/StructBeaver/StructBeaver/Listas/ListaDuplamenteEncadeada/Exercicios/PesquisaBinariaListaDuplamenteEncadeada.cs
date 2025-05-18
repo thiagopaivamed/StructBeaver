@@ -4,18 +4,18 @@
     {
         public bool Pesquisar(ListaDuplamenteEncadeada listaParaProcura, int valorProcurado)
         {
-            NoDuplamenteEncadeado primeiroNo = listaParaProcura.PegarPrimeiroNo();
-            NoDuplamenteEncadeado ultimoNo = listaParaProcura.PegarUltimoNo();
+            NoDuplamenteEncadeado? primeiroNo = listaParaProcura.PegarPrimeiroNo();
+            NoDuplamenteEncadeado? ultimoNo = listaParaProcura.PegarUltimoNo();
 
             return PesquisaBinariaRecursiva(primeiroNo, ultimoNo, valorProcurado);
         }
 
-        private bool PesquisaBinariaRecursiva(NoDuplamenteEncadeado noInicial, NoDuplamenteEncadeado noFinal, int valorProcurado)
+        private bool PesquisaBinariaRecursiva(NoDuplamenteEncadeado? noInicial, NoDuplamenteEncadeado? noFinal, int valorProcurado)
         {
             if (noInicial is null || noFinal is null)
                 return false;
 
-            NoDuplamenteEncadeado atual = noInicial;
+            NoDuplamenteEncadeado? atual = noInicial;
 
             while (atual is not null && atual != noFinal)
                 atual = atual.Proximo;
@@ -23,16 +23,16 @@
             if (atual != noFinal)
                 return false;
 
-            NoDuplamenteEncadeado ponteiroInicio = noInicial;
-            NoDuplamenteEncadeado ponteiroFim = noFinal;
+            NoDuplamenteEncadeado? ponteiroInicio = noInicial;
+            NoDuplamenteEncadeado? ponteiroFim = noFinal;
 
-            while (ponteiroInicio != ponteiroFim && ponteiroInicio.Proximo != ponteiroFim)
+            while (ponteiroInicio != ponteiroFim && ponteiroInicio!.Proximo != ponteiroFim)
             {
                 ponteiroInicio = ponteiroInicio?.Proximo;
                 ponteiroFim = ponteiroFim?.Anterior;
             }
 
-            NoDuplamenteEncadeado noMeio = ponteiroInicio;
+            NoDuplamenteEncadeado? noMeio = ponteiroInicio;
 
             if (noMeio is null)
                 return false;

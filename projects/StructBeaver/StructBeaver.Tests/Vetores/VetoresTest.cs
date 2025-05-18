@@ -1,12 +1,13 @@
-﻿using StructBeaver.Vetores;
+﻿using Shouldly;
+using StructBeaver.Vetores;
 
 namespace StructBeaver.Tests.Vetores
 {
     public class VetoresTest
     {
-        private VetoresBasico _vetoresBasico;
+        private readonly VetoresBasico _vetoresBasico;
         public VetoresTest() =>
-            _vetoresBasico = new VetoresBasico();
+            _vetoresBasico = new();
 
         [Fact]
         public void AdicionarElemento_Deve_Inserir_Elemento()
@@ -15,7 +16,7 @@ namespace StructBeaver.Tests.Vetores
 
             int[] vetor = _vetoresBasico.AdicionarElemento(valorAdicionado);
 
-            Assert.Contains(valorAdicionado, vetor);
+            vetor.ShouldContain(valorAdicionado);
         }
     }
 }

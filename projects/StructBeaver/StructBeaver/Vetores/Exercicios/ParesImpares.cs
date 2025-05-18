@@ -11,6 +11,7 @@
             {
                 if (vetor[indice] % 2 == 0)
                     pares = pares + 1;
+
                 else
                     impares = impares + 1;
             }

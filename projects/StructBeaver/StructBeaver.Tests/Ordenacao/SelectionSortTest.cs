@@ -1,4 +1,5 @@
-﻿using StructBeaver.Ordenacao;
+﻿using Shouldly;
+using StructBeaver.Ordenacao;
 
 namespace StructBeaver.Tests.Ordenacao
 {
@@ -7,7 +8,7 @@ namespace StructBeaver.Tests.Ordenacao
         private readonly SelectionSort _selectionSort;
 
         public SelectionSortTest()
-            => _selectionSort = new SelectionSort();
+            => _selectionSort = new();
 
         [Fact]
         public void SelectionSort_Deve_Retornar_Vetor_Ordenado()
@@ -17,7 +18,7 @@ namespace StructBeaver.Tests.Ordenacao
             int[] vetorOrdenado = _selectionSort.Sort(vetorDesordenado);
 
             for (int indice = 0; indice < vetorOrdenado.Length - 1; indice++)
-                Assert.True(vetorOrdenado[indice] <= vetorOrdenado[indice + 1]);
+                vetorOrdenado[indice].ShouldBeLessThanOrEqualTo(vetorOrdenado[indice + 1]);
         }
 
         [Fact]
@@ -29,7 +30,7 @@ namespace StructBeaver.Tests.Ordenacao
             int[] vetorOrdenado = _selectionSort.RecursiveSort(vetorDesordenado, quantidadeElementos);
 
             for (int indice = 0; indice < vetorOrdenado.Length - 1; indice++)
-                Assert.True(vetorOrdenado[indice] <= vetorOrdenado[indice + 1]);
+                vetorOrdenado[indice].ShouldBeLessThanOrEqualTo(vetorOrdenado[indice + 1]);
         }        
     }
 }

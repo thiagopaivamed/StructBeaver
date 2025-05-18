@@ -4,7 +4,7 @@
     {
         public ListaCircularDuplamenteEncadeada Ordenar(ListaCircularDuplamenteEncadeada listaCircularOriginal)
         {
-            NoCircular primeiroNo = listaCircularOriginal.PegarPrimeiroNo();
+            NoCircular? primeiroNo = listaCircularOriginal.PegarPrimeiroNo();
 
             if (primeiroNo is null || primeiroNo.Proximo == primeiroNo)
                 return listaCircularOriginal;
@@ -24,29 +24,29 @@
             ListaCircularDuplamenteEncadeada nosEsquerda,
             ListaCircularDuplamenteEncadeada nosDireita)
         {
-            NoCircular ponteiroParaInicio = listaOriginal.PrimeiroNo;
-            NoCircular ponteiroParaFinal = listaOriginal.PrimeiroNo;
+            NoCircular? ponteiroParaInicio = listaOriginal.PrimeiroNo;
+            NoCircular? ponteiroParaFinal = listaOriginal.PrimeiroNo;
 
             while (
-                ponteiroParaFinal.Proximo != listaOriginal.PrimeiroNo &&
-                ponteiroParaFinal.Proximo.Proximo != listaOriginal.PrimeiroNo)
+                ponteiroParaFinal!.Proximo != listaOriginal.PrimeiroNo &&
+                ponteiroParaFinal.Proximo!.Proximo != listaOriginal.PrimeiroNo)
             {
-                ponteiroParaInicio = ponteiroParaInicio.Proximo;
+                ponteiroParaInicio = ponteiroParaInicio?.Proximo;
                 ponteiroParaFinal = ponteiroParaFinal.Proximo.Proximo;
             }
 
-            NoCircular ultimoNoEsquerda = ponteiroParaInicio;
-            NoCircular noAtual = listaOriginal.PrimeiroNo;
+            NoCircular? ultimoNoEsquerda = ponteiroParaInicio;
+            NoCircular? noAtual = listaOriginal.PrimeiroNo;
 
-            while (noAtual != ultimoNoEsquerda.Proximo)
+            while (noAtual != ultimoNoEsquerda?.Proximo)
             {
-                nosEsquerda.AdicionarNoFim(noAtual.Valor);
+                nosEsquerda.AdicionarNoFim(noAtual!.Valor);
                 noAtual = noAtual.Proximo;
             }
 
             while (noAtual != listaOriginal.PrimeiroNo)
             {
-                nosDireita.AdicionarNoFim(noAtual.Valor);
+                nosDireita.AdicionarNoFim(noAtual!.Valor);
                 noAtual = noAtual.Proximo;
             }
         }
@@ -57,8 +57,8 @@
         {
             ListaCircularDuplamenteEncadeada listaOrdenada = new ListaCircularDuplamenteEncadeada();
 
-            NoCircular noAtualEsquerda = nosEsquerda.PrimeiroNo;
-            NoCircular noAtualDireita = nosDireita.PrimeiroNo;
+            NoCircular? noAtualEsquerda = nosEsquerda.PrimeiroNo;
+            NoCircular? noAtualDireita = nosDireita.PrimeiroNo;
 
             int totalNosEsquerda = PegarQuantidadeDeNos(nosEsquerda);
             int totalNosDireita = PegarQuantidadeDeNos(nosDireita);
@@ -70,18 +70,18 @@
             {
                 bool deveAdicionarDaPrimeiraLista = false;
 
-                if (contadorNosEsquerda < totalNosEsquerda && (contadorNosDireita >= totalNosDireita || noAtualEsquerda.Valor <= noAtualDireita.Valor))
+                if (contadorNosEsquerda < totalNosEsquerda && (contadorNosDireita >= totalNosDireita || noAtualEsquerda!.Valor <= noAtualDireita!.Valor))
                     deveAdicionarDaPrimeiraLista = true;
 
                 if (deveAdicionarDaPrimeiraLista)
                 {
-                    listaOrdenada.AdicionarNoFim(noAtualEsquerda.Valor);
+                    listaOrdenada.AdicionarNoFim(noAtualEsquerda!.Valor);
                     noAtualEsquerda = noAtualEsquerda.Proximo;
                     contadorNosEsquerda = contadorNosEsquerda + 1;
                 }
                 else
                 {
-                    listaOrdenada.AdicionarNoFim(noAtualDireita.Valor);
+                    listaOrdenada.AdicionarNoFim(noAtualDireita!.Valor);
                     noAtualDireita = noAtualDireita.Proximo;
                     contadorNosDireita = contadorNosDireita + 1;
                 }
@@ -96,12 +96,12 @@
                 return 0;
 
             int quantidadeNos = 1;
-            NoCircular noAtual = listaCircular.PrimeiroNo.Proximo;
+            NoCircular? noAtual = listaCircular.PrimeiroNo.Proximo;
 
             while (noAtual != listaCircular.PrimeiroNo)
             {
                 quantidadeNos = quantidadeNos + 1;
-                noAtual = noAtual.Proximo;
+                noAtual = noAtual?.Proximo;
             }
 
             return quantidadeNos;

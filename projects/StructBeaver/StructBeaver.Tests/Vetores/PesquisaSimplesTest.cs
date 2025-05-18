@@ -1,4 +1,5 @@
-﻿using StructBeaver.Vetores;
+﻿using Shouldly;
+using StructBeaver.Vetores;
 
 namespace StructBeaver.Tests.Vetores
 {
@@ -7,7 +8,7 @@ namespace StructBeaver.Tests.Vetores
         private readonly PesquisaSimples _pesquisaSimples;
 
         public PesquisaSimplesTest()
-            => _pesquisaSimples = new PesquisaSimples();
+            => _pesquisaSimples = new();
 
         [Fact]
         public void PesquisaSimples_Deve_Encontrar_Elemento()
@@ -17,7 +18,7 @@ namespace StructBeaver.Tests.Vetores
 
             int indiceElementoProcurado = _pesquisaSimples.ExecutarPesquisaSimples(vetor, elementoProcurado);
 
-            Assert.True(indiceElementoProcurado is not -1);
+            indiceElementoProcurado.ShouldNotBe(-1);
         }
 
         [Fact]
@@ -28,7 +29,7 @@ namespace StructBeaver.Tests.Vetores
 
             int indiceElementoProcurado = _pesquisaSimples.ExecutarPesquisaSimples(vetor, elementoProcurado);
 
-            Assert.False(indiceElementoProcurado is not -1);
+            indiceElementoProcurado.ShouldBe(-1);
         }
 
         [Fact]
@@ -39,7 +40,7 @@ namespace StructBeaver.Tests.Vetores
 
             int indiceElementoProcurado = _pesquisaSimples.ExecutarPesquisaSimplesRecursiva(vetor, elementoProcurado, 0);
 
-            Assert.True(indiceElementoProcurado is not -1);
+            indiceElementoProcurado.ShouldNotBe(-1);
         }
 
         [Fact]
@@ -50,7 +51,7 @@ namespace StructBeaver.Tests.Vetores
 
             int indiceElementoProcurado = _pesquisaSimples.ExecutarPesquisaSimplesRecursiva(vetor, elementoProcurado, 0);
 
-            Assert.True(indiceElementoProcurado is -1);
+            indiceElementoProcurado.ShouldBe(-1);
         }
     }
 }

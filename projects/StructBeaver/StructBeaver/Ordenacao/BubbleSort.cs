@@ -33,10 +33,7 @@
         }
 
         private void Swap(int[] vetorDesordenado, int indiceAtual)
-        {
-            int valorTemporario = vetorDesordenado[indiceAtual];
-            vetorDesordenado[indiceAtual] = vetorDesordenado[indiceAtual + 1];
-            vetorDesordenado[indiceAtual + 1] = valorTemporario;
-        }
+            => (vetorDesordenado[indiceAtual + 1], vetorDesordenado[indiceAtual]) =
+            (vetorDesordenado[indiceAtual], vetorDesordenado[indiceAtual + 1]);
     }
 }

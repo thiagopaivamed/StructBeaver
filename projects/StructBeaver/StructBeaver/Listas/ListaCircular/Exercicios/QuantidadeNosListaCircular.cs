@@ -4,15 +4,15 @@
     {
         public int ContarQuantidadeNos(ListaCircularDuplamenteEncadeada listaCircularDuplamenteEncadeada)
         {
-            NoCircular noAtual = listaCircularDuplamenteEncadeada.PrimeiroNo;
+            NoCircular? noAtual = listaCircularDuplamenteEncadeada.PrimeiroNo;
 
             if(noAtual is null)
                 return 0;
 
-            NoCircular primeiroNo = noAtual;
+            NoCircular? primeiroNo = noAtual;
             int quantidadeNos = 0;
 
-            while (noAtual.Proximo != primeiroNo)
+            while (noAtual!.Proximo != primeiroNo)
             {
                 quantidadeNos = quantidadeNos + 1;
                 noAtual = noAtual.Proximo;

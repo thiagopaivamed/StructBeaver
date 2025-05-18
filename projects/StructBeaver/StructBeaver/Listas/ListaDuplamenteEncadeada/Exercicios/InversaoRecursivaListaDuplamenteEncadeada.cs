@@ -4,14 +4,14 @@
     {
         public ListaDuplamenteEncadeada Inverter(ListaDuplamenteEncadeada listaDuplamenteEncadeada)
         {
-            NoDuplamenteEncadeado primeiroNo = listaDuplamenteEncadeada.PegarPrimeiroNo();
+            NoDuplamenteEncadeado? primeiroNo = listaDuplamenteEncadeada.PegarPrimeiroNo();
 
             if (primeiroNo is null)
                 return listaDuplamenteEncadeada;
 
             InverterRecursivo(primeiroNo, listaDuplamenteEncadeada);
 
-            NoDuplamenteEncadeado noTemporario = listaDuplamenteEncadeada.PrimeiroNo;
+            NoDuplamenteEncadeado? noTemporario = listaDuplamenteEncadeada.PrimeiroNo;
             listaDuplamenteEncadeada.PrimeiroNo = listaDuplamenteEncadeada.UltimoNo;
             listaDuplamenteEncadeada.UltimoNo = noTemporario;
 
@@ -20,7 +20,7 @@
 
         private ListaDuplamenteEncadeada InverterRecursivo(NoDuplamenteEncadeado noAtual, ListaDuplamenteEncadeada listaDuplamenteEncadeada)
         {
-            NoDuplamenteEncadeado noTemporario = noAtual.Proximo;
+            NoDuplamenteEncadeado? noTemporario = noAtual.Proximo;
             noAtual.Proximo = noAtual.Anterior;
             noAtual.Anterior = noTemporario;
 

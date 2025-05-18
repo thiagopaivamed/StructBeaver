@@ -4,12 +4,12 @@
     {
         public bool Pesquisar(ListaEncadeada listaEncadeada, int valorProcurado)
         {
-            No noAtual = listaEncadeada.PegarPrimeiroNo();
+            No? noAtual = listaEncadeada.PegarPrimeiroNo();
 
             return PesquisarRecursivo(noAtual, valorProcurado);
         }
 
-        private bool PesquisarRecursivo(No noAtual, int valorProcurado)
+        private bool PesquisarRecursivo(No? noAtual, int valorProcurado)
         {
             if (noAtual is null)
                 return false;

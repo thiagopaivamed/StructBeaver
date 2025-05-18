@@ -9,7 +9,7 @@ namespace StructBeaver.Tests.Arvores.Binaria
         private ArvoreBinaria _arvoreBinaria;
 
         public ArvoreBinariaTest()
-            => _arvoreBinaria = new(null);
+            => _arvoreBinaria = new(null!);
 
         [Fact]
         public void Inserir_Deve_Definir_Raiz_Se_Arvore_Estiver_Vazia()
@@ -62,7 +62,7 @@ namespace StructBeaver.Tests.Arvores.Binaria
         {
             InicializarArvore();
 
-            NoArvore noProcurado = _arvoreBinaria.PesquisarComBfs(1);
+            NoArvore? noProcurado = _arvoreBinaria.PesquisarComBfs(1);
 
             noProcurado.ShouldNotBeNull();
             noProcurado.Valor.ShouldBe(1);
@@ -73,7 +73,7 @@ namespace StructBeaver.Tests.Arvores.Binaria
         {
             InicializarArvore();
 
-            NoArvore noProcurado = _arvoreBinaria.PesquisarComBfs(3);
+            NoArvore? noProcurado = _arvoreBinaria.PesquisarComBfs(3);
 
             noProcurado.ShouldNotBeNull();
             noProcurado.Valor.ShouldBe(3);
@@ -84,7 +84,7 @@ namespace StructBeaver.Tests.Arvores.Binaria
         {
             InicializarArvore();
 
-            NoArvore noProcurado = _arvoreBinaria.PesquisarComBfs(5);
+            NoArvore? noProcurado = _arvoreBinaria.PesquisarComBfs(5);
 
             noProcurado.ShouldNotBeNull();
             noProcurado.Valor.ShouldBe(5);
@@ -95,7 +95,7 @@ namespace StructBeaver.Tests.Arvores.Binaria
         {
             InicializarArvore();
 
-            NoArvore noProcurado = _arvoreBinaria.PesquisarComBfs(999);
+            NoArvore? noProcurado = _arvoreBinaria.PesquisarComBfs(999);
 
             noProcurado.ShouldBeNull();
         }
@@ -104,7 +104,8 @@ namespace StructBeaver.Tests.Arvores.Binaria
         public void PesquisarComDfsPreOrdem_Deve_Retornar_No_Quando_Valor_Esta_Na_Raiz()
         {
             InicializarArvore();
-            NoArvore noProcurado = _arvoreBinaria.PesquisarComDfsPreOrdem(4);
+
+            NoArvore? noProcurado = _arvoreBinaria.PesquisarComDfsPreOrdem(4);
 
             noProcurado.ShouldNotBeNull();
             noProcurado.Valor.ShouldBe(4);
@@ -114,7 +115,7 @@ namespace StructBeaver.Tests.Arvores.Binaria
         public void PesquisarComDfsPreOrdem_Deve_Retornar_No_Quando_Valor_Esta_No_Meio()
         {
             InicializarArvore();
-            NoArvore noProcurado = _arvoreBinaria.PesquisarComDfsPreOrdem(2);
+            NoArvore? noProcurado = _arvoreBinaria.PesquisarComDfsPreOrdem(2);
 
             noProcurado.ShouldNotBeNull();
             noProcurado.Valor.ShouldBe(2);
@@ -124,7 +125,8 @@ namespace StructBeaver.Tests.Arvores.Binaria
         public void PesquisarComDfsPreOrdem_Deve_Retornar_No_Quando_Valor_Esta_Na_Folha()
         {
             InicializarArvore();
-            NoArvore noProcurado = _arvoreBinaria.PesquisarComDfsPreOrdem(1);
+
+            NoArvore? noProcurado = _arvoreBinaria.PesquisarComDfsPreOrdem(1);
 
             noProcurado.ShouldNotBeNull();
             noProcurado.Valor.ShouldBe(1);
@@ -134,7 +136,8 @@ namespace StructBeaver.Tests.Arvores.Binaria
         public void PesquisarComDfsPreOrdem_Deve_Retornar_Null_Quando_Valor_Nao_Existe()
         {
             InicializarArvore();
-            NoArvore noProcurado = _arvoreBinaria.PesquisarComDfsPreOrdem(999);
+
+            NoArvore? noProcurado = _arvoreBinaria.PesquisarComDfsPreOrdem(999);
 
             noProcurado.ShouldBeNull();
         }
@@ -143,6 +146,7 @@ namespace StructBeaver.Tests.Arvores.Binaria
         public void PesquisarDfsEmOrdem_Deve_Retornar_Null_Quando_Valor_Nao_Existe()
         {
             InicializarArvore();
+
             NoArvore? noProcurado = _arvoreBinaria.PesquisarDfsEmOrdem(999);
 
             noProcurado.ShouldBeNull();
@@ -152,6 +156,7 @@ namespace StructBeaver.Tests.Arvores.Binaria
         public void PesquisarDfsEmOrdem_Deve_Retornar_No_Quando_Valor_Existe()
         {
             InicializarArvore();
+
             NoArvore? noProcurado = _arvoreBinaria.PesquisarDfsEmOrdem(5);
 
             noProcurado.ShouldNotBeNull();
@@ -162,6 +167,7 @@ namespace StructBeaver.Tests.Arvores.Binaria
         public void PesquisarDfsPosOrdem_Deve_Retornar_Null_Quando_Valor_Nao_Existe()
         {
             InicializarArvore();
+
             NoArvore? noProcurado = _arvoreBinaria.PesquisarDfsPosOrdem(999);
 
             noProcurado.ShouldBeNull();
@@ -171,6 +177,7 @@ namespace StructBeaver.Tests.Arvores.Binaria
         public void PesquisarDfsPosOrdem_Deve_Retornar_No_Quando_Valor_Existe()
         {
             InicializarArvore();
+
             NoArvore? noProcurado = _arvoreBinaria.PesquisarDfsPosOrdem(6);
 
             noProcurado.ShouldNotBeNull();
@@ -193,7 +200,7 @@ namespace StructBeaver.Tests.Arvores.Binaria
         [Fact]
         public void Remover_Deve_Remover_No_Com_Um_Filho()
         {
-            ArvoreBinaria arvore = new(null);
+            ArvoreBinaria arvore = new(null!);
             _arvoreBinaria.Inserir(10);
             _arvoreBinaria.Inserir(5);
             _arvoreBinaria.Inserir(15);

@@ -1,19 +1,20 @@
-﻿using StructBeaver.Filas;
+﻿using Shouldly;
+using StructBeaver.Filas;
 using StructBeaver.Filas.Exercicios;
 
 namespace StructBeaver.Tests.Filas.Exercicios
 {
     public class MediaValoresFilaTest
     {
-        private MediaValoresFila _mediaValoresFila;
+        private readonly MediaValoresFila _mediaValoresFila;
 
         public MediaValoresFilaTest()
-            => _mediaValoresFila = new MediaValoresFila();
+            => _mediaValoresFila = new();
 
         [Fact]
         public void MediaValoresFila_Deve_Retornar_Media_Dos_Valores_Da_Fila()
         {
-            Fila fila = new Fila();
+            Fila fila = new();
 
             fila.Enqueue(1);
             fila.Enqueue(2);
@@ -23,7 +24,7 @@ namespace StructBeaver.Tests.Filas.Exercicios
 
             double media = _mediaValoresFila.CalcularMedia(fila);
 
-            Assert.Equal(3, media);
+            media.ShouldBe(3);
         }
     }
 }

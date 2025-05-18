@@ -1,14 +1,8 @@
 ﻿namespace StructBeaver.Listas.ListaEncadeada
 {
-    public class No
+    public class No(int valor)
     {
-        public int Valor;
-        public No Proximo;
-
-        public No(int valor)
-        {
-            Valor = valor;
-            Proximo = null;            
-        }
+        public int Valor = valor;
+        public No? Proximo;        
     }
 }

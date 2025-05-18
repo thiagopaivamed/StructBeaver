@@ -1,19 +1,20 @@
-﻿using StructBeaver.Listas.ListaEncadeada;
+﻿using Shouldly;
+using StructBeaver.Listas.ListaEncadeada;
 using StructBeaver.Listas.ListaEncadeada.Exercicios;
 
 namespace StructBeaver.Tests.Listas.ListasEncadeadas.Exercicios
 {
     public class InversaoElementosListaEncadeadaTest
     {
-        private InversaoElementosListaEncadeada _inversaoElementosListaEncadeada;
+        private readonly InversaoElementosListaEncadeada _inversaoElementosListaEncadeada;
 
         public InversaoElementosListaEncadeadaTest()
-            => _inversaoElementosListaEncadeada = new InversaoElementosListaEncadeada();
+            => _inversaoElementosListaEncadeada = new();
 
         [Fact]
         public void Inverter_Deve_Retornar_Lista_Invertida()
         {
-            ListaEncadeada listaParaInversao = new ListaEncadeada();
+            ListaEncadeada listaParaInversao = new();
             listaParaInversao.AdicionarNoFim(1);
             listaParaInversao.AdicionarNoFim(2);
             listaParaInversao.AdicionarNoFim(3);
@@ -22,11 +23,11 @@ namespace StructBeaver.Tests.Listas.ListasEncadeadas.Exercicios
 
             ListaEncadeada listaInvertida = _inversaoElementosListaEncadeada.Inverter(listaParaInversao);
 
-            Assert.Equal(5, listaInvertida.RemoverNoInicio().Valor);
-            Assert.Equal(4, listaInvertida.RemoverNoInicio().Valor);
-            Assert.Equal(3, listaInvertida.RemoverNoInicio().Valor);
-            Assert.Equal(2, listaInvertida.RemoverNoInicio().Valor);
-            Assert.Equal(1, listaInvertida.RemoverNoInicio().Valor);
+            listaInvertida.RemoverNoInicio()!.Valor.ShouldBe(5);
+            listaInvertida.RemoverNoInicio()!.Valor.ShouldBe(4);
+            listaInvertida.RemoverNoInicio()!.Valor.ShouldBe(3);
+            listaInvertida.RemoverNoInicio()!.Valor.ShouldBe(2);
+            listaInvertida.RemoverNoInicio()!.Valor.ShouldBe(1);
         }
     }
 }
