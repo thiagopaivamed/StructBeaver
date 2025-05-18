@@ -39,25 +39,25 @@ comments: true
     ```csharp
     
     public class PesquisaRecursivaListaEncadeada
-{
-    public bool Pesquisar(ListaEncadeada listaEncadeada, int valorProcurado)
     {
-        No? noAtual = listaEncadeada.PegarPrimeiroNo();
+        public bool Pesquisar(ListaEncadeada listaEncadeada, int valorProcurado)
+        {
+            No? noAtual = listaEncadeada.PegarPrimeiroNo();
 
-        return PesquisarRecursivo(noAtual, valorProcurado);
+            return PesquisarRecursivo(noAtual, valorProcurado);
+        }
+
+        private bool PesquisarRecursivo(No? noAtual, int valorProcurado)
+        {
+            if (noAtual is null)
+                return false;
+
+            if (noAtual.Valor == valorProcurado)
+                return true;
+
+            return PesquisarRecursivo(noAtual.Proximo, valorProcurado);
+        }
     }
-
-    private bool PesquisarRecursivo(No? noAtual, int valorProcurado)
-    {
-        if (noAtual is null)
-            return false;
-
-        if (noAtual.Valor == valorProcurado)
-            return true;
-
-        return PesquisarRecursivo(noAtual.Proximo, valorProcurado);
-    }
-}
 
     ```
 
@@ -146,31 +146,31 @@ comments: true
     ```csharp
     
     public class PesquisaBinariaListaEncadeada
-{
-    public bool Pesquisar(ListaEncadeada lista, int valor)
     {
-        No? primeiroNo = lista.PegarPrimeiroNo();
+        public bool Pesquisar(ListaEncadeada lista, int valor)
+        {
+            No? primeiroNo = lista.PegarPrimeiroNo();
 
-        if (primeiroNo is null)
-            return false;
+            if (primeiroNo is null)
+                return false;
 
-        return PesquisaBinariaRecursiva(primeiroNo, primeiroNo, valor);
+            return PesquisaBinariaRecursiva(primeiroNo, primeiroNo, valor);
+        }
+
+        private bool PesquisaBinariaRecursiva(No? primeiroNo, No? meio, int valor)
+        {
+            if (meio is null)
+                return false;
+                        
+            if (meio.Valor == valor)
+                return true;
+
+            if (valor < meio.Valor)
+                return PesquisaBinariaRecursiva(primeiroNo, meio.Proximo, valor);
+
+            return PesquisaBinariaRecursiva(meio.Proximo, meio.Proximo, valor);
+        }
     }
-
-    private bool PesquisaBinariaRecursiva(No? primeiroNo, No? meio, int valor)
-    {
-        if (meio is null)
-            return false;
-                    
-        if (meio.Valor == valor)
-            return true;
-
-        if (valor < meio.Valor)
-            return PesquisaBinariaRecursiva(primeiroNo, meio.Proximo, valor);
-
-        return PesquisaBinariaRecursiva(meio.Proximo, meio.Proximo, valor);
-    }
-}
 
     ```
 
