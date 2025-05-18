@@ -73,8 +73,8 @@
                             PrimeiroNo = noAtual.Proximo;
                     }
 
-                    noAtual.Proximo = null;
-                    noAtual.Anterior = null;
+                    noAtual.Proximo = null!;
+                    noAtual.Anterior = null!;
 
                     return noAtual; 
                 }
