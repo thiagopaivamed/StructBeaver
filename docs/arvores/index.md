@@ -24,3 +24,5 @@ Vamos adentrar o fascinante mundo das árvores binárias.
 [8.2 Árvores de pesquisa binária](../arvores/arvores-pesquisas-binarias.md)
 
 [8.3 Árvores AVL](../arvores/arvores-avl.md)
+
+[8.4 Exercícios de árvores](../arvores/exercicios-arvores.md)
