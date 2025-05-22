@@ -3,12 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\listas\\listacircular\\listacircularduplamenteencadeada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\listas\\listacircular\\listacircularduplamenteencadeada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver.tests\\arvores\\avl\\exercicios\\quantidadenosdesbalanceadosavltest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|solutionrelative:structbeaver.tests\\arvores\\avl\\exercicios\\quantidadenosdesbalanceadosavltest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver.tests\\listas\\listacircular\\listacircularduplamenteencadeadatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|solutionrelative:structbeaver.tests\\listas\\listacircular\\listacircularduplamenteencadeadatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\arvores\\avl\\exercicios\\quantidadenosdesbalanceadosavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\arvores\\avl\\exercicios\\quantidadenosdesbalanceadosavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\arvores\\avl\\exercicios\\quantidadenosavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\arvores\\avl\\exercicios\\quantidadenosavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\arvores\\avl\\exercicios\\pesquisabinariaavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\arvores\\avl\\exercicios\\pesquisabinariaavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\arvores\\avl\\exercicios\\menorvaloravl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\arvores\\avl\\exercicios\\menorvaloravl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\arvores\\avl\\exercicios\\balanceamentoavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\arvores\\avl\\exercicios\\balanceamentoavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\arvores\\arvorepesquisabinaria\\exercicios\\somasubarvorebst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\arvores\\arvorepesquisabinaria\\exercicios\\somasubarvorebst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\arvores\\arvorepesquisabinaria\\exercicios\\quantidadenosdoisfilhosbst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\arvores\\arvorepesquisabinaria\\exercicios\\quantidadenosdoisfilhosbst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\arvores\\arvorepesquisabinaria\\exercicios\\profundidadenobst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\arvores\\arvorepesquisabinaria\\exercicios\\profundidadenobst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\arvores\\arvorepesquisabinaria\\exercicios\\diametrobst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\arvores\\arvorepesquisabinaria\\exercicios\\diametrobst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\arvores\\arvorepesquisabinaria\\exercicios\\arvorebalanceadabst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\arvores\\arvorepesquisabinaria\\exercicios\\arvorebalanceadabst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +54,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QuantidadeNosDesbalanceadosAvlTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Arvores\\Avl\\Exercicios\\QuantidadeNosDesbalanceadosAvlTest.cs",
+              "RelativeDocumentMoniker": "StructBeaver.Tests\\Arvores\\Avl\\Exercicios\\QuantidadeNosDesbalanceadosAvlTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Arvores\\Avl\\Exercicios\\QuantidadeNosDesbalanceadosAvlTest.cs",
+              "RelativeToolTip": "StructBeaver.Tests\\Arvores\\Avl\\Exercicios\\QuantidadeNosDesbalanceadosAvlTest.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T03:04:38.224Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -30,28 +79,132 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ListaCircularDuplamenteEncadeada.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Listas\\ListaCircular\\ListaCircularDuplamenteEncadeada.cs",
-              "RelativeDocumentMoniker": "StructBeaver\\Listas\\ListaCircular\\ListaCircularDuplamenteEncadeada.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Listas\\ListaCircular\\ListaCircularDuplamenteEncadeada.cs",
-              "RelativeToolTip": "StructBeaver\\Listas\\ListaCircular\\ListaCircularDuplamenteEncadeada.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAIAwwEwAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "QuantidadeNosDesbalanceadosAvl.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\Avl\\Exercicios\\QuantidadeNosDesbalanceadosAvl.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Arvores\\Avl\\Exercicios\\QuantidadeNosDesbalanceadosAvl.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\Avl\\Exercicios\\QuantidadeNosDesbalanceadosAvl.cs",
+              "RelativeToolTip": "StructBeaver\\Arvores\\Avl\\Exercicios\\QuantidadeNosDesbalanceadosAvl.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T01:44:45.373Z",
+              "WhenOpened": "2025-05-22T03:04:06.753Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ListaCircularDuplamenteEncadeadaTest.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Listas\\ListaCircular\\ListaCircularDuplamenteEncadeadaTest.cs",
-              "RelativeDocumentMoniker": "StructBeaver.Tests\\Listas\\ListaCircular\\ListaCircularDuplamenteEncadeadaTest.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Listas\\ListaCircular\\ListaCircularDuplamenteEncadeadaTest.cs",
-              "RelativeToolTip": "StructBeaver.Tests\\Listas\\ListaCircular\\ListaCircularDuplamenteEncadeadaTest.cs",
+              "DocumentIndex": 2,
+              "Title": "QuantidadeNosAvl.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\Avl\\Exercicios\\QuantidadeNosAvl.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Arvores\\Avl\\Exercicios\\QuantidadeNosAvl.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\Avl\\Exercicios\\QuantidadeNosAvl.cs",
+              "RelativeToolTip": "StructBeaver\\Arvores\\Avl\\Exercicios\\QuantidadeNosAvl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T03:03:58.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PesquisaBinariaAvl.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\Avl\\Exercicios\\PesquisaBinariaAvl.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Arvores\\Avl\\Exercicios\\PesquisaBinariaAvl.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\Avl\\Exercicios\\PesquisaBinariaAvl.cs",
+              "RelativeToolTip": "StructBeaver\\Arvores\\Avl\\Exercicios\\PesquisaBinariaAvl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T01:44:37.6Z",
+              "WhenOpened": "2025-05-22T03:03:45.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MenorValorAvl.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\Avl\\Exercicios\\MenorValorAvl.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Arvores\\Avl\\Exercicios\\MenorValorAvl.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\Avl\\Exercicios\\MenorValorAvl.cs",
+              "RelativeToolTip": "StructBeaver\\Arvores\\Avl\\Exercicios\\MenorValorAvl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T03:03:39.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BalanceamentoAvl.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\Avl\\Exercicios\\BalanceamentoAvl.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Arvores\\Avl\\Exercicios\\BalanceamentoAvl.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\Avl\\Exercicios\\BalanceamentoAvl.cs",
+              "RelativeToolTip": "StructBeaver\\Arvores\\Avl\\Exercicios\\BalanceamentoAvl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T03:03:33.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SomaSubarvoreBst.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\SomaSubarvoreBst.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\SomaSubarvoreBst.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\SomaSubarvoreBst.cs",
+              "RelativeToolTip": "StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\SomaSubarvoreBst.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T03:03:23.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "QuantidadeNosDoisFilhosBst.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\QuantidadeNosDoisFilhosBst.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\QuantidadeNosDoisFilhosBst.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\QuantidadeNosDoisFilhosBst.cs",
+              "RelativeToolTip": "StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\QuantidadeNosDoisFilhosBst.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T03:03:07.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProfundidadeNoBst.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\ProfundidadeNoBst.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\ProfundidadeNoBst.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\ProfundidadeNoBst.cs",
+              "RelativeToolTip": "StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\ProfundidadeNoBst.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T03:02:42.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DiametroBst.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\DiametroBst.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\DiametroBst.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\DiametroBst.cs",
+              "RelativeToolTip": "StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\DiametroBst.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T03:02:33.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ArvoreBalanceadaBst.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\ArvoreBalanceadaBst.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\ArvoreBalanceadaBst.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\ArvoreBalanceadaBst.cs",
+              "RelativeToolTip": "StructBeaver\\Arvores\\ArvorePesquisaBinaria\\Exercicios\\ArvoreBalanceadaBst.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T03:02:26.556Z",
               "EditorCaption": ""
             }
           ]

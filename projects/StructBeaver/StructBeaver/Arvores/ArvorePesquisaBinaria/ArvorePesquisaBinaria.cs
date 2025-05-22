@@ -23,7 +23,7 @@
 
             else if (valor > noAtual.Valor)
             {
-                if (noAtual.NoDireito == null)
+                if (noAtual.NoDireito is null)
                 {
                     noAtual.NoDireito = new NoArvore(valor);
                     return noAtual.NoDireito;
