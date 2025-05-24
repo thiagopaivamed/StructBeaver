@@ -5,23 +5,22 @@ theme:
   name: material
   custom_dir: overrides
   features:
-   - search
-   - search.suggest
-   - search.highlight
-   - navigation.instant
-   - navigation.instant.prefetch
-   - navigation.instant.progress
-   - navigation.expand
-   - navigation.path
-   - navigation.prune
-   - navigation.indexes
-   - toc.follow
-   - content.code.copy
-   - content.code.select
-   
+    - search
+    - search.suggest
+    - search.highlight
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    - toc.follow
+    - content.code.copy
+    - content.code.select
+
   palette:
-    
-     # Palette toggle for light mode
+    # Palette toggle for light mode
     - scheme: default
       toggle:
         icon: material/weather-night
@@ -35,51 +34,56 @@ theme:
 
 nav:
   - 1. Vetores:
-    - vetores/index.md
-    - 1.1 Uso básico: vetores/uso-basico.md
-    - 1.2 Pesquisa simples: vetores/pesquisa_simples.md
-    - 1.3 Pesquisa binaria: vetores/pesquisa_binaria.md
-    - 1.4 Exercícios: vetores/exercicios-vetores.md
+      - vetores/index.md
+      - 1.1 Uso básico: vetores/uso-basico.md
+      - 1.2 Pesquisa simples: vetores/pesquisa_simples.md
+      - 1.3 Pesquisa binaria: vetores/pesquisa_binaria.md
+      - 1.4 Exercícios: vetores/exercicios-vetores.md
   - 2. Recursividade:
-    - recursividade/index.md
-    - 2.1 Funções recursivas: recursividade/funcoes-recursivas.md
-    - 2.2 Sequência de Fibonacci: recursividade/fibonacci.md
-    - 2.3 Exercícios recursividade: recursividade/exercicios-recursividade.md
-  - 3. Notação Big O: 
-    - notacaoBigO/index.md
-    - 3.1 Como calcular o tempo de execução: notacaoBigO/calculo-tempo-execucao.md
+      - recursividade/index.md
+      - 2.1 Funções recursivas: recursividade/funcoes-recursivas.md
+      - 2.2 Sequência de Fibonacci: recursividade/fibonacci.md
+      - 2.3 Exercícios recursividade: recursividade/exercicios-recursividade.md
+  - 3. Notação Big O:
+      - notacao-big-o/index.md
+      - 3.1 Como calcular o tempo de execução: notacao-big-o/calculo-tempo-execucao.md
   - 4. Ordenação:
-    - ordenacao/index.md
-    - 4.1 Ordenação usando o método da bolha (Bubble Sort): ordenacao/bubble-sort.md
-    - 4.2 Ordenação usando o método de seleção (Selection Sort): ordenacao/selection-sort.md
-    - 4.3 Ordenação usando o método de inserção (Insertion Sort): ordenacao/insertion-sort.md
-    - 4.4 Ordenação usando o método de ordenação rápida (Quick Sort): ordenacao/quick-sort.md
-    - 4.5 Ordenação usando o Merge Sort: ordenacao/merge-sort.md
-    - 4.6 Exercícios de ordenação: ordenacao/exercicios-ordenacao.md
+      - ordenacao/index.md
+      - 4.1 Ordenação usando o método da bolha (Bubble Sort): ordenacao/bubble-sort.md
+      - 4.2 Ordenação usando o método de seleção (Selection Sort): ordenacao/selection-sort.md
+      - 4.3 Ordenação usando o método de inserção (Insertion Sort): ordenacao/insertion-sort.md
+      - 4.4 Ordenação usando o método de ordenação rápida (Quick Sort): ordenacao/quick-sort.md
+      - 4.5 Ordenação usando o Merge Sort: ordenacao/merge-sort.md
+      - 4.6 Exercícios de ordenação: ordenacao/exercicios-ordenacao.md
   - 5. Pilhas:
-    - pilhas/index.md
-    - 5.1 Pilhas e suas operações: pilhas/pilhas-operacoes.md
-    - 5.2 Implementação padrão de pilhas usando C#: pilhas/pilhas-c-sharp.md
-    - 5.3 Exercícios de pilhas: pilhas/exercicios-pilhas.md
+      - pilhas/index.md
+      - 5.1 Pilhas e suas operações: pilhas/pilhas-operacoes.md
+      - 5.2 Implementação padrão de pilhas usando C#: pilhas/pilhas-c-sharp.md
+      - 5.3 Exercícios de pilhas: pilhas/exercicios-pilhas.md
   - 6. Filas:
-    - filas/index.md
-    - 6.1 Filas e suas operações: filas/filas-operacoes.md
-    - 6.2 Implementação padrão de filas usando C#: filas/filas-c-sharp.md
-    - 6.3 Exercícios de filas: filas/exercicios-filas.md
+      - filas/index.md
+      - 6.1 Filas e suas operações: filas/filas-operacoes.md
+      - 6.2 Implementação padrão de filas usando C#: filas/filas-c-sharp.md
+      - 6.3 Exercícios de filas: filas/exercicios-filas.md
   - 7. Listas:
-    - listas/index.md
-    - 7.1 Listas encadeadas e suas operações: listas/listas-encadeadas-operacoes.md
-    - 7.2 Listas encadeadas padrão em C#: listas/listas-encadeadas-operacoes-c-sharp.md
-    - 7.3 Listas duplamente encadeadas e suas operações: listas/listas-duplamente-encadeadas-operacoes.md
-    - 7.4 Listas duplamente encadeadas padrão em C#: listas/listas-duplamente-encadeadas-operacoes-c-sharp.md
-    - 7.5 Listas circulares duplamente encadeadas e suas operações: listas/listas-circulares-duplamente-encadeadas.md
-    - 7.6 Exercícios de listas: listas/exercicios-listas.md
+      - listas/index.md
+      - 7.1 Listas encadeadas e suas operações: listas/listas-encadeadas-operacoes.md
+      - 7.2 Listas encadeadas padrão em C#: listas/listas-encadeadas-operacoes-c-sharp.md
+      - 7.3 Listas duplamente encadeadas e suas operações: listas/listas-duplamente-encadeadas-operacoes.md
+      - 7.4 Listas duplamente encadeadas padrão em C#: listas/listas-duplamente-encadeadas-operacoes-c-sharp.md
+      - 7.5 Listas circulares duplamente encadeadas e suas operações: listas/listas-circulares-duplamente-encadeadas.md
+      - 7.6 Exercícios de listas: listas/exercicios-listas.md
   - 8. Árvores:
-    - arvores/index.md
-    - 8.1 Árvores binárias: arvores/arvores-binarias.md
-    - 8.2 Árvores de pesquisa binária: arvores/arvores-pesquisas-binarias.md
-    - 8.3 Árvores AVL: arvores/arvores-avl.md
-    - 8.4 Exercícios de árvores: arvores/exercicios-arvores.md
+      - arvores/index.md
+      - 8.1 Árvores binárias: arvores/arvores-binarias.md
+      - 8.2 Árvores de pesquisa binária: arvores/arvores-pesquisas-binarias.md
+      - 8.3 Árvores AVL: arvores/arvores-avl.md
+      - 8.4 Exercícios de árvores: arvores/exercicios-arvores.md
+  - 9. Tabelas Hash:
+      - tabelas-hash/index.md
+      - 9.1 Tabelas Hash: tabelas-hash/tabelas-hash.md
+  - 10. Heaps:
+      - heaps/index.md
 
 markdown_extensions:
   - admonition
@@ -98,20 +102,20 @@ markdown_extensions:
       custom_checkbox: true
 
 plugins:
- - search
- - glightbox:
-       touchNavigation: true
-       loop: false
-       effect: zoom
-       slide_effect: slide
-       width: 100%
-       height: auto
-       zoomable: true
-       draggable: true       
-       auto_caption: false
-       background: white
-       shadow: true
-       manual: false
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      background: white
+      shadow: true
+      manual: false
 
 extra_css:
   - assets/styles.css

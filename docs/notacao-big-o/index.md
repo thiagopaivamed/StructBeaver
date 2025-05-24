@@ -6,7 +6,7 @@ comments: true
 
 # **Introdução à notação Big O**
 
-![Notação Big O](notacaoBigO.assets/notacaoBigO.png)
+![Notação Big O](notacao-big-o.assets/notacaoBigO.png)
 
 Após um longo período de trabalho, Cristina percebeu que precisava de um respiro — algo leve e divertido. Decidiu ir ao cinema, recarregar suas energias com um filme empolgante. Pegou o carro e resolveu dirigir até o shopping mais próximo. Mas havia um problema: era hora do _rush_.
 
@@ -20,4 +20,4 @@ Assim como escolher a melhor avenida pode significar a diferença entre um traje
 
 Compreender seu funcionamento é essencial para que possamos escolher a abordagem mais adequada nas mais variadas situações.
 
-[3.1 Como calcular o tempo de execução](../notacaoBigO/calculo-tempo-execucao.md)
+[3.1 Como calcular o tempo de execução](../notacao-big-o/calculo-tempo-execucao.md)
