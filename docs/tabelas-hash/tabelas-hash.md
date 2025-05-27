@@ -57,22 +57,7 @@ public class TabelaHash
             hash = hash + Tamanho;
 
         return hash;
-    }
-
-    public int Inserir(int chave, int valor)
-    {
-        int indice = FuncaoHash(chave);
-        LinkedList<(int chave, int valor)> linhaTabelaHash = Tabela[indice];
-
-        foreach ((int chave, int valor) par in linhaTabelaHash)
-        {
-            if (par.chave == chave)
-                return -1; // chave já existe                
-        }
-
-        linhaTabelaHash.AddLast((chave, valor));
-        return indice;
-    }
+    }    
 
     public int Buscar(int chave)
     {
@@ -111,3 +96,35 @@ public class TabelaHash
 }
 
 ```
+
+## **Inserção de dados**
+
+Durante a inserção de um novo par chave-valor, a função hash é utilizada para calcular o índice do bucket correspondente na tabela. Esse índice determina em qual posição do array a chave será armazenada. Em seguida, o par é inserido no final da lista ligada associada a esse bucket, preservando a ordem de inserção entre elementos que colidem (ou seja, que compartilham o mesmo índice).
+
+### **Implementação**
+
+```csharp
+
+public int Inserir(int chave, int valor)
+    {
+        int indice = FuncaoHash(chave);
+        LinkedList<(int chave, int valor)> linhaTabelaHash = Tabela[indice];
+
+        foreach ((int chave, int valor) par in linhaTabelaHash)
+        {
+            if (par.chave == chave)
+                return -1;                
+        }
+
+        linhaTabelaHash.AddLast((chave, valor));
+        return indice;
+    }
+
+```
+
+![Inserção Tabela hash](tabelas-hash.assets/insercao-tabela-hash.png)
+
+
+## **Remoção de dados**
+
+Na remoção, a função hash é usada para localizar o bucket correspondente. Em seguida, percorremos a lista ligada nesse bucket até encontrar e remover o nó com a chave desejada.
