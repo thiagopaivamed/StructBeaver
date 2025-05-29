@@ -20,4 +20,8 @@ Assim como Natália consultando o catálogo para ir direto ao livro, uma tabela 
 
 Vamos nos aprofundar no funcionamento da tabela hash, explorando suas principais características e aplicações práticas.
 
-[9.1 Tabela Hash](../tabelas-hash/tabelas-hash.md)
+[9.1 Tabelas Hash](../tabelas-hash/tabelas-hash.md)
+
+[9.2 Tabelas Hash em C#](../tabelas-hash/tabelas-hash-c-sharp.md)
+
+[9.3 Exercícios de tabelas Hash](../tabelas-hash/exercicios-tabelas-hash.md)

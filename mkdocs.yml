@@ -82,6 +82,8 @@ nav:
   - 9. Tabelas Hash:
       - tabelas-hash/index.md
       - 9.1 Tabelas Hash: tabelas-hash/tabelas-hash.md
+      - 9.2 Tabelas Hash em C#: tabelas-hash/tabelas-hash-c-sharp.md
+      - 9.3 Exercícios de tabelas Hash: tabelas-hash/exercicios-tabelas-hash.md
   - 10. Heaps:
       - heaps/index.md
 
