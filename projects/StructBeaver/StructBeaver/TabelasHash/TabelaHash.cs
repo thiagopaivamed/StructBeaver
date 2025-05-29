@@ -32,46 +32,52 @@
             foreach ((int chave, int valor) par in linhaTabelaHash)
             {
                 if (par.chave == chave)
-                    return -1; // chave já existe                
+                    return -1;           
             }
 
             linhaTabelaHash.AddLast((chave, valor));
             return indice;
         }
 
-        public int Buscar(int chave)
+        public List<int> Pesquisar(int chave)
         {
             int indice = FuncaoHash(chave);
             LinkedList<(int chave, int valor)> linhaTabelaHash = Tabela[indice];
 
-            foreach ((int chave, int valor) par in linhaTabelaHash)
+            List<int> valores = [];
+
+            foreach ((int chaveAtual, int valor) in linhaTabelaHash)
             {
-                if (par.chave == chave)
-                    return indice;
+                if (chaveAtual == chave)
+                    valores.Add(valor);
             }
 
-            return -1;
+            return valores;
         }
 
-        public bool Remover(int chave)
+
+        public bool Remover(int chave, int valor)
         {
             int indice = FuncaoHash(chave);
             LinkedList<(int chave, int valor)> linhaTabelaHash = Tabela[indice];
 
+            bool elementoRemovido = false;
             LinkedListNode<(int chave, int valor)>? atual = linhaTabelaHash.First;
 
             while (atual is not null)
             {
-                if (atual.Value.chave == chave)
+                LinkedListNode<(int chave, int valor)>? proximo = atual.Next;
+
+                if (atual.Value.chave == chave && atual.Value.valor == valor)
                 {
                     linhaTabelaHash.Remove(atual);
-                    return true;
+                    elementoRemovido = true;
                 }
 
-                atual = atual.Next;
+                atual = proximo;
             }
 
-            return false;
+            return elementoRemovido;
         }
     }
 }

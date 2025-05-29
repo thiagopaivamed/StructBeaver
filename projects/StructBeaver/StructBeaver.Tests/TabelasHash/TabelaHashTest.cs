@@ -3,64 +3,73 @@ using StructBeaver.TabelasHash;
 
 namespace StructBeaver.Tests.TabelasHash
 {
-    public class TabelaHashTest
+    public class TabelaHashTests
     {
-        private readonly TabelaHash tabelaHash;
+        private readonly TabelaHash _tabelaHash;
 
-        public TabelaHashTest()
-            => tabelaHash = new TabelaHash(10);
+        public TabelaHashTests()
+            => _tabelaHash = new TabelaHash(10);
 
         [Fact]
         public void Inserir_Deve_Retornar_Indice_Correto_Quando_Inserir_Chave_Nova()
         {
-            int indice = tabelaHash.Inserir(15, 100);
+            int indice = _tabelaHash.Inserir(15, 100);
 
-            indice.ShouldBeInRange(0, 9);
+            indice.ShouldBe(5);
         }
 
         [Fact]
         public void Inserir_Deve_Retornar_Menos_Um_Quando_Chave_Ja_Existe()
         {
-            tabelaHash.Inserir(5, 50);
-            int resultado = tabelaHash.Inserir(5, 70);
+            int primeiraInsercao = _tabelaHash.Inserir(15, 100);
+            int segundaInsercao = _tabelaHash.Inserir(15, 200);
 
-            resultado.ShouldBe(-1);
+            primeiraInsercao.ShouldBe(5);
+            segundaInsercao.ShouldBe(-1);
         }
 
         [Fact]
-        public void Buscar_Deve_Retornar_Indice_Correto_Quando_Chave_Existe()
+        public void Pesquisar_Deve_Retornar_Lista_De_Valores_Quando_Chave_Existe()
         {
-            tabelaHash.Inserir(7, 70);
+            _tabelaHash.Inserir(1, 100);
+            _tabelaHash.Inserir(11, 200); 
 
-            int indice = tabelaHash.Buscar(7);
+            List<int> valores = _tabelaHash.Pesquisar(1);
 
-            indice.ShouldBeInRange(0, 9);
+            valores.ShouldContain(100);
+            valores.ShouldNotContain(200);
         }
 
         [Fact]
-        public void Buscar_Deve_Retornar_Menos_Um_Quando_Chave_Nao_Existe()
+        public void Pesquisar_Deve_Retornar_Lista_Vazia_Quando_Chave_Nao_Existe()
         {
-            int indice = tabelaHash.Buscar(999);
+            List<int> valores = _tabelaHash.Pesquisar(99);
 
-            indice.ShouldBe(-1);
+            valores.ShouldBeEmpty();
         }
 
         [Fact]
-        public void Remover_Deve_Retornar_True_Quando_Chave_Existe()
+        public void Remover_Deve_Retornar_True_Quando_Chave_E_Valor_Existem()
         {
-            tabelaHash.Inserir(3, 30);
+            _tabelaHash.Inserir(2, 300);
 
-            bool removido = tabelaHash.Remover(3);
+            bool removido = _tabelaHash.Remover(2, 300);
+            List<int> valores = _tabelaHash.Pesquisar(2);
 
             removido.ShouldBeTrue();
+            valores.ShouldBeEmpty();
         }
 
         [Fact]
-        public void Remover_Deve_Retornar_False_Quando_Chave_Nao_Existe()
+        public void Remover_Deve_Retornar_False_Quando_Valor_Nao_Existe()
         {
-            bool removido = tabelaHash.Remover(100);
+            _tabelaHash.Inserir(2, 300);
+
+            bool removido = _tabelaHash.Remover(2, 999);
+            List<int> valores = _tabelaHash.Pesquisar(2);
 
             removido.ShouldBeFalse();
+            valores.ShouldContain(300);
         }
     }
 }

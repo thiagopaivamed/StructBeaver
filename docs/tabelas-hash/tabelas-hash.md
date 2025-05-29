@@ -57,42 +57,33 @@ public class TabelaHash
             hash = hash + Tamanho;
 
         return hash;
-    }    
+    } 
+}
 
-    public int Buscar(int chave)
+```
+
+## **Pesquisa de dados**
+
+Durante a pesquisa de dados, aplicamos a função hash à chave fornecida para determinar o índice correspondente na tabela. Em seguida, percorremos a lista ligada presente nesse índice e retornamos todos os valores associados àquela chave.mk
+
+### **Implementação**
+
+```csharp
+
+public List<int> Pesquisar(int chave)
+{
+    int indice = FuncaoHash(chave);
+    LinkedList<(int chave, int valor)> linhaTabelaHash = Tabela[indice];
+
+    List<int> valores = new();
+
+    foreach ((int chaveAtual, int valor) in linhaTabelaHash)
     {
-        int indice = FuncaoHash(chave);
-        LinkedList<(int chave, int valor)> linhaTabelaHash = Tabela[indice];
-
-        foreach ((int chave, int valor) par in linhaTabelaHash)
-        {
-            if (par.chave == chave)
-                return indice;
-        }
-
-        return -1;
+        if (chaveAtual == chave)
+            valores.Add(valor);
     }
 
-    public bool Remover(int chave)
-    {
-        int indice = FuncaoHash(chave);
-        LinkedList<(int chave, int valor)> linhaTabelaHash = Tabela[indice];
-
-        LinkedListNode<(int chave, int valor)>? atual = linhaTabelaHash.First;
-
-        while (atual is not null)
-        {
-            if (atual.Value.chave == chave)
-            {
-                linhaTabelaHash.Remove(atual);
-                return true;
-            }
-
-            atual = atual.Next;
-        }
-
-        return false;
-    }
+    return valores;
 }
 
 ```
@@ -128,3 +119,41 @@ public int Inserir(int chave, int valor)
 ## **Remoção de dados**
 
 Na remoção, a função hash é usada para localizar o bucket correspondente. Em seguida, percorremos a lista ligada nesse bucket até encontrar e remover o nó com a chave desejada.
+
+### **Implementação**
+
+```csharp
+
+public bool Remover(int chave, int valor)
+{
+    int indice = FuncaoHash(chave);
+    LinkedList<(int chave, int valor)> linhaTabelaHash = Tabela[indice];
+
+    bool elementoRemovido = false;
+    LinkedListNode<(int chave, int valor)>? atual = linhaTabelaHash.First;
+
+    while (atual is not null)
+    {
+        LinkedListNode<(int chave, int valor)>? proximo = atual.Next;
+
+        if (atual.Value.chave == chave && atual.Value.valor == valor)
+        {
+            linhaTabelaHash.Remove(atual);
+            elementoRemovido = true;
+        }
+
+        atual = proximo;
+    }
+
+    return elementoRemovido;
+}
+
+```
+
+=== "Remoção de dados 01"
+
+    ![](tabelas-hash.assets/remocao-tabela-hash-01.png)
+
+=== "Remoção de dados 02"
+
+    ![](tabelas-hash.assets/remocao-tabela-hash-02.png)
