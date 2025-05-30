@@ -38,7 +38,7 @@ Por outro lado, no pior cenário — quando muitas chaves colidem e são agrupad
 public class TabelaHash
 {
     private readonly int Tamanho;
-    private readonly LinkedList<(int chave, int valor)>[] Tabela;
+    public readonly LinkedList<(int chave, int valor)>[] Tabela;
 
     public TabelaHash(int tamanho)
     {

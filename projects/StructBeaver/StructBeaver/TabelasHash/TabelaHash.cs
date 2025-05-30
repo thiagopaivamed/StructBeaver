@@ -3,7 +3,7 @@
     public class TabelaHash
     {
         private readonly int Tamanho;
-        private readonly LinkedList<(int chave, int valor)>[] Tabela;
+        public readonly LinkedList<(int chave, int valor)>[] Tabela;
 
         public TabelaHash(int tamanho)
         {

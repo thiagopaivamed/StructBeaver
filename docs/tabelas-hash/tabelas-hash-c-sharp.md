@@ -14,7 +14,7 @@ A linguagem C# já oferece uma implementação moderna de tabela hash por meio d
 
 public class TabelaHashPadrao
 {
-    private readonly Dictionary<int, int> _tabela;
+    public readonly Dictionary<int, int> _tabela;
 
     public TabelaHashPadrao()
         => _tabela = [];
