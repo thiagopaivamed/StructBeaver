@@ -7,8 +7,4 @@
         <NoWarn>CS8601</NoWarn>
     </PropertyGroup>
 
-    <ItemGroup>
-      <Folder Include="TabelasHash\Exercicios\" />
-    </ItemGroup>
-
 </Project>
