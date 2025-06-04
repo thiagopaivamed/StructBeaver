@@ -86,6 +86,7 @@ nav:
       - 9.3 Exercícios de tabelas Hash: tabelas-hash/exercicios-tabelas-hash.md
   - 10. Heaps:
       - heaps/index.md
+      - 10.1 Heaps e suas operações: heaps/heaps-operacoes.md
 
 markdown_extensions:
   - admonition
