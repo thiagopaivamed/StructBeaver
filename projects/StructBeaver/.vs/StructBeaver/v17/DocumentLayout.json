@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\tabelashash\\exercicios\\quantidadechavestabelahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\tabelashash\\exercicios\\quantidadechavestabelahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver.tests\\heap\\maxheaptest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F891CB5-1856-4676-8AE0-F701B3BE95CF}|StructBeaver.Tests\\StructBeaver.Tests.csproj|solutionrelative:structbeaver.tests\\heap\\maxheaptest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\tabelashash\\exercicios\\estavaziatabelahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\tabelashash\\exercicios\\estavaziatabelahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\tabelashash\\exercicios\\chaveexistenatabelahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\tabelashash\\exercicios\\chaveexistenatabelahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\tabelashash\\exercicios\\chavescomnumerosprimostabelahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\tabelashash\\exercicios\\chavescomnumerosprimostabelahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\tabelashash\\exercicios\\existemchavesduplicadastabelahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\tabelashash\\exercicios\\existemchavesduplicadastabelahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|c:\\users\\thiago\\desktop\\structbeaver\\projects\\structbeaver\\structbeaver\\heap\\maxheap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F6BA6F-0258-4C08-A0E4-9242814DD056}|StructBeaver\\StructBeaver.csproj|solutionrelative:structbeaver\\heap\\maxheap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,63 +31,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "QuantidadeChavesTabelaHash.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\TabelasHash\\Exercicios\\QuantidadeChavesTabelaHash.cs",
-              "RelativeDocumentMoniker": "StructBeaver\\TabelasHash\\Exercicios\\QuantidadeChavesTabelaHash.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\TabelasHash\\Exercicios\\QuantidadeChavesTabelaHash.cs",
-              "RelativeToolTip": "StructBeaver\\TabelasHash\\Exercicios\\QuantidadeChavesTabelaHash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Title": "MaxHeapTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Heap\\MaxHeapTest.cs",
+              "RelativeDocumentMoniker": "StructBeaver.Tests\\Heap\\MaxHeapTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver.Tests\\Heap\\MaxHeapTest.cs",
+              "RelativeToolTip": "StructBeaver.Tests\\Heap\\MaxHeapTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T00:52:41.575Z",
+              "WhenOpened": "2025-06-06T18:59:42.401Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EstaVaziaTabelaHash.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\TabelasHash\\Exercicios\\EstaVaziaTabelaHash.cs",
-              "RelativeDocumentMoniker": "StructBeaver\\TabelasHash\\Exercicios\\EstaVaziaTabelaHash.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\TabelasHash\\Exercicios\\EstaVaziaTabelaHash.cs",
-              "RelativeToolTip": "StructBeaver\\TabelasHash\\Exercicios\\EstaVaziaTabelaHash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Title": "MaxHeap.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Heap\\MaxHeap.cs",
+              "RelativeDocumentMoniker": "StructBeaver\\Heap\\MaxHeap.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\Heap\\MaxHeap.cs",
+              "RelativeToolTip": "StructBeaver\\Heap\\MaxHeap.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T00:51:44.918Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ChaveExisteNaTabelaHash.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\TabelasHash\\Exercicios\\ChaveExisteNaTabelaHash.cs",
-              "RelativeDocumentMoniker": "StructBeaver\\TabelasHash\\Exercicios\\ChaveExisteNaTabelaHash.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\TabelasHash\\Exercicios\\ChaveExisteNaTabelaHash.cs",
-              "RelativeToolTip": "StructBeaver\\TabelasHash\\Exercicios\\ChaveExisteNaTabelaHash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T00:50:52.215Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChavesComNumerosPrimosTabelaHash.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\TabelasHash\\Exercicios\\ChavesComNumerosPrimosTabelaHash.cs",
-              "RelativeDocumentMoniker": "StructBeaver\\TabelasHash\\Exercicios\\ChavesComNumerosPrimosTabelaHash.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\TabelasHash\\Exercicios\\ChavesComNumerosPrimosTabelaHash.cs",
-              "RelativeToolTip": "StructBeaver\\TabelasHash\\Exercicios\\ChavesComNumerosPrimosTabelaHash.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T00:49:56.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ExistemChavesDuplicadasTabelaHash.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\TabelasHash\\Exercicios\\ExistemChavesDuplicadasTabelaHash.cs",
-              "RelativeDocumentMoniker": "StructBeaver\\TabelasHash\\Exercicios\\ExistemChavesDuplicadasTabelaHash.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\StructBeaver\\projects\\StructBeaver\\StructBeaver\\TabelasHash\\Exercicios\\ExistemChavesDuplicadasTabelaHash.cs",
-              "RelativeToolTip": "StructBeaver\\TabelasHash\\Exercicios\\ExistemChavesDuplicadasTabelaHash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T00:48:51.214Z"
+              "WhenOpened": "2025-06-05T20:16:39.869Z",
+              "EditorCaption": ""
             }
           ]
         }

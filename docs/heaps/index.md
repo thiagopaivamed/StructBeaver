@@ -43,3 +43,7 @@ Esse é o `Min-Heap` — onde os mais "leves" lideram, e a estrutura é organiza
 Vamos adentrar no mundo das `heaps` e descobrir como podemos utilizá-las.
 
 [10.1 Heaps e suas operações](../heaps/heaps-operacoes.md)
+
+[10.2 Implementação padrão de heaps em C#](../heaps/heaps-c-sharp.md)
+
+[10.3 Exercícios de heaps](../heaps/exercicios-heaps.md)
