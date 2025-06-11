@@ -17,7 +17,7 @@
         public void Inserir(int valor)
         {
             _itens.Add(valor);
-            HeapfyUp(Tamanho - 1);
+            HeapifyUp(Tamanho - 1);
         }
 
         public int Remover()
@@ -33,7 +33,7 @@
             return topo;
         }
 
-        private void HeapfyUp(int indice)
+        private void HeapifyUp(int indice)
         {
             while (TemPai(indice) && _itens[indice] > PegarPai(indice))
             {
