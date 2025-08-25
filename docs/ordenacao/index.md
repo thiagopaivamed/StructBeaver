@@ -36,4 +36,6 @@ A partir da história de Cíntia, percebemos como algo simples como ordenar uma 
 
 [4.5 Ordenação usando o Merge Sort](../ordenacao/merge-sort.md)
 
-[4.6 Exercícios ordenação](../ordenacao/exercicios-ordenacao.md)
+[4.6 Ordenação usando o método de ordenação por heap (Heap Sort)](../ordenacao/heap-sort.md)
+
+[4.7 Exercícios ordenação](../ordenacao/exercicios-ordenacao.md)
