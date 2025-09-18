@@ -90,6 +90,10 @@ nav:
       - 10.1 Heaps e suas operações: heaps/heaps-operacoes.md
       - 10.2 Implementação padrão de heaps em C#: heaps/heaps-c-sharp.md
       - 10.3 Exercícios de heaps: heaps/exercicios-heaps.md
+  - 11. Grafos:
+    - grafos/index.md
+    - 11.1 Grafos e suas operações: grafos/grafos-operacoes.md
+    - 11.2 Representação de grafos: grafos/grafos-representacao.md
 
 markdown_extensions:
   - admonition
