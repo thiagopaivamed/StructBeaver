@@ -33,6 +33,8 @@ O que acabamos de ver é a representação de um grafo: uma estrutura formada po
 
 Veremos a fundo como essa estrutura funciona e como encontrar sempre o caminho mais curto entre dois pontos (por exemplo, usando algoritmos como Dijkstra).
 
-[11.1 Grafos e suas operações](../grafos/grafos-operacoes.md)
+[11.1 Grafos e seus tipos](../grafos/grafos-tipos.md)
 
 [11.2 Representação de grafos](../grafos/grafos-representacao.md)
+
+[11.3 Operações básicas em grafos](../grafos/grafos-operacoes-basicas.md)

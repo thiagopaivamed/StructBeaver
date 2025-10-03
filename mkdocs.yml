@@ -92,8 +92,9 @@ nav:
       - 10.3 Exercícios de heaps: heaps/exercicios-heaps.md
   - 11. Grafos:
     - grafos/index.md
-    - 11.1 Grafos e suas operações: grafos/grafos-operacoes.md
+    - 11.1 Grafos e seus tipos: grafos/grafos-tipos.md
     - 11.2 Representação de grafos: grafos/grafos-representacao.md
+    - 11.3 Operações básicas em grafos: grafos/grafos-operacoes-basicas.md
 
 markdown_extensions:
   - admonition
