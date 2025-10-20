@@ -144,73 +144,108 @@ Agora vamos implementar a lista de adjacência do nosso grafo, considerando que 
 
 public class GrafoListaAdjacencia
 {
-    private List<List<int>> adjacencias;
+    private Dictionary<int, List<int>> verticesAdjacentes;
     private bool grafoDirecionado;
-    public int numeroDeVertices => adjacencias.Count;
 
-    public GrafoListaAdjacencia(int numeroVertices, bool direcionado = false)
+    public int NumeroDeVertices => verticesAdjacentes.Count;
+
+    public GrafoListaAdjacencia(bool direcionado = false)
     {
-        adjacencias = new List<List<int>>(numeroVertices);
+        verticesAdjacentes = new Dictionary<int, List<int>>();
         grafoDirecionado = direcionado;
-
-        for (int i = 0; i < numeroVertices; i++)
-            adjacencias.Add(new List<int>());
     }
 
-    public void AdicionarAresta(int origem, int destino)
+    public bool AdicionarVertice(int vertice)
     {
-        adjacencias[origem].Add(destino);
+        bool verticeFoiAdicionado = false;
 
-        if (!grafoDirecionado)
-            adjacencias[destino].Add(origem);
+        if (verticesAdjacentes.ContainsKey(vertice))
+            return false;
+
+        verticesAdjacentes[vertice] = new List<int>();
+
+        verticeFoiAdicionado = true;
+        return verticeFoiAdicionado;
     }
 
-    public void RemoverAresta(int origem, int destino)
+    public bool RemoverVertice(int vertice)
     {
-        adjacencias[origem].Remove(destino);
+        bool verticeFoiRemovido = false;
 
-        if (!grafoDirecionado)
-            adjacencias[destino].Remove(origem);
+        if (!verticesAdjacentes.TryGetValue(vertice, out _))
+            return verticeFoiRemovido;
+
+        verticesAdjacentes.Remove(vertice);
+
+        foreach (List<int> valoresAdjacencia in verticesAdjacentes.Values)
+            valoresAdjacencia.Remove(vertice);
+
+        verticeFoiRemovido = true;
+        return true;
     }
 
-    public void AdicionarVertice()
-        => adjacencias.Add(new List<int>());
-
-    public void RemoverVertice(int vertice)
+    public bool AdicionarAresta(int origem, int destino)
     {
-        adjacencias.RemoveAt(vertice);
+        bool arestaFoiAdicionada = false;
 
-        foreach (List<int> lista in adjacencias)
-            lista.Remove(vertice);
+        if (!verticesAdjacentes.TryGetValue(origem, out List<int> listaOrigem))
+            return arestaFoiAdicionada;
 
-        for (int i = 0; i < adjacencias.Count; i++)
+        if (!verticesAdjacentes.TryGetValue(destino, out List<int> listaDestino))
+            return arestaFoiAdicionada;
+
+        if (!listaOrigem.Contains(destino))
         {
-            for (int j = 0; j < adjacencias[i].Count; j++)
-            {
-                int verticeAtual = adjacencias[i][j];
-
-                if (verticeAtual > vertice)
-                    adjacencias[i][j] = verticeAtual - 1;
-            }
+            listaOrigem.Add(destino);
+            arestaFoiAdicionada = true;
         }
-    }        
+
+        if (!grafoDirecionado && !listaDestino.Contains(origem))
+        {
+            listaDestino.Add(origem);
+            arestaFoiAdicionada = true;
+        }
+
+        return arestaFoiAdicionada;
+    }
+
+    public bool RemoverAresta(int origem, int destino)
+    {
+        bool arestaFoiRemovida = false;
+
+        if (!verticesAdjacentes.TryGetValue(origem, out List<int> listaOrigem))
+            return arestaFoiRemovida;
+
+        if (!verticesAdjacentes.TryGetValue(destino, out List<int> listaDestino))
+            return arestaFoiRemovida;
+
+        if (listaOrigem.Remove(destino))
+            arestaFoiRemovida = true;
+
+        if (!grafoDirecionado && listaDestino.Remove(origem))
+            arestaFoiRemovida = true;
+
+        return arestaFoiRemovida;
+    }
 
     public List<int> ObterAdjacencias(int vertice)
     {
-        if (vertice < 0 || vertice >= adjacencias.Count)
+        if (!verticesAdjacentes.TryGetValue(vertice, out List<int> arestasAdjacentes))
             throw new ArgumentOutOfRangeException(nameof(vertice));
 
-        return adjacencias[vertice];
+        return arestasAdjacentes;
     }
 
     public bool TemAresta(int origem, int destino)
     {
-        if (origem < 0 || origem >= adjacencias.Count)
-            throw new ArgumentOutOfRangeException(nameof(origem));
-        if (destino < 0 || destino >= adjacencias.Count)
-            throw new ArgumentOutOfRangeException(nameof(destino));
-        return adjacencias[origem].Contains(destino);
-    }
+        if (!verticesAdjacentes.ContainsKey(origem) || !verticesAdjacentes.ContainsKey(destino))
+            return false;
+
+        return verticesAdjacentes[origem].Contains(destino);
+    }        
 }
 
 ```
+
+!!! tip "Uso de um dictionary"
+    Nesta implementação de lista de adjacência, optamos por utilizar uma tabela `hash` (Dictionary) em vez de uma lista simples. Essa escolha se deve ao fato de que a tabela `hash` impede a existência de vértices duplicados e permite acesso direto às listas de adjacência em tempo `O(1)`. Assim, cada vértice é utilizado como chave no dicionário, e sua lista de vértices adjacentes é armazenada como valor correspondente.

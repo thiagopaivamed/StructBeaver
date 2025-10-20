@@ -1,81 +1,85 @@
-﻿using Shouldly;
-using StructBeaver.Grafos;
+﻿using StructBeaver.Grafos;
+using Shouldly;
 
 namespace StructBeaver.Tests.Grafos
 {
-    public class GrafoListaAdjacenciaTests
+    public sealed class GrafoListaAdjacenciaTests
     {
-        [Fact]
-        public void AdicionarAresta_GrafoNaoDirecionado_DeveAdicionarNasDuasListas()
+        [Fact(DisplayName = "AdicionarAresta deve retornar true quando adicionada com sucesso")]
+        public void AdicionarAresta_DeveRetornarTrue_QuandoAdicionadaComSucesso()
         {
-            GrafoListaAdjacencia grafo = new GrafoListaAdjacencia(3, false);
+            GrafoListaAdjacencia grafo = new GrafoListaAdjacencia(false);
+            grafo.AdicionarVertice(0);
+            grafo.AdicionarVertice(1);
 
-            grafo.AdicionarAresta(0, 1);
+            bool arestaFoiAdicionada = grafo.AdicionarAresta(0, 1);
 
+            arestaFoiAdicionada.ShouldBeTrue();
             grafo.TemAresta(0, 1).ShouldBeTrue();
             grafo.TemAresta(1, 0).ShouldBeTrue();
         }
 
-        [Fact]
-        public void AdicionarAresta_GrafoDirecionado_DeveAdicionarApenasNaOrigem()
+        [Fact(DisplayName = "AdicionarAresta deve retornar false se vértice não existir")]
+        public void AdicionarAresta_VerticeInexistente_DeveRetornarFalse()
         {
-            GrafoListaAdjacencia grafo = new GrafoListaAdjacencia(3, true);
+            GrafoListaAdjacencia grafo = new GrafoListaAdjacencia();
 
-            grafo.AdicionarAresta(0, 1);
+            bool arestaFoiAdicionada = grafo.AdicionarAresta(0, 1);
 
-            grafo.TemAresta(0, 1).ShouldBeTrue();
-            grafo.TemAresta(1, 0).ShouldBeFalse();
+            arestaFoiAdicionada.ShouldBeFalse();
         }
 
-        [Fact]
-        public void RemoverAresta_GrafoNaoDirecionado_DeveRemoverDasDuasListas()
+        [Fact(DisplayName = "RemoverAresta deve retornar true quando aresta removida com sucesso")]
+        public void RemoverAresta_DeveRetornarTrue_QuandoRemovidaComSucesso()
         {
-            GrafoListaAdjacencia grafo = new GrafoListaAdjacencia(3, false);
+            GrafoListaAdjacencia grafo = new GrafoListaAdjacencia(false);
+            grafo.AdicionarVertice(0);
+            grafo.AdicionarVertice(1);
             grafo.AdicionarAresta(0, 1);
 
-            grafo.RemoverAresta(0, 1);
+            bool arestaFoiRemovida = grafo.RemoverAresta(0, 1);
 
+            arestaFoiRemovida.ShouldBeTrue();
             grafo.TemAresta(0, 1).ShouldBeFalse();
             grafo.TemAresta(1, 0).ShouldBeFalse();
         }
 
-        [Fact]
-        public void AdicionarVertice_DeveAumentarNumeroDeVertices()
+        [Fact(DisplayName = "RemoverAresta deve retornar false se vértices não existirem")]
+        public void RemoverAresta_VerticeInexistente_DeveRetornarFalse()
         {
-            GrafoListaAdjacencia grafo = new GrafoListaAdjacencia(2);
-            int antes = grafo.numeroDeVertices;
+            GrafoListaAdjacencia grafo = new GrafoListaAdjacencia();
 
-            grafo.AdicionarVertice();
+            bool arestaFoiRemovida = grafo.RemoverAresta(0, 1);
 
-            grafo.numeroDeVertices.ShouldBe(antes + 1);
+            arestaFoiRemovida.ShouldBeFalse();
         }
 
-        [Fact]
-        public void RemoverVertice_DeveRemoverVerticeEAtualizarArestas()
+        [Fact(DisplayName = "Remover vértice deve apagar todas arestas que apontam para ele")]
+        public void RemoverVertice_DeveRemoverTodasArestasAssociadas()
         {
-            GrafoListaAdjacencia grafo = new GrafoListaAdjacencia(4, false);
+            GrafoListaAdjacencia grafo = new GrafoListaAdjacencia(false);
+            grafo.AdicionarVertice(0);
+            grafo.AdicionarVertice(1);
+            grafo.AdicionarVertice(2);
+
             grafo.AdicionarAresta(0, 1);
             grafo.AdicionarAresta(1, 2);
-            grafo.AdicionarAresta(2, 3);
 
             grafo.RemoverVertice(1);
 
-            grafo.numeroDeVertices.ShouldBe(3);
-
-            grafo.TemAresta(0, 1).ShouldBeFalse(); 
-            grafo.TemAresta(1, 2).ShouldBeTrue();  
+            grafo.TemAresta(0, 1).ShouldBeFalse();
+            grafo.TemAresta(1, 0).ShouldBeFalse();
+            grafo.NumeroDeVertices.ShouldBe(2);
         }
 
-        [Fact]
-        public void RemoverVertice_UltimoVertice_DeveRemoverSemErros()
+        [Fact(DisplayName = "TemAresta com vértice inexistente deve retornar false")]
+        public void TemAresta_VerticeInexistente_DeveRetornarFalse()
         {
-            var grafo = new GrafoListaAdjacencia(3);
-            grafo.AdicionarAresta(0, 2);
+            GrafoListaAdjacencia grafo = new GrafoListaAdjacencia();
 
-            grafo.RemoverVertice(2);
+            bool arestaExiste = grafo.TemAresta(0, 1);
 
-            grafo.numeroDeVertices.ShouldBe(2);
-            grafo.TemAresta(0, 1).ShouldBeFalse();
+            arestaExiste.ShouldBeFalse();
         }
     }
 }

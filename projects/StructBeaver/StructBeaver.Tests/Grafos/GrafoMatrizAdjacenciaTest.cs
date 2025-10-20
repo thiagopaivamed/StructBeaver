@@ -10,11 +10,11 @@ namespace StructBeaver.Tests.Grafos
 
         public GrafoMatrizAdjacenciaTest()
         {
-            _grafoNaoDirecionado = new GrafoMatrizAdjacencia(5);               
-            _grafoDirecionado = new GrafoMatrizAdjacencia(5, direcionado: true); 
+            _grafoNaoDirecionado = new GrafoMatrizAdjacencia(5);
+            _grafoDirecionado = new GrafoMatrizAdjacencia(5, direcionado: true);
         }
 
-        [Fact]
+        [Fact(DisplayName = "AdicionarAresta (não direcionado) deve adicionar pesos corretamente nas duas direções")]
         public void Adicionar_Aresta_Nao_Direcionada_Deve_Adicionar_Peso_Correto()
         {
             int origem = 0;
@@ -28,7 +28,7 @@ namespace StructBeaver.Tests.Grafos
             _grafoNaoDirecionado.ExisteAresta(destino, origem).ShouldBeTrue();
         }
 
-        [Fact]
+        [Fact(DisplayName = "AdicionarAresta (direcionado) deve adicionar peso apenas na direção especificada")]
         public void Adicionar_Aresta_Direcionada_Deve_Adicionar_Peso_Correto()
         {
             int origem = 0;
@@ -39,10 +39,10 @@ namespace StructBeaver.Tests.Grafos
 
             arestaFoiAdicionada.ShouldBeTrue();
             _grafoDirecionado.ExisteAresta(origem, destino).ShouldBeTrue();
-            _grafoDirecionado.ExisteAresta(destino, origem).ShouldBeFalse(); 
+            _grafoDirecionado.ExisteAresta(destino, origem).ShouldBeFalse();
         }
 
-        [Fact]
+        [Fact(DisplayName = "RemoverAresta (não direcionado) deve remover peso nas duas direções")]
         public void Remover_Aresta_Nao_Direcionada_Deve_Remover_Corretamente()
         {
             _grafoNaoDirecionado.AdicionarAresta(2, 3, 4);
@@ -54,7 +54,7 @@ namespace StructBeaver.Tests.Grafos
             _grafoNaoDirecionado.ExisteAresta(3, 2).ShouldBeFalse();
         }
 
-        [Fact]
+        [Fact(DisplayName = "RemoverAresta (direcionado) deve remover apenas na direção especificada")]
         public void Remover_Aresta_Direcionada_Deve_Remover_Corretamente()
         {
             _grafoDirecionado.AdicionarAresta(2, 3, 4);
@@ -64,6 +64,6 @@ namespace StructBeaver.Tests.Grafos
             arestaFoiRemovida.ShouldBeTrue();
             _grafoDirecionado.ExisteAresta(2, 3).ShouldBeFalse();
             _grafoDirecionado.ExisteAresta(3, 2).ShouldBeFalse();
-        }        
+        }
     }
 }
