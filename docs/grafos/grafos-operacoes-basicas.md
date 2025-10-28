@@ -249,3 +249,60 @@ public class GrafoListaAdjacencia
 
 !!! tip "Uso de um dictionary"
     Nesta implementação de lista de adjacência, optamos por utilizar uma tabela `hash` (Dictionary) em vez de uma lista simples. Essa escolha se deve ao fato de que a tabela `hash` impede a existência de vértices duplicados e permite acesso direto às listas de adjacência em tempo `O(1)`. Assim, cada vértice é utilizado como chave no dicionário, e sua lista de vértices adjacentes é armazenada como valor correspondente.
+
+
+## **Busca em largura (BFS) em uma lista de adjacência**
+
+A busca em largura (BFS) é um algoritmo de travessia que começa a partir de um vértice específico e visita os vértices mais próximos primeiro, expandindo a exploração camada por camada. Iniciando pelo vértice de origem, o algoritmo visita todos os vértices adjacentes a ele antes de avançar para os vértices adjacentes do próximo nível. Esse processo continua até que todos os vértices alcançáveis tenham sido visitados.
+
+=== "BFS em uma lista de adjacência"
+
+    ![](grafos.assets/grafo-bfs-lista-adjacencia.png)
+
+
+## **Implementação**
+
+A busca em largura (BFS) é implementada utilizando uma fila, que segue a política `FIFO` (`First In, First Out`). Esse comportamento se encaixa perfeitamente na ideia do algoritmo: explorar primeiro os vértices mais próximos e, então, avançar gradualmente para os mais distantes.
+
+O processo funciona da seguinte forma:
+
+1. Adiciona-se o vértice inicial à fila e inicia-se o loop de exploração.
+2. A cada iteração, remove-se o vértice no início da fila, marca-se como visitado e adicionam-se à fila todos os seus vértices adjacentes ainda não visitados.
+3. O algoritmo continua repetindo esses passos até que não reste nenhum vértice a ser visitado.
+
+Para evitar visitas repetidas, utiliza-se um `HashSet`, que registra os vértices já explorados.
+
+```csharp
+
+public class GrafoListaAdjacenciaBfs
+{
+    public List<int> Executar(GrafoListaAdjacencia grafo, int verticeInicial)
+    {
+        List<int> ordemVisita = new List<int>();
+
+        HashSet<int> visitados = new HashSet<int>();
+        visitados.Add(verticeInicial);
+
+        Queue<int> fila = new Queue<int>();
+        fila.Enqueue(verticeInicial);
+
+        while (fila.Count > 0)
+        {
+            int verticeAtual = fila.Dequeue();
+            ordemVisita.Add(verticeAtual);
+
+            foreach (int adjacente in grafo.ObterAdjacencias(verticeAtual))
+            {
+                if (!visitados.Contains(adjacente))
+                {
+                    visitados.Add(adjacente);
+                    fila.Enqueue(adjacente);
+                }
+            }
+        }
+
+        return ordemVisita;
+    }
+}
+
+```
