@@ -20,7 +20,7 @@ namespace StructBeaver.Tests.Grafos
 
             GrafoListaAdjacenciaBfs bfs = new GrafoListaAdjacenciaBfs();
 
-            List<int> resultado = bfs.ExecutarBuscaEmLargura(grafo, 0);
+            List<int> resultado = bfs.Executar(grafo, 0);
 
             resultado.ShouldBe([0, 1, 2, 3]);
         }
@@ -35,7 +35,7 @@ namespace StructBeaver.Tests.Grafos
 
             GrafoListaAdjacenciaBfs bfs = new GrafoListaAdjacenciaBfs();
 
-            List<int> resultado = bfs.ExecutarBuscaEmLargura(grafo, 1);
+            List<int> resultado = bfs.Executar(grafo, 1);
 
             resultado.ShouldBe([1]);
         }
@@ -57,7 +57,7 @@ namespace StructBeaver.Tests.Grafos
 
             GrafoListaAdjacenciaBfs bfs = new GrafoListaAdjacenciaBfs();
 
-            List<int> resultado = bfs.ExecutarBuscaEmLargura(grafo, 0);
+            List<int> resultado = bfs.Executar(grafo, 0);
 
             resultado.ShouldBe([0, 1, 2, 3, 4]);
         }
