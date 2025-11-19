@@ -9,7 +9,7 @@
 
         public GrafoListaAdjacencia(bool direcionado = false)
         {
-            verticesAdjacentes = new Dictionary<int, List<int>>();
+            verticesAdjacentes = [];
             grafoDirecionado = direcionado;
         }
 
@@ -20,7 +20,7 @@
             if (verticesAdjacentes.ContainsKey(vertice))
                 return false;
 
-            verticesAdjacentes[vertice] = new List<int>();
+            verticesAdjacentes[vertice] = [];
 
             verticeFoiAdicionado = true;
             return verticeFoiAdicionado;

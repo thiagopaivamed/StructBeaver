@@ -272,6 +272,10 @@ O processo funciona da seguinte forma:
 
 Para evitar visitas repetidas, utiliza-se um `HashSet`, que registra os vértices já explorados.
 
+Cada vértice é enfileirado e desenfileirado exatamente uma vez, resultando em uma complexidade de `O(n)`.
+Durante a travessia dos vértices adjacentes, como o grafo é não direcionado, cada aresta é visitada duas vezes — uma para cada extremidade — o que representa uma complexidade de `O(2t)`.
+Portanto, a complexidade total do algoritmo é `O(n + t)`.
+
 ```csharp
 
 public class GrafoListaAdjacenciaBfs
@@ -302,6 +306,62 @@ public class GrafoListaAdjacenciaBfs
         }
 
         return ordemVisita;
+    }
+}
+
+```
+
+## **Busca em profundidade (DFS) em uma lista de adjacência**
+
+A busca em profundidade (DFS) é um método que prioriza explorar cada caminho o mais profundamente possível antes de retroceder, utilizando backtracking (recursão) quando não há mais caminhos disponíveis.
+Iniciando pelo vértice mais à esquerda, visita-se um vértice adjacente ainda não visitado e continua o processo até que não existam mais alternativas. Em seguida, retorna-se para os vértices anteriores e repete-se o procedimento até que todos os vértices tenham sido visitados.
+
+=== "DFS em uma lista de adjacência"
+
+    ![](grafos.assets/grafo-dfs-lista-adjacencia.png)
+
+
+## **Implementação**
+
+A busca em profundidade é geralmente implementada usando recursão. Para garantir que cada vértice seja visitado apenas uma vez, utiliza-se um HashSet para armazenar os vértices já visitados.
+
+Diferente da busca em largura, que utiliza uma fila para processar os vértices em ordem de proximidade, a DFS usa a pilha de chamadas da recursão para explorar cada caminho até o fim antes de voltar (backtracking). Isso permite que a DFS vá “o mais fundo possível” em cada ramo antes de explorar outros caminhos.
+
+```csharp
+
+public class GrafoListaAdjacenciaDfs
+{
+    public List<int> Executar(GrafoListaAdjacencia grafo, int verticeInicial)
+    {
+        HashSet<int> visitados = [];
+        List<int> ordem = [];
+
+        Dfs(verticeInicial, grafo, visitados, ordem);
+
+        return ordem;
+    }
+
+    private void Dfs(int vertice, GrafoListaAdjacencia grafo, HashSet<int> visitados, List<int> ordem)
+    {
+        visitados.Add(vertice);
+        ordem.Add(vertice);
+
+        List<int> adjacentes;
+
+        try
+        {
+            adjacentes = grafo.ObterAdjacencias(vertice);
+        }
+        catch (ArgumentOutOfRangeException)
+        {
+            return;
+        }
+
+        foreach (int adj in adjacentes)
+        {
+            if (!visitados.Contains(adj))
+                Dfs(adj, grafo, visitados, ordem);
+        }
     }
 }
 

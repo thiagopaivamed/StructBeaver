@@ -4,12 +4,12 @@
     {
         public List<int> Executar(GrafoListaAdjacencia grafo, int verticeInicial)
         {
-            List<int> ordemVisita = new List<int>();
+            List<int> ordemVisita = [];
 
-            HashSet<int> visitados = new HashSet<int>();
+            HashSet<int> visitados = [];
             visitados.Add(verticeInicial);
 
-            Queue<int> fila = new Queue<int>();
+            Queue<int> fila = [];
             fila.Enqueue(verticeInicial);
 
             while (fila.Count > 0)
